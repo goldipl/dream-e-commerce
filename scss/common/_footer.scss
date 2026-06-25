@@ -1,0 +1,151 @@
+.footer {
+  background: $white;
+  border-top: 1px solid rgba($stroke, 0.1);
+
+  &__content {
+    display: grid;
+    grid-template-columns: 180px 1fr 1fr 1fr;
+    gap: 80px;
+    padding: 48px 0;
+    align-items: center;
+  }
+
+  &__logo {
+    img {
+      max-width: 160px;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__column {
+    p,
+    a,
+    li {
+      color: $main_text;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 35px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 18px;
+    }
+
+    a {
+      color: $main_text;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $accent_color;
+      }
+    }
+
+    &--contact {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        color: $accent_color;
+
+        &:first-of-type {
+          margin-top: 24px;
+        }
+      }
+    }
+
+    &--menu {
+      a {
+        font-weight: 700;
+      }
+
+      li:last-child a {
+        color: $accent_color;
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid rgba($stroke, 0.1);
+    padding: 14px 0;
+  }
+
+  &__bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    span,
+    a {
+      font-size: 11px;
+      color: $main_text;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: $accent_color;
+      }
+    }
+    .realization-box {
+      display: flex;
+      align-items: center;
+      &__logo {
+        display: inline-flex;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .footer {
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 24px;
+      padding: 40px 0;
+      text-align: left;
+      align-items: start;
+    }
+
+    &__logo {
+      grid-column: 1 / -1;
+
+      img {
+        margin: 0;
+        width: 120px;
+      }
+    }
+
+    &__column {
+      align-items: flex-start;
+      p,
+      a,
+      li {
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 6px;
+      }
+    }
+
+    &__bottom-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  }
+}
