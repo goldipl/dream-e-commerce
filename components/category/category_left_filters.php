@@ -3,246 +3,118 @@
         <h3>Rozwiń filtry</h3>
         <img src="./assets/icons/common/grey-arrow-down.svg" width="9" height="9">
     </div>
+
     <div class="category-left-filters">
-        <div class="category-left-filters__slot">
+        <div class="category-left-filters__slot active">
             <div class="header">
-                <h3>Sortuj</h3>
+                <h3>Kolor:</h3>
+                <span class="accordion-arrow"></span>
             </div>
-            <div class="content">
-                <label class="custom-checkbox-container">Nowość <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Bestseller <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Promocja <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Ekologiczny <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
+            <div class="content colors-grid">
+                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-pistachio"></span></label>
+                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-white"></span></label>
+                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-burgundy"></span></label>
+                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-black"></span></label>
+                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-red"></span></label>
+                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-purple"></span></label>
+                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-blue"></span></label>
+                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-orange"></span></label>
+                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-pink"></span></label>
+                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-grey"></span></label>
+                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-green"></span></label>
+                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-yellow"></span></label>
             </div>
         </div>
-        <div class="category-left-filters__slot price-type">
+
+        <div class="category-left-filters__slot active">
             <div class="header">
-                <h3>Typ ceny</h3>
+                <h3>Płeć:</h3>
+                <span class="accordion-arrow"></span>
             </div>
             <div class="content">
-                <label class="custom-checkbox-container">
-                    Katalogowa <input type="checkbox" class="custom_input" name="priceType" onclick="handleCheckboxClick(this)">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">
-                    Twoja cena <input type="checkbox" class="custom_input" name="priceType" onclick="handleCheckboxClick(this)">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
+                <label class="custom-checkbox-container">Dziecko <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Kobieta <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Mężczyzna <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Unisex <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
             </div>
         </div>
-        <div class="category-left-filters__slot">
+
+        <div class="category-left-filters__slot active">
             <div class="header">
-                <h3>Cena</h3>
+                <h3>Zakres rozmiarów:</h3>
+                <span class="accordion-arrow"></span>
             </div>
             <div class="content">
-                <div class="row-inputs">
-                    <div class="row-inputs__left">
-                        <input class="form-input" type="text" name="price-left-input" id="price-left-input" placeholder="Od" min="0">
-                    </div>
-                    <span class="spacer">-</span>
-                    <div class="row-inputs__right">
-                        <input class="form-input" type="text" name="price-right-input" id="price-right-input" placeholder="Do" min="0">
-                    </div>
-                </div>
+                <label class="custom-checkbox-container">Dla dzieci <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Duże (XL - 3XL) <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Małe (XXS - S) <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Rozmiary plus size (4XL+) <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Standardowe (M - L) <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
             </div>
         </div>
-        <div class="category-left-filters__slot">
+
+        <div class="category-left-filters__slot active">
             <div class="header">
-                <h3>Ilość</h3>
+                <h3>Gramatura:</h3>
+                <span class="accordion-arrow"></span>
             </div>
             <div class="content">
-                <input class="form-input" type="text" name="quantity-input" id="quantity-input" min="1">
+                <label class="custom-checkbox-container">Grube <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Lekkie <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Typowe <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
             </div>
         </div>
-        <div class="category-left-filters__slot">
+
+        <div class="category-left-filters__slot active">
             <div class="header">
-                <h3>Dostępność</h3>
+                <h3>Skład:</h3>
+                <span class="accordion-arrow"></span>
             </div>
             <div class="content">
-                <label class="custom-checkbox-container">24h/48h <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">2-3 dni <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Dostawa <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
+                <label class="custom-checkbox-container">100% Bawełna <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">100% Poliester <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Bawełna <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Elastan <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Poliester <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Wiskoza <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
             </div>
         </div>
-        <div class="category-left-filters__slot">
+
+        <div class="category-left-filters__slot active">
             <div class="header">
-                <h3>Kolor</h3>
+                <h3>Klasa jakości produktu:</h3>
+                <span class="accordion-arrow"></span>
             </div>
             <div class="content">
-                <label class="custom-checkbox-container">
-                    <div class="color white"></div>Biały <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">
-                    <div class="color grey"></div>Szary <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">
-                    <div class="color black"></div>Czarny <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">
-                    <div class="color red"></div>Czerwony <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">
-                    <div class="color green"></div>Zielony <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">
-                    <div class="color blue"></div>Granatowy <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">
-                    <div class="color purple"></div>Fioletowy <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">
-                    <div class="color orange"></div>Pomarańczowy <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">
-                    <div class="color yellow"></div>Zółty <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">
-                    <div class="color pink"></div>Rózowy <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">
-                    <div class="color lightblue"></div>Niebieski <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
+                <label class="custom-checkbox-container">Ekonomiczna <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Premium <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Standard <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
             </div>
         </div>
-        <div class="category-left-filters__slot">
+
+        <div class="category-left-filters__slot active">
             <div class="header">
-                <h3>Marka</h3>
+                <h3>Marka:</h3>
+                <span class="accordion-arrow"></span>
             </div>
             <div class="content">
-                <label class="custom-checkbox-container">M-Collection <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">CrisMA <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Ferraghini <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Mark Twain <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Pierre Cardin <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Schwarzwolf <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
+                <label class="custom-checkbox-container">Crimson Cut <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Elevate <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Geffer <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Mark Helper <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Promostars <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Roly <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
+                <label class="custom-checkbox-container">Stanley Stella <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
             </div>
         </div>
-        <div class="category-left-filters__slot">
+
+        <div class="category-left-filters__slot active">
             <div class="header">
-                <h3>Materiał</h3>
+                <h3>Typ:</h3>
+                <span class="accordion-arrow"></span>
             </div>
             <div class="content">
-                <label class="custom-checkbox-container">Bambus <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Plastik <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Metal <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Bawełna <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Ceramika <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Karton <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Juta <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Tworzywo sztuczne <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-            </div>
-            <div class="show-more">
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M5 1V10.5" stroke="#374957" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M10 5.75L0.5 5.75" stroke="#374957" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>Więcej 
-                </span>
-            </div>
-            <div class="content hidden">
-                <label class="custom-checkbox-container">Ukryty filtr <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Ukryty filtr <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Ukryty filtr <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-            </div>
-        </div>
-        <div class="category-left-filters__slot">
-            <div class="header">
-                <h3>Technika znakowania</h3>
-            </div>
-            <div class="content">
-                <label class="custom-checkbox-container">Tampodruk <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Druk UV <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Grawer laserowy <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Sublimacja <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Doming <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-            </div>
-            <div class="show-more">
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M5 1V10.5" stroke="#374957" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M10 5.75L0.5 5.75" stroke="#374957" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>Więcej 
-                </span>
-            </div>
-            <div class="content hidden">
-                <label class="custom-checkbox-container">Ukryty filtr <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Ukryty filtr <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
-                <label class="custom-checkbox-container">Ukryty filtr <input type="checkbox" class="custom_input">
-                    <span class="custom-checkbox-checkmark"></span>
-                </label>
+                <label class="custom-checkbox-container">Z okrągłym dekoltem <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
             </div>
         </div>
     </div>

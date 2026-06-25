@@ -1,168 +1,178 @@
 .category-left-filters-box {
+  width: 296px;
+
   &__button {
     display: none;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    padding: 15px 39px 10px;
+    padding: 15px 20px;
     background-color: $white;
     border: 1px solid $stroke;
-    border-bottom: 0;
-    width: 296px;
-    h3 {
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 177.023%;
-      color: $main_text;
-    }
+
     img {
-      margin-top: -10px;
-      margin-right: -13px;
+      transition: transform 0.3s ease;
       &.rotate {
-        transition: 0.3s;
         transform: rotate(180deg);
       }
     }
   }
+
   .category-left-filters {
+    display: flex;
     flex-direction: column;
-    width: 296px;
-    height: auto;
-    margin-right: 24px;
-    margin-bottom: 65px;
     background-color: $white;
-    border: 1px solid $stroke;
-    padding: 29px 39px;
-    &.show {
-      display: flex;
-    }
+
     &__slot {
-      &:first-of-type {
-        .header {
-          h3 {
-            margin-top: 0;
-          }
-        }
+      border-bottom: 1px solid $stroke;
+      padding: 20px 5px;
+
+      &:last-of-type {
+        border-bottom: none;
       }
+
       .header {
-        h3 {
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 177.023%;
-          color: $main_text;
-          margin: 20px 0;
-        }
-      }
-      .content {
-        &.hidden {
-          display: none;
-          .custom-checkbox-container {
-            margin-bottom: 10px;
-            &:first-of-type {
-              margin-top: 3px;
-            }
-          }
-        }
-        &.show {
-          display: flex;
-          flex-direction: column;
-        }
-        .custom-checkbox-container {
-          display: inline-flex;
-          align-items: center;
-          font-size: 12px;
-          font-weight: 400;
-          width: 100%;
-          margin-bottom: 8px;
-          .custom-checkbox-checkmark {
-            width: 18px;
-            height: 18px;
-            top: 0;
-            &::after {
-              left: 7px;
-              top: 4px;
-              width: 5px;
-              height: 9px;
-            }
-          }
-        }
-        .row-inputs {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          width: 100%;
-          &__left,
-          &__right {
-            input {
-              height: 35px;
-              width: 100%;
-              padding: 0 15px;
-              margin: 0;
-            }
-          }
-          .spacer {
-            display: inline-flex;
-            padding: 0 10px;
-            line-height: 35px;
-            height: 35px;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
-          }
-        }
-        input {
-          height: 35px;
-          width: 100%;
-          padding: 0 15px;
-          margin: 0;
-        }
-        .color {
-          border: 0;
-          width: 15px;
-          height: 15px;
-          min-width: 15px;
-          min-height: 15px;
-          &.white {
-            border: 1px solid $stroke;
-          }
-        }
-      }
-      .show-more {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         cursor: pointer;
         user-select: none;
-        &.hide {
-          display: none;
+
+        h3 {
+          font-size: 15px;
+          font-weight: 500;
+          color: $main_text;
+          margin: 0;
         }
-        svg {
-          margin: 0 24px 0 4px;
+
+        .accordion-arrow {
+          width: 8px;
+          height: 8px;
+          border-right: 2px solid $main_color;
+          border-top: 2px solid $main_color;
+          transform: rotate(-45deg);
+          transition: transform 0.3s ease;
+          margin-right: 5px;
         }
-        span {
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 400;
-          color: $main_color;
+      }
+
+      .content {
+        max-height: 500px;
+        overflow: hidden;
+        transition:
+          max-height 0.3s ease,
+          margin-top 0.3s ease;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+
+        // Grid for standard color circles
+        &.colors-grid {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          gap: 12px 8px;
+          max-width: 220px;
+        }
+      }
+
+      // State when an individual filter block is collapsed
+      &:not(.active) {
+        .header .accordion-arrow {
+          transform: rotate(135deg);
+        }
+        .content {
+          max-height: 0 !important;
+          margin-top: 0;
         }
       }
     }
   }
 }
 
+// Color circular layout choices custom classes
+.color-circle-container {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+
+  input {
+    display: none; // hidden target checkbox style
+  }
+
+  .color {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+
+    &.circle-beige {
+      background-color: #cbd5e1;
+    }
+    &.circle-white {
+      background-color: #ffffff;
+      border-color: $stroke;
+    }
+    &.circle-brown {
+      background-color: #4a1d1d;
+    }
+    &.circle-black {
+      background-color: #000000;
+    }
+    &.circle-red {
+      background-color: #e53e3e;
+    }
+    &.circle-purple {
+      background-color: #805ad5;
+    }
+    &.circle-blue {
+      background-color: #3182ce;
+    }
+    &.circle-orange {
+      background-color: #dd6b20;
+    }
+    &.circle-pink {
+      background-color: #d53f8c;
+    }
+    &.circle-lightgrey {
+      background-color: #edf2f7;
+    }
+    &.circle-green {
+      background-color: #48bb78;
+    }
+    &.circle-yellow {
+      background-color: #ecc94b;
+    }
+  }
+
+  // Active ring border visualization when checked
+  input:checked + .color {
+    box-shadow:
+      0 0 0 2px $white,
+      0 0 0 4px $main_color;
+  }
+}
+
 @media (max-width: 992px) {
   .category-left-filters-box {
-    .category-left-filters {
-      display: none;
-      padding: 24px;
-      margin-bottom: 15px;
-    }
+    width: 100%;
+
     &__button {
       display: flex;
-      width: 100%;
-      font-size: 15px;
-      padding: 10px 28px 0 24px;
+    }
+
+    .category-left-filters {
+      display: none;
+      border: 1px solid $stroke;
+      border-top: none;
+      padding: 10px 20px;
+
+      &.show {
+        display: flex;
+      }
     }
   }
 }

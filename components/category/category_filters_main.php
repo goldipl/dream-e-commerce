@@ -1,1210 +1,134 @@
-<div class="category-filters-main">
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/main_page/products/green_pen.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Długopis metalowy</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
+<div class="catalog-wrapper">
+    <!-- 1. Products Grid Container -->
+    <div class="products-grid-container">
+        <!-- Card 1 -->
+        <div class="product-card">
+            <div class="product-card__image-wrapper">
+                <div class="badge-container">
+                    <span class="badge badge--promocja">Promocja</span>
+                    <span class="badge badge--bestseller">Bestseller</span>
+                </div>
+                <img src="https://picsum.photos/id/1025/400/500" alt="Koszulka męska" class="product-card__img">
+                <span class="product-card__brand-tag">Promostars | 1347</span>
             </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="your-price">
-                <p class="text-center">Twoja cena <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="product-card__info">
+                <h4 class="product-card__title">Koszulka męska premium pl...</h4>
+                <p class="product-card__subtitle">100% bawełna, 160 g/m2</p>
+                
+                <!-- Color circles changed to clickable hyperlinks (a href tags) -->
+                <div class="product-card__colors">
+                    <a href="#white" class="color-dot color-dot--white" aria-label="Kolor biały"></a>
+                    <a href="#navy" class="color-dot color-dot--navy" aria-label="Kolor granatowy"></a>
+                    <a href="#black" class="color-dot color-dot--black" aria-label="Kolor czarny"></a>
+                    <a href="#grey" class="color-dot color-dot--grey" aria-label="Kolor szary"></a>
+                    <a href="#maroon" class="color-dot color-dot--maroon" aria-label="Kolor bordowy"></a>
+                    <a href="#blue" class="color-dot color-dot--blue" aria-label="Kolor niebieski"></a>
+                    <a href="#slate" class="color-dot color-dot--slate" aria-label="Kolor ciemnoszary"></a>
+                    <a href="#orange" class="color-dot color-dot--orange" aria-label="Kolor pomarańczowy"></a>
+                    <span class="color-dots-more">+15</span>
+                </div>
+
+                <div class="product-card__price-box">
+                    <span class="price-value">18.50 zł</span>
+                    <span class="price-label">netto agencyjna</span>
+                </div>
             </div>
         </div>
-        <!-- Product label -->
-        <div class="product-label-box">
-            <div class="product-label" style="background-color: #B5EFCC;">
-                <p>Nowość</p>
+
+        <!-- Card 2 -->
+        <div class="product-card">
+            <div class="product-card__image-wrapper">
+                <div class="badge-container">
+                    <span class="badge badge--promocja">Promocja</span>
+                    <span class="badge badge--bestseller">Bestseller</span>
+                </div>
+                <img src="https://picsum.photos/id/338/400/500" alt="T-shirt Asher" class="product-card__img">
+                <span class="product-card__brand-tag">Stanley Stella | 1347</span>
             </div>
-            <div class="product-label" style="background-color: #EFD4B5;">
-                <p>Bestseller</p>
-            </div>
-            <div class="product-label" style="background-color: #A8DF0C;">
-                <p>2023</p>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/category/mousepad.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Podkładka pod mysz</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
+            <div class="product-card__info">
+                <h4 class="product-card__title">T-shirt Asher Green Bay</h4>
+                <p class="product-card__subtitle">100% bawełna, 160 g/m2</p>
+                <div class="product-card__colors">
+                    <a href="#white" class="color-dot color-dot--white" aria-label="Kolor biały"></a>
+                    <a href="#navy" class="color-dot color-dot--navy" aria-label="Kolor granatowy"></a>
+                    <a href="#black" class="color-dot color-dot--black" aria-label="Kolor czarny"></a>
+                    <a href="#grey" class="color-dot color-dot--grey" aria-label="Kolor szary"></a>
+                    <a href="#maroon" class="color-dot color-dot--maroon" aria-label="Kolor bordowy"></a>
+                    <a href="#blue" class="color-dot color-dot--blue" aria-label="Kolor niebieski"></a>
+                    <a href="#slate" class="color-dot color-dot--slate" aria-label="Kolor ciemnoszary"></a>
+                    <a href="#orange" class="color-dot color-dot--orange" aria-label="Kolor pomarańczowy"></a>
+                    <span class="color-dots-more">+15</span>
+                </div>
+                <div class="product-card__price-box">
+                    <span class="price-value">18.50 zł</span>
+                    <span class="price-label">netto agencyjna</span>
+                </div>
             </div>
         </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
+
+        <!-- Card 3 -->
+        <div class="product-card">
+            <div class="product-card__image-wrapper">
+                <div class="badge-container">
+                    <span class="badge badge--nowosc">Nowość</span>
+                    <span class="badge badge--wyprzedaz">Wyprzedaż</span>
+                </div>
+                <img src="https://picsum.photos/id/64/400/500" alt="Koszulka polo" class="product-card__img">
+                <span class="product-card__brand-tag">ID | 1347</span>
             </div>
-            <div class="promo-price">
-                <p class="text-center">Cena promo <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="product-card__info">
+                <h4 class="product-card__title">Koszulka polo damska</h4>
+                <p class="product-card__subtitle">100% bawełna, 160 g/m2</p>
+                <div class="product-card__colors">
+                    <a href="#white" class="color-dot color-dot--white" aria-label="Kolor biały"></a>
+                    <a href="#navy" class="color-dot color-dot--navy" aria-label="Kolor granatowy"></a>
+                    <a href="#black" class="color-dot color-dot--black" aria-label="Kolor czarny"></a>
+                    <a href="#grey" class="color-dot color-dot--grey" aria-label="Kolor szary"></a>
+                    <a href="#maroon" class="color-dot color-dot--maroon" aria-label="Kolor bordowy"></a>
+                    <a href="#blue" class="color-dot color-dot--blue" aria-label="Kolor niebieski"></a>
+                    <a href="#slate" class="color-dot color-dot--slate" aria-label="Kolor ciemnoszary"></a>
+                    <a href="#orange" class="color-dot color-dot--orange" aria-label="Kolor pomarańczowy"></a>
+                    <span class="color-dots-more">+15</span>
+                </div>
+                <div class="product-card__price-box">
+                    <span class="price-value">18.50 zł</span>
+                    <span class="price-label">netto agencyjna</span>
+                </div>
             </div>
         </div>
-        <!-- Product label -->
-        <div class="product-label-box">
-            <div class="product-label" style="background-color: #E4EDFF;">
-                <p>Promocja</p>
+
+        <!-- Card 4 -->
+        <div class="product-card">
+            <div class="product-card__image-wrapper">
+                <img src="https://picsum.photos/id/364/400/500" alt="Koszulka damska" class="product-card__img">
+                <span class="product-card__brand-tag">ID | 1347</span>
             </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
+            <div class="product-card__info">
+                <h4 class="product-card__title">Koszulka damska na ramiąc...</h4>
+                <p class="product-card__subtitle">100% bawełna, 160 g/m2</p>
+                <div class="product-card__colors">
+                    <a href="#white" class="color-dot color-dot--white" aria-label="Kolor biały"></a>
+                    <a href="#navy" class="color-dot color-dot--navy" aria-label="Kolor granatowy"></a>
+                    <a href="#black" class="color-dot color-dot--black" aria-label="Kolor czarny"></a>
+                    <a href="#grey" class="color-dot color-dot--grey" aria-label="Kolor szary"></a>
+                    <a href="#maroon" class="color-dot color-dot--maroon" aria-label="Kolor bordowy"></a>
+                    <a href="#blue" class="color-dot color-dot--blue" aria-label="Kolor niebieski"></a>
+                    <a href="#slate" class="color-dot color-dot--slate" aria-label="Kolor ciemnoszary"></a>
+                    <a href="#purple" class="color-dot color-dot--purple" aria-label="Kolor fioletowy"></a>
+                    <span class="color-dots-more">+15</span>
+                </div>
+                <div class="product-card__price-box">
+                    <span class="price-value">18.50 zł</span>
+                    <span class="price-label">netto agencyjna</span>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/category/piggybank.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Plastikowa skarbonka</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="your-price">
-                <p class="text-center">Twoja cena <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/category/briefcase.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Teczka konferencyjna A4 z segregatorem</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="your-price">
-                <p class="text-center">Twoja cena <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/main_page/products/green_pen.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Długopis metalowy</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="your-price">
-                <p class="text-center">Twoja cena <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product label -->
-        <div class="product-label-box">
-            <div class="product-label" style="background-color: #B5EFCC;">
-                <p>Nowość</p>
-            </div>
-            <div class="product-label" style="background-color: #EFD4B5;">
-                <p>Bestseller</p>
-            </div>
-            <div class="product-label" style="background-color: #A8DF0C;">
-                <p>2023</p>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/category/mousepad.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Podkładka pod mysz</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="promo-price">
-                <p class="text-center">Cena promo <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product label -->
-        <div class="product-label-box">
-            <div class="product-label" style="background-color: #E4EDFF;">
-                <p>Promocja</p>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/category/piggybank.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Plastikowa skarbonka</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="your-price">
-                <p class="text-center">Twoja cena <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/category/briefcase.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Teczka konferencyjna A4 z segregatorem</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="your-price">
-                <p class="text-center">Twoja cena <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/main_page/products/green_pen.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Długopis metalowy</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="your-price">
-                <p class="text-center">Twoja cena <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product label -->
-        <div class="product-label-box">
-            <div class="product-label" style="background-color: #B5EFCC;">
-                <p>Nowość</p>
-            </div>
-            <div class="product-label" style="background-color: #EFD4B5;">
-                <p>Bestseller</p>
-            </div>
-            <div class="product-label" style="background-color: #A8DF0C;">
-                <p>2023</p>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/category/mousepad.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Podkładka pod mysz</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="promo-price">
-                <p class="text-center">Cena promo <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product label -->
-        <div class="product-label-box">
-            <div class="product-label" style="background-color: #E4EDFF;">
-                <p>Promocja</p>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/category/piggybank.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Plastikowa skarbonka</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="your-price">
-                <p class="text-center">Twoja cena <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/category/briefcase.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Teczka konferencyjna A4 z segregatorem</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="your-price">
-                <p class="text-center">Twoja cena <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/main_page/products/green_pen.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Długopis metalowy</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="your-price">
-                <p class="text-center">Twoja cena <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product label -->
-        <div class="product-label-box">
-            <div class="product-label" style="background-color: #B5EFCC;">
-                <p>Nowość</p>
-            </div>
-            <div class="product-label" style="background-color: #EFD4B5;">
-                <p>Bestseller</p>
-            </div>
-            <div class="product-label" style="background-color: #A8DF0C;">
-                <p>2023</p>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/category/mousepad.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Podkładka pod mysz</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="promo-price">
-                <p class="text-center">Cena promo <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product label -->
-        <div class="product-label-box">
-            <div class="product-label" style="background-color: #E4EDFF;">
-                <p>Promocja</p>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/category/piggybank.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Plastikowa skarbonka</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="your-price">
-                <p class="text-center">Twoja cena <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
-    </div>
-    <div class="category-filters-main__slot">
-        <div class="category-filters-main__slot__top">
-            <a href="#" class="products-image" rel="nofollow">
-                <img src="./assets/img/category/briefcase.jpg" alt="products img" width="200" height="200">
-            </a>
-            <a href="#" class="products-title">
-                <h3 class="text-center">Teczka konferencyjna A4 z segregatorem</h3>
-            </a>
-            <div class="products-colors">
-                <a href="#" class="color white"></a>
-                <a href="#" class="color grey"></a>
-                <a href="#" class="color red"></a>
-                <a href="#" class="color yellow"></a>
-                <a href="#" class="color lightblue"></a>
-                <a href="#" class="color blue"></a>
-                <a href="#" class="color pink"></a>
-                <a href="#" class="color purple"></a>
-                <a href="#" class="color green"></a>
-                <a href="#" class="color orange"></a>
-                <a href="#" class="color black"></a>
-            </div>
-            <div class="products-code">
-                <p class="text-center">Kod: 1333929</p>
-            </div>
-        </div>
-        <div class="category-filters-main__slot__bottom">
-            <div class="catalog-price">
-                <p class="text-center">Cena kat. <span>111,88 PLN</span>
-                </p>
-            </div>
-            <div class="your-price">
-                <p class="text-center">Twoja cena <span>100,88 PLN</span>
-                </p>
-            </div>
-            <div class="table-delivery">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th><b>24h/48h</b></th>
-                            <th><b>2-3 dni</b></th>
-                            <th><b>Dostawa</b></th>
-                        </tr>
-                        <tr>
-                            <td>30 348</td>
-                            <td>45 675</td>
-                            <td>100 000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Product hover box -->
-        <div class="product-hover-box">
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/cart.svg" alt="cart icon" width="20" height="20">
-                <span>Do koszyka</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/calculator.svg" alt="calculator icon" width="20" height="20">
-                <span>Kalkulator</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/offertspage.svg" alt="offertspage icon" width="20" height="20">
-                <span>Ofertownik</span>
-            </a>
-            <a href="#" class="product-hover-box__slot">
-                <img src="./assets/icons/category/more.svg" alt="more icon" width="20" height="20">
-                <span>Więcej</span>
-            </a>
-        </div>
+
+    <!-- 2. Load More Section (image_81dc1d.png layout) -->
+    <div class="catalog-actions">
+        <button type="button" class="btn-load-more">
+            Wczytaj więcej produktów (72)
+        </button>
     </div>
 </div>

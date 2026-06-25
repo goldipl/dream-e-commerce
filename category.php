@@ -37,7 +37,7 @@
         <header> 
             <?php include "./components/common/nav.php"; ?> 
         </header>
-        <main id="main-wrapper" class="grey-background">
+        <main id="main-wrapper">
             <div class="breadcrumbs container">
                 <ul>
                     <li class="breadcrumb-item">
@@ -51,8 +51,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="container category-title">
-                <h1>Artykuły biurowe</h1>
+            <div class="category-top-wrapper container">
+                <?php include "./components/category/category_top_filters.php"; ?> 
             </div>
             <div class="category-wrapper">
                 <div class="container">
@@ -75,5 +75,6 @@
         <script src="./js/select2.min.js"></script>
         <script src="./js/script.js"></script>
         <script src="./js/category/show_menu.js"></script>
+        <script src="./js/category/accordions.js"></script>
     </body>
 </html>

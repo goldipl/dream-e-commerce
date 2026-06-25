@@ -19,11 +19,11 @@
       &::after {
         position: absolute;
         margin-right: 10px;
-        top: 8px;
-        left: -24px;
+        top: 5px;
+        left: -28px;
         background-size: contain;
-        width: 8px;
-        height: 8px;
+        width: 16px;
+        height: 16px;
         content: "";
         background-image: url("./../assets/icons/common/breadcrumbs/breadcrumb_icon.svg");
         display: inline-block;
