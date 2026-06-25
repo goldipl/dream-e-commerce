@@ -1812,8 +1812,10 @@ nav .promo-card .dropdown-menu.mega-menu {
   background-color: #0049ff;
   color: #ffffff;
   border: none;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
   padding: 12px 48px;
   cursor: pointer;
   align-self: flex-end;
@@ -1868,8 +1870,10 @@ nav .promo-card .dropdown-menu.mega-menu {
   flex-shrink: 0;
 }
 .showroom-wrapper .address-info .address-text {
-  font-size: 1.1rem;
+  font-size: 20px;
+  font-style: normal;
   font-weight: 700;
+  line-height: 35px;
 }
 @media (max-width: 992px) {
   .showroom-wrapper .address-info .address-text {

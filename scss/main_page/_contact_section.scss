@@ -257,7 +257,8 @@
       font-size: 20px;
       font-style: normal;
       font-weight: 700;
-      line-height: 35px @media (max-width: 992px) {
+      line-height: 35px;
+      @media (max-width: 992px) {
         font-size: 14px;
       }
     }
