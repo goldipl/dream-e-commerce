@@ -23,17 +23,29 @@
 // Left Column Styles
 .form-wrapper {
   .section-heading {
-    font-size: 2rem;
+    font-size: 32px;
+    font-style: normal;
     font-weight: 700;
+    line-height: normal;
     color: $main_color;
     margin: 0 0 12px 0;
+    @media (max-width: 992px) {
+      font-size: 24px;
+    }
   }
 
   .section-subheading {
-    font-size: 1.1rem;
+    font-size: 20px;
+    font-style: normal;
     font-weight: 700;
+    line-height: 35px;
     color: $accent_color;
     margin: 0 0 40px 0;
+    @media (max-width: 992px) {
+      font-size: 16px;
+      line-height: 22px;
+      margin: 0 0 16px 0;
+    }
   }
 }
 
@@ -69,8 +81,16 @@
       outline: none;
       transition: background-color 0.2s ease;
 
+      @media (max-width: 992px) {
+        font-size: 14px;
+      }
+
       &:focus {
         background-color: $inputs_layer;
+      }
+
+      &::placeholder {
+        font-size: 14px;
       }
     }
 
@@ -172,8 +192,10 @@
     background-color: $cta_color;
     color: $white;
     border: none;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px;
     padding: 12px 48px;
     cursor: pointer;
     align-self: flex-end;
@@ -232,8 +254,12 @@
     }
 
     .address-text {
-      font-size: 1.1rem;
+      font-size: 20px;
+      font-style: normal;
       font-weight: 700;
+      line-height: 35px @media (max-width: 992px) {
+        font-size: 14px;
+      }
     }
   }
 }
