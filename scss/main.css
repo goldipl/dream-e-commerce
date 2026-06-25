@@ -2111,7 +2111,6 @@ nav .promo-card .dropdown-menu.mega-menu {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  font-family: "Inter", sans-serif;
 }
 
 .products-grid-container {
@@ -2178,7 +2177,7 @@ nav .promo-card .dropdown-menu.mega-menu {
 .product-card__title {
   font-size: 14px;
   font-weight: 500;
-  color: #2d3748;
+  color: #1a1a1a;
   margin: 0 0 6px 0;
   white-space: nowrap;
   overflow: hidden;
@@ -2186,7 +2185,7 @@ nav .promo-card .dropdown-menu.mega-menu {
 }
 .product-card__subtitle {
   font-size: 12px;
-  color: #718096;
+  color: #8b9bb4;
   margin: 0 0 12px 0;
 }
 .product-card__colors {
@@ -2210,7 +2209,7 @@ nav .promo-card .dropdown-menu.mega-menu {
   transform: scale(1.15);
 }
 .product-card__colors .color-dot:focus-visible {
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #2b6cb0;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0349ff;
 }
 .product-card__colors .color-dot--white {
   background-color: #ffffff;
@@ -2257,11 +2256,11 @@ nav .promo-card .dropdown-menu.mega-menu {
 .product-card__price-box .price-value {
   font-size: 16px;
   font-weight: 700;
-  color: #2b6cb0;
+  color: #0349ff;
 }
 .product-card__price-box .price-label {
   font-size: 11px;
-  color: #718096;
+  color: #8b9bb4;
 }
 
 .badge-container {
@@ -2311,8 +2310,7 @@ nav .promo-card .dropdown-menu.mega-menu {
 
 .btn-load-more {
   background-color: #ffffff;
-  color: #002244;
-  font-family: "Inter", sans-serif;
+  color: #001c5e;
   font-size: 13px;
   font-weight: 700;
   border: 1px solid #cbd5e1;
@@ -2323,8 +2321,8 @@ nav .promo-card .dropdown-menu.mega-menu {
 }
 .btn-load-more:hover {
   background-color: #f8fafc;
-  border-color: #002244;
-  color: #2b6cb0;
+  border-color: #001c5e;
+  color: #0349ff;
 }
 .btn-load-more:active {
   background-color: #f1f5f9;
