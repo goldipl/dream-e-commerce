@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./assets/icons/common/header/macma-logo.svg" height="64"/>
+    <img src="./assets/icons/common/header/dreamtex-logo.svg" height="64"/>
 </p>
 
 <h1 align="center">Dreamtex.pl website</h1>
