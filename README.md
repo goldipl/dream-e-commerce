@@ -2,9 +2,9 @@
     <img src="./assets/icons/common/header/dreamtex-logo.svg" height="64"/>
 </p>
 
-<h1 align="center">Dreamtex.pl website</h1>
+<h1 align="center">Dream E-commerce website</h1>
 
-<p align="center">Dreamtex.pl is a comprehensive e-commerce platform for promotional products and gadgets. Built with PHP, SCSS, Bootstrap, and modern JavaScript libraries, it offers a full-featured online store experience including product catalogs, shopping cart, user accounts, custom configurators, and more.</p>
+<p align="center">Dream E-commerce website is a comprehensive e-commerce platform for promotional products and gadgets. Built with PHP, SCSS, Bootstrap, and modern JavaScript libraries, it offers a full-featured online store experience including product catalogs, shopping cart, user accounts, custom configurators, and more.</p>
 
 ## Table of contents
 
