@@ -1,0 +1,105 @@
+.products-section {
+  width: 100%;
+  padding: 92px 16px;
+  box-sizing: border-box;
+  background-color: $inputs_layer;
+  @media (max-width: 991px) {
+    padding: 40px 16px;
+  }
+}
+
+.products-boxes {
+  display: grid;
+  max-width: 1296px;
+  margin: 0 auto;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 50px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  @media (max-width: 991px) {
+    gap: 16px;
+  }
+}
+
+.product-box {
+  background-color: $white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  text-align: left;
+  @media (max-width: 991px) {
+    padding: 24px 16px;
+  }
+
+  .badge {
+    background-color: $inputs_layer;
+    color: $helper_text;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    height: 20px;
+    padding: 0 9px;
+    border-radius: 0;
+    margin-bottom: 39px;
+    @media (max-width: 991px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .title {
+    color: $main_color;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 0 16px 0;
+    @media (max-width: 991px) {
+      font-size: 18px;
+    }
+  }
+
+  .description {
+    color: $main_text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0 0 48px 0;
+    flex-grow: 1;
+
+    @media (max-width: 991px) {
+      margin: 0 0 24px 0;
+    }
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: $main_color;
+    color: $white;
+    text-decoration: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    padding: 12px 24px;
+    transition: background-color 0.2s ease-in-out;
+    height: 45px;
+
+    &:hover {
+      background-color: $menu_hover_color;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 13px;
+    }
+  }
+}

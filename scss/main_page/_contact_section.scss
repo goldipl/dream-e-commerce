@@ -1,0 +1,239 @@
+.contact-section {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: $white;
+  box-sizing: border-box;
+  box-shadow: 0 4px 30px 0 rgba(0, 28, 94, 0.15);
+
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    @media (min-width: 992px) {
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+  }
+}
+
+// Left Column Styles
+.form-wrapper {
+  .section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $main_color;
+    margin: 0 0 12px 0;
+  }
+
+  .section-subheading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $accent_color;
+    margin: 0 0 40px 0;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @media (min-width: 576px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .form-group {
+    position: relative;
+    width: 100%;
+
+    input,
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 16px;
+      font-size: 0.95rem;
+      color: $main_text;
+      background-color: $white;
+      border: 1px solid $stroke;
+      border-radius: 0; // Flat boxed edges matching image
+      outline: none;
+      transition: background-color 0.2s ease;
+
+      &:focus {
+        background-color: $inputs_layer;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    // Floating structural labels
+    label {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      color: #757575;
+      font-size: 0.95rem;
+      pointer-events: none;
+      transition: all 0.2s ease;
+    }
+
+    // Floating mechanics trigger when input is focused or not empty
+    input:focus ~ label,
+    input:not(:placeholder-shown) ~ label,
+    textarea:focus ~ label,
+    textarea:not(:placeholder-shown) ~ label {
+      top: -10px;
+      left: 10px;
+      font-size: 0.75rem;
+      background-color: $white;
+      padding: 0 6px;
+      color: $stroke;
+      font-weight: 600;
+    }
+  }
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 10px;
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  // Custom checkbox layout matching image box checkmark
+  .checkbox-container {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 28px;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked ~ .checkmark::after {
+        display: block;
+      }
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 16px;
+      width: 16px;
+      border: 1px solid $stroke;
+      background-color: $white;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 5px;
+        top: 1px;
+        width: 4px;
+        height: 9px;
+        border: solid $stroke;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    .checkbox-text {
+      font-size: 0.75rem;
+      line-height: 1.4;
+      color: $main_text;
+      max-width: 320px;
+    }
+  }
+
+  .submit-btn {
+    background-color: $cta_color;
+    color: $white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 48px;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: background-color 0.2s ease;
+
+    @media (max-width: 575px) {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: darken($cta_color, 8%);
+    }
+  }
+}
+
+// Right Column Styles (Showroom side)
+.showroom-wrapper {
+  background-color: #f7f9fc; // Light gray-blue structural background block
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+
+  .showroom-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $main_text;
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 250px;
+    background-color: #e5e3df;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      height: 280px;
+    }
+  }
+
+  .address-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: $accent_color;
+
+    .pin-icon {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    .address-text {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+  }
+}
