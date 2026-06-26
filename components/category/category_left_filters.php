@@ -1,7 +1,7 @@
 <div class="category-left-filters-box">
     <div class="category-left-filters-box__button">
-        <h3>Rozwiń filtry</h3>
-        <img src="./assets/icons/common/grey-arrow-down.svg" width="9" height="9">
+        <span>Rozwiń filtry</span>
+        <img src="./assets/icons/common/header/menu-arrow-down.svg" width="16" height="12">
     </div>
 
     <div class="category-left-filters">

@@ -1893,6 +1893,7 @@ nav .promo-card .dropdown-menu.mega-menu {
 @media (max-width: 768px) {
   .filter-results-bar {
     gap: 16px;
+    margin-bottom: 16px;
   }
 }
 .filter-results-bar .results-count {
@@ -1971,7 +1972,7 @@ nav .promo-card .dropdown-menu.mega-menu {
   cursor: pointer;
   padding: 15px 20px;
   background-color: #ffffff;
-  border: 1px solid #001c5e;
+  border: 1px solid rgba(0, 28, 94, 0.2);
 }
 .category-left-filters-box__button img {
   transition: transform 0.3s ease;
@@ -2020,8 +2021,8 @@ nav .promo-card .dropdown-menu.mega-menu {
 .category-left-filters-box .category-left-filters__slot .content {
   max-height: 500px;
   overflow: hidden;
-  transition: max-height 0.3s ease, margin-top 0.3s ease;
-  margin-top: 15px;
+  transition: max-height 0.3s ease, margin-top 0.3s ease, padding 0.3s ease;
+  margin-top: 22px;
   display: flex;
   flex-direction: column;
 }
@@ -2030,14 +2031,16 @@ nav .promo-card .dropdown-menu.mega-menu {
   grid-template-columns: repeat(6, 1fr);
   gap: 12px 8px;
   max-width: 220px;
-  padding: 4px 0;
+  margin-top: 4px;
+  padding: 16px 0 8px;
 }
 .category-left-filters-box .category-left-filters__slot:not(.active) .header .accordion-arrow {
   transform: rotate(135deg);
 }
 .category-left-filters-box .category-left-filters__slot:not(.active) .content {
-  max-height: 0 !important;
+  max-height: 0;
   margin-top: 0;
+  padding: 0;
 }
 
 .color-circle-container {
@@ -2112,9 +2115,13 @@ nav .promo-card .dropdown-menu.mega-menu {
   .category-left-filters-box__button {
     display: flex;
   }
+  .category-left-filters-box__button span {
+    font-size: 15px;
+    line-height: 15px;
+  }
   .category-left-filters-box .category-left-filters {
     display: none;
-    border: 1px solid #001c5e;
+    border: 1px solid rgba(0, 28, 94, 0.2);
     border-top: none;
     padding: 10px 20px;
   }

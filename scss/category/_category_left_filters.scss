@@ -9,7 +9,7 @@
     cursor: pointer;
     padding: 15px 20px;
     background-color: $white;
-    border: 1px solid $stroke;
+    border: 1px solid rgba(0, 28, 94, 0.2);
 
     img {
       transition: transform 0.3s ease;
@@ -64,8 +64,9 @@
         overflow: hidden;
         transition:
           max-height 0.3s ease,
-          margin-top 0.3s ease;
-        margin-top: 15px;
+          margin-top 0.3s ease,
+          padding 0.3s ease;
+        margin-top: 22px;
         display: flex;
         flex-direction: column;
 
@@ -75,7 +76,8 @@
           grid-template-columns: repeat(6, 1fr);
           gap: 12px 8px;
           max-width: 220px;
-          padding: 4px 0;
+          margin-top: 4px;
+          padding: 16px 0 8px;
         }
       }
 
@@ -85,8 +87,9 @@
           transform: rotate(135deg);
         }
         .content {
-          max-height: 0 !important;
+          max-height: 0;
           margin-top: 0;
+          padding: 0;
         }
       }
     }
@@ -172,11 +175,15 @@
 
     &__button {
       display: flex;
+      span {
+        font-size: 15px;
+        line-height: 15px;
+      }
     }
 
     .category-left-filters {
       display: none;
-      border: 1px solid $stroke;
+      border: 1px solid rgba(0, 28, 94, 0.2);
       border-top: none;
       padding: 10px 20px;
 
