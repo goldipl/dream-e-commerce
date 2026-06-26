@@ -2,13 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-start;
   gap: 20px 32px;
   margin-bottom: 40px;
   background-color: $white;
   box-sizing: border-box;
   width: 100%;
 
-  // Mobile adjustment to push layout elements cleanly if compressed
   @media (max-width: 768px) {
     gap: 16px;
     margin-bottom: 16px;
@@ -16,41 +16,43 @@
 
   // Left Side: Count Text
   .results-count {
-    font-size: 0.95rem;
-    color: $text_muted;
+    color: rgba(0, 28, 94, 0.5);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
     white-space: nowrap;
-
-    .count-number {
-      font-weight: 600;
-    }
   }
 
-  // Middle Side: Horizontal alignment of tags
   .active-filters {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 12px 28px;
-    flex-grow: 1; // Allows space tracking before clear button
   }
 
   // Single badge structure
   .filter-badge {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 
     .badge-text {
-      font-size: 0.95rem;
-      color: $text_muted;
+      color: rgba(0, 28, 94, 0.5);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px; /* 166.667% */
     }
 
     .remove-filter-btn {
       background: none;
       border: none;
       color: $accent_color;
-      font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
       cursor: pointer;
       padding: 0;
       line-height: 1;
@@ -65,8 +67,6 @@
 
   // Right Side: Clear Trigger Action
   .clear-filters {
-    margin-left: auto; // Pushes the clear button to the extreme right on desktops
-
     @media (max-width: 480px) {
       margin-left: 0;
       width: 100%;
@@ -77,10 +77,17 @@
     background: none;
     border: none;
     padding: 0;
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 166.667% */
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
     color: $accent_color;
-    text-decoration: underline;
     cursor: pointer;
     font-family: inherit;
     transition: color 0.15s ease;

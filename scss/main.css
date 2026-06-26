@@ -792,7 +792,7 @@ nav .promo-card .dropdown-menu.mega-menu {
     margin-bottom: 8px;
   }
   .breadcrumbs ul {
-    padding-left: 16px;
+    padding-left: 12px;
     margin: 0;
   }
   .breadcrumbs ul li.breadcrumb-item {
@@ -1894,6 +1894,7 @@ nav .promo-card .dropdown-menu.mega-menu {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-start;
   gap: 20px 32px;
   margin-bottom: 40px;
   background-color: #ffffff;
@@ -1907,35 +1908,39 @@ nav .promo-card .dropdown-menu.mega-menu {
   }
 }
 .filter-results-bar .results-count {
-  font-size: 0.95rem;
-  color: #8b9bb4;
+  color: rgba(0, 28, 94, 0.5);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
   white-space: nowrap;
-}
-.filter-results-bar .results-count .count-number {
-  font-weight: 600;
 }
 .filter-results-bar .active-filters {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 12px 28px;
-  flex-grow: 1;
 }
 .filter-results-bar .filter-badge {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 .filter-results-bar .filter-badge .badge-text {
-  font-size: 0.95rem;
-  color: #8b9bb4;
+  color: rgba(0, 28, 94, 0.5);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 166.667% */
 }
 .filter-results-bar .filter-badge .remove-filter-btn {
   background: none;
   border: none;
   color: #0349ff;
-  font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
   cursor: pointer;
   padding: 0;
   line-height: 1;
@@ -1944,9 +1949,6 @@ nav .promo-card .dropdown-menu.mega-menu {
 }
 .filter-results-bar .filter-badge .remove-filter-btn:hover {
   color: #001c5e;
-}
-.filter-results-bar .clear-filters {
-  margin-left: auto;
 }
 @media (max-width: 480px) {
   .filter-results-bar .clear-filters {
@@ -1958,10 +1960,18 @@ nav .promo-card .dropdown-menu.mega-menu {
   background: none;
   border: none;
   padding: 0;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 166.667% */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
   color: #0349ff;
-  text-decoration: underline;
   cursor: pointer;
   font-family: inherit;
   transition: color 0.15s ease;
@@ -2001,6 +2011,11 @@ nav .promo-card .dropdown-menu.mega-menu {
 }
 .category-left-filters-box .category-left-filters__slot:last-of-type {
   border-bottom: 1px solid rgba(0, 28, 94, 0.2);
+}
+@media (max-width: 991px) {
+  .category-left-filters-box .category-left-filters__slot:first-of-type {
+    border-top: 0;
+  }
 }
 .category-left-filters-box .category-left-filters__slot .header {
   display: flex;
