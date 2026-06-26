@@ -9,7 +9,7 @@
     li.breadcrumb-item {
       position: relative;
       list-style: none;
-      margin-right: 40px;
+      margin-right: 24px;
       &:nth-child(1)::after {
         display: none;
       }
@@ -18,9 +18,9 @@
       }
       &::after {
         position: absolute;
-        margin-right: 10px;
+        margin-right: 0px;
         top: 5px;
-        left: -28px;
+        left: -20px;
         background-size: contain;
         width: 16px;
         height: 16px;
@@ -30,17 +30,31 @@
         background-repeat: no-repeat;
         background-position: center center;
       }
-      a,
-      p,
-      span {
+      a {
+        font-size: 16px;
+        font-style: normal;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 160%;
-        color: $main_text;
+        line-height: normal;
+        color: $breadcrumbs_color;
         text-decoration: none;
         margin: 0;
         &:hover {
           color: $main_color;
+        }
+      }
+      p,
+      span {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: $breadcrumbs_color;
+        text-decoration: none;
+        margin: 0;
+      }
+      &.active {
+        span {
+          color: $main_text;
         }
       }
     }

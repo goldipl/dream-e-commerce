@@ -44,7 +44,7 @@
                         <a href="#">Odzież firmowa</a>
                     </li>
                     <li class="breadcrumb-item active">
-                        <a href="#">Koszulki T-shirt</a>
+                        <span>Koszulki T-shirt</span>
                     </li>
                 </ul>
             </div>

@@ -725,7 +725,7 @@ nav .promo-card .dropdown-menu.mega-menu {
 .breadcrumbs ul li.breadcrumb-item {
   position: relative;
   list-style: none;
-  margin-right: 40px;
+  margin-right: 24px;
 }
 .breadcrumbs ul li.breadcrumb-item:nth-child(1)::after {
   display: none;
@@ -735,9 +735,9 @@ nav .promo-card .dropdown-menu.mega-menu {
 }
 .breadcrumbs ul li.breadcrumb-item::after {
   position: absolute;
-  margin-right: 10px;
+  margin-right: 0px;
   top: 5px;
-  left: -28px;
+  left: -20px;
   background-size: contain;
   width: 16px;
   height: 16px;
@@ -747,20 +747,30 @@ nav .promo-card .dropdown-menu.mega-menu {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.breadcrumbs ul li.breadcrumb-item a,
-.breadcrumbs ul li.breadcrumb-item p,
-.breadcrumbs ul li.breadcrumb-item span {
+.breadcrumbs ul li.breadcrumb-item a {
+  font-size: 16px;
+  font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 160%;
-  color: #1a1a1a;
+  line-height: normal;
+  color: #808eaf;
   text-decoration: none;
   margin: 0;
 }
-.breadcrumbs ul li.breadcrumb-item a:hover,
-.breadcrumbs ul li.breadcrumb-item p:hover,
-.breadcrumbs ul li.breadcrumb-item span:hover {
+.breadcrumbs ul li.breadcrumb-item a:hover {
   color: #001c5e;
+}
+.breadcrumbs ul li.breadcrumb-item p,
+.breadcrumbs ul li.breadcrumb-item span {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #808eaf;
+  text-decoration: none;
+  margin: 0;
+}
+.breadcrumbs ul li.breadcrumb-item.active span {
+  color: #1a1a1a;
 }
 
 @media (max-width: 1260px) {
