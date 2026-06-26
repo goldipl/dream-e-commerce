@@ -1996,11 +1996,11 @@ nav .promo-card .dropdown-menu.mega-menu {
   background-color: #ffffff;
 }
 .category-left-filters-box .category-left-filters__slot {
-  border-bottom: 1px solid rgba(0, 28, 94, 0.2);
+  border-top: 1px solid rgba(0, 28, 94, 0.2);
   padding: 20px 5px;
 }
 .category-left-filters-box .category-left-filters__slot:last-of-type {
-  border-bottom: none;
+  border-bottom: 1px solid rgba(0, 28, 94, 0.2);
 }
 .category-left-filters-box .category-left-filters__slot .header {
   display: flex;
