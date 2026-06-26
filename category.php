@@ -18,17 +18,17 @@
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.macma.pl/index.php"
+                    "item": "https://www.dreamtex.pl/index.php"
                 }, {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Oferta",
-                    "item": "https://www.macma.pl/oferta"
+                    "item": "https://www.dreamtex.pl/odziez-firmowa"
                 }, {
                     "@type": "ListItem",
                     "position": 3,
                     "name": "Artykuły biurowe",
-                    "item": "https://www.macma.pl/oferta/artykuly-biurowe"
+                    "item": "https://www.dreamtex.pl/odziez-firmowa/koszulki-tshirt"
                 }]
             }
         </script>
@@ -41,13 +41,10 @@
             <div class="breadcrumbs container">
                 <ul>
                     <li class="breadcrumb-item">
-                        <a href="./index.php">Home</a>
+                        <a href="#">Odzież firmowa</a>
                     </li>
-                    <li class="breadcrumb-item">
-                        <a href="#">Oferta</a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="#">Artykuły biurowe</a>
+                    <li class="breadcrumb-item active">
+                        <a href="#">Koszulki T-shirt</a>
                     </li>
                 </ul>
             </div>
@@ -74,7 +71,6 @@
         <script src="./js/bootbox.min.js"></script>
         <script src="./js/select2.min.js"></script>
         <script src="./js/script.js"></script>
-        <script src="./js/category/show_menu.js"></script>
         <script src="./js/category/accordions.js"></script>
     </body>
 </html>

@@ -13,7 +13,7 @@
             <div class="content colors-grid">
                 <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-pistachio"></span></label>
                 <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-white"></span></label>
-                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-burgundy"></span></label>
+                <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-brown"></span></label>
                 <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-black"></span></label>
                 <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-red"></span></label>
                 <label class="color-circle-container"><input type="checkbox" class="custom_input"><span class="color circle-purple"></span></label>

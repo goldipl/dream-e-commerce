@@ -898,7 +898,7 @@ nav .promo-card .dropdown-menu.mega-menu {
 
 /* On mouse-over, add a grey background color */
 .custom-radio-container:hover input ~ .custom-radio-checkmark {
-  background-color: #d9d9d9;
+  background-color: #f4f4f4;
 }
 
 /* When the radio button is checked, add a background */
@@ -937,10 +937,14 @@ nav .promo-card .dropdown-menu.mega-menu {
 .custom-checkbox-container {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 32px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  color: #1a1a1a;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -958,16 +962,18 @@ nav .promo-card .dropdown-menu.mega-menu {
 /* Create a custom checkbox */
 .custom-checkbox-checkmark {
   position: absolute;
-  top: 4px;
+  top: 1px;
   left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+  height: 19px;
+  width: 19px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  border: 0.5px solid rgba(0, 28, 94, 0.4);
 }
 
 /* On mouse-over, add a grey background color */
 .custom-checkbox-container:hover input ~ .custom-checkbox-checkmark {
-  background-color: #ccc;
+  background-color: #f4f4f4;
 }
 
 /* When the checkbox is checked, add a grey background */
@@ -989,8 +995,8 @@ nav .promo-card .dropdown-menu.mega-menu {
 
 /* Style the checkmark/indicator */
 .custom-checkbox-container .custom-checkbox-checkmark:after {
-  left: 9px;
-  top: 5px;
+  left: 6px;
+  top: 2px;
   width: 6px;
   height: 12px;
   border: solid #001c5e;
@@ -1979,7 +1985,7 @@ nav .promo-card .dropdown-menu.mega-menu {
   background-color: #ffffff;
 }
 .category-left-filters-box .category-left-filters__slot {
-  border-bottom: 1px solid #001c5e;
+  border-bottom: 1px solid rgba(0, 28, 94, 0.2);
   padding: 20px 5px;
 }
 .category-left-filters-box .category-left-filters__slot:last-of-type {
@@ -1995,8 +2001,10 @@ nav .promo-card .dropdown-menu.mega-menu {
           user-select: none;
 }
 .category-left-filters-box .category-left-filters__slot .header h3 {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
   color: #1a1a1a;
   margin: 0;
 }
@@ -2022,6 +2030,7 @@ nav .promo-card .dropdown-menu.mega-menu {
   grid-template-columns: repeat(6, 1fr);
   gap: 12px 8px;
   max-width: 220px;
+  padding: 4px 0;
 }
 .category-left-filters-box .category-left-filters__slot:not(.active) .header .accordion-arrow {
   transform: rotate(135deg);
@@ -2046,44 +2055,51 @@ nav .promo-card .dropdown-menu.mega-menu {
   width: 22px;
   height: 22px;
   border-radius: 50%;
+  box-sizing: border-box;
   border: 1px solid transparent;
 }
 .color-circle-container .color.circle-beige {
-  background-color: #cbd5e1;
+  background-color: #c6d0ac;
 }
 .color-circle-container .color.circle-white {
   background-color: #ffffff;
-  border-color: #001c5e;
+  border: 0.667px solid rgba(0, 28, 94, 0.5);
 }
 .color-circle-container .color.circle-brown {
-  background-color: #4a1d1d;
+  background-color: #3b0602;
 }
 .color-circle-container .color.circle-black {
   background-color: #000000;
 }
 .color-circle-container .color.circle-red {
-  background-color: #e53e3e;
+  background-color: #d00000;
 }
 .color-circle-container .color.circle-purple {
-  background-color: #805ad5;
+  background-color: #7d048b;
 }
 .color-circle-container .color.circle-blue {
-  background-color: #3182ce;
+  background-color: #424ae8;
 }
 .color-circle-container .color.circle-orange {
-  background-color: #dd6b20;
+  background-color: #e9641c;
 }
 .color-circle-container .color.circle-pink {
-  background-color: #d53f8c;
+  background-color: #e31eb5;
 }
 .color-circle-container .color.circle-lightgrey {
-  background-color: #edf2f7;
+  background-color: #d8d8d8;
 }
 .color-circle-container .color.circle-green {
-  background-color: #48bb78;
+  background-color: #63a131;
 }
 .color-circle-container .color.circle-yellow {
-  background-color: #ecc94b;
+  background-color: #ffcd04;
+}
+.color-circle-container .color.circle-pistachio {
+  background-color: #c6d0ac;
+}
+.color-circle-container .color.circle-grey {
+  background-color: #d8d8d8;
 }
 .color-circle-container input:checked + .color {
   box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #001c5e;

@@ -25,7 +25,7 @@
     background-color: $white;
 
     &__slot {
-      border-bottom: 1px solid $stroke;
+      border-bottom: 1px solid rgba(0, 28, 94, 0.2);
       padding: 20px 5px;
 
       &:last-of-type {
@@ -40,8 +40,10 @@
         user-select: none;
 
         h3 {
-          font-size: 15px;
-          font-weight: 500;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 20px;
           color: $main_text;
           margin: 0;
         }
@@ -73,6 +75,7 @@
           grid-template-columns: repeat(6, 1fr);
           gap: 12px 8px;
           max-width: 220px;
+          padding: 4px 0;
         }
       }
 
@@ -107,44 +110,51 @@
     width: 22px;
     height: 22px;
     border-radius: 50%;
+    box-sizing: border-box;
     border: 1px solid transparent;
 
     &.circle-beige {
-      background-color: #cbd5e1;
+      background-color: #c6d0ac;
     }
     &.circle-white {
       background-color: #ffffff;
-      border-color: $stroke;
+      border: 0.667px solid rgba(0, 28, 94, 0.5);
     }
     &.circle-brown {
-      background-color: #4a1d1d;
+      background-color: #3b0602;
     }
     &.circle-black {
       background-color: #000000;
     }
     &.circle-red {
-      background-color: #e53e3e;
+      background-color: #d00000;
     }
     &.circle-purple {
-      background-color: #805ad5;
+      background-color: #7d048b;
     }
     &.circle-blue {
-      background-color: #3182ce;
+      background-color: #424ae8;
     }
     &.circle-orange {
-      background-color: #dd6b20;
+      background-color: #e9641c;
     }
     &.circle-pink {
-      background-color: #d53f8c;
+      background-color: #e31eb5;
     }
     &.circle-lightgrey {
-      background-color: #edf2f7;
+      background-color: #d8d8d8;
     }
     &.circle-green {
-      background-color: #48bb78;
+      background-color: #63a131;
     }
     &.circle-yellow {
-      background-color: #ecc94b;
+      background-color: #ffcd04;
+    }
+    &.circle-pistachio {
+      background-color: #c6d0ac;
+    }
+    &.circle-grey {
+      background-color: #d8d8d8;
     }
   }
 
