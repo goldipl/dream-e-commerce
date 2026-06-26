@@ -594,6 +594,7 @@ nav .promo-card .dropdown-menu.mega-menu {
 
 .footer {
   background: #ffffff;
+  border-top: 1px solid rgba(0, 28, 94, 0.1);
 }
 .footer__content {
   display: grid;
