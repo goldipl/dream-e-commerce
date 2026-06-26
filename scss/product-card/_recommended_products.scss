@@ -1,0 +1,71 @@
+.recommended-section {
+  margin-top: 55px;
+  margin-bottom: 120px;
+  @media (max-width: 991px) {
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  .recommended-title {
+    color: $main_text;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 180% */
+    margin-bottom: 16px;
+    @media (max-width: 991px) {
+      font-size: 18px;
+    }
+  }
+
+  .swiper-button-next {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-image: url("./../assets/icons/main_page/hero_swiper/arrow-right.svg");
+    background-size: 13px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: $white;
+    border-radius: 100%;
+    padding: 18px;
+    box-sizing: border-box;
+    filter: drop-shadow(0 0 15px rgba(0, 28, 94, 0.2));
+    top: 50%;
+    right: 6px;
+    z-index: 1;
+    &::after {
+      display: none;
+    }
+    @media (max-width: 991px) {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  .swiper-button-prev {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-image: url("./../assets/icons/main_page/hero_swiper/arrow-left.svg");
+    background-size: 13px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: $white;
+    border-radius: 100%;
+    padding: 18px;
+    box-sizing: border-box;
+    filter: drop-shadow(0 0 15px rgba(0, 28, 94, 0.2));
+    top: 50%;
+    left: 6px;
+    z-index: 1;
+    &::after {
+      display: none;
+    }
+    @media (max-width: 991px) {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}

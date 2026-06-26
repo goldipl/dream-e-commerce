@@ -17,9 +17,9 @@ const swiper = new Swiper('.swiper', {
       disableOnInteraction: false,
     },
   
-  });
+});
 
-  const newsSwiper = new Swiper('.news-swiper', {
+const newsSwiper = new Swiper('.news-swiper', {
   direction: 'horizontal',
   loop: true,
   
@@ -48,4 +48,37 @@ const swiper = new Swiper('.swiper', {
     disableOnInteraction: false,
   },
   
-  });
+});
+
+const recommendedProductsSwiper = new Swiper('.recommended-products-swiper', {
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 16,
+
+  // Responsive dynamic breakpoints layout configuration
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 16
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 24
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 30
+    }
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+});

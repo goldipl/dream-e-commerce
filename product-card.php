@@ -20,18 +20,19 @@
             <div class="breadcrumbs container">
                 <ul>
                     <li class="breadcrumb-item">
-                        <a href="./index.php">Home</a>
+                        <a href="#">Odzież firmowa</a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="#">Długopisy i artykuły piśmienne</a>
+                        <a href="#">Koszulki T-shirt</a>
                     </li>
-                    <li class="breadcrumb-item">
-                        <a href="#">Długopisy metalowe</a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="#">Długopis metalowy</a>
+                    <li class="breadcrumb-item active">
+                        <span>T-shirt Havy 170</span>
                     </li>
                 </ul>
+            </div>
+            <div class="container">
+                <?php include "./components/product-card/product_card.php"; ?> 
+                <?php include "./components/product-card/recommended_products.php"; ?> 
             </div>
         </main>
         <footer> 
@@ -44,5 +45,6 @@
         <script src="./js/select2.min.js"></script>
         <script src="./js/script.js"></script>
         <script src="./js/swiper/swiper-bundle.js"></script>
+        <script src="./js/swiper/swiper.js"></script>
     </body>
 </html>
