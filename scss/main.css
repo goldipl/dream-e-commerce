@@ -2604,6 +2604,11 @@ nav .promo-card .dropdown-menu.mega-menu {
   gap: 16px;
   z-index: 3;
 }
+@media (max-width: 991px) {
+  .product-gallery .badge-container {
+    gap: 8px;
+  }
+}
 .product-gallery .badge {
   font-size: 14px;
   font-style: normal;
@@ -2617,6 +2622,12 @@ nav .promo-card .dropdown-menu.mega-menu {
 }
 .product-gallery .badge--promocja {
   background-color: #d32f2f;
+}
+@media (max-width: 991px) {
+  .product-gallery .badge {
+    font-size: 10px;
+    padding: 0 8px;
+  }
 }
 .product-gallery .btn-zoom-gallery {
   position: absolute;
@@ -2639,6 +2650,16 @@ nav .promo-card .dropdown-menu.mega-menu {
 .product-gallery .btn-zoom-gallery svg {
   width: 24px;
   height: 24px;
+}
+@media (max-width: 991px) {
+  .product-gallery .btn-zoom-gallery {
+    width: 40px;
+    height: 40px;
+  }
+  .product-gallery .btn-zoom-gallery svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 .product-gallery .btn-zoom-gallery:hover {
   background-color: #001c5e;
