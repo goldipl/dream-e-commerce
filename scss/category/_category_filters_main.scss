@@ -85,6 +85,11 @@
       opacity 0.3s ease,
       transform 0.3s ease;
 
+    @media (max-width: 991px) {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .action-btn {
       width: 40px;
       height: 40px;
@@ -306,6 +311,11 @@
           filter: invert(1) brightness(2);
         }
       }
+
+      @media (max-width: 991px) {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
 }
@@ -329,8 +339,7 @@
   line-height: 20px;
   color: $white;
   padding: 0 8px;
-  border-radius: 2px;
-  letter-spacing: 0.5px;
+  border-radius: 0;
   align-self: flex-start;
   user-select: none;
 
