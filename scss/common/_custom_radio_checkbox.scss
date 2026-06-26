@@ -35,7 +35,7 @@
 
 /* On mouse-over, add a grey background color */
 .custom-radio-container:hover input ~ .custom-radio-checkmark {
-  background-color: #d9d9d9;
+  background-color: #f4f4f4;
 }
 
 /* When the radio button is checked, add a background */
@@ -82,10 +82,14 @@
 .custom-checkbox-container {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 32px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  color: $main_text;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -104,16 +108,18 @@
 /* Create a custom checkbox */
 .custom-checkbox-checkmark {
   position: absolute;
-  top: 4px;
+  top: 1px;
   left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+  height: 19px;
+  width: 19px;
+  background-color: $white;
+  border-radius: 2px;
+  border: 0.5px solid rgba(0, 28, 94, 0.4);
 }
 
 /* On mouse-over, add a grey background color */
 .custom-checkbox-container:hover input ~ .custom-checkbox-checkmark {
-  background-color: #ccc;
+  background-color: #f4f4f4;
 }
 
 /* When the checkbox is checked, add a grey background */
@@ -135,8 +141,8 @@
 
 /* Style the checkmark/indicator */
 .custom-checkbox-container .custom-checkbox-checkmark:after {
-  left: 9px;
-  top: 5px;
+  left: 6px;
+  top: 2px;
   width: 6px;
   height: 12px;
   border: solid $main_color;
