@@ -109,6 +109,7 @@
   display: inline-block;
   width: 22px;
   height: 22px;
+  margin: 0 4px;
 
   input {
     display: none; // hidden target checkbox style
@@ -168,10 +169,12 @@
   }
 
   // Active ring border visualization when checked
+  &:hover,
   input:checked + .color {
     box-shadow:
       0 0 0 2px $white,
       0 0 0 4px $main_color;
+    border-radius: 100%;
   }
 }
 
