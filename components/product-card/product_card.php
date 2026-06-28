@@ -53,19 +53,19 @@
         <span class="color-selection-title">Kolor: <strong>Navy (granat) DX</strong>
         </span>
         <div class="colors-swatch-list">
-          <button class="swatch-btn" style="background-color: #ffffff; border: 1px solid #cbd5e1;" aria-label="Biały"></button>
-          <button class="swatch-btn swatch-btn--active" style="background-color: #1a365d;" aria-label="Navy"></button>
-          <button class="swatch-btn" style="background-color: #000000;" aria-label="Czarny"></button>
-          <button class="swatch-btn" style="background-color: #a0aec0;" aria-label="Szary"></button>
-          <button class="swatch-btn" style="background-color: #5c1d24;" aria-label="Bordowy"></button>
-          <button class="swatch-btn" style="background-color: #3b719f;" aria-label="Niebieski"></button>
-          <button class="swatch-btn" style="background-color: #556270;" aria-label="Ciemnoszary"></button>
-          <button class="swatch-btn" style="background-color: #e53e3e;" aria-label="Czerwony"></button>
-          <button class="swatch-btn" style="background-color: #3182ce;" aria-label="Jasnoniebieski"></button>
-          <button class="swatch-btn" style="background-color: #e06d26;" aria-label="Pomarańczowy"></button>
-          <button class="swatch-btn" style="background-color: #38a169;" aria-label="Zielony"></button>
-          <button class="swatch-btn" style="background-color: #ecc94b;" aria-label="Żółty"></button>
-          <button class="swatch-btn" style="background-color: #63b3ed;" aria-label="Błękitny"></button>
+          <a href="" class="swatch-btn" style="background-color: #ffffff; border: 1px solid #cbd5e1;" aria-label="Biały"></a>
+          <a href="" class="swatch-btn swatch-btn--active" style="background-color: #1a365d;" aria-label="Navy"></a>
+          <a href="" class="swatch-btn" style="background-color: #000000;" aria-label="Czarny"></a>
+          <a href="" class="swatch-btn" style="background-color: #a0aec0;" aria-label="Szary"></a>
+          <a href="" class="swatch-btn" style="background-color: #5c1d24;" aria-label="Bordowy"></a>
+          <a href="" class="swatch-btn" style="background-color: #3b719f;" aria-label="Niebieski"></a>
+          <a href="" class="swatch-btn" style="background-color: #556270;" aria-label="Ciemnoszary"></a>
+          <a href="" class="swatch-btn" style="background-color: #e53e3e;" aria-label="Czerwony"></a>
+          <a href="" class="swatch-btn" style="background-color: #3182ce;" aria-label="Jasnoniebieski"></a>
+          <a href="" class="swatch-btn" style="background-color: #e06d26;" aria-label="Pomarańczowy"></a>
+          <a href="" class="swatch-btn" style="background-color: #38a169;" aria-label="Zielony"></a>
+          <a href="" class="swatch-btn" style="background-color: #ecc94b;" aria-label="Żółty"></a>
+          <a href="" class="swatch-btn" style="background-color: #63b3ed;" aria-label="Błękitny"></a>
         </div>
       </div>
       <div class="purchase-action-container">
