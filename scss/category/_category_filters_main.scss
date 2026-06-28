@@ -173,6 +173,10 @@
     color: $main_text;
     transition: color 0.2s;
 
+    @media (max-width: 991px) {
+      font-size: 18px;
+    }
+
     &:hover {
       color: $accent_color;
     }
@@ -273,6 +277,10 @@
       font-weight: 400;
       line-height: 20px;
       color: $accent_color;
+
+      @media (max-width: 991px) {
+        font-size: 19px;
+      }
     }
 
     .price-label {
@@ -281,6 +289,10 @@
       font-weight: 300;
       line-height: 20px;
       color: $main_text;
+
+      @media (max-width: 991px) {
+        font-size: 13px;
+      }
     }
 
     .cart-btn {
@@ -315,6 +327,9 @@
       @media (max-width: 991px) {
         opacity: 1;
         transform: translateY(0);
+        svg {
+          filter: unset;
+        }
       }
     }
   }
