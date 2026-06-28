@@ -251,6 +251,7 @@ nav {
     .navbar-top {
       gap: 16px;
       .nav-links-items {
+        flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
         gap: 8px;

@@ -323,6 +323,7 @@ nav .navbar-bottom .main-nav-item > a:first-of-type:hover {
     gap: 16px;
   }
   nav .navbar-top .nav-links-items {
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     gap: 8px;
