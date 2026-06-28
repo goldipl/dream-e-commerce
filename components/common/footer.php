@@ -46,7 +46,7 @@
         <span class="realization-box">
           <span>Realizacja:</span>
           <a href="https://www.contip.net/" target="_blank" rel="noopener" class="realization-box__logo">
-            <img src="assets/icons/common/footer/contip-logo.png" alt="Contip" width="43" height="24" />
+            <img src="assets/img/common/footer/contip-logo.png" alt="Contip" width="43" height="24" />
           </a>
         </span>
       </div>
