@@ -12,7 +12,7 @@
               <span class="badge badge--bestseller">Bestseller</span>
             </div>
             <a href="#product-details-1" class="product-card__img-link">
-              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=400&auto=format&fit=crop" alt="T-shirt Asher" class="product-card__img">
+              <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="T-shirt Asher" class="product-card__img">
             </a>
             <div class="product-card__action-buttons">
               <button class="action-btn action-btn--compare" aria-label="Porównaj">
@@ -67,7 +67,7 @@
               <span class="badge badge--bestseller">Bestseller</span>
             </div>
             <a href="#product-details-1" class="product-card__img-link">
-              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=400&auto=format&fit=crop" alt="T-shirt Asher" class="product-card__img">
+              <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="T-shirt Asher" class="product-card__img">
             </a>
             <div class="product-card__action-buttons">
               <button class="action-btn action-btn--compare" aria-label="Porównaj">
@@ -122,7 +122,7 @@
               <span class="badge badge--bestseller">Bestseller</span>
             </div>
             <a href="#product-details-1" class="product-card__img-link">
-              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=400&auto=format&fit=crop" alt="T-shirt Asher" class="product-card__img">
+              <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="T-shirt Asher" class="product-card__img">
             </a>
             <div class="product-card__action-buttons">
               <button class="action-btn action-btn--compare" aria-label="Porównaj">
@@ -177,7 +177,7 @@
               <span class="badge badge--bestseller">Bestseller</span>
             </div>
             <a href="#product-details-1" class="product-card__img-link">
-              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=400&auto=format&fit=crop" alt="T-shirt Asher" class="product-card__img">
+              <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="T-shirt Asher" class="product-card__img">
             </a>
             <div class="product-card__action-buttons">
               <button class="action-btn action-btn--compare" aria-label="Porównaj">
@@ -232,7 +232,7 @@
               <span class="badge badge--bestseller">Bestseller</span>
             </div>
             <a href="#product-details-1" class="product-card__img-link">
-              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=400&auto=format&fit=crop" alt="T-shirt Asher" class="product-card__img">
+              <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="T-shirt Asher" class="product-card__img">
             </a>
             <div class="product-card__action-buttons">
               <button class="action-btn action-btn--compare" aria-label="Porównaj">
@@ -287,7 +287,7 @@
               <span class="badge badge--bestseller">Bestseller</span>
             </div>
             <a href="#product-details-1" class="product-card__img-link">
-              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=400&auto=format&fit=crop" alt="T-shirt Asher" class="product-card__img">
+              <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="T-shirt Asher" class="product-card__img">
             </a>
             <div class="product-card__action-buttons">
               <button class="action-btn action-btn--compare" aria-label="Porównaj">
@@ -342,7 +342,7 @@
               <span class="badge badge--bestseller">Bestseller</span>
             </div>
             <a href="#product-details-1" class="product-card__img-link">
-              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=400&auto=format&fit=crop" alt="T-shirt Asher" class="product-card__img">
+              <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="T-shirt Asher" class="product-card__img">
             </a>
             <div class="product-card__action-buttons">
               <button class="action-btn action-btn--compare" aria-label="Porównaj">
@@ -397,7 +397,7 @@
               <span class="badge badge--bestseller">Bestseller</span>
             </div>
             <a href="#product-details-1" class="product-card__img-link">
-              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=400&auto=format&fit=crop" alt="T-shirt Asher" class="product-card__img">
+              <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="T-shirt Asher" class="product-card__img">
             </a>
             <div class="product-card__action-buttons">
               <button class="action-btn action-btn--compare" aria-label="Porównaj">
@@ -452,7 +452,7 @@
               <span class="badge badge--bestseller">Bestseller</span>
             </div>
             <a href="#product-details-1" class="product-card__img-link">
-              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=400&auto=format&fit=crop" alt="T-shirt Asher" class="product-card__img">
+              <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="T-shirt Asher" class="product-card__img">
             </a>
             <div class="product-card__action-buttons">
               <button class="action-btn action-btn--compare" aria-label="Porównaj">
