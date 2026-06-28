@@ -10,11 +10,16 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 
   @media (min-width: 992px) {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 120px;
+    margin-bottom: 72px;
+  }
+
+  @media (max-width: 991px) {
+    margin-bottom: 0;
   }
 }
 
@@ -124,19 +129,22 @@
   flex-direction: column;
 
   &__header {
-    border-bottom: 1px solid #f1f5f9;
-    padding-bottom: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
+    @media (max-width: 991px) {
+      margin-bottom: 8px;
+    }
   }
 
   .product-title {
     font-size: 26px;
+    font-style: normal;
     font-weight: 700;
-    color: $black;
-    margin: 0 0 8px 0;
+    line-height: 20px;
+    color: $main_text;
+    margin: 0 0 10px 0;
 
     @media (min-width: 768px) {
-      font-size: 32px;
+      font-size: 30px;
     }
   }
 
@@ -145,16 +153,25 @@
     gap: 16px;
     font-size: 13px;
     color: $text_muted;
+    .meta-item {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px;
+      color: $main_text;
+    }
   }
 
   .product-row-wrapper {
     display: flex;
     flex-direction: row;
     gap: 64px;
+    margin-bottom: 32px;
 
     @media (max-width: 991px) {
       flex-direction: column;
       gap: 16px;
+      margin-bottom: 16px;
     }
     .product-spec-group {
       display: flex;
@@ -165,29 +182,43 @@
   // Segment Tab Buttons
   .product-segments {
     display: flex;
-    gap: 16px;
+    gap: 30px;
     margin-bottom: 24px;
-    border-bottom: 1px solid $stroke-color;
-    padding-bottom: 8px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 8px;
+      gap: 16px;
+    }
 
     .segment-link {
       text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      color: $breadcrumbs_color;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 24px;
+      color: $main_text;
       position: relative;
-      padding-bottom: 8px;
 
-      &--active {
+      @media (max-width: 991px) {
+        font-size: 12px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $main_text;
+      }
+
+      &--active,
+      &:hover {
         color: $accent_color;
+        font-weight: 600;
 
         &::after {
-          content: "";
-          position: absolute;
-          bottom: -1px;
-          left: 0;
-          width: 100%;
-          height: 2px;
           background-color: $accent_color;
         }
       }
@@ -197,35 +228,43 @@
   // Technical Info rows Layout
   .product-spec-group {
     display: flex;
-    margin-bottom: 12px;
     font-size: 13px;
     line-height: 1.5;
 
     &--stack {
       flex-direction: column;
-      margin-bottom: 16px;
+      margin-bottom: 32px;
+
+      @media (max-width: 991px) {
+        margin-bottom: 16px;
+      }
 
       .spec-label {
+        color: $breadcrumbs_color;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 20px; /* 142.857% */
         width: 100%;
-        margin-bottom: 4px;
       }
     }
 
     .spec-label {
       width: 100px;
       flex-shrink: 0;
-      font-weight: 500;
-      color: $text_muted;
+      color: $breadcrumbs_color;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px; /* 142.857% */
     }
 
     .spec-value {
       color: $main_text;
-      font-weight: 500;
-
-      &--small {
-        font-size: 12px;
-        font-weight: 400;
-      }
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px;
 
       &.text-dimmed {
         color: #556270;
@@ -235,19 +274,24 @@
 
   // Color selection swatches grid layout
   .product-colors-selection {
-    margin-top: 16px;
-    padding-top: 16px;
-    border-top: 1px solid #f1f5f9;
-    margin-bottom: 28px;
+    margin-bottom: 44px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 32px;
+    }
 
     .color-selection-title {
-      font-size: 13px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px;
       display: block;
-      margin-bottom: 12px;
-      color: #4a5568;
+      margin-bottom: 19px;
+      color: $main_text;
 
       strong {
         color: $black;
+        font-weight: 700;
       }
     }
 
@@ -257,8 +301,8 @@
       gap: 10px;
 
       .swatch-btn {
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
         border-radius: 50%;
         border: none;
         cursor: pointer;
@@ -273,7 +317,7 @@
         &--active {
           box-shadow:
             0 0 0 2px $white,
-            0 0 0 4px $accent_color;
+            0 0 0 3px $main_color;
         }
       }
     }
@@ -283,25 +327,27 @@
 // Purchase CTA Section Bottom Structure Layout
 .purchase-action-container {
   margin-top: auto;
-  padding: 20px;
-  border-radius: 6px;
 
   .price-display {
     display: flex;
     align-items: baseline;
-    gap: 10px;
-    margin-bottom: 16px;
+    gap: 12px;
+    margin-bottom: 32px;
 
     .price-value {
-      font-size: 28px;
-      font-weight: 700;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
       color: $accent_color;
     }
 
     .price-label {
-      font-size: 12px;
-      color: $text_muted;
-      font-weight: 500;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px;
+      color: $main_text;
     }
   }
 
@@ -310,6 +356,18 @@
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 991px) {
+      gap: 32px;
+    }
+
+    &__utility-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
 
     .utility-circle-btn {
       width: 42px;
@@ -325,40 +383,43 @@
       transition: all 0.2s ease;
 
       svg {
-        width: 18px;
-        height: 18px;
+        width: 22px;
+        height: auto;
       }
 
       &:hover {
         background-color: $main_color;
         border-color: $main_color;
         color: $white;
+        svg {
+          filter: invert(1) brightness(22);
+        }
       }
     }
 
     .btn-primary-cta {
       flex-grow: 1;
-      height: 44px;
+      height: 45px;
       background-color: $cta_color;
       color: $white;
       border: none;
-      border-radius: 4px;
-      font-weight: 700;
       font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 35px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
       cursor: pointer;
       padding: 0 24px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
       transition: background-color 0.2s;
-      min-width: 160px;
+      max-width: 154px;
+      white-space: pre;
 
       svg {
-        width: 18px;
-        height: 18px;
+        width: 21px;
+        height: 21px;
       }
 
       &:hover {
@@ -372,9 +433,9 @@
 .product-extra-details {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
-  border-top: 1px solid $stroke-color;
+  gap: 16px;
   padding-top: 32px;
+  margin-bottom: 45px;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -382,38 +443,48 @@
   }
 
   .details-grid-column {
-    background: #ffffff;
+    padding: 30px 50px;
+    border: 0.5px solid rgba(0, 28, 94, 0.2);
+
+    @media (max-width: 991px) {
+      padding: 8px 16px;
+    }
   }
 
   .details-column-title {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0 0 16px 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    margin: 0 0 20px 0;
     color: $main_text;
+    @media (max-width: 991px) {
+      font-size: 17px;
+      margin: 0 0 8px 0;
+    }
   }
 
   .details-bullet-list {
     margin: 0;
-    padding-left: 20px;
-    font-size: 13px;
-    line-height: 1.8;
-    color: #4a5568;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+    color: $main_text;
+
+    @media (max-width: 991px) {
+      line-height: 18px;
+      padding-left: 20px;
+    }
 
     li {
       margin-bottom: 8px;
-
-      strong {
-        color: $main_text;
-      }
     }
   }
 }
 
 // Sekcja wideo YouTube
 .product-video-section {
-  margin-top: 48px;
-  border-top: 1px solid $stroke-color;
-  padding-top: 32px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -421,10 +492,6 @@
   .video-wrapper {
     position: relative;
     width: 100%;
-    // Maksymalne wymiary podane w specyfikacji
-    max-width: 1480px;
-    max-height: 828px;
-    // Wymuszenie proporcji 143:80 dla zachowania elastyczności (responsive)
     aspect-ratio: 143 / 80;
 
     iframe {
