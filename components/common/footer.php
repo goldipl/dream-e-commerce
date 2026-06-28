@@ -12,8 +12,8 @@
         <p>Szyszkowa 32</p>
         <p>02-285 Warszawa</p>
 
-        <a href="tel:+4822574520">Tel. (22) 257 45 20</a>
-        <a href="mailto:kontakt@dreamtex.pl">kontakt@dreamtex.pl</a>
+        <a href="tel:+4822574520" class="gtm-phone">Tel. (22) 257 45 20</a>
+        <a href="mailto:kontakt@dreamtex.pl" class="gtm-mail">kontakt@dreamtex.pl</a>
       </div>
 
       <div class="footer__column">
