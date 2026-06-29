@@ -3585,9 +3585,8 @@ tbody td {
 .offer-view {
   color: #1a1a1a;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 36px auto;
   padding: 16px;
-  background-color: #ffffff;
 }
 
 .text-bold {
