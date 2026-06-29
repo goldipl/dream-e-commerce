@@ -1,5 +1,5 @@
 // ==========================================================================
-// Base Workspace Styles
+// BASE
 // ==========================================================================
 .offer-view {
   color: $main_text;
@@ -12,53 +12,56 @@
 }
 
 // ==========================================================================
-// 1. TOP SUMMARY BLOCK (TABLE STYLE)
+// TABLE WRAPPER (IMPORTANT FOR MOBILE SCROLL)
+// ==========================================================================
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// ==========================================================================
+// 1. SUMMARY TABLE
 // ==========================================================================
 .summary-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
   background-color: $white;
   border-radius: $radius-sm;
+  overflow: hidden;
   box-shadow: $shadow-sm;
   border: 1px solid $stroke-color;
-  margin-bottom: 24px;
-  overflow: hidden;
 
-  &__header,
-  &__row {
-    display: grid;
-    grid-template-columns: 3.5fr 1fr 1fr 0.5fr 1.5fr 1fr 1.2fr;
-    gap: 12px;
-    align-items: center;
-    padding: 12px 24px;
+  th,
+  td {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 13px;
+    white-space: nowrap;
   }
 
-  &__header {
+  thead {
     background-color: $inputs_layer;
     border-bottom: 1px solid $stroke-color;
+
+    th {
+      font-size: 11px;
+      color: $breadcrumbs_color;
+      font-weight: 600;
+    }
   }
 
-  &__th {
-    font-size: 11px;
-    color: $breadcrumbs_color;
-    font-weight: 500;
-  }
-
-  &__row {
-    padding-top: 18px;
-    padding-bottom: 18px;
-  }
-
-  &__td {
-    font-size: 13.5px;
-    color: $main_text;
-    font-weight: 500;
+  tbody tr {
+    border-bottom: 1px solid $stroke-color;
   }
 
   &__title {
     font-size: 20px;
     font-weight: 700;
     color: $main_color;
-    letter-spacing: -0.3px;
     margin: 0;
+    white-space: normal;
   }
 
   &__price {
@@ -68,7 +71,9 @@
   }
 }
 
-// Blue Status Pill Badge
+// ==========================================================================
+// STATUS BADGE
+// ==========================================================================
 .status-badge {
   display: inline-block;
   background-color: $accent_color;
@@ -77,113 +82,84 @@
   font-weight: 700;
   padding: 6px 16px;
   border-radius: $radius-sm;
-  width: fit-content;
-  text-align: center;
 }
 
 // ==========================================================================
-// 2. NAV TABS
+// NAV TABS
 // ==========================================================================
 .nav-tabs {
   display: flex;
   gap: 8px;
   border-bottom: 1px solid $stroke-color;
-  padding-left: 12px;
-  margin-bottom: 24px;
+  margin: 16px 0 24px;
 
   &__item {
-    background: $transparent;
-    border: none;
-    padding: 14px 28px;
+    padding: 14px 24px;
     font-size: 14px;
-    font-weight: 500;
     color: $main_text;
-    position: relative;
-    transition: color $transition-speed ease;
+    cursor: pointer;
 
     &--active {
       color: $accent_color;
       font-weight: 700;
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background-color: $accent_color;
-      }
+      border-bottom: 3px solid $accent_color;
     }
   }
 }
 
 // ==========================================================================
-// 3. MAIN WORKSPACE DATA TABLE
+// DATA TABLE
 // ==========================================================================
 .data-table {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 4px;
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
 
-  // Exact Data Column Alignments
-  &__header,
-  &__row {
-    display: grid;
-    grid-template-columns: 45px 4.2fr 115px 120px 180px 180px 140px 80px;
-    gap: 16px;
-    align-items: center;
-    padding: 12px 16px;
-  }
-
-  &__header {
-    background-color: $inputs_layer;
-    border-radius: $radius-sm;
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-
-  &__th {
-    font-size: 11px;
-    color: $breadcrumbs_color;
-    font-weight: 600;
-  }
-
-  &__row {
-    border-bottom: 1px solid $stroke-color;
-    background-color: $white;
-    transition: all $transition-speed ease-in-out;
-    position: relative;
-
-    // HOVER INTERACTION
-    &:hover {
-      box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
-    }
-  }
-
-  &__td {
+  th,
+  td {
+    padding: 12px 14px;
     font-size: 13px;
-    color: $main_text;
-    &.col-actions {
-      display: flex;
-      flex-direction: row;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  thead {
+    background: $inputs_layer;
+
+    th {
+      font-size: 11px;
+      color: $breadcrumbs_color;
+      font-weight: 600;
     }
+  }
+
+  tbody tr {
+    border-bottom: 1px solid $stroke-color;
+
+    &:hover {
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  .col-actions {
+    display: flex;
+    gap: 8px;
   }
 }
 
-// Product Media Content Element
+// ==========================================================================
+// MEDIA OBJECT
+// ==========================================================================
 .media-object {
   display: flex;
+  gap: 12px;
   align-items: center;
-  gap: 16px;
 
   &__thumb {
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
     border: 1px solid $stroke-color;
     border-radius: $radius-sm;
-    padding: 2px;
-    background-color: $white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,16 +171,9 @@
     }
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
   &__title {
     font-weight: 700;
-    font-size: 13.5px;
-    color: $black;
+    font-size: 13px;
   }
 
   &__meta {
@@ -213,158 +182,79 @@
   }
 }
 
-// Grid Form Cell Input Elements
+// ==========================================================================
+// INPUT BOX
+// ==========================================================================
 .input-box {
   border: 1px solid $stroke-color;
   border-radius: $radius-sm;
-  background-color: $white;
   height: 42px;
-  width: 100%;
   display: flex;
   align-items: center;
-  transition: border-color $transition-speed ease;
 
   input {
     width: 100%;
-    height: 100%;
     border: none;
+    padding: 0 10px;
+    font-size: 13px;
     outline: none;
-    padding: 0 12px;
-    font-size: 13.5px;
-    color: $main_text;
-    background: $transparent;
-
-    &[readonly] {
-      color: $main_text;
-      cursor: default;
-    }
-  }
-
-  &:hover,
-  &:focus-within {
-    border-color: $accent_color;
-    border-width: 1px;
-  }
-}
-
-// Right Action Control Icons
-.icon-control {
-  background: $transparent;
-  border: none;
-  cursor: pointer;
-  color: $text_muted;
-  padding: 6px;
-  font-size: 14px;
-  transition: color $transition-speed ease;
-
-  &:hover {
-    color: $cta_color;
   }
 }
 
 // ==========================================================================
-// 4. BOTTOM INTEGRATED SUMMARY FOOTER PANEL
+// FOOTER (UNCHANGED LOGIC)
 // ==========================================================================
 .summary-footer {
-  // Same exact Grid as data-table ensures perfect column alignment
   display: grid;
-  grid-template-columns: 45px 4.2fr 115px 120px 180px 180px 140px 80px;
-  gap: 16px;
-  align-items: end; // Keeps labels above cleanly aligned
-  background-color: $inputs_layer;
-  padding: 24px 16px;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 20px;
+  background: $inputs_layer;
+  padding: 24px;
+  margin-top: 6px;
   border-radius: $radius-sm;
-  margin-top: 4px;
 
   &__total {
-    grid-column: 6 / span 2; // Spans end space and aligns right
     display: flex;
-    align-items: center;
     justify-content: flex-end;
-    gap: 16px;
-    padding-bottom: 6px; // Offset to visually match input boxes
-    white-space: nowrap;
-  }
-
-  &__total-label {
-    font-size: 14px;
-    color: $helper_text;
-    font-weight: 500;
+    gap: 12px;
+    align-items: center;
   }
 
   &__total-sum {
     font-size: 20px;
     font-weight: 700;
-    color: $black;
   }
 }
 
-// Integrated apply action units inside row footer
+// ==========================================================================
+// BULK ITEMS
+// ==========================================================================
 .bulk-item {
   display: flex;
   flex-direction: column;
   gap: 6px;
 
-  &--qty {
-    grid-column: 3 / span 2;
-    width: max-content;
-  }
-
-  &--discount {
-    grid-column: 5 / span 2;
-    width: max-content;
-  }
-
-  &__label {
-    font-size: 11px;
-    color: $breadcrumbs_color;
-    font-weight: 600;
-  }
-
   &__widget {
     display: flex;
     border: 1px solid $accent_color;
     border-radius: $radius-sm;
-    background-color: $white;
     overflow: hidden;
-    height: 42px;
   }
 
   &__input {
-    width: 65px;
-    border: none;
-    outline: none;
+    width: 70px;
     text-align: center;
-    font-weight: 700;
-    font-size: 14px;
-    color: $black;
-    border-right: 1px solid $accent_color; // Match the blue border in the image
+    border: none;
   }
 
   &__action {
-    background-color: $white;
-    border: none;
-    outline: none;
-    color: $accent_color;
     font-size: 10px;
-    font-weight: 600;
-    line-height: 1.2;
-    padding: 0 12px;
-    text-align: left;
-    cursor: pointer;
-    transition: background-color $transition-speed ease;
-
-    &:hover {
-      background-color: rgba(
-        #001c5e,
-        0.05
-      ); // Subtle hover effect matching blue
-    }
+    padding: 6px 10px;
   }
 }
 
 // ==========================================================================
-// 5. BUTTON EXECUTION GRID ROW
+// ACTION ROW
 // ==========================================================================
 .action-row {
   display: flex;
@@ -375,35 +265,18 @@
   &__btn {
     height: 42px;
     padding: 0 24px;
-    font-size: 13px;
     font-weight: 700;
-    border-radius: $radius-sm;
-    cursor: pointer;
-    transition: all $transition-speed ease;
-    display: inline-flex;
-    align-items: center;
-    border-radius: 0;
 
     &--solid {
-      background-color: $cta_color;
+      background: $cta_color;
       color: $white;
       border: none;
-
-      &:hover {
-        background-color: $cta_hover_color;
-      }
     }
 
     &--outline {
-      background-color: $white;
-      color: $cta_color;
       border: 1px solid $cta_color;
-
-      &:hover {
-        background-color: $cta_color;
-        border-color: $cta_color;
-        color: $white;
-      }
+      background: $white;
+      color: $cta_color;
     }
   }
 }

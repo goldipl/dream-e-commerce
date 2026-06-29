@@ -1,359 +1,169 @@
-// ==========================================================================
-// Step Two: Znakowanie (Marking) Styles
-// ==========================================================================
-
-// ==========================================================================
-// 1. MARKING TABLE - Main Product List
-// ==========================================================================
-.marking-table {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 4px;
-
-  &__header {
-    display: grid;
-    grid-template-columns: 45px 1fr 115px 200px 80px;
-    gap: 16px;
-    align-items: center;
-    padding: 12px 16px;
-    background-color: $inputs_layer;
-    border-radius: $radius-sm;
-  }
-
-  &__th {
-    font-size: 11px;
-    color: $breadcrumbs_color;
-    font-weight: 600;
-  }
-
-  &__row {
-    display: grid;
-    grid-template-columns: 45px 1fr 115px 200px 80px;
-    gap: 16px;
-    align-items: center;
-    padding: 16px;
-    border-bottom: 1px solid $stroke-color;
-    background-color: $white;
-    transition: all $transition-speed ease-in-out;
-
-    &:hover {
-      box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
-    }
-
-    &--expanded {
-      border-bottom: none;
-    }
-  }
-
-  &__td {
-    font-size: 13px;
-    color: $main_text;
-
-    &.col-actions {
-      display: flex;
-      flex-direction: row;
-      gap: 4px;
-    }
-  }
+// =====================================================
+// WRAPPER (MOBILE SCROLL)
+// =====================================================
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-// ==========================================================================
-// 2. LOGOTYPE CONFIGURATION PANEL
-// ==========================================================================
-.logotype-panel {
-  background-color: $white;
-  border: 1px solid $stroke-color;
-  border-top: none;
-  padding: 20px 16px;
-  margin-bottom: 0;
+// =====================================================
+// MARKING TABLE
+// =====================================================
+.marking-table {
+  width: 100%;
+  min-width: 1000px;
+  border-collapse: collapse;
+  background: $white;
 
-  &__header {
-    display: grid;
-    grid-template-columns: 160px 140px 80px 90px 110px 120px 1fr 160px;
-    gap: 12px;
-    align-items: center;
-    padding-bottom: 12px;
-    margin-bottom: 12px;
-  }
-
-  &__th {
-    font-size: 11px;
-    color: $breadcrumbs_color;
-    font-weight: 600;
-  }
-
-  &__row {
-    display: grid;
-    grid-template-columns: 160px 140px 80px 90px 110px 120px 1fr 160px;
-    gap: 12px;
-    align-items: center;
-    padding: 8px 0;
-    border: 1px solid $stroke-color;
-    border-radius: $radius-sm;
-    padding: 12px;
-    margin-bottom: 4px;
-    background-color: $white;
-  }
-
-  &__td {
+  th,
+  td {
+    padding: 12px 14px;
     font-size: 13px;
-    color: $main_text;
-
-    &--actions {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      justify-content: flex-end;
-    }
+    white-space: nowrap;
+    vertical-align: top;
   }
 
-  &__cost-row {
-    display: flex;
-    gap: 24px;
-    padding: 8px 12px 16px 12px;
-    margin-bottom: 8px;
-  }
+  thead {
+    background: $inputs_layer;
 
-  &__cost-label {
-    font-size: 11px;
-    color: $breadcrumbs_color;
-
-    strong {
-      color: $main_text;
+    th {
+      font-size: 11px;
+      color: $breadcrumbs_color;
       font-weight: 600;
     }
   }
 
-  &__summary {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding: 16px 0;
-    background-color: $inputs_layer;
-    padding: 16px;
-    border-radius: $radius-sm;
-    margin-top: 8px;
+  tbody tr {
+    border-bottom: 1px solid $stroke-color;
   }
 
-  &__summary-item {
-    font-size: 13px;
-    color: $main_text;
-
-    strong {
-      font-weight: 700;
-      color: $accent_color;
-    }
+  .col-actions {
+    display: flex;
+    gap: 8px;
   }
 }
 
-// ==========================================================================
-// 3. FORM ELEMENTS
-// ==========================================================================
-
-// Select Box
-.select-box {
+// =====================================================
+// LOGOTYPE PANEL (inside table cell)
+// =====================================================
+.logotype-panel {
+  padding: 16px;
   border: 1px solid $stroke-color;
+  background: $white;
   border-radius: $radius-sm;
-  background-color: $white;
-  height: 42px;
-  width: 100%;
+
+  &__header,
+  &__row {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 0.6fr 0.8fr 1fr 1fr 1.2fr 0.8fr;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__header {
+    font-size: 11px;
+    color: $breadcrumbs_color;
+    margin-bottom: 10px;
+  }
+
+  &__row {
+    padding: 10px 0;
+    border-bottom: 1px solid $stroke-color;
+  }
+
+  &__cost-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 12px;
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+    background: $inputs_layer;
+    padding: 12px;
+    border-radius: $radius-sm;
+    margin-top: 10px;
+  }
+}
+
+// =====================================================
+// FORM ELEMENTS
+// =====================================================
+.input-box {
+  border: 1px solid $stroke-color;
+  height: 38px;
   display: flex;
   align-items: center;
-  transition: border-color $transition-speed ease;
-  position: relative;
+
+  input {
+    width: 100%;
+    border: none;
+    padding: 0 10px;
+    font-size: 13px;
+    outline: none;
+  }
+}
+
+.select-box {
+  border: 1px solid $stroke-color;
+  height: 38px;
+  width: 100%;
 
   select {
     width: 100%;
     height: 100%;
     border: none;
-    outline: none;
-    padding: 0 12px;
+    padding: 0 10px;
     font-size: 13px;
-    color: $main_text;
-    background: $transparent;
-    cursor: pointer;
-    appearance: none;
-    padding-right: 32px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid $breadcrumbs_color;
-    pointer-events: none;
-  }
-
-  &:hover,
-  &:focus-within {
-    border-color: $accent_color;
-  }
-
-  &--sm {
-    width: 70px;
+    background: transparent;
   }
 }
 
-// Checkbox Field
+// =====================================================
+// CHECKBOX
+// =====================================================
 .checkbox-field {
   display: flex;
   align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  user-select: none;
+  gap: 8px;
 
-  input[type="checkbox"] {
+  input {
     display: none;
   }
 
   &__checkmark {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border: 2px solid $stroke-color;
-    border-radius: $radius-sm;
-    background-color: $white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all $transition-speed ease;
-    flex-shrink: 0;
-
-    &::after {
-      content: "";
-      width: 10px;
-      height: 6px;
-      border-left: 2px solid $white;
-      border-bottom: 2px solid $white;
-      transform: rotate(-45deg) translate(1px, -1px);
-      opacity: 0;
-      transition: opacity $transition-speed ease;
-    }
   }
 
-  input[type="checkbox"]:checked + &__checkmark {
-    background-color: $accent_color;
-    border-color: $accent_color;
-
-    &::after {
-      opacity: 1;
-    }
-  }
-
-  &__label {
-    font-size: 13px;
-    color: $main_text;
-    font-weight: 500;
-
-    &--blue {
-      color: $accent_color;
-      font-weight: 600;
-    }
+  input:checked + .checkbox-field__checkmark {
+    background: $accent_color;
   }
 }
 
-// File Status Elements
+// =====================================================
+// FILE STATES
+// =====================================================
 .file-name {
   font-size: 12px;
-  color: $main_text;
-  font-weight: 500;
 }
 
 .file-missing {
+  color: red;
   font-size: 12px;
-  color: #e53935;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-
-  i {
-    font-size: 14px;
-  }
 }
 
-// Editable Link
-.link-editable {
-  color: $accent_color;
-  text-decoration: underline;
-  font-weight: 600;
-  cursor: pointer;
-
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-// ==========================================================================
-// 4. BUTTONS
-// ==========================================================================
-
-// Icon Button
-.icon-btn {
-  background: $transparent;
-  border: none;
-  cursor: pointer;
-  color: $text_muted;
-  padding: 8px;
-  font-size: 14px;
-  transition: color $transition-speed ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &:hover {
-    color: $cta_color;
-  }
-}
-
-// ==========================================================================
-// 5. TECHNICAL REQUIREMENTS
-// ==========================================================================
-.tech-requirements {
-  padding: 16px 0 8px 0;
-
-  &__content {
-    background-color: $inputs_layer;
-    border-radius: $radius-sm;
-    padding: 16px;
-    margin-top: 8px;
-
-    p {
-      font-size: 13px;
-      color: $main_text;
-      line-height: 1.5;
-      margin: 0;
-    }
-  }
-}
-
-// ==========================================================================
-// 6. SUMMARY FOOTER - STEP TWO VARIANT
-// ==========================================================================
+// =====================================================
+// SUMMARY FOOTER
+// =====================================================
 .summary-footer--simple {
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
-  background-color: $inputs_layer;
-  padding: 24px 16px;
+  padding: 20px;
+  background: $inputs_layer;
   border-radius: $radius-sm;
-  margin-top: 4px;
-}
-
-.bulk-item--qty-simple {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-// ==========================================================================
-// 7. ACTION ROW - NAVIGATION VARIANT
-// ==========================================================================
-.action-row--between {
-  justify-content: space-between;
 }
