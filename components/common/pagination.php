@@ -1,28 +1,28 @@
 <div class="pagination containter d-flex justify-content-center align-items-center">
     <div class="pagination_container">
-        <a href="#" class="element prev">
-            <img src="./assets/icons/pagination/pagination_right.svg" alt="prev" width="12" height="12">
+        <a href="#" class="element spanrev">
+            <img src="./assets/icons/common/pagination/pagination_left.svg" alt="spanrev" width="16" height="16">
         </a>
         <a href="#" class="element active">
-            <p>1</p>
+            <span>1</span>
         </a>
         <a href="#" class="element">
-            <p>2</p>
+            <span>2</span>
         </a>
         <a href="#" class="element">
-            <p>3</p>
+            <span>3</span>
         </a>
         <div class="dots">
-            <p>...</p>
+            <span>...</span>
         </div>
         <a href="#" class="element">
-            <p>25</p>
+            <span>25</span>
         </a>
         <a href="#" class="element">
-            <p>26</p>
+            <span>26</span>
         </a>
         <a href="#" class="element next">
-            <img src="./assets/icons/pagination/pagination_right.svg" alt="next" width="12" height="12">
+            <img src="./assets/icons/common/pagination/pagination_right.svg" alt="next" width="16" height="16">
         </a>
     </div>
 </div>

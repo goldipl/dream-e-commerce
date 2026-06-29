@@ -1,58 +1,45 @@
 .pagination {
   width: 100%;
-  background-color: $inputs_layer;
-  padding-bottom: 59px;
+  margin: 36px auto;
   &_container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 32px;
     .dots {
-      margin: 24px 13px 0 0;
+      margin: 8px 0 0 0;
     }
     .element {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 35px;
+      width: 9px;
       height: 35px;
-      border: 1px solid $inputs_layer;
       background-color: $white;
-      margin-right: 13px;
       cursor: pointer;
       box-sizing: border-box;
       text-decoration: none;
-      p {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: normal;
-        color: $main_text;
+      span {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 35px;
+        color: rgba(26, 26, 26, 0.7);
         text-decoration: none;
         margin: 0;
       }
-      &.prev {
-        img {
-          transform: rotate(180deg);
-        }
-      }
       &.active {
-        background-color: $main_color;
-        border-color: $main_color;
-        p {
-          color: $white;
+        span {
+          font-weight: 600;
+          color: $accent_color;
         }
       }
       &:hover {
-        border: 1px solid $main_color;
-      }
-      &.last {
-        img {
-          width: 35px;
-          height: 35px;
-          &:hover {
-            border: 1px solid $main_color;
-          }
+        span {
+          font-weight: 600;
+          color: $accent_color;
         }
       }
     }
