@@ -793,3 +793,88 @@
     padding: 0 9px;
   }
 }
+
+// ==========================================================================
+// Action Row — Button Component
+// Matches Figma spec; uses project design tokens
+// ==========================================================================
+
+.action-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 18px;
+  gap: 16px;
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+
+    font-family: "Lexend", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px;
+    white-space: nowrap;
+
+    transition:
+      background-color $transition-speed ease,
+      color $transition-speed ease,
+      border-color $transition-speed ease,
+      box-shadow $transition-speed ease;
+
+    // ------------------------------------------------------------------
+    // Solid variant — "Dodaj produkt +"
+    // ------------------------------------------------------------------
+    &--solid {
+      background-color: $cta_color;
+      color: $white;
+      border: 2px solid transparent;
+
+      &:hover {
+        background-color: $cta_hover_color;
+        box-shadow: $shadow-md;
+      }
+
+      &:focus-visible {
+        outline: 2px solid $cta_hover_color;
+        outline-offset: 3px;
+      }
+
+      &:active {
+        background-color: $main_color;
+      }
+    }
+
+    // ------------------------------------------------------------------
+    // Outline variant — "Znakowanie →"
+    // ------------------------------------------------------------------
+    &--outline {
+      background-color: transparent;
+      color: $cta_color;
+      border: 2px solid $cta_color;
+
+      &:hover {
+        background-color: $cta_color;
+        color: $white;
+        box-shadow: $shadow-md;
+      }
+
+      &:focus-visible {
+        outline: 2px solid $cta_color;
+        outline-offset: 3px;
+      }
+
+      &:active {
+        background-color: $main_color;
+        border-color: $main_color;
+        color: $white;
+      }
+    }
+  }
+}
