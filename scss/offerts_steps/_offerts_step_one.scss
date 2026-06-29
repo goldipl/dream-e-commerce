@@ -1,0 +1,394 @@
+// ==========================================================================
+// Base Workspace Styles
+// ==========================================================================
+.offer-view {
+  color: $main_text;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: $white;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+// ==========================================================================
+// 1. TOP SUMMARY BLOCK
+// ==========================================================================
+.summary-card {
+  background-color: $white;
+  padding: 16px 24px;
+  border-radius: $radius-sm;
+  box-shadow: $shadow-sm;
+  border: 1px solid $stroke-color;
+  margin-bottom: 24px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 3.5fr repeat(5, 1.2fr) 1.5fr;
+    gap: 12px;
+    align-items: center;
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    &--right {
+      text-align: right;
+      align-items: flex-end;
+    }
+  }
+
+  &__label {
+    font-size: 11px;
+    color: $breadcrumbs_color;
+    font-weight: 500;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $main_color;
+    letter-spacing: -0.3px;
+  }
+
+  &__value {
+    font-size: 13.5px;
+    color: $main_text;
+    font-weight: 500;
+  }
+
+  &__price {
+    font-size: 18px;
+    font-weight: 700;
+    color: $black;
+  }
+}
+
+// Blue Status Pill Badge
+.status-badge {
+  display: inline-block;
+  background-color: $accent_color;
+  color: $white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: $radius-sm;
+  width: fit-content;
+  text-align: center;
+}
+
+// ==========================================================================
+// 2. NAV TABS
+// ==========================================================================
+.nav-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid $stroke-color;
+  padding-left: 12px;
+  margin-bottom: 24px;
+
+  &__item {
+    background: $transparent;
+    border: none;
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $main_text;
+    position: relative;
+    transition: color $transition-speed ease;
+
+    &--active {
+      color: $accent_color;
+      font-weight: 700;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: $accent_color;
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// 3. MAIN WORKSPACE DATA TABLE
+// ==========================================================================
+.data-table {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+
+  // Exact Data Column Alignments
+  &__header,
+  &__row {
+    display: grid;
+    grid-template-columns: 45px 4.2fr 115px 120px 180px 180px 140px 80px;
+    gap: 16px;
+    align-items: center;
+    padding: 12px 16px;
+  }
+
+  &__header {
+    background-color: $inputs_layer;
+    border-radius: $radius-sm;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  &__th {
+    font-size: 11px;
+    color: $breadcrumbs_color;
+    font-weight: 600;
+  }
+
+  &__row {
+    border-bottom: 1px solid $stroke-color;
+    background-color: $white;
+    transition: all $transition-speed ease-in-out;
+    position: relative;
+
+    // HOVER INTERACTION
+    &:hover {
+      box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
+    }
+  }
+
+  &__td {
+    font-size: 13px;
+    color: $main_text;
+    &.col-actions {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+// Product Media Content Element
+.media-object {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__thumb {
+    width: 64px;
+    height: 64px;
+    border: 1px solid $stroke-color;
+    border-radius: $radius-sm;
+    padding: 2px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 13.5px;
+    color: $black;
+  }
+
+  &__meta {
+    font-size: 11px;
+    color: $text_muted;
+  }
+}
+
+// Grid Form Cell Input Elements
+.input-box {
+  border: 1px solid $stroke-color;
+  border-radius: $radius-sm;
+  background-color: $white;
+  height: 42px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: border-color $transition-speed ease;
+
+  input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    font-size: 13.5px;
+    color: $main_text;
+    background: $transparent;
+
+    &[readonly] {
+      color: $main_text;
+      cursor: default;
+    }
+  }
+
+  &:hover,
+  &:focus-within {
+    border-color: $accent_color;
+    border-width: 1px;
+  }
+}
+
+// Right Action Control Icons
+.icon-control {
+  background: $transparent;
+  border: none;
+  cursor: pointer;
+  color: $text_muted;
+  padding: 6px;
+  font-size: 14px;
+  transition: color $transition-speed ease;
+
+  &:hover {
+    color: $cta_color;
+  }
+}
+
+// ==========================================================================
+// 4. BOTTOM INTEGRATED SUMMARY FOOTER PANEL
+// ==========================================================================
+.summary-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $inputs_layer;
+  padding: 20px 24px;
+  border-radius: $radius-sm;
+  margin-top: 4px;
+
+  &__bulk {
+    display: flex;
+    gap: 48px;
+  }
+
+  &__total {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  &__total-label {
+    font-size: 14px;
+    color: $helper_text;
+    font-weight: 500;
+  }
+
+  &__total-sum {
+    font-size: 20px;
+    font-weight: 700;
+    color: $black;
+  }
+}
+
+// Integrated apply action units inside row footer
+.bulk-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  &__label {
+    font-size: 11px;
+    color: $breadcrumbs_color;
+    font-weight: 600;
+  }
+
+  &__widget {
+    display: flex;
+    border: 1px solid $accent_color;
+    border-radius: $radius-sm;
+    background-color: $white;
+    overflow: hidden;
+    height: 40px;
+  }
+
+  &__input {
+    width: 65px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: $black;
+    border-right: 1px solid $stroke-color;
+  }
+
+  &__action {
+    background-color: $white;
+    border: none;
+    outline: none;
+    color: $accent_color;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 0 14px;
+    cursor: pointer;
+    transition:
+      background-color $transition-speed ease,
+      color $transition-speed ease;
+
+    &:hover {
+      background-color: $accent_color;
+      color: $white;
+    }
+  }
+}
+
+// ==========================================================================
+// 5. BUTTON EXECUTION GRID ROW
+// ==========================================================================
+.action-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+
+  &__btn {
+    height: 42px;
+    padding: 0 24px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    transition: all $transition-speed ease;
+    display: inline-flex;
+    align-items: center;
+
+    &--solid {
+      background-color: $cta_color;
+      color: $white;
+      border: none;
+
+      &:hover {
+        background-color: $cta_hover_color;
+      }
+    }
+
+    &--outline {
+      background-color: $white;
+      color: $cta_color;
+      border: 1px solid $stroke-color;
+
+      &:hover {
+        background-color: $inputs_layer;
+        border-color: $cta_color;
+      }
+    }
+  }
+}
