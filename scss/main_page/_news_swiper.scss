@@ -9,7 +9,7 @@
 }
 
 .news-container {
-  max-width: 1296px;
+  max-width: 1480px;
   margin: 0 auto;
   position: relative;
 }
@@ -20,10 +20,10 @@
   font-weight: 700;
   line-height: normal;
   color: $main_text;
-  margin-bottom: 40px;
+  margin: 0 16px 40px 16px;
+
   @media (max-width: 991px) {
     font-size: 24px;
-    padding: 0 16px;
     margin-bottom: 24px;
   }
 }

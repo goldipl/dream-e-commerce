@@ -1286,7 +1286,7 @@ nav .promo-card .dropdown-menu.mega-menu {
 
 .products-boxes {
   display: grid;
-  max-width: 1296px;
+  max-width: 1480px;
   margin: 0 auto;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 50px;
@@ -1399,7 +1399,7 @@ nav .promo-card .dropdown-menu.mega-menu {
 }
 
 .news-container {
-  max-width: 1296px;
+  max-width: 1480px;
   margin: 0 auto;
   position: relative;
 }
@@ -1410,12 +1410,11 @@ nav .promo-card .dropdown-menu.mega-menu {
   font-weight: 700;
   line-height: normal;
   color: #1a1a1a;
-  margin-bottom: 40px;
+  margin: 0 16px 40px 16px;
 }
 @media (max-width: 991px) {
   .section-title {
     font-size: 24px;
-    padding: 0 16px;
     margin-bottom: 24px;
   }
 }
