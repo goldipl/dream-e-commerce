@@ -58,7 +58,7 @@
         <div class="data-table__td col-product">
           <div class="media-object">
             <div class="media-object__thumb">
-              <img src="https://via.placeholder.com/60x60?text=T-Shirt" alt="Product item image">
+              <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="Product item image">
             </div>
             <div class="media-object__content">
               <div class="media-object__title">T-shirt męski 141g/m2</div>
@@ -100,7 +100,7 @@
         <div class="data-table__td col-product">
           <div class="media-object">
             <div class="media-object__thumb">
-              <img src="https://via.placeholder.com/60x60?text=Vest" alt="Product item image">
+              <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="Product item image">
             </div>
             <div class="media-object__content">
               <div class="media-object__title">Kamizelka odblaskowa dla dzieci</div>
@@ -142,7 +142,7 @@
         <div class="data-table__td col-product">
           <div class="media-object">
             <div class="media-object__thumb">
-              <img src="https://via.placeholder.com/60x60?text=Ladie-T" alt="Product item image">
+              <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="Product item image">
             </div>
             <div class="media-object__content">
               <div class="media-object__title">Promostars Ladie's Premium 190</div>
@@ -184,7 +184,7 @@
         <div class="data-table__td col-product">
           <div class="media-object">
             <div class="media-object__thumb">
-              <img src="https://via.placeholder.com/60x60?text=Blouse" alt="Product item image">
+              <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="Product item image">
             </div>
             <div class="media-object__content">
               <div class="media-object__title">Męska rozpinana bluza CORE</div>
