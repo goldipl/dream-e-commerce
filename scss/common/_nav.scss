@@ -571,3 +571,7 @@ nav {
 .nav-item.dropdown {
   position: static;
 }
+
+.dropdown-item:active {
+  background-color: $white;
+}

@@ -593,6 +593,10 @@ nav .promo-card .dropdown-menu.mega-menu {
   position: static;
 }
 
+.dropdown-item:active {
+  background-color: #ffffff;
+}
+
 .footer {
   background: #ffffff;
   border-top: 1px solid rgba(0, 28, 94, 0.1);
