@@ -1,0 +1,17 @@
+.offerts-row {
+  display: flex;
+  flex-direction: row;
+  gap: 120px;
+  margin-top: 46px;
+  @media (max-width: 1360px) {
+    gap: 64px;
+  }
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 0;
+  }
+  @media (max-width: 760px) {
+    gap: 40px;
+  }
+}
