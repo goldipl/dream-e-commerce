@@ -709,7 +709,6 @@ nav .promo-card .dropdown-menu.mega-menu {
     margin-bottom: 6px;
   }
   .footer__bottom-content {
-    flex-direction: column;
     text-align: center;
     gap: 10px;
   }
