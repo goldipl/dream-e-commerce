@@ -368,6 +368,7 @@
     transition: all $transition-speed ease;
     display: inline-flex;
     align-items: center;
+    border-radius: 0;
 
     &--solid {
       background-color: $cta_color;
@@ -382,11 +383,12 @@
     &--outline {
       background-color: $white;
       color: $cta_color;
-      border: 1px solid $stroke-color;
+      border: 1px solid $cta_color;
 
       &:hover {
-        background-color: $inputs_layer;
+        background-color: $cta_color;
         border-color: $cta_color;
+        color: $white;
       }
     }
   }

@@ -3891,6 +3891,7 @@ tbody td {
   transition: all 0.25s ease;
   display: inline-flex;
   align-items: center;
+  border-radius: 0;
 }
 .action-row__btn--solid {
   background-color: #0049ff;
@@ -3903,9 +3904,10 @@ tbody td {
 .action-row__btn--outline {
   background-color: #ffffff;
   color: #0049ff;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #0049ff;
 }
 .action-row__btn--outline:hover {
-  background-color: #ecf2fb;
+  background-color: #0049ff;
   border-color: #0049ff;
+  color: #ffffff;
 }/*# sourceMappingURL=main.css.map */
