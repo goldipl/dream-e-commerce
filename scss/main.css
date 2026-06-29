@@ -3593,46 +3593,47 @@ tbody td {
   font-weight: 700;
 }
 
-.summary-card {
+.summary-table {
   background-color: #ffffff;
-  padding: 16px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border: 1px solid #cbd5e1;
   margin-bottom: 24px;
+  overflow: hidden;
 }
-.summary-card__grid {
+.summary-table__header, .summary-table__row {
   display: grid;
-  grid-template-columns: 3.5fr repeat(5, 1.2fr) 1.5fr;
+  grid-template-columns: 3.5fr 1fr 1fr 0.5fr 1.5fr 1fr 1.2fr;
   gap: 12px;
   align-items: center;
+  padding: 12px 24px;
 }
-.summary-card__cell {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+.summary-table__header {
+  background-color: #ecf2fb;
+  border-bottom: 1px solid #cbd5e1;
 }
-.summary-card__cell--right {
-  text-align: right;
-  align-items: flex-end;
-}
-.summary-card__label {
+.summary-table__th {
   font-size: 11px;
   color: #808eaf;
   font-weight: 500;
 }
-.summary-card__title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #001c5e;
-  letter-spacing: -0.3px;
+.summary-table__row {
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
-.summary-card__value {
+.summary-table__td {
   font-size: 13.5px;
   color: #1a1a1a;
   font-weight: 500;
 }
-.summary-card__price {
+.summary-table__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #001c5e;
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+.summary-table__price {
   font-size: 18px;
   font-weight: 700;
   color: #000000;
@@ -3644,7 +3645,7 @@ tbody td {
   color: #ffffff;
   font-size: 10px;
   font-weight: 700;
-  padding: 4px 14px;
+  padding: 6px 16px;
   border-radius: 4px;
   width: -moz-fit-content;
   width: fit-content;

@@ -13,37 +13,44 @@
 }
 
 // ==========================================================================
-// 1. TOP SUMMARY BLOCK
+// 1. TOP SUMMARY BLOCK (TABLE STYLE)
 // ==========================================================================
-.summary-card {
+.summary-table {
   background-color: $white;
-  padding: 16px 24px;
   border-radius: $radius-sm;
   box-shadow: $shadow-sm;
   border: 1px solid $stroke-color;
   margin-bottom: 24px;
+  overflow: hidden;
 
-  &__grid {
+  &__header,
+  &__row {
     display: grid;
-    grid-template-columns: 3.5fr repeat(5, 1.2fr) 1.5fr;
+    grid-template-columns: 3.5fr 1fr 1fr 0.5fr 1.5fr 1fr 1.2fr;
     gap: 12px;
     align-items: center;
+    padding: 12px 24px;
   }
 
-  &__cell {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-
-    &--right {
-      text-align: right;
-      align-items: flex-end;
-    }
+  &__header {
+    background-color: $inputs_layer;
+    border-bottom: 1px solid $stroke-color;
   }
 
-  &__label {
+  &__th {
     font-size: 11px;
     color: $breadcrumbs_color;
+    font-weight: 500;
+  }
+
+  &__row {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  &__td {
+    font-size: 13.5px;
+    color: $main_text;
     font-weight: 500;
   }
 
@@ -52,12 +59,7 @@
     font-weight: 700;
     color: $main_color;
     letter-spacing: -0.3px;
-  }
-
-  &__value {
-    font-size: 13.5px;
-    color: $main_text;
-    font-weight: 500;
+    margin: 0;
   }
 
   &__price {
@@ -74,7 +76,7 @@
   color: $white;
   font-size: 10px;
   font-weight: 700;
-  padding: 4px 14px;
+  padding: 6px 16px;
   border-radius: $radius-sm;
   width: fit-content;
   text-align: center;

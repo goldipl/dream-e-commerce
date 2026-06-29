@@ -1,33 +1,27 @@
 <div class="offer-view">
-  <header class="summary-card">
-    <div class="summary-card__grid">
-      <div class="summary-card__cell">
-        <span class="summary-card__label">Nazwa</span>
-        <h1 class="summary-card__title">Nazwa oferty lorem ipsum dolor sit amet</h1>
+  <header class="summary-table">
+    <div class="summary-table__header">
+      <div class="summary-table__th">Nazwa</div>
+      <div class="summary-table__th">Typ</div>
+      <div class="summary-table__th">Status</div>
+      <div class="summary-table__th">Utworzył</div>
+      <div class="summary-table__th">Kontrahent</div>
+      <div class="summary-table__th">Utworzona</div>
+      <div class="summary-table__th">Wartość PLN</div>
+    </div>
+    <div class="summary-table__row">
+      <div class="summary-table__td">
+        <h1 class="summary-table__title">Nazwa oferty lorem ipsum dolor sit amet</h1>
       </div>
-      <div class="summary-card__cell">
-        <span class="summary-card__label">Typ</span>
-        <span class="summary-card__value">Oferta</span>
-      </div>
-      <div class="summary-card__cell">
-        <span class="summary-card__label">Status</span>
+      <div class="summary-table__td">Oferta</div>
+      <div class="summary-table__td">
         <span class="status-badge">Wysłana</span>
       </div>
-      <div class="summary-card__cell">
-        <span class="summary-card__label">Utworzył</span>
-        <span class="summary-card__value">PO</span>
-      </div>
-      <div class="summary-card__cell">
-        <span class="summary-card__label">Kontrahent</span>
-        <span class="summary-card__value">Nazwa kontrahenta</span>
-      </div>
-      <div class="summary-card__cell">
-        <span class="summary-card__label">Utworzona</span>
-        <span class="summary-card__value">1.04.2026</span>
-      </div>
-      <div class="summary-card__cell summary-card__cell--right">
-        <span class="summary-card__label">Wartość PLN</span>
-        <span class="summary-card__price">1 000,00</span>
+      <div class="summary-table__td">PO</div>
+      <div class="summary-table__td">Nazwa kontrahenta</div>
+      <div class="summary-table__td">1.04.2026</div>
+      <div class="summary-table__td">
+        <span class="summary-table__price">1 000,00</span>
       </div>
     </div>
   </header>
@@ -38,7 +32,7 @@
     <span class="nav-tabs__item">3. Ustal ceny</span>
     <span class="nav-tabs__item">4. Opis i ustawienia</span>
     <span class="nav-tabs__item">5. Nagłówek i warunki</span>
-</div>
+  </div>
 
   <main class="workspace-area">
     <div class="data-table">
@@ -84,11 +78,11 @@
         </div>
         <div class="data-table__td col-total text-bold">498,15</div>
         <div class="data-table__td col-actions">
-              <button class="icon-btn">
+          <button class="icon-btn">
             <span class="tooltip">Kopiuj</span>
             <i class="fa-regular fa-copy"></i>
           </button>
-                    <button class="icon-btn">
+          <button class="icon-btn">
             <span class="tooltip">Usuń</span>
             <i class="fa-regular fa-trash-can"></i>
           </button>
@@ -126,11 +120,11 @@
         </div>
         <div class="data-table__td col-total text-bold">213,75</div>
         <div class="data-table__td col-actions">
-              <button class="icon-btn">
+          <button class="icon-btn">
             <span class="tooltip">Kopiuj</span>
             <i class="fa-regular fa-copy"></i>
           </button>
-                    <button class="icon-btn">
+          <button class="icon-btn">
             <span class="tooltip">Usuń</span>
             <i class="fa-regular fa-trash-can"></i>
           </button>
@@ -168,11 +162,11 @@
         </div>
         <div class="data-table__td col-total text-bold">324,25</div>
         <div class="data-table__td col-actions">
-              <button class="icon-btn">
+          <button class="icon-btn">
             <span class="tooltip">Kopiuj</span>
             <i class="fa-regular fa-copy"></i>
           </button>
-                    <button class="icon-btn">
+          <button class="icon-btn">
             <span class="tooltip">Usuń</span>
             <i class="fa-regular fa-trash-can"></i>
           </button>
@@ -210,11 +204,11 @@
         </div>
         <div class="data-table__td col-total text-bold">94,15</div>
         <div class="data-table__td col-actions">
-              <button class="icon-btn">
+          <button class="icon-btn">
             <span class="tooltip">Kopiuj</span>
             <i class="fa-regular fa-copy"></i>
           </button>
-                    <button class="icon-btn">
+          <button class="icon-btn">
             <span class="tooltip">Usuń</span>
             <i class="fa-regular fa-trash-can"></i>
           </button>
