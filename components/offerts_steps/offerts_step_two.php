@@ -187,7 +187,9 @@
                     </select>
                   </div>
                   <div class="file-missing">
-                    <i class="fa-solid fa-circle" style="font-size:8px;margin-right:4px;"></i>Brak pliku
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                      <path d="M6.39974 9.06665C6.55085 9.06665 6.67752 9.01554 6.77974 8.91332C6.88196 8.8111 6.93307 8.68443 6.93307 8.53332C6.93307 8.38221 6.88196 8.25554 6.77974 8.15332C6.67752 8.0511 6.55085 7.99998 6.39974 7.99998C6.24863 7.99998 6.12196 8.0511 6.01974 8.15332C5.91752 8.25554 5.86641 8.38221 5.86641 8.53332C5.86641 8.68443 5.91752 8.8111 6.01974 8.91332C6.12196 9.01554 6.24863 9.06665 6.39974 9.06665ZM5.86641 6.93332H6.93307V3.73332H5.86641V6.93332ZM6.39974 11.7333C5.66196 11.7333 4.96863 11.5933 4.31974 11.3133C3.67085 11.0333 3.10641 10.6533 2.62641 10.1733C2.14641 9.69332 1.76641 9.12887 1.48641 8.47998C1.20641 7.8311 1.06641 7.13776 1.06641 6.39998C1.06641 5.66221 1.20641 4.96887 1.48641 4.31998C1.76641 3.67109 2.14641 3.10665 2.62641 2.62665C3.10641 2.14665 3.67085 1.76665 4.31974 1.48665C4.96863 1.20665 5.66196 1.06665 6.39974 1.06665C7.13752 1.06665 7.83085 1.20665 8.47974 1.48665C9.12863 1.76665 9.69307 2.14665 10.1731 2.62665C10.6531 3.10665 11.0331 3.67109 11.3131 4.31998C11.5931 4.96887 11.7331 5.66221 11.7331 6.39998C11.7331 7.13776 11.5931 7.8311 11.3131 8.47998C11.0331 9.12887 10.6531 9.69332 10.1731 10.1733C9.69307 10.6533 9.12863 11.0333 8.47974 11.3133C7.83085 11.5933 7.13752 11.7333 6.39974 11.7333Z" fill="#CF2122" />
+                    </svg>Brak pliku
                   </div>
                   <div>
                     <input class="input-field" type="text" value="Pantone 485C + Pantone 12">
@@ -284,7 +286,7 @@
             <td>
               <div class="media-object">
                 <div class="media-object__thumb">
-                  <img src="https://images.unsplash.com/photo-1594938298603-c8148c4b4e5b?w=80&h=80&fit=crop" alt="Kamizelka">
+                  <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=80&h=80&fit=crop&crop=center&sat=-100" alt="Kamizelka">
                 </div>
                 <div class="media-object__content">
                   <div class="media-object__title">Kamizelka odblaskowa dla dzieci</div>
@@ -358,7 +360,7 @@
             <td>
               <div class="media-object">
                 <div class="media-object__thumb">
-                  <img src="https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=80&h=80&fit=crop" alt="Bluza">
+                  <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=80&h=80&fit=crop&crop=center&sat=-100" alt="Bluza">
                 </div>
                 <div class="media-object__content">
                   <div class="media-object__title">Męska rozpinana bluza CORE</div>
