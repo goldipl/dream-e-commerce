@@ -4168,43 +4168,6 @@ input[type=checkbox]:checked + .checkbox-field__checkmark::after {
   text-decoration: none;
 }
 
-.btn {
-  height: 42px;
-  padding: 0 20px;
-  font-size: 13px;
-  font-weight: 700;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  white-space: nowrap;
-}
-.btn--primary {
-  background-color: #0049ff;
-  color: #ffffff;
-  border: none;
-}
-.btn--primary:hover {
-  background-color: #008cff;
-}
-.btn--outline-primary {
-  background-color: #ffffff;
-  color: #0049ff;
-  border: 1px solid #0049ff;
-}
-.btn--outline-primary:hover {
-  background-color: #0049ff;
-  color: #ffffff;
-}
-.btn--sm {
-  height: 34px;
-  padding: 0 14px;
-  font-size: 12px;
-}
-
 .icon-btn {
   background: rgba(255, 255, 255, 0);
   border: none;

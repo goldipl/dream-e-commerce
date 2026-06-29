@@ -292,47 +292,6 @@
 // ==========================================================================
 // 4. BUTTONS
 // ==========================================================================
-.btn {
-  height: 42px;
-  padding: 0 20px;
-  font-size: 13px;
-  font-weight: 700;
-  border-radius: $radius-sm;
-  cursor: pointer;
-  transition: all $transition-speed ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  white-space: nowrap;
-
-  &--primary {
-    background-color: $cta_color;
-    color: $white;
-    border: none;
-
-    &:hover {
-      background-color: $cta_hover_color;
-    }
-  }
-
-  &--outline-primary {
-    background-color: $white;
-    color: $cta_color;
-    border: 1px solid $cta_color;
-
-    &:hover {
-      background-color: $cta_color;
-      color: $white;
-    }
-  }
-
-  &--sm {
-    height: 34px;
-    padding: 0 14px;
-    font-size: 12px;
-  }
-}
 
 // Icon Button
 .icon-btn {
