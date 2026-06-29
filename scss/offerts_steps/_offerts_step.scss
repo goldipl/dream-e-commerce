@@ -1,0 +1,795 @@
+// ==========================================================================
+// WRAPPER
+// ==========================================================================
+.offer-view {
+  margin: 32px auto;
+  padding: 0 16px 60px;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+// ==========================================================================
+// TABLE SCROLL (important for mobile)
+// ==========================================================================
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// ==========================================================================
+// 1. SUMMARY TABLE
+// ==========================================================================
+.summary-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  background: $white;
+  border-radius: $radius-sm;
+  overflow: hidden;
+  box-shadow: $shadow-sm;
+  border: 1px solid $stroke-color;
+
+  th,
+  td {
+    padding: 12px 18px;
+    text-align: left;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  thead {
+    background: $inputs_layer;
+    border-bottom: 1px solid $stroke-color;
+
+    th {
+      font-size: 11px;
+      color: $breadcrumbs_color;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  tbody tr {
+    border-bottom: 1px solid $stroke-color;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $main_color;
+    margin: 0;
+    white-space: normal;
+  }
+
+  &__price {
+    font-size: 17px;
+    font-weight: 700;
+    color: $black;
+  }
+}
+
+// ==========================================================================
+// STATUS BADGE
+// ==========================================================================
+.status-badge {
+  display: inline-block;
+  background: $accent_color;
+  color: $white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: $radius-sm;
+  letter-spacing: 0.02em;
+}
+
+// ==========================================================================
+// NAV TABS
+// ==========================================================================
+.nav-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 1px solid $stroke-color;
+  margin: 20px 0 24px;
+  background: $white;
+  border-radius: $radius-sm $radius-sm 0 0;
+  box-shadow: $shadow-sm;
+
+  &__item {
+    padding: 16px 22px;
+    font-size: 13px;
+    color: $main_text;
+    white-space: nowrap;
+    transition: color 0.15s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -1px;
+
+    &--active {
+      color: $accent_color;
+      font-weight: 700;
+      border-bottom-color: $accent_color;
+    }
+  }
+}
+
+// ==========================================================================
+// WORKSPACE
+// ==========================================================================
+.workspace-area {
+  background: $white;
+  border-radius: $radius-sm;
+  box-shadow: $shadow-sm;
+  border: 1px solid $stroke-color;
+  overflow: hidden;
+}
+
+// ==========================================================================
+// MARKING TABLE
+// ==========================================================================
+.marking-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+  background: $white;
+
+  th,
+  td {
+    padding: 14px 16px;
+    font-size: 13px;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+
+  thead {
+    background: $inputs_layer;
+    border-bottom: 1px solid $stroke-color;
+
+    th {
+      font-size: 11px;
+      color: $breadcrumbs_color;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  tbody tr {
+    border-bottom: 1px solid $stroke-color;
+  }
+
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  &__product-row {
+    background: $white;
+
+    &.is-expanded {
+      background: $white;
+    }
+  }
+
+  .col-actions {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+}
+
+// ==========================================================================
+// MEDIA OBJECT (product thumbnail + name)
+// ==========================================================================
+.media-object {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  &__thumb {
+    width: 56px;
+    height: 56px;
+    border: 1px solid $stroke-color;
+    border-radius: $radius-sm;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $inputs_layer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 13px;
+    color: $main_text;
+  }
+
+  &__meta {
+    font-size: 11px;
+    color: $text_muted;
+    margin-top: 2px;
+  }
+}
+
+// ==========================================================================
+// INPUT / SELECT FIELDS
+// ==========================================================================
+.input-wrap {
+  display: inline-block;
+}
+
+.input-field {
+  border: 1px solid $stroke-color;
+  border-radius: $radius-xs;
+  height: 36px;
+  padding: 0 10px;
+  font-size: 13px;
+  color: $main_text;
+  outline: none;
+  width: 100%;
+  background: $white;
+  transition: border-color 0.15s;
+  font-family: inherit;
+
+  &:focus {
+    border-color: $accent_color;
+  }
+
+  &--sm {
+    width: 70px;
+    text-align: center;
+  }
+}
+
+.select-field {
+  border: 1px solid $stroke-color;
+  border-radius: $radius-xs;
+  height: 36px;
+  padding: 0 8px;
+  font-size: 13px;
+  color: $main_text;
+  background: $white;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  appearance: auto;
+  font-family: inherit;
+  transition: border-color 0.15s;
+
+  &:focus {
+    border-color: $accent_color;
+  }
+
+  &--sm {
+    width: 72px;
+  }
+}
+
+// ==========================================================================
+// CHECKBOX
+// ==========================================================================
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  &__checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid $stroke-color;
+    border-radius: 3px;
+    flex-shrink: 0;
+    position: relative;
+    background: $white;
+    transition:
+      background 0.15s,
+      border-color 0.15s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 4px;
+      top: 1px;
+      width: 5px;
+      height: 9px;
+      border: 2px solid $white;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+    }
+  }
+
+  input[type="checkbox"]:checked + .checkbox-field__checkmark {
+    background: $accent_color;
+    border-color: $accent_color;
+
+    &::after {
+      display: block;
+    }
+  }
+
+  &__label {
+    font-size: 13px;
+    color: $main_text;
+
+    &--blue {
+      color: $accent_color;
+      font-weight: 600;
+    }
+  }
+}
+
+// ==========================================================================
+// ICON BUTTONS
+// ==========================================================================
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 6px 8px;
+  cursor: pointer;
+  color: $text_muted;
+  border-radius: $radius-xs;
+  font-size: 14px;
+  transition:
+    color 0.15s,
+    background 0.15s;
+  line-height: 1;
+
+  &:hover {
+    color: $main_text;
+    background: $inputs_layer;
+  }
+}
+
+.col-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 90px;
+}
+
+// ==========================================================================
+// BUTTONS
+// ==========================================================================
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: $radius-sm;
+  font-size: 13px;
+  font-weight: 600;
+  height: 36px;
+  padding: 0 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  transition:
+    opacity 0.15s,
+    background 0.15s;
+
+  &:hover {
+    opacity: 0.88;
+  }
+
+  &--primary {
+    background: $accent_color;
+    color: $white;
+    border: none;
+  }
+
+  &--outline {
+    background: $white;
+    color: $accent_color;
+    border: 1.5px solid $accent_color;
+  }
+
+  &--sm {
+    font-size: 12px;
+    height: 32px;
+    padding: 0 12px;
+  }
+
+  &--nav {
+    background: $white;
+    color: $main_text;
+    border: 1.5px solid $stroke-color;
+    font-weight: 600;
+    padding: 0 20px;
+    height: 40px;
+    border-radius: $radius-sm;
+
+    &:hover {
+      border-color: $accent_color;
+      color: $accent_color;
+    }
+  }
+}
+
+// ==========================================================================
+// LOGOTYPE PANEL
+// ==========================================================================
+.logotype-wrapper > td {
+  padding: 0 16px 16px;
+  background: $inputs_layer;
+}
+
+.logotype-panel {
+  background: $white;
+  border: 1px solid $stroke-color;
+  border-radius: $radius-sm;
+
+  &__header {
+    display: grid;
+    grid-template-columns: 1.5fr 1.1fr 0.6fr 0.7fr 1fr 1fr 1.3fr 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 16px;
+    background: $inputs_layer;
+    border-bottom: 1px solid $stroke-color;
+    border-radius: $radius-sm $radius-sm 0 0;
+
+    > div {
+      font-size: 11px;
+      color: $breadcrumbs_color;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1.5fr 1.1fr 0.6fr 0.7fr 1fr 1fr 1.3fr 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 12px 16px 6px;
+    border-bottom: 1px solid $stroke-color;
+  }
+
+  &__cost-row {
+    display: flex;
+    gap: 24px;
+    padding: 6px 16px 12px;
+    font-size: 12px;
+    color: $text_muted;
+    border-bottom: 1px solid $stroke-color;
+
+    strong {
+      color: $main_text;
+    }
+
+    &--highlight strong {
+      /* keeps default */
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: $inputs_layer;
+    border-top: 1px solid $stroke-color;
+    border-radius: 0 0 $radius-sm $radius-sm;
+  }
+
+  &__summary-costs {
+    display: flex;
+    gap: 32px;
+    font-size: 13px;
+
+    strong {
+      font-size: 15px;
+      font-weight: 700;
+    }
+  }
+}
+
+// Cost highlight badges (row 3)
+.badge-cost {
+  display: inline-block;
+  background: $inputs_layer;
+  border: 1px solid $stroke-color;
+  border-radius: 3px;
+  padding: 1px 7px;
+  font-size: 12px;
+  font-weight: 600;
+  color: $main_text;
+
+  &--accent {
+    background: #dbeafe;
+    border-color: #93c5fd;
+    color: $accent_color;
+  }
+}
+
+// ==========================================================================
+// FILE STATES
+// ==========================================================================
+.file-name {
+  font-size: 12px;
+  color: $main_text;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.file-missing {
+  font-size: 12px;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+}
+
+// ==========================================================================
+// TECH REQUIREMENTS
+// ==========================================================================
+.tech-requirements {
+  padding: 14px 16px;
+
+  &__content {
+    margin-top: 10px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 42px;
+    font-size: 13px;
+  }
+}
+
+// ==========================================================================
+// SUMMARY FOOTER
+// ==========================================================================
+.summary-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: $inputs_layer;
+  border-top: 1px solid $stroke-color;
+
+  &__total {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+
+    strong {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}
+
+// ==========================================================================
+// BULK ITEM
+// ==========================================================================
+.bulk-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  &__label {
+    font-size: 11px;
+    color: $breadcrumbs_color;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  &__widget {
+    display: flex;
+    border: 1.5px solid $accent_color;
+    border-radius: $radius-sm;
+    overflow: hidden;
+    height: 42px;
+  }
+
+  &__input {
+    width: 56px;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    padding: 0 8px;
+  }
+
+  &__action {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.3;
+    padding: 0 10px;
+    background: $inputs_layer;
+    border: none;
+    border-left: 1.5px solid $accent_color;
+    cursor: pointer;
+    color: $main_text;
+    text-align: center;
+    font-family: inherit;
+
+    &:hover {
+      background: #e8edf7;
+    }
+  }
+}
+
+// ==========================================================================
+// PAGE NAV (bottom prev/next)
+// ==========================================================================
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 1px solid $stroke-color;
+  background: $white;
+}
+
+// ==========================================================================
+// RWD — TABLET (< 900px)
+// ==========================================================================
+@media (max-width: 900px) {
+  .offer-view {
+    margin: 16px auto;
+  }
+
+  .nav-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__item {
+      padding: 14px 16px;
+      font-size: 12px;
+    }
+  }
+
+  .logotype-panel {
+    &__header,
+    &__row {
+      grid-template-columns: 1.4fr 1fr 0.55fr 0.65fr 1fr 0.9fr 1.2fr 0.9fr;
+      gap: 8px;
+    }
+  }
+}
+
+// ==========================================================================
+// RWD — MOBILE (< 768px)  — tables get overflow-x scroll
+// ==========================================================================
+@media (max-width: 768px) {
+  .offer-view {
+    padding: 0 8px 40px;
+    margin: 12px auto;
+  }
+
+  // Summary table stays scrollable (min-width on table handles it)
+  .summary-table {
+    min-width: 700px;
+  }
+
+  // Marking table stays scrollable
+  .marking-table {
+    min-width: 700px;
+
+    th,
+    td {
+      padding: 12px 10px;
+    }
+  }
+
+  // Logotype panel inner grid scrolls inside the cell
+  .logotype-wrapper > td {
+    padding: 0 8px 12px;
+  }
+
+  .logotype-panel {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &__header,
+    &__row {
+      // On mobile the panel itself scrolls — keep grid but tighten columns
+      min-width: 860px;
+      grid-template-columns: 160px 120px 70px 80px 110px 100px 140px 110px;
+      gap: 8px;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    &__cost-row {
+      min-width: 860px;
+      padding-left: 12px;
+    }
+
+    &__summary {
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    &__summary-costs {
+      flex-direction: column;
+      gap: 6px;
+    }
+  }
+
+  .nav-tabs {
+    &__item {
+      padding: 12px 12px;
+      font-size: 11px;
+    }
+  }
+
+  .summary-footer {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+
+    &__total {
+      align-self: flex-end;
+    }
+  }
+
+  .page-nav {
+    padding: 14px 16px;
+
+    .btn--nav {
+      font-size: 12px;
+      padding: 0 14px;
+    }
+  }
+
+  .tech-requirements__input {
+    font-size: 12px;
+  }
+}
+
+// ==========================================================================
+// RWD — SMALL MOBILE (< 480px)
+// ==========================================================================
+@media (max-width: 480px) {
+  .nav-tabs__item {
+    padding: 10px 10px;
+    font-size: 10px;
+  }
+
+  .logotype-panel__summary-costs {
+    font-size: 12px;
+
+    strong {
+      font-size: 13px;
+    }
+  }
+
+  .btn--sm {
+    font-size: 11px;
+    padding: 0 9px;
+  }
+}
