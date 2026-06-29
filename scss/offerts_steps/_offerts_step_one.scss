@@ -267,23 +267,24 @@
 // 4. BOTTOM INTEGRATED SUMMARY FOOTER PANEL
 // ==========================================================================
 .summary-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  // Same exact Grid as data-table ensures perfect column alignment
+  display: grid;
+  grid-template-columns: 45px 4.2fr 115px 120px 180px 180px 140px 80px;
+  gap: 16px;
+  align-items: end; // Keeps labels above cleanly aligned
   background-color: $inputs_layer;
-  padding: 20px 24px;
+  padding: 24px 16px;
   border-radius: $radius-sm;
   margin-top: 4px;
 
-  &__bulk {
-    display: flex;
-    gap: 48px;
-  }
-
   &__total {
+    grid-column: 6 / span 2; // Spans end space and aligns right
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    justify-content: flex-end;
     gap: 16px;
+    padding-bottom: 6px; // Offset to visually match input boxes
+    white-space: nowrap;
   }
 
   &__total-label {
@@ -305,6 +306,16 @@
   flex-direction: column;
   gap: 6px;
 
+  &--qty {
+    grid-column: 3 / span 2;
+    width: max-content;
+  }
+
+  &--discount {
+    grid-column: 5 / span 2;
+    width: max-content;
+  }
+
   &__label {
     font-size: 11px;
     color: $breadcrumbs_color;
@@ -317,7 +328,7 @@
     border-radius: $radius-sm;
     background-color: $white;
     overflow: hidden;
-    height: 40px;
+    height: 42px;
   }
 
   &__input {
@@ -328,7 +339,7 @@
     font-weight: 700;
     font-size: 14px;
     color: $black;
-    border-right: 1px solid $stroke-color;
+    border-right: 1px solid $accent_color; // Match the blue border in the image
   }
 
   &__action {
@@ -336,17 +347,19 @@
     border: none;
     outline: none;
     color: $accent_color;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 0 14px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 0 12px;
+    text-align: left;
     cursor: pointer;
-    transition:
-      background-color $transition-speed ease,
-      color $transition-speed ease;
+    transition: background-color $transition-speed ease;
 
     &:hover {
-      background-color: $accent_color;
-      color: $white;
+      background-color: rgba(
+        #001c5e,
+        0.05
+      ); // Subtle hover effect matching blue
     }
   }
 }

@@ -217,21 +217,20 @@
     </div>
 
     <footer class="summary-footer">
-      <div class="summary-footer__bulk">
-        <div class="bulk-item">
-          <span class="bulk-item__label">Liczba sztuk.</span>
-          <div class="bulk-item__widget">
-            <input type="text" value="10" class="bulk-item__input">
-            <button class="bulk-item__action">Zastosuj do wszystkich</button>
-          </div>
+      
+      <div class="bulk-item bulk-item--qty">
+        <span class="bulk-item__label">Liczba sztuk.</span>
+        <div class="bulk-item__widget">
+          <input type="text" value="10" class="bulk-item__input">
+          <button class="bulk-item__action">Zastosuj<br>do wszystkich</button>
         </div>
+      </div>
 
-        <div class="bulk-item">
-          <span class="bulk-item__label">Rabat dodatkowy</span>
-          <div class="bulk-item__widget">
-            <input type="text" value="7%" class="bulk-item__input">
-            <button class="bulk-item__action">Zastosuj do wszystkich</button>
-          </div>
+      <div class="bulk-item bulk-item--discount">
+        <span class="bulk-item__label">Rabat dodatkowy</span>
+        <div class="bulk-item__widget">
+          <input type="text" value="7%" class="bulk-item__input">
+          <button class="bulk-item__action">Zastosuj<br>do wszystkich</button>
         </div>
       </div>
 
@@ -239,6 +238,7 @@
         <span class="summary-footer__total-label">Suma:</span>
         <span class="summary-footer__total-sum">1 130,30 PLN</span>
       </div>
+      
     </footer>
 
     <div class="action-row">
