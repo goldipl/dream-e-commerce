@@ -66,26 +66,26 @@ body #main-wrapper.opened-menu::after {
   }
   /* For Webkit browsers (Chrome, Safari) */
   ::-webkit-scrollbar-thumb {
-    background-color: #001c5e;
-    width: 5px;
-    height: 5px;
+    background-color: #0349ff;
+    width: 4px;
+    height: 4px;
   }
   /* For Firefox */
   ::-moz-scrollbar-thumb {
-    background-color: #001c5e;
-    width: 5px;
-    height: 5px;
+    background-color: #0349ff;
+    width: 4px;
+    height: 4px;
   }
   /* For Internet Explorer and Edge */
   ::-ms-thumb {
-    background-color: #001c5e;
-    width: 5px;
-    height: 5px;
+    background-color: #0349ff;
+    width: 4px;
+    height: 4px;
   }
   /* For standard scrollbars (if supported) */
   ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
   }
 }
 header {
@@ -3605,7 +3605,6 @@ tbody td {
   min-width: 760px;
   border-collapse: collapse;
   background: #ffffff;
-  border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border: 1px solid #cbd5e1;
@@ -3656,12 +3655,13 @@ tbody td {
 
 .nav-tabs {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0;
   border-bottom: 1px solid #cbd5e1;
   margin: 20px 0 24px;
   background: #ffffff;
-  border-radius: 6px 6px 0 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 .nav-tabs__item {
@@ -3681,9 +3681,7 @@ tbody td {
 
 .workspace-area {
   background: #ffffff;
-  border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  border: 1px solid #cbd5e1;
   overflow: hidden;
 }
 
@@ -3768,7 +3766,6 @@ tbody td {
 
 .input-field {
   border: 1px solid #cbd5e1;
-  border-radius: 4px;
   height: 36px;
   padding: 0 10px;
   font-size: 13px;
@@ -3789,7 +3786,6 @@ tbody td {
 
 .select-field {
   border: 1px solid #cbd5e1;
-  border-radius: 4px;
   height: 36px;
   padding: 0 8px;
   font-size: 13px;
@@ -3891,7 +3887,6 @@ tbody td {
   align-items: center;
   gap: 6px;
   border: none;
-  border-radius: 6px;
   font-size: 13px;
   font-weight: 600;
   height: 36px;
@@ -3926,7 +3921,6 @@ tbody td {
   font-weight: 600;
   padding: 0 20px;
   height: 40px;
-  border-radius: 6px;
 }
 .btn--nav:hover {
   border-color: #0349ff;
@@ -3941,7 +3935,6 @@ tbody td {
 .logotype-panel {
   background: #ffffff;
   border: 1px solid #cbd5e1;
-  border-radius: 6px;
 }
 .logotype-panel__header {
   display: grid;
@@ -3951,7 +3944,6 @@ tbody td {
   padding: 10px 16px;
   background: #ecf2fb;
   border-bottom: 1px solid #cbd5e1;
-  border-radius: 6px 6px 0 0;
 }
 .logotype-panel__header > div {
   font-size: 11px;
@@ -3993,7 +3985,6 @@ tbody td {
   padding: 14px 16px;
   background: #ecf2fb;
   border-top: 1px solid #cbd5e1;
-  border-radius: 0 0 6px 6px;
 }
 .logotype-panel__summary-costs {
   display: flex;
@@ -4009,7 +4000,6 @@ tbody td {
   display: inline-block;
   background: #ecf2fb;
   border: 1px solid #cbd5e1;
-  border-radius: 3px;
   padding: 1px 7px;
   font-size: 12px;
   font-weight: 600;
@@ -4082,7 +4072,6 @@ tbody td {
 .bulk-item__widget {
   display: flex;
   border: 1.5px solid #0349ff;
-  border-radius: 6px;
   overflow: hidden;
   height: 42px;
 }
@@ -4124,14 +4113,6 @@ tbody td {
 @media (max-width: 900px) {
   .offer-view {
     margin: 16px auto;
-  }
-  .nav-tabs {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    scrollbar-width: none;
-  }
-  .nav-tabs::-webkit-scrollbar {
-    display: none;
   }
   .nav-tabs__item {
     padding: 14px 16px;

@@ -27,7 +27,6 @@
   min-width: 760px;
   border-collapse: collapse;
   background: $white;
-  border-radius: $radius-sm;
   overflow: hidden;
   box-shadow: $shadow-sm;
   border: 1px solid $stroke-color;
@@ -90,12 +89,13 @@
 // ==========================================================================
 .nav-tabs {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0;
   border-bottom: 1px solid $stroke-color;
   margin: 20px 0 24px;
   background: $white;
-  border-radius: $radius-sm $radius-sm 0 0;
   box-shadow: $shadow-sm;
 
   &__item {
@@ -120,9 +120,7 @@
 // ==========================================================================
 .workspace-area {
   background: $white;
-  border-radius: $radius-sm;
   box-shadow: $shadow-sm;
-  border: 1px solid $stroke-color;
   overflow: hidden;
 }
 
@@ -227,7 +225,6 @@
 
 .input-field {
   border: 1px solid $stroke-color;
-  border-radius: $radius-xs;
   height: 36px;
   padding: 0 10px;
   font-size: 13px;
@@ -250,7 +247,6 @@
 
 .select-field {
   border: 1px solid $stroke-color;
-  border-radius: $radius-xs;
   height: 36px;
   padding: 0 8px;
   font-size: 13px;
@@ -371,7 +367,6 @@
   align-items: center;
   gap: 6px;
   border: none;
-  border-radius: $radius-sm;
   font-size: 13px;
   font-weight: 600;
   height: 36px;
@@ -412,7 +407,6 @@
     font-weight: 600;
     padding: 0 20px;
     height: 40px;
-    border-radius: $radius-sm;
 
     &:hover {
       border-color: $accent_color;
@@ -432,7 +426,6 @@
 .logotype-panel {
   background: $white;
   border: 1px solid $stroke-color;
-  border-radius: $radius-sm;
 
   &__header {
     display: grid;
@@ -442,7 +435,6 @@
     padding: 10px 16px;
     background: $inputs_layer;
     border-bottom: 1px solid $stroke-color;
-    border-radius: $radius-sm $radius-sm 0 0;
 
     > div {
       font-size: 11px;
@@ -491,7 +483,6 @@
     padding: 14px 16px;
     background: $inputs_layer;
     border-top: 1px solid $stroke-color;
-    border-radius: 0 0 $radius-sm $radius-sm;
   }
 
   &__summary-costs {
@@ -511,7 +502,6 @@
   display: inline-block;
   background: $inputs_layer;
   border: 1px solid $stroke-color;
-  border-radius: 3px;
   padding: 1px 7px;
   font-size: 12px;
   font-weight: 600;
@@ -602,7 +592,6 @@
   &__widget {
     display: flex;
     border: 1.5px solid $accent_color;
-    border-radius: $radius-sm;
     overflow: hidden;
     height: 42px;
   }
@@ -657,14 +646,6 @@
   }
 
   .nav-tabs {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
     &__item {
       padding: 14px 16px;
       font-size: 12px;
