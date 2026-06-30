@@ -45,28 +45,28 @@ body {
   }
   /* For Webkit browsers (Chrome, Safari) */
   ::-webkit-scrollbar-thumb {
-    background-color: $main_color;
-    width: 5px;
-    height: 5px;
+    background-color: $accent_color;
+    width: 4px;
+    height: 4px;
   }
 
   /* For Firefox */
   ::-moz-scrollbar-thumb {
-    background-color: $main_color;
-    width: 5px;
-    height: 5px;
+    background-color: $accent_color;
+    width: 4px;
+    height: 4px;
   }
 
   /* For Internet Explorer and Edge */
   ::-ms-thumb {
-    background-color: $main_color;
-    width: 5px;
-    height: 5px;
+    background-color: $accent_color;
+    width: 4px;
+    height: 4px;
   }
 
   /* For standard scrollbars (if supported) */
   ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
   }
 }
