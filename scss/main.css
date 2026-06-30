@@ -4234,7 +4234,7 @@ tbody td {
 }
 .action-row__btn--solid:hover {
   background-color: #008cff;
-  box-shadow: 0 8px 20px rgba(0, 28, 94, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 28, 94, 0.2);
 }
 .action-row__btn--solid:focus-visible {
   outline: 2px solid #008cff;
@@ -4251,7 +4251,7 @@ tbody td {
 .action-row__btn--outline:hover {
   background-color: #0049ff;
   color: #ffffff;
-  box-shadow: 0 8px 20px rgba(0, 28, 94, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 28, 94, 0.2);
 }
 .action-row__btn--outline:focus-visible {
   outline: 2px solid #0049ff;
