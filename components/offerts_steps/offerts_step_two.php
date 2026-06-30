@@ -253,7 +253,7 @@
                 <div class="logotype-panel__cost-row logotype-panel__cost-row--highlight">
                   <span>Koszt przygotowalni: <span class="badge-cost">10,00 PLN</span>
                   </span>
-                  <span>Koszt/szt.: <span class="badge-cost badge-cost--accent">210,00 PLN</span>
+                  <span>Koszt/szt.: <span class="badge-cost">210,00 PLN</span>
                   </span>
                 </div>
                 <!-- SUMMARY BAR -->
@@ -286,7 +286,7 @@
             <td>
               <div class="media-object">
                 <div class="media-object__thumb">
-                  <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=80&h=80&fit=crop&crop=center&sat=-100" alt="Kamizelka">
+                  <img src="https://cdn.strauss.com/pl/assets/pdp/images/Three_MainImage_Desktop/product/12.Release.3210990/Kamizelka_ostrzegawcza_e_s_motion_24_7_uni-287426-0-638555086990380200.png" alt="Kamizelka">
                 </div>
                 <div class="media-object__content">
                   <div class="media-object__title">Kamizelka odblaskowa dla dzieci</div>
@@ -392,21 +392,29 @@
             </td>
           </tr>
         </tbody>
+               <tfoot class="data-table__footer">
+        <tr>
+          <td></td>
+          <td></td>
+          <td>
+            <div class="bulk-item bulk-item--qty">
+              <span class="bulk-item__label">Liczba sztuk.</span>
+              <div class="bulk-item__widget">
+                <input type="text" value="10" class="bulk-item__input">
+                <button class="bulk-item__action">Zastosuj <br>do wszystkich</button>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="summary-footer__total">
+              <span class="summary-footer__total-label">Suma:</span>
+              <span class="summary-footer__total-sum">1 130,30 PLN</span>
+            </div>
+          </td>
+          <td></td>
+        </tr>
+      </tfoot>
       </table>
-    </div>
-    <!-- SUMMARY FOOTER -->
-    <div class="summary-footer">
-      <div class="bulk-item">
-        <span class="bulk-item__label">Liczba sztuk</span>
-        <div class="bulk-item__widget">
-          <input class="bulk-item__input" type="text" value="10">
-          <button class="bulk-item__action">Zastosuj <br>do wszystkich </button>
-        </div>
-      </div>
-      <div class="summary-footer__total">
-        <span>Suma:</span>
-        <strong>1 130,30 PLN</strong>
-      </div>
     </div>
     <!-- NAV BUTTONS -->
     <div class="page-nav">

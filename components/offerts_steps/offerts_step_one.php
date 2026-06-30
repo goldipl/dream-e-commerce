@@ -105,7 +105,7 @@
             <td>
               <div class="media-object">
                 <div class="media-object__thumb">
-                  <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="">
+                  <img src="https://cdn.strauss.com/pl/assets/pdp/images/Three_MainImage_Desktop/product/12.Release.3210990/Kamizelka_ostrzegawcza_e_s_motion_24_7_uni-287426-0-638555086990380200.png" alt="">
                 </div>
                 <div class="media-object__content">
                   <div class="media-object__title">Kamizelka odblaskowa dla dzieci</div>
@@ -142,33 +142,44 @@
             </td>
           </tr>
         </tbody>
+          <tfoot class="data-table__footer">
+        <tr>
+          <td></td>
+          <td></td>
+          <td>
+            <div class="bulk-item bulk-item--qty">
+              <span class="bulk-item__label">Liczba sztuk.</span>
+              <div class="bulk-item__widget">
+                <input type="text" value="10" class="bulk-item__input">
+                <button class="bulk-item__action">Zastosuj <br>do wszystkich</button>
+              </div>
+            </div>
+          </td>
+            <td></td>
+          <td>
+            <div class="bulk-item bulk-item--discount">
+              <span class="bulk-item__label">Rabat dodatkowy</span>
+              <div class="bulk-item__widget">
+                <input type="text" value="7%" class="bulk-item__input">
+                <button class="bulk-item__action">Zastosuj <br>do wszystkich</button>
+              </div>
+            </div>
+          </td>
+          <td colspan="2">
+            <div class="summary-footer__total">
+              <span class="summary-footer__total-label">Suma:</span>
+              <span class="summary-footer__total-sum">1 130,30 PLN</span>
+            </div>
+          </td>
+          <td></td>
+        </tr>
+      </tfoot>
       </table>
-    </div>
-    <!-- ================= SUMMARY FOOTER ================= -->
-    <div class="summary-footer">
-      <div class="bulk-item bulk-item--qty">
-        <span class="bulk-item__label">Liczba sztuk.</span>
-        <div class="bulk-item__widget">
-          <input type="text" value="10" class="bulk-item__input">
-          <button class="bulk-item__action">Zastosuj <br>do wszystkich </button>
-        </div>
-      </div>
-      <div class="bulk-item bulk-item--discount">
-        <span class="bulk-item__label">Rabat dodatkowy</span>
-        <div class="bulk-item__widget">
-          <input type="text" value="7%" class="bulk-item__input">
-          <button class="bulk-item__action">Zastosuj <br>do wszystkich </button>
-        </div>
-      </div>
-      <div class="summary-footer__total">
-        <span class="summary-footer__total-label">Suma:</span>
-        <span class="summary-footer__total-sum">1 130,30 PLN</span>
-      </div>
     </div>
     <!-- ================= ACTION ROW ================= -->
     <div class="action-row">
-      <button class="action-row__btn action-row__btn--solid">Dodaj produkt +</button>
-      <button class="action-row__btn action-row__btn--outline">Znakowanie →</button>
+      <button class="action-row__btn action-row__btn--solid">Dodaj produkt <i class="fa-solid fa-plus"></i></button>
+      <button class="action-row__btn action-row__btn--outline">Znakowanie <i class="fa-solid fa-arrow-right"></i></button>
     </div>
   </main>
 </div>
