@@ -32,6 +32,10 @@ nav {
         font-weight: 300;
         line-height: normal;
       }
+      &::-webkit-search-cancel-button,
+      &::-ms-clear {
+        cursor: pointer;
+      }
     }
     button {
       all: unset;
