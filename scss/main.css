@@ -519,6 +519,10 @@ nav .promo-card__btn {
 nav .promo-card:hover .promo-card__image img {
   transform: scale(1.05);
 }
+nav .promo-card:hover .promo-card__btn {
+  background-color: #0049ff;
+  color: #ffffff;
+}
 nav .promo-card .dropdown-menu.mega-menu {
   left: 0 !important;
   right: 0 !important;

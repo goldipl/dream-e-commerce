@@ -481,6 +481,10 @@ nav {
       .promo-card__image img {
         transform: scale(1.05);
       }
+      .promo-card__btn {
+        background-color: $cta_color;
+        color: $white;
+      }
     }
 
     .dropdown-menu.mega-menu {
