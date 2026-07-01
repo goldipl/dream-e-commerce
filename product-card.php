@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="./css/swiper-bundle.css" />
         <link rel="stylesheet" href="./css/select2.min.css" />
         <link rel="stylesheet" href="./css/magnific-popup.min.css">
+        <link rel="stylesheet" href="./css/all.min.css" />
         <link rel="stylesheet" href="./scss/main.css">
     </head>
     <body>

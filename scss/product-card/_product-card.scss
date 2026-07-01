@@ -159,6 +159,82 @@
   }
 }
 
+.product-image-modal {
+  .product-image-modal__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    filter: drop-shadow(0 0 15px rgba(0, 28, 94, 0.2));
+    color: #4a5568;
+    z-index: 3;
+    transition: transform 0.2s;
+
+    .tooltip {
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: $accent_color;
+      color: $white;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 500;
+      white-space: nowrap;
+      min-width: max-content;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.18s;
+      pointer-events: none;
+      z-index: 20;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 5px solid rgba(255, 255, 255, 0);
+        border-top-color: $accent_color;
+      }
+    }
+
+    i {
+      font-size: 20px;
+    }
+
+    @media (max-width: 991px) {
+      width: 40px;
+      height: 40px;
+
+      i {
+        font-size: 18px;
+      }
+    }
+
+    &:hover {
+      background-color: $main_color;
+      border-color: $main_color;
+      color: $white;
+
+      .tooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(-4px);
+      }
+    }
+  }
+}
+
 // Right Column: Product data info panel
 .product-info-block {
   display: flex;

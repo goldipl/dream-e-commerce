@@ -19,6 +19,50 @@ $(function () {
     });
   };
 
+  const initProductImageZoom = () => {
+    const $productPage = $('.product-page-container');
+    const $zoomButton = $('.btn-zoom-gallery');
+
+    if (!$productPage.length || !$zoomButton.length || typeof bootbox === 'undefined') {
+      return;
+    }
+
+    $zoomButton.on('click', function (event) {
+      event.preventDefault();
+
+      const $galleryImage = $('.product-gallery__img');
+      const imageSrc = $galleryImage.attr('src') || '';
+      const imageAlt = $galleryImage.attr('alt') || 'Zdjęcie produktu';
+
+      const modalContent = `
+        <div style="position:relative;text-align:center;">
+          <button type="button" class="btn-zoom-gallery product-image-modal__close" aria-label="Zamknij">
+            <span class="tooltip">Zamknij</span>
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+          <img src="${imageSrc}" alt="${imageAlt}" style="display:block;max-width:100%;max-height:80vh;margin:0 auto;" />
+        </div>
+      `;
+
+      const dialog = bootbox.dialog({
+        message: modalContent,
+        closeButton: false,
+        backdrop: true,
+        className: 'product-image-modal',
+        size: 'large',
+        buttons: {}
+      });
+
+      dialog.find('.product-image-modal__close').on('click', function () {
+        dialog.modal('hide');
+      });
+
+      $(document).on('click', '.modal-backdrop', function () {
+        dialog.modal('hide');
+      });
+    });
+  };
+
   const initLoadMoreProducts = () => {
     const $grid = $('.products-grid-container');
     const $loadMoreButton = $('.btn-load-more');
@@ -99,4 +143,5 @@ $(function () {
   initCategoryCardTooltips();
   initLoadMoreProducts();
   initActiveFilterBadges();
+  initProductImageZoom();
 });
