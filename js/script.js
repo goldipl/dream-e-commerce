@@ -36,4 +36,56 @@ const initCategoryCardTooltips = () => {
   });
 };
 
-document.addEventListener('DOMContentLoaded', initCategoryCardTooltips);
+const initLoadMoreProducts = () => {
+  const grid = document.querySelector('.products-grid-container');
+  const loadMoreButton = document.querySelector('.btn-load-more');
+
+  if (!grid || !loadMoreButton) {
+    return;
+  }
+
+  const cards = Array.from(grid.querySelectorAll('.product-card'));
+  const initialVisibleCount = 12;
+  const batchSize = 6;
+  let visibleCount = initialVisibleCount;
+
+  if (cards.length <= initialVisibleCount) {
+    loadMoreButton.style.display = 'none';
+    return;
+  }
+
+  cards.forEach((card, index) => {
+    card.style.display = index < initialVisibleCount ? '' : 'none';
+  });
+
+  const updateButtonLabel = () => {
+    const remainingCount = cards.length - visibleCount;
+    const nextBatchCount = Math.min(batchSize, remainingCount);
+
+    if (nextBatchCount <= 0) {
+      loadMoreButton.style.display = 'none';
+      return;
+    }
+
+    loadMoreButton.style.display = '';
+    loadMoreButton.textContent = `Wczytaj więcej produktów (${nextBatchCount})`;
+  };
+
+  updateButtonLabel();
+
+  loadMoreButton.addEventListener('click', () => {
+    const nextVisibleCount = Math.min(visibleCount + batchSize, cards.length);
+
+    cards.forEach((card, index) => {
+      card.style.display = index < nextVisibleCount ? '' : 'none';
+    });
+
+    visibleCount = nextVisibleCount;
+    updateButtonLabel();
+  });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCategoryCardTooltips();
+  initLoadMoreProducts();
+});
