@@ -85,7 +85,45 @@ const initLoadMoreProducts = () => {
   });
 };
 
+const initActiveFilterBadges = () => {
+  const removeButtons = document.querySelectorAll('.remove-filter-btn');
+  const clearAllButton = document.querySelector('.clear-all-btn');
+
+  if (!removeButtons.length && !clearAllButton) {
+    return;
+  }
+
+  const updateClearButtonVisibility = () => {
+    const visibleBadges = document.querySelectorAll('.filter-badge:not([style*="display: none"])');
+    if (clearAllButton) {
+      clearAllButton.style.display = visibleBadges.length > 0 ? '' : 'none';
+    }
+  };
+
+  removeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const badge = button.closest('.filter-badge');
+      if (badge) {
+        badge.style.display = 'none';
+        updateClearButtonVisibility();
+      }
+    });
+  });
+
+  if (clearAllButton) {
+    clearAllButton.addEventListener('click', () => {
+      document.querySelectorAll('.filter-badge').forEach((badge) => {
+        badge.style.display = 'none';
+      });
+      updateClearButtonVisibility();
+    });
+  }
+
+  updateClearButtonVisibility();
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   initCategoryCardTooltips();
   initLoadMoreProducts();
+  initActiveFilterBadges();
 });
