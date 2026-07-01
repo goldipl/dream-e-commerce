@@ -207,7 +207,7 @@
     }
 
     &:hover {
-      background-color: darken($cta_color, 8%);
+      background-color: $cta_hover_color;
     }
   }
 }
