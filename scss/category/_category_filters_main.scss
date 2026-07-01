@@ -50,7 +50,7 @@
     width: 100%;
     padding-top: 125%; // 4:5 aspect ratio
     height: 471px;
-    overflow: hidden;
+    overflow: visible;
     background-color: $white;
   }
 
@@ -91,6 +91,7 @@
     }
 
     .action-btn {
+      position: relative;
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -107,6 +108,35 @@
       background-color: #ffffff;
       color: #1a365d; // Default layout deep blue
 
+      .tooltip {
+        position: absolute;
+        bottom: calc(100% + 8px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: $accent_color;
+        color: $white;
+        padding: 5px 8px;
+        border-radius: 4px;
+        font-size: 10px;
+        font-weight: 500;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.18s;
+        pointer-events: none;
+        z-index: 2;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          border: 5px solid rgba(255, 255, 255, 0);
+          border-top-color: $accent_color;
+        }
+      }
+
       svg {
         width: 18px;
         height: 18px;
@@ -114,6 +144,12 @@
 
       &:hover {
         transform: scale(1.05);
+
+        .tooltip {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(-4px);
+        }
       }
 
       &--compare {
@@ -296,6 +332,7 @@
     }
 
     .cart-btn {
+      position: relative;
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -312,6 +349,37 @@
         background-color 0.2s,
         transform 0.2s;
 
+      .tooltip {
+        position: absolute;
+        bottom: calc(100% + 8px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: $accent_color;
+        color: $white;
+        padding: 5px 8px;
+        border-radius: 4px;
+        font-size: 10px;
+        font-weight: 500;
+        white-space: nowrap;
+        min-width: max-content;
+        max-width: 180px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.18s;
+        pointer-events: none;
+        z-index: 20;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          border: 5px solid rgba(255, 255, 255, 0);
+          border-top-color: $accent_color;
+        }
+      }
+
       svg {
         width: 16px;
         height: 16px;
@@ -319,6 +387,13 @@
 
       &:hover {
         background-color: $accent_color;
+
+        .tooltip {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(-4px);
+        }
+
         svg {
           filter: invert(1) brightness(2);
         }

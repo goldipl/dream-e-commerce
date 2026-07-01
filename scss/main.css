@@ -2225,7 +2225,7 @@ nav .promo-card .dropdown-menu.mega-menu {
   width: 100%;
   padding-top: 125%;
   height: 471px;
-  overflow: hidden;
+  overflow: visible;
   background-color: #ffffff;
 }
 .product-card__img-link {
@@ -2262,6 +2262,7 @@ nav .promo-card .dropdown-menu.mega-menu {
   }
 }
 .product-card__action-buttons .action-btn {
+  position: relative;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -2275,12 +2276,44 @@ nav .promo-card .dropdown-menu.mega-menu {
   background-color: #ffffff;
   color: #1a365d;
 }
+.product-card__action-buttons .action-btn .tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0349ff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.18s;
+  pointer-events: none;
+  z-index: 2;
+}
+.product-card__action-buttons .action-btn .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid rgba(255, 255, 255, 0);
+  border-top-color: #0349ff;
+}
 .product-card__action-buttons .action-btn svg {
   width: 18px;
   height: 18px;
 }
 .product-card__action-buttons .action-btn:hover {
   transform: scale(1.05);
+}
+.product-card__action-buttons .action-btn:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-4px);
 }
 .product-card__action-buttons .action-btn--compare:hover {
   background-color: #07193b;
@@ -2442,6 +2475,7 @@ nav .promo-card .dropdown-menu.mega-menu {
   }
 }
 .product-card__price-box .cart-btn {
+  position: relative;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -2456,12 +2490,47 @@ nav .promo-card .dropdown-menu.mega-menu {
   opacity: 0;
   transition: background-color 0.2s, transform 0.2s;
 }
+.product-card__price-box .cart-btn .tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0349ff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  max-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.18s;
+  pointer-events: none;
+  z-index: 20;
+}
+.product-card__price-box .cart-btn .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid rgba(255, 255, 255, 0);
+  border-top-color: #0349ff;
+}
 .product-card__price-box .cart-btn svg {
   width: 16px;
   height: 16px;
 }
 .product-card__price-box .cart-btn:hover {
   background-color: #0349ff;
+}
+.product-card__price-box .cart-btn:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-4px);
 }
 .product-card__price-box .cart-btn:hover svg {
   filter: invert(1) brightness(2);
@@ -2597,7 +2666,7 @@ nav .promo-card .dropdown-menu.mega-menu {
   width: 100%;
   padding-top: 100%;
   background-color: #cbd5e1;
-  overflow: hidden;
+  overflow: visible;
 }
 @media (min-width: 768px) {
   .product-gallery__wrapper {
@@ -2665,6 +2734,35 @@ nav .promo-card .dropdown-menu.mega-menu {
   z-index: 3;
   transition: transform 0.2s;
 }
+.product-gallery .btn-zoom-gallery .tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0349ff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.18s;
+  pointer-events: none;
+  z-index: 20;
+}
+.product-gallery .btn-zoom-gallery .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid rgba(255, 255, 255, 0);
+  border-top-color: #0349ff;
+}
 .product-gallery .btn-zoom-gallery svg {
   width: 24px;
   height: 24px;
@@ -2683,6 +2781,11 @@ nav .promo-card .dropdown-menu.mega-menu {
   background-color: #001c5e;
   border-color: #001c5e;
   color: #ffffff;
+}
+.product-gallery .btn-zoom-gallery:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-4px);
 }
 
 .product-info-block {

@@ -19,3 +19,21 @@ const toggleMainWrapperClass = () => {
 }
 
 document.addEventListener('click', toggleMainWrapperClass);
+
+const initCategoryCardTooltips = () => {
+  const buttons = document.querySelectorAll('.product-card__action-buttons .action-btn, .product-card .cart-btn');
+
+  buttons.forEach((button) => {
+    if (button.querySelector('.tooltip')) {
+      return;
+    }
+
+    const label = button.getAttribute('aria-label') || 'Akcja';
+    const tooltip = document.createElement('span');
+    tooltip.className = 'tooltip';
+    tooltip.textContent = label;
+    button.prepend(tooltip);
+  });
+};
+
+document.addEventListener('DOMContentLoaded', initCategoryCardTooltips);

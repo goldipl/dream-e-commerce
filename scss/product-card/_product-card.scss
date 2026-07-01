@@ -32,7 +32,7 @@
     width: 100%;
     padding-top: 100%;
     background-color: $stroke-color;
-    overflow: hidden;
+    overflow: visible;
 
     @media (min-width: 768px) {
       padding-top: 110%;
@@ -101,6 +101,36 @@
     z-index: 3;
     transition: transform 0.2s;
 
+    .tooltip {
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: $accent_color;
+      color: $white;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 500;
+      white-space: nowrap;
+      min-width: max-content;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.18s;
+      pointer-events: none;
+      z-index: 20;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 5px solid rgba(255, 255, 255, 0);
+        border-top-color: $accent_color;
+      }
+    }
+
     svg {
       width: 24px;
       height: 24px;
@@ -119,6 +149,12 @@
       background-color: $main_color;
       border-color: $main_color;
       color: $white;
+
+      .tooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(-4px);
+      }
     }
   }
 }
