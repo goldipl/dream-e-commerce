@@ -310,29 +310,23 @@
       line-height: 24px;
       color: $main_text;
       position: relative;
+      display: inline-block;
+      padding-bottom: 2px;
+      transition:
+        color 0.2s ease,
+        text-shadow 0.2s ease;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
 
       @media (max-width: 991px) {
         font-size: 12px;
       }
 
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 3px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: $main_text;
-      }
-
-      &--active,
-      &:hover {
+      &:hover,
+      &.segment-link--active {
         color: $accent_color;
-        font-weight: 600;
-
-        &::after {
-          background-color: $accent_color;
-        }
+        text-shadow: 0 0 1px $accent_color;
       }
     }
   }
