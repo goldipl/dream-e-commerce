@@ -2907,6 +2907,7 @@ nav .promo-card .dropdown-menu.mega-menu {
   align-items: center;
 }
 .purchase-action-container .action-buttons-row .utility-circle-btn {
+  position: relative;
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -2919,6 +2920,33 @@ nav .promo-card .dropdown-menu.mega-menu {
   color: #001c5e;
   transition: all 0.2s ease;
 }
+.purchase-action-container .action-buttons-row .utility-circle-btn .tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0349ff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.18s;
+  pointer-events: none;
+  z-index: 2;
+}
+.purchase-action-container .action-buttons-row .utility-circle-btn .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid rgba(255, 255, 255, 0);
+  border-top-color: #0349ff;
+}
 .purchase-action-container .action-buttons-row .utility-circle-btn svg {
   width: 22px;
   height: auto;
@@ -2927,6 +2955,11 @@ nav .promo-card .dropdown-menu.mega-menu {
   background-color: #001c5e;
   border-color: #001c5e;
   color: #ffffff;
+}
+.purchase-action-container .action-buttons-row .utility-circle-btn:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-4px);
 }
 .purchase-action-container .action-buttons-row .utility-circle-btn:hover svg {
   filter: invert(1) brightness(22);
