@@ -84,7 +84,7 @@
 
   .cta-button {
     display: inline-block;
-    background-color: $main_color;
+    background-color: $cta_secondary_color;
     color: $white;
     text-decoration: none;
     font-size: 14px;
@@ -95,7 +95,7 @@
     height: 45px;
 
     &:hover {
-      background-color: $menu_hover_color;
+      background-color: $cta_secondary_hover_color;
     }
 
     @media (max-width: 991px) {
