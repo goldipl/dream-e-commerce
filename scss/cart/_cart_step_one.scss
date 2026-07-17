@@ -5,7 +5,7 @@
 .cart-page {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 64px auto;
   padding: 24px 40px 60px;
   color: $main_text;
 
@@ -14,7 +14,11 @@
   }
 
   &__header {
+    display: flex;
+    align-items: center;
+    gap: 32px;
     margin-bottom: 32px;
+    border-bottom: 1px solid $stroke-color;
   }
 
   &__title {
@@ -53,7 +57,6 @@
 .cart-steps {
   display: flex;
   gap: 32px;
-  border-bottom: 1px solid $stroke-color;
   padding-bottom: 12px;
 
   &__item {

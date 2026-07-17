@@ -8,11 +8,11 @@
         <path d="M11.7846 26.7361C13.192 26.5434 14.4887 27.5229 14.6744 28.9191C14.8601 30.3153 13.8638 31.5945 12.4541 31.7698C11.0568 31.9436 9.78008 30.9666 9.59599 29.5827C9.41193 28.1988 10.3896 26.9272 11.7846 26.7361Z" fill="white" stroke="#001C5E" />
       </svg> Twój koszyk
     </h1>
-    <nav class="cart-steps">
+    <div class="cart-steps">
       <span class="cart-steps__item cart-steps__item--done">1. Produkty</span>
       <span class="cart-steps__item cart-steps__item--active">2. Dostawa i płatność</span>
       <span class="cart-steps__item">3. Podsumowanie</span>
-    </nav>
+    </div>
   </div>
   <div class="cart-page__body">
     <div class="checkout-column">

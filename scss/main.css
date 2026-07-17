@@ -4836,7 +4836,7 @@ tbody td {
 .cart-page {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 64px auto;
   padding: 24px 40px 60px;
   color: #1a1a1a;
 }
@@ -4846,7 +4846,11 @@ tbody td {
   }
 }
 .cart-page__header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
   margin-bottom: 32px;
+  border-bottom: 1px solid #cbd5e1;
 }
 .cart-page__title {
   display: flex;
@@ -4881,7 +4885,6 @@ tbody td {
 .cart-steps {
   display: flex;
   gap: 32px;
-  border-bottom: 1px solid #cbd5e1;
   padding-bottom: 12px;
 }
 .cart-steps__item {
