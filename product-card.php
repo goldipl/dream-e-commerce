@@ -34,6 +34,7 @@
             <div class="container">
                 <?php include "./components/product-card/product_card.php"; ?> 
                 <?php include "./components/product-card/recommended_products.php"; ?> 
+                <?php include "./components/product-card/cart_modal.php"; ?> 
             </div>
         </main>
         <footer> 
@@ -47,5 +48,6 @@
         <script src="./js/script.js"></script>
         <script src="./js/swiper/swiper-bundle.js"></script>
         <script src="./js/swiper/swiper.js"></script>
+        <script src="./js/product_card/cart-modal.js"></script>
     </body>
 </html>

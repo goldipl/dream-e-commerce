@@ -1,0 +1,407 @@
+// ==========================================================================
+// Cart Configuration Modal (bootbox.dialog wrapper)
+// Bootbox 6 renders: .bootbox.modal > .modal-dialog > .modal-content > .modal-body > .bootbox-body
+// ==========================================================================
+
+.bootbox.cart-modal-dialog {
+  .modal-dialog {
+    max-width: 1070px;
+    width: 100%;
+    margin: 1.75rem auto;
+
+    @media (max-width: 991px) {
+      max-width: calc(100% - 24px);
+      margin: 12px auto;
+    }
+  }
+
+  .modal-content {
+    border: none;
+    border-radius: $radius-md;
+    box-shadow: $shadow-md;
+    overflow: hidden;
+  }
+
+  .modal-body {
+    padding: 32px 36px;
+
+    @media (max-width: 991px) {
+      padding: 20px 16px;
+    }
+  }
+
+  // Bootbox appends its own close button; we reposition + restyle it
+  // to match .btn-zoom-gallery / .utility-circle-btn conventions
+  .bootbox-close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $white;
+    border: 1px solid $stroke-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    z-index: 5;
+    transition: all 0.2s ease;
+    font-size: 20px;
+    line-height: 1;
+    color: $main_color;
+
+    &:hover {
+      background-color: $main_color;
+      color: $white;
+    }
+
+    @media (max-width: 991px) {
+      width: 32px;
+      height: 32px;
+      top: 12px;
+      right: 12px;
+      font-size: 16px;
+    }
+  }
+}
+
+.cart-modal {
+  position: relative;
+  color: $main_text;
+
+  // ---------------------------------------------------------------------
+  // Header: thumbnail + product title/sku
+  // ---------------------------------------------------------------------
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-right: 40px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 16px;
+      gap: 12px;
+    }
+  }
+
+  &__thumb {
+    flex-shrink: 0;
+    width: 76px;
+    height: 76px;
+    border-radius: $radius-sm;
+    overflow: hidden;
+    background-color: $stroke-color;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 991px) {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  &__head-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: $main_text;
+    margin: 0;
+
+    @media (max-width: 991px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__sku {
+    font-size: 13px;
+    font-weight: 300;
+    color: $text_muted;
+  }
+
+  // ---------------------------------------------------------------------
+  // Color swatches (same visual language as .product-colors-selection)
+  // ---------------------------------------------------------------------
+  &__colors {
+    margin-bottom: 24px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__colors-label {
+    display: block;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    color: $main_text;
+    margin-bottom: 12px;
+
+    strong {
+      color: $black;
+      font-weight: 700;
+    }
+  }
+
+  &__swatch-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  // ---------------------------------------------------------------------
+  // Size / quantity table
+  // ---------------------------------------------------------------------
+  &__table-wrapper {
+    margin: 0 -36px 20px;
+    padding: 0 36px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media (max-width: 991px) {
+      margin: 0 -16px 16px;
+      padding: 0 16px;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+    background-color: $inputs_layer;
+    border-radius: $radius-sm;
+    overflow: hidden;
+
+    thead {
+      th {
+        text-align: left;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+        color: $breadcrumbs_color;
+        padding: 12px 10px;
+        white-space: nowrap;
+
+        &.col-num,
+        &.col-price,
+        &.col-total {
+          text-align: center;
+        }
+
+        &.col-qty {
+          text-align: left;
+          padding-left: 16px;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        background-color: $white;
+        transition: background-color 0.15s ease;
+
+        &:not(:last-child) td {
+          border-bottom: 1px solid $stroke-color;
+        }
+
+        &:hover {
+          background-color: $inputs_layer;
+        }
+      }
+
+      td {
+        padding: 10px;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 20px;
+        color: $main_text;
+        white-space: nowrap;
+
+        &.col-size {
+          font-size: 14px;
+
+          strong {
+            font-weight: 700;
+          }
+        }
+
+        &.col-num,
+        &.col-price,
+        &.col-total {
+          text-align: center;
+        }
+
+        &.col-total strong {
+          color: $accent_color;
+          font-weight: 700;
+        }
+
+        &.col-qty {
+          padding-left: 16px;
+        }
+      }
+    }
+  }
+
+  // Quantity stepper — mirrors .utility-circle-btn's rounded, bordered treatment
+  .qty-stepper {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    &__btn {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background-color: $white;
+      border: 1px solid $stroke-color;
+      color: $main_color;
+      font-size: 15px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      padding: 0;
+
+      &:hover {
+        background-color: $main_color;
+        border-color: $main_color;
+        color: $white;
+      }
+    }
+
+    &__input {
+      width: 44px;
+      height: 26px;
+      text-align: center;
+      border: 1px solid $stroke-color;
+      border-radius: $radius-xs;
+      font-size: 13px;
+      font-weight: 600;
+      color: $main_text;
+      background-color: $white;
+      -moz-appearance: textfield;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: $accent_color;
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------------
+  // Footer: selected-color recap + grand total + submit CTA
+  // ---------------------------------------------------------------------
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 1px solid $stroke-color;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 16px;
+    }
+  }
+
+  &__selected {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__selected-label {
+    font-size: 12px;
+    font-weight: 300;
+    color: $breadcrumbs_color;
+  }
+
+  &__selected-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .selected-swatch-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .selected-swatch-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .selected-swatch-count {
+    font-size: 11px;
+    font-weight: 600;
+    color: $main_text;
+    min-height: 14px;
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: 991px) {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__summary-label {
+    font-size: 14px;
+    font-weight: 300;
+    color: $main_text;
+    white-space: nowrap;
+  }
+
+  &__grand-total {
+    font-size: 16px;
+    font-weight: 700;
+    color: $accent_color;
+  }
+
+  // .btn-primary-cta styling comes from _product-card.scss;
+  // widen it slightly for the modal footer context.
+  &__submit {
+    max-width: none;
+    min-width: 160px;
+  }
+}
