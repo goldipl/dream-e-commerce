@@ -1,0 +1,284 @@
+// ==========================================================================
+// Cart Step 3 — Podsumowanie
+// Extends cart-page / cart-steps / cart-summary / print-banner /
+// btn-outline-* / btn-primary-cta / checkbox-input / text-input already
+// defined for steps 1 & 2.
+// ==========================================================================
+
+.cart-page__body--three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 320px;
+  gap: 24px;
+  align-items: start;
+
+  @media (max-width: 1199px) {
+    grid-template-columns: 1fr 1fr;
+
+    .cart-summary--purchase {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+
+    .cart-summary--purchase {
+      grid-column: auto;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------
+// Shared summary panel shell
+// ---------------------------------------------------------------------
+.summary-panel {
+  background-color: $white;
+  border: 1px solid $stroke-color;
+  border-radius: $radius-md;
+  overflow: hidden;
+
+  &__header {
+    background-color: $inputs_layer;
+    color: $main_color;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 12px 20px;
+
+    &--split {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------
+// Column 1 — scrollable product list
+// ---------------------------------------------------------------------
+.summary-products {
+  display: flex;
+  flex-direction: column;
+  max-height: 620px;
+
+  &__scroll {
+    overflow-y: auto;
+    flex: 1;
+
+    // thin scrollbar to echo the design's slim indicator
+    scrollbar-width: thin;
+    scrollbar-color: $accent_color $inputs_layer;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background: $inputs_layer;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $accent_color;
+      border-radius: 4px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    border-bottom: 1px solid $stroke-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__thumb {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: $radius-sm;
+    overflow: hidden;
+    background-color: $stroke-color;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    flex: 1;
+    font-size: 13px;
+    font-weight: 300;
+    color: $main_text;
+  }
+
+  &__qty {
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: $main_text;
+    min-width: 24px;
+    text-align: right;
+  }
+}
+
+// ---------------------------------------------------------------------
+// Column 2 — order details (delivery / address / payment / notes)
+// ---------------------------------------------------------------------
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: transparent;
+  gap: 20px;
+
+  &__block {
+    background-color: $white;
+    border: 1px solid $stroke-color;
+    border-radius: $radius-md;
+    overflow: hidden;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+
+    &--stack {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 16px;
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    width: 48px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 300;
+    color: $main_text;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__label {
+    font-size: 12px;
+    font-weight: 300;
+    color: $breadcrumbs_color;
+  }
+
+  &__value {
+    font-size: 13px;
+    color: $main_text;
+
+    strong {
+      font-weight: 700;
+    }
+
+    &--muted {
+      font-weight: 300;
+      line-height: 20px;
+      color: #556270;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------
+// Column 3 — purchase card extras: promo code + consents
+// ---------------------------------------------------------------------
+.promo-code-row {
+  display: flex;
+  gap: 10px;
+
+  &__input {
+    flex: 1;
+    height: 40px;
+    font-weight: 700;
+    color: $accent_color;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    padding: 0 20px;
+    height: 40px;
+  }
+}
+
+.consent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.consent-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+
+  .checkbox-input {
+    margin-top: 2px;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 18px;
+    color: $main_text;
+
+    a {
+      color: $accent_color;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+
+      &:hover {
+        color: $cta_hover_color;
+      }
+    }
+  }
+}
+
+.cart-summary--purchase {
+  .cart-summary__body {
+    gap: 16px;
+  }
+
+  .cart-summary__submit--final {
+    margin-top: 4px;
+  }
+}
+
+// ---------------------------------------------------------------------
+// Footer nav — single "back" button only on step 3
+// ---------------------------------------------------------------------
+.cart-page__footer-nav--single {
+  display: flex;
+  margin-top: 24px;
+
+  @media (max-width: 767px) {
+    .btn-outline-blue--back {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

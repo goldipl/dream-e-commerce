@@ -145,3 +145,42 @@ $(function () {
   initActiveFilterBadges();
   initProductImageZoom();
 });
+
+/**
+ * Adres dostawy toggle
+ * Switches between the collapsed (invoice address) view and the
+ * expanded (custom address form + saved address list) view.
+ *
+ * Append to ./js/script.js
+ */
+$(function () {
+  const $collapsedView = $("#address-collapsed-view");
+  const $expandedView = $("#address-expanded-view");
+  const $checkboxes = $("#toggle-different-address, #toggle-different-address-expanded");
+
+  $checkboxes.on("change", function () {
+    const isChecked = $(this).is(":checked");
+
+    // Keep both checkbox instances (collapsed + expanded headers) in sync
+    $checkboxes.prop("checked", isChecked);
+
+    if (isChecked) {
+      $collapsedView.hide();
+      $expandedView.prop("hidden", false).show();
+    } else {
+      $expandedView.hide().prop("hidden", true);
+      $collapsedView.show();
+    }
+  });
+
+  // Selecting a saved address auto-checks it and unchecks the others
+  $(".address-list__item input[name='saved-address']").on("change", function () {
+    if ($(this).is(":checked")) {
+      $(".address-list__item input[name='saved-address']")
+        .not(this)
+        .prop("checked", false);
+      $(".address-list__item").removeClass("address-list__item--active");
+      $(this).closest(".address-list__item").addClass("address-list__item--active");
+    }
+  });
+});
