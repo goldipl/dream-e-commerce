@@ -1,0 +1,29 @@
+.btn-primary-cta {
+  flex-grow: 1;
+  height: 45px;
+  background-color: $cta_color;
+  color: $white;
+  border: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 0 24px;
+  transition: background-color 0.2s;
+  max-width: 154px;
+  white-space: pre;
+
+  svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  &:hover {
+    background-color: $cta_hover_color;
+  }
+}

@@ -1013,6 +1013,34 @@ nav .promo-card .dropdown-menu.mega-menu {
   transform: rotate(45deg);
 }
 
+.btn-primary-cta {
+  flex-grow: 1;
+  height: 45px;
+  background-color: #0049ff;
+  color: #ffffff;
+  border: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 0 24px;
+  transition: background-color 0.2s;
+  max-width: 154px;
+  white-space: pre;
+}
+.btn-primary-cta svg {
+  width: 21px;
+  height: 21px;
+}
+.btn-primary-cta:hover {
+  background-color: #008cff;
+}
+
 #swiper {
   width: 100vw;
   max-width: unset;
@@ -3137,33 +3165,6 @@ nav .promo-card .dropdown-menu.mega-menu {
 }
 .purchase-action-container .action-buttons-row .utility-circle-btn:hover svg {
   filter: invert(1) brightness(22);
-}
-.purchase-action-container .action-buttons-row .btn-primary-cta {
-  flex-grow: 1;
-  height: 45px;
-  background-color: #0049ff;
-  color: #ffffff;
-  border: none;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  cursor: pointer;
-  padding: 0 24px;
-  transition: background-color 0.2s;
-  max-width: 154px;
-  white-space: pre;
-}
-.purchase-action-container .action-buttons-row .btn-primary-cta svg {
-  width: 21px;
-  height: 21px;
-}
-.purchase-action-container .action-buttons-row .btn-primary-cta:hover {
-  background-color: #008cff;
 }
 
 .product-extra-details {
