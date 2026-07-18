@@ -15,8 +15,9 @@
   cursor: pointer;
   padding: 0 24px;
   transition: background-color 0.2s;
-  max-width: 154px;
   white-space: pre;
+  width: fit-content;
+  max-width: 240px;
 
   svg {
     width: 21px;

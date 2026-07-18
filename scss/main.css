@@ -1030,8 +1030,10 @@ nav .promo-card .dropdown-menu.mega-menu {
   cursor: pointer;
   padding: 0 24px;
   transition: background-color 0.2s;
-  max-width: 154px;
   white-space: pre;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 240px;
 }
 .btn-primary-cta svg {
   width: 21px;
