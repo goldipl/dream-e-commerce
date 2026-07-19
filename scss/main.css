@@ -5511,7 +5511,8 @@ tbody td {
   background: #fff;
   box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
 }
-.delivery-option:has(input:checked) .delivery-option__name {
+.delivery-option:has(input:checked) .delivery-option__name,
+.delivery-option:has(input:checked) .delivery-option__price {
   font-weight: 700;
 }
 .delivery-option__logo {
@@ -5550,9 +5551,6 @@ tbody td {
   color: #1a1a1a;
   white-space: nowrap;
   margin-right: 12px;
-}
-.delivery-option__price strong {
-  font-weight: 700;
 }
 @media (max-width: 767px) {
   .delivery-option__price {
