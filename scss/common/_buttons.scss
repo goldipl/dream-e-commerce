@@ -20,11 +20,32 @@
   max-width: 240px;
 
   svg {
-    width: 21px;
-    height: 21px;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
   }
 
   &:hover {
     background-color: $cta_hover_color;
+  }
+
+  &.btn-next-step {
+    background-color: $white;
+    color: $cta_color;
+    border: 1px solid $cta_color;
+    svg {
+      path {
+        fill: $cta_color;
+      }
+    }
+    &:hover {
+      background-color: $cta_color;
+      color: $white;
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
   }
 }
