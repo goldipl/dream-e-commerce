@@ -45,7 +45,7 @@
               </div>
             </td>
             <td class="col-size">
-              <strong>L</strong>
+              L
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
@@ -82,7 +82,7 @@
               </div>
             </td>
             <td class="col-size">
-              <strong>XS</strong>
+              XS
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
@@ -107,7 +107,7 @@
           </tr>
           <tr class="cart-row" data-group="2">
             <td class="col-size">
-              <strong>S</strong>
+              S
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
@@ -132,7 +132,7 @@
           </tr>
           <tr class="cart-row" data-group="2">
             <td class="col-size">
-              <strong>M</strong>
+              M
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
@@ -157,7 +157,7 @@
           </tr>
           <tr class="cart-row cart-row--group-end" data-group="2">
             <td class="col-size">
-              <strong>L</strong>
+              L
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
@@ -193,7 +193,7 @@
               </div>
             </td>
             <td class="col-size">
-              <strong>L</strong>
+              L
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
@@ -229,7 +229,7 @@
               </div>
             </td>
             <td class="col-size">
-              <strong>L</strong>
+              L
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
@@ -266,11 +266,11 @@
               </div>
             </td>
             <td class="col-size">
-              <span class="size-error-label">Wybierz rozmiar</span>
-              <strong>L</strong>
+              L
             </td>
             <td class="col-qty">
               <div class="qty-stepper qty-stepper--error">
+                <span class="size-error-label">Wybierz rozmiar</span>
                 <input type="number" class="qty-stepper__input" value="0" min="0" step="1" aria-label="Ilość sztuk">
               </div>
             </td>
@@ -303,7 +303,7 @@
               </div>
             </td>
             <td class="col-size">
-              <strong>XS</strong>
+              XS
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
@@ -328,7 +328,7 @@
           </tr>
           <tr class="cart-row cart-row--group-end" data-group="6">
             <td class="col-size">
-              <strong>S</strong>
+              S
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
@@ -364,7 +364,7 @@
         <div class="cart-summary__row">
           <span class="cart-summary__label">Wartość bez dostawy:</span>
           <div class="cart-summary__value-group">
-            <span class="cart-summary__value cart-summary__value--accent">4 130,30 PLN</span>
+            <span class="cart-summary__value">4 130,30 PLN</span>
             <span class="cart-summary__value-sub">| 5319,00 PLN brutto</span>
           </div>
         </div>
@@ -372,7 +372,7 @@
           <span class="cart-summary__label">Łącznie netto:</span>
           <div class="cart-summary__value-group">
             <span class="cart-summary__value cart-summary__value--accent">4 699,00 PLN</span>
-            <span class="cart-summary__value-sub">| 5779,77 PLN Brutto</span>
+            <span class="cart-summary__value-sub cart-summary__value-sub--accent">| 5779,77 PLN Brutto</span>
           </div>
         </div>
         <button type="button" class="btn-primary-cta cart-summary__submit">

@@ -34,7 +34,7 @@
 .summary-panel {
   background-color: $white;
   border: 1px solid $stroke-color;
-  border-radius: $radius-md;
+  border-radius: 0;
   overflow: hidden;
 
   &__header {
@@ -136,7 +136,7 @@
   &__block {
     background-color: $white;
     border: 1px solid $stroke-color;
-    border-radius: $radius-md;
+    border-radius: 0;
     overflow: hidden;
   }
 

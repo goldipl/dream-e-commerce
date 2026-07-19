@@ -11,6 +11,7 @@
 
   @media (max-width: 991px) {
     padding: 16px 16px 40px;
+    margin: 16px 0 24px;
   }
 
   &__header {
@@ -19,20 +20,29 @@
     gap: 32px;
     margin-bottom: 32px;
     border-bottom: 1px solid $stroke-color;
+    @media (max-width: 991px) {
+      gap: 8px;
+      overflow-x: scroll;
+    }
   }
 
   &__title {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 24px;
+    gap: 24px;
+    font-size: 30px;
     font-weight: 700;
     color: $main_text;
     margin: 0 0 16px 0;
 
+    @media (max-width: 991px) {
+      gap: 12px;
+      font-size: 17px;
+    }
+
     svg {
-      width: 24px;
-      height: 21px;
+      width: 35px;
+      height: 33px;
     }
   }
 
@@ -59,23 +69,36 @@
   gap: 32px;
   padding-bottom: 12px;
 
+  @media (max-width: 991px) {
+    gap: 4px;
+  }
+
   &__item {
-    font-size: 14px;
-    font-weight: 600;
-    color: $text_muted;
+    color: #373737;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 35px; /* 218.75% */
     position: relative;
-    padding-bottom: 12px;
+    padding: 0 32px 0px;
+
+    @media (max-width: 991px) {
+      white-space: pre;
+      font-size: 14px;
+      line-height: 16px;
+    }
 
     &--active {
+      font-weight: 700;
       color: $accent_color;
 
       &::after {
         content: "";
         position: absolute;
         left: 0;
-        bottom: -13px;
+        bottom: -15px;
         width: 100%;
-        height: 2px;
+        height: 5px;
         background-color: $accent_color;
       }
     }
@@ -99,11 +122,16 @@
 
   thead th {
     text-align: left;
-    font-size: 12px;
-    font-weight: 600;
+    color: rgba(0, 28, 94, 0.7);
+    font-family: Lexend;
+    font-size: 11.2px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px; /* 142.857% */
     color: $breadcrumbs_color;
     background-color: $inputs_layer;
-    padding: 12px 16px;
+    padding: 0 20px;
+    height: 32px;
     white-space: nowrap;
 
     &.col-num,
@@ -114,6 +142,12 @@
   }
 
   tbody {
+    tr {
+      border-bottom: 0;
+      &.cart-row--group-start {
+        border-top: 0;
+      }
+    }
     .cart-row {
       &--single td,
       &--group-end td {
@@ -129,15 +163,16 @@
     // Grouped rows get a border wrapping the whole product block
     .cart-row--group-start {
       td:not(.col-product) {
-        border-top: 1px solid $stroke-color;
+        border-top: 0;
       }
       td.col-product {
-        border-top: 1px solid $stroke-color;
-        border-bottom: 1px solid $stroke-color;
+        border-top: 0;
+        border-bottom: 0;
+        vertical-align: baseline;
       }
     }
     .cart-row--group-end td:not(.col-product) {
-      border-bottom: 1px solid $stroke-color;
+      border-bottom: 0;
     }
     .cart-row:not(.cart-row--single):not(.cart-row--group-start):not(
         .cart-row--group-end
@@ -148,10 +183,12 @@
     }
 
     td {
-      padding: 14px 16px;
-      font-size: 13px;
+      padding: 14px 6px;
+      font-size: 14px;
       font-weight: 300;
       color: $main_text;
+      min-width: unset;
+      width: fit-content;
       vertical-align: middle;
 
       &.col-size {
@@ -169,7 +206,6 @@
       }
 
       &.col-total strong {
-        color: $accent_color;
         font-weight: 700;
       }
 
@@ -194,10 +230,6 @@
       }
     }
 
-    tr:hover td {
-      background-color: $inputs_layer;
-    }
-
     .cart-row--error:hover td {
       background-color: rgba(224, 55, 55, 0.03);
     }
@@ -211,11 +243,12 @@
 
   &__thumb {
     flex-shrink: 0;
-    width: 56px;
-    height: 56px;
-    border-radius: $radius-sm;
+    width: 90px;
+    height: 90px;
+    border-radius: 0;
     overflow: hidden;
     background-color: $stroke-color;
+    border: 0.4px solid rgb(218, 218, 218);
 
     img {
       width: 100%;
@@ -240,7 +273,8 @@
   &__sku {
     font-size: 11px;
     font-weight: 300;
-    color: $text_muted;
+    color: $main_text;
+    margin-top: 16px;
   }
 }
 
@@ -251,14 +285,15 @@
   &__input {
     width: 60px;
     height: 30px;
-    text-align: center;
+    text-align: left;
     border: 1px solid $stroke-color;
-    border-radius: $radius-xs;
-    font-size: 13px;
-    font-weight: 600;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 300;
     color: $main_text;
     background-color: $white;
     -moz-appearance: textfield;
+    padding: 8px;
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
@@ -272,7 +307,9 @@
     }
   }
 
-  &--error &__input {
+  &--error {
+    display: flex;
+    flex-direction: column;
     border-color: #e03737;
     color: #e03737;
 
@@ -351,9 +388,10 @@
   justify-content: space-between;
   gap: 24px;
   margin-top: 24px;
+  margin-bottom: 40px;
   padding: 24px 32px;
-  border-radius: $radius-md;
-  background: linear-gradient(135deg, $main_color 0%, $accent_color 140%);
+  border-radius: 0;
+  background: linear-gradient(270deg, $main_color 0%, $accent_color 100%);
   color: $white;
 
   @media (max-width: 991px) {
@@ -366,18 +404,20 @@
   &__content {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
 
     @media (max-width: 991px) {
-      gap: 14px;
+      flex-direction: column;
+      align-items: start;
+      gap: 8px;
     }
   }
 
   &__thumb {
     flex-shrink: 0;
-    width: 64px;
-    height: 64px;
-    border-radius: $radius-sm;
+    border-radius: 0;
+    width: 90px;
+    height: 90px;
     overflow: hidden;
 
     img {
@@ -388,19 +428,28 @@
   }
 
   &__title {
-    font-size: 16px;
+    font-size: 20px;
+    font-style: normal;
     font-weight: 700;
+    line-height: 36px;
     margin: 0 0 6px 0;
     color: $white;
+    @media (max-width: 991px) {
+      line-height: 24px;
+    }
   }
 
   &__desc {
-    font-size: 13px;
+    font-size: 14px;
+    font-style: normal;
     font-weight: 300;
-    line-height: 18px;
+    line-height: 26px;
     margin: 0;
     max-width: 420px;
-    color: rgba(255, 255, 255, 0.85);
+    color: $white;
+    @media (max-width: 991px) {
+      line-height: 18px;
+    }
   }
 
   &__cta {
@@ -417,13 +466,14 @@
   }
 
   &__note {
-    font-size: 11px;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 16px;
     color: rgba(255, 255, 255, 0.7);
     max-width: 220px;
-    text-align: right;
+    text-align: left;
 
     @media (max-width: 991px) {
-      text-align: left;
       max-width: none;
     }
   }
@@ -435,9 +485,9 @@
   gap: 8px;
   padding: 10px 18px;
   background-color: $white;
-  color: $main_color;
+  color: $cta_color;
   border: none;
-  border-radius: $radius-xs;
+  border-radius: 0;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
@@ -447,10 +497,19 @@
   svg {
     width: 16px;
     height: 12px;
+    path {
+      fill: $cta_color;
+    }
   }
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: $cta_color;
+    color: $white;
+    svg {
+      path {
+        fill: $white;
+      }
+    }
   }
 }
 
@@ -462,7 +521,7 @@
   background-color: $white;
   color: $accent_color;
   border: 1px solid $accent_color;
-  border-radius: $radius-xs;
+  border-radius: 0;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
@@ -484,11 +543,11 @@
 // Sticky summary sidebar
 // ---------------------------------------------------------------------
 .cart-summary {
-  border: 1px solid $stroke-color;
-  border-radius: $radius-md;
+  border: 1px solid $accent_color;
+  border-radius: 0;
   overflow: hidden;
   background-color: $white;
-  box-shadow: $shadow-sm;
+  box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
 
   // Sticky positioning — pins to viewport while scrolling the table column
   position: sticky;
@@ -509,10 +568,10 @@
   }
 
   &__body {
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
   }
 
   &__row {
@@ -544,15 +603,18 @@
   &__value-group {
     display: flex;
     align-items: baseline;
-    gap: 8px;
+    gap: 24px;
     flex-wrap: wrap;
   }
 
   &__value-sub {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 300;
-    color: $text_muted;
+    color: $main_text;
     white-space: nowrap;
+    &--accent {
+      color: $accent_color;
+    }
   }
 
   &__submit {

@@ -34,7 +34,7 @@
               <img src="./assets/icons/couriers/dpd.svg" alt="DPD">
             </div>
             <span class="delivery-option__name">
-              <strong>Przesyłka kurierska za pobraniem</strong>
+              Przesyłka kurierska za pobraniem
             </span>
             <span class="delivery-option__price">
               <strong>19,00 PLN + VAT</strong>
@@ -58,7 +58,9 @@
             <input type="radio" name="delivery-method" class="delivery-option__radio">
           </label>
           <label class="delivery-option delivery-option--last">
-            <div class="delivery-option__logo delivery-option__logo--text">DREAMTEX</div>
+            <div class="delivery-option__logo">
+               <img src="./assets/icons/couriers/dreamtex.svg" alt="Dreamtex">
+            </div>
             <span class="delivery-option__name">Odbiór osobisty</span>
             <span class="delivery-option__price">ul. Szyszkowa 32, 02-285 Warszawa</span>
             <input type="radio" name="delivery-method" class="delivery-option__radio">
@@ -130,26 +132,24 @@
         <div class="checkout-panel__body checkout-panel__body--flush">
           <label class="delivery-option">
             <div class="delivery-option__logo">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="none">
-                <path d="M12 0L24 6H0L12 0Z" fill="#001C5E" />
-                <path d="M2 8H4V18H2V8ZM8 8H10V18H8V8ZM14 8H16V18H14V8ZM20 8H22V18H20V8Z" fill="#001C5E" />
-                <rect y="19" width="24" height="3" fill="#001C5E" />
-              </svg>
+              <img src="./assets/icons/payments/normal-payment.svg" alt="Przelew tradycyjny">
             </div>
             <span class="delivery-option__name">Tradycyjny przelew bankowy</span>
             <input type="radio" name="payment-method" class="delivery-option__radio">
           </label>
-          <label class="delivery-option delivery-option--active">
+          <label class="delivery-option">
             <div class="delivery-option__logo">
               <img src="./assets/icons/payments/przelewy24.svg" alt="Przelewy24">
             </div>
             <span class="delivery-option__name">
-              <strong>Szybki przelew</strong>
+              Szybki przelew
             </span>
             <input type="radio" name="payment-method" class="delivery-option__radio" checked>
           </label>
           <label class="delivery-option delivery-option--last">
-            <div class="delivery-option__logo delivery-option__logo--text">DREAMTEX</div>
+            <div class="delivery-option__logo">
+              <img src="./assets/icons/payments/dreamtex.svg" alt="Dreamtex">
+            </div>
             <span class="delivery-option__name">Płatność przy odbiorze karta, lub gotówką</span>
             <input type="radio" name="payment-method" class="delivery-option__radio">
           </label>
@@ -231,10 +231,10 @@
       </svg>
       <span>Produkty</span>
     </a>
-    <button type="button" class="btn-primary-cta">
+    <button type="button" class="btn-primary-cta btn-next-step">
       <span>Przejdź do podsumowania</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
-        <path d="M1 6H15M15 6L10 1M15 6L10 11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M1 6H15M15 6L10 1M15 6L10 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
     </button>
   </div>
