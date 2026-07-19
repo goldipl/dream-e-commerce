@@ -4984,6 +4984,11 @@ tbody td {
   height: 5px;
   background-color: #0349ff;
 }
+@media (max-width: 991px) {
+  .cart-steps__item--active::after {
+    display: none;
+  }
+}
 
 .cart-table-wrapper {
   min-width: 0;
