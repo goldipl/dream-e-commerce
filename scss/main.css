@@ -3633,7 +3633,6 @@ nav .promo-card .dropdown-menu.mega-menu {
   justify-content: space-between;
   gap: 16px;
   padding-top: 20px;
-  border-top: 1px solid #cbd5e1;
 }
 @media (max-width: 991px) {
   .cart-modal__footer {
