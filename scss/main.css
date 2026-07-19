@@ -5202,8 +5202,8 @@ tbody td {
   border-top-color: #0349ff;
 }
 .icon-btn:hover {
-  color: #e03737;
-  background-color: rgba(224, 55, 55, 0.08);
+  color: #0349ff;
+  background-color: rgba(55, 170, 224, 0.18);
 }
 .icon-btn:hover .tooltip {
   opacity: 1;

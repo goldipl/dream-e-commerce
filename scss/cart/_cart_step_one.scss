@@ -368,8 +368,8 @@
   }
 
   &:hover {
-    color: #e03737;
-    background-color: rgba(224, 55, 55, 0.08);
+    color: $accent_color;
+    background-color: rgba(55, 170, 224, 0.18);
 
     .tooltip {
       opacity: 1;
