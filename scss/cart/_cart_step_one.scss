@@ -119,6 +119,7 @@
   min-width: 860px;
   border-collapse: collapse;
   background-color: $white;
+  table-layout: auto;
 
   thead th {
     text-align: left;
@@ -133,6 +134,9 @@
     padding: 0 20px;
     height: 32px;
     white-space: nowrap;
+    min-width: unset;
+    border-bottom: 0;
+    width: auto;
 
     &.col-num,
     &.col-price,
@@ -143,6 +147,7 @@
 
   tbody {
     tr {
+      width: auto;
       border-bottom: 0;
       &.cart-row--group-start {
         border-top: 0;
@@ -188,7 +193,7 @@
       font-weight: 300;
       color: $main_text;
       min-width: unset;
-      width: fit-content;
+      width: auto;
       vertical-align: middle;
 
       &.col-size {
@@ -210,8 +215,9 @@
       }
 
       &.col-actions {
+        display: table-cell;
         text-align: center;
-        width: 40px;
+        padding: 0 24px;
       }
     }
 

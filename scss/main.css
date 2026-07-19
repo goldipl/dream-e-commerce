@@ -3816,7 +3816,7 @@ select {
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
-  line-height: 35px;
+  line-height: 15px;
   outline: none;
   transition: 0.2s;
 }
@@ -4996,6 +4996,7 @@ tbody td {
   min-width: 860px;
   border-collapse: collapse;
   background-color: #ffffff;
+  table-layout: auto;
 }
 .cart-table thead th {
   text-align: left;
@@ -5010,11 +5011,15 @@ tbody td {
   padding: 0 20px;
   height: 32px;
   white-space: nowrap;
+  min-width: unset;
+  border-bottom: 0;
+  width: auto;
 }
 .cart-table thead th.col-num, .cart-table thead th.col-price, .cart-table thead th.col-total {
   text-align: center;
 }
 .cart-table tbody tr {
+  width: auto;
   border-bottom: 0;
 }
 .cart-table tbody tr.cart-row--group-start {
@@ -5048,8 +5053,7 @@ tbody td {
   font-weight: 300;
   color: #1a1a1a;
   min-width: unset;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: auto;
   vertical-align: middle;
 }
 .cart-table tbody td.col-size {
@@ -5066,8 +5070,9 @@ tbody td {
   font-weight: 700;
 }
 .cart-table tbody td.col-actions {
+  display: table-cell;
   text-align: center;
-  width: 40px;
+  padding: 0 24px;
 }
 .cart-table tbody .cart-row--error td {
   background-color: rgba(224, 55, 55, 0.03);
