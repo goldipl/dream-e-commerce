@@ -6,28 +6,28 @@
         <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="Męska rozpinana bluza CORE">
       </div>
       <div class="cart-modal__head-info">
-        <h3 class="cart-modal__title">Męska rozpinana bluza CORE</h3>
+        <h3 class="cart-modal__title">T-shirt Asher Green Bay</h3>
         <span class="cart-modal__sku">SD0658-30</span>
+        <div class="cart-modal__colors">
+          <span class="cart-modal__colors-label">Wybierz kolor: <strong>Ciemny zielony DX</strong></span>
+          <div class="cart-modal__swatch-list">
+            <button type="button" class="swatch-btn" style="background-color:#ffffff; border:1px solid #cbd5e1;" data-color="Biały" aria-label="Biały"></button>
+            <button type="button" class="swatch-btn" style="background-color:#1a365d;" data-color="Navy" aria-label="Navy"></button>
+            <button type="button" class="swatch-btn" style="background-color:#000000;" data-color="Czarny" aria-label="Czarny"></button>
+            <button type="button" class="swatch-btn" style="background-color:#a0aec0;" data-color="Szary" aria-label="Szary"></button>
+            <button type="button" class="swatch-btn" style="background-color:#5c1d24;" data-color="Bordowy" aria-label="Bordowy"></button>
+            <button type="button" class="swatch-btn" style="background-color:#3b719f;" data-color="Niebieski" aria-label="Niebieski"></button>
+            <button type="button" class="swatch-btn" style="background-color:#556270;" data-color="Ciemnoszary" aria-label="Ciemnoszary"></button>
+            <button type="button" class="swatch-btn" style="background-color:#e53e3e;" data-color="Czerwony" aria-label="Czerwony"></button>
+            <button type="button" class="swatch-btn" style="background-color:#3182ce;" data-color="Jasnoniebieski" aria-label="Jasnoniebieski"></button>
+            <button type="button" class="swatch-btn" style="background-color:#e06d26;" data-color="Pomarańczowy" aria-label="Pomarańczowy"></button>
+            <button type="button" class="swatch-btn swatch-btn--active" style="background-color:#38a169;" data-color="Zielony DX" aria-label="Ciemny zielony DX"></button>
+            <button type="button" class="swatch-btn" style="background-color:#63b3ed;" data-color="Błękitny" aria-label="Błękitny"></button>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="cart-modal__colors">
-      <span class="cart-modal__colors-label">Wybierz kolor: <strong>Ciemny zielony DX</strong></span>
-      <div class="cart-modal__swatch-list">
-        <button type="button" class="swatch-btn" style="background-color:#ffffff; border:1px solid #cbd5e1;" data-color="Biały" aria-label="Biały"></button>
-        <button type="button" class="swatch-btn" style="background-color:#1a365d;" data-color="Navy" aria-label="Navy"></button>
-        <button type="button" class="swatch-btn" style="background-color:#000000;" data-color="Czarny" aria-label="Czarny"></button>
-        <button type="button" class="swatch-btn" style="background-color:#a0aec0;" data-color="Szary" aria-label="Szary"></button>
-        <button type="button" class="swatch-btn" style="background-color:#5c1d24;" data-color="Bordowy" aria-label="Bordowy"></button>
-        <button type="button" class="swatch-btn" style="background-color:#3b719f;" data-color="Niebieski" aria-label="Niebieski"></button>
-        <button type="button" class="swatch-btn" style="background-color:#556270;" data-color="Ciemnoszary" aria-label="Ciemnoszary"></button>
-        <button type="button" class="swatch-btn" style="background-color:#e53e3e;" data-color="Czerwony" aria-label="Czerwony"></button>
-        <button type="button" class="swatch-btn" style="background-color:#3182ce;" data-color="Jasnoniebieski" aria-label="Jasnoniebieski"></button>
-        <button type="button" class="swatch-btn" style="background-color:#e06d26;" data-color="Pomarańczowy" aria-label="Pomarańczowy"></button>
-        <button type="button" class="swatch-btn swatch-btn--active" style="background-color:#38a169;" data-color="Zielony DX" aria-label="Ciemny zielony DX"></button>
-        <button type="button" class="swatch-btn" style="background-color:#63b3ed;" data-color="Błękitny" aria-label="Błękitny"></button>
-      </div>
-    </div>
 
     <div class="cart-modal__table-wrapper">
       <table class="cart-modal__table">
@@ -163,7 +163,7 @@
           </span>
           <span class="selected-swatch-item">
             <span class="selected-swatch-dot" style="background-color:#63b3ed;"></span>
-            <span class="selected-swatch-count"></span>
+            <span class="selected-swatch-count">4</span>
           </span>
         </div>
       </div>
