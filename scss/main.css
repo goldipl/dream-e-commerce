@@ -3352,7 +3352,7 @@ nav .promo-card .dropdown-menu.mega-menu {
 }
 .bootbox.cart-modal-dialog .modal-content {
   border: none;
-  border-radius: 8px;
+  border-radius: 0;
   box-shadow: 0 8px 20px rgba(0, 28, 94, 0.2);
   overflow: hidden;
 }
@@ -3703,6 +3703,12 @@ nav .promo-card .dropdown-menu.mega-menu {
 .cart-modal__submit {
   max-width: none;
   min-width: 160px;
+}
+
+.modal-content,
+.cart-modal-dialog,
+.modal {
+  border-radius: 0;
 }
 
 .offerts-row {

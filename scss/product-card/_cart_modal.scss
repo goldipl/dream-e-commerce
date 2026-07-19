@@ -20,7 +20,7 @@
 
   .modal-content {
     border: none;
-    border-radius: $radius-md;
+    border-radius: 0;
     box-shadow: $shadow-md;
     overflow: hidden;
   }
@@ -433,4 +433,10 @@
     max-width: none;
     min-width: 160px;
   }
+}
+
+.modal-content,
+.cart-modal-dialog,
+.modal {
+  border-radius: 0;
 }
