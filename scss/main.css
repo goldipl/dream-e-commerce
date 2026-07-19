@@ -5774,9 +5774,14 @@ tbody td {
 .summary-panel__header {
   background-color: #ecf2fb;
   color: #001c5e;
+  padding: 12px 20px;
+}
+.summary-panel__header span {
   font-size: 12px;
   font-weight: 700;
-  padding: 12px 20px;
+}
+.summary-panel__header span:nth-of-type(2) {
+  font-weight: 300;
 }
 .summary-panel__header--split {
   display: flex;
@@ -5830,14 +5835,15 @@ tbody td {
 }
 .summary-products__name {
   flex: 1;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #1a1a1a;
 }
 .summary-products__qty {
   flex-shrink: 0;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
   color: #1a1a1a;
   min-width: 24px;
   text-align: right;
@@ -5884,28 +5890,33 @@ tbody td {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: #1a1a1a;
 }
 .summary-details__row {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: row;
+  gap: 40px;
 }
 .summary-details__label {
   font-size: 12px;
   font-weight: 300;
   color: #808eaf;
+  min-width: 140px;
 }
 .summary-details__value {
-  font-size: 13px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
   color: #1a1a1a;
 }
 .summary-details__value strong {
   font-weight: 700;
 }
 .summary-details__value--muted {
+  font-size: 10px;
   font-weight: 300;
   line-height: 20px;
   color: #556270;
@@ -5918,7 +5929,7 @@ tbody td {
 .promo-code-row__input {
   flex: 1;
   height: 40px;
-  font-weight: 700;
+  font-weight: 400;
   color: #0349ff;
 }
 .promo-code-row__btn {
@@ -5943,17 +5954,19 @@ tbody td {
   margin-top: 2px;
 }
 .consent-item__text {
-  font-size: 12px;
-  line-height: 18px;
-  color: #1a1a1a;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  color: #001c5e;
 }
 .consent-item__text a {
-  color: #0349ff;
+  color: #001c5e;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 .consent-item__text a:hover {
-  color: #008cff;
+  text-decoration: none;
 }
 
 .cart-summary--purchase .cart-summary__body {

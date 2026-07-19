@@ -40,9 +40,15 @@
   &__header {
     background-color: $inputs_layer;
     color: $main_color;
-    font-size: 12px;
-    font-weight: 700;
     padding: 12px 20px;
+
+    span {
+      font-size: 12px;
+      font-weight: 700;
+      &:nth-of-type(2) {
+        font-weight: 300;
+      }
+    }
 
     &--split {
       display: flex;
@@ -108,15 +114,16 @@
 
   &__name {
     flex: 1;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 300;
     color: $main_text;
   }
 
   &__qty {
     flex-shrink: 0;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
     color: $main_text;
     min-width: 24px;
     text-align: right;
@@ -171,25 +178,29 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 300;
     color: $main_text;
   }
 
   &__row {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    flex-direction: row;
+    gap: 40px;
   }
 
   &__label {
     font-size: 12px;
     font-weight: 300;
     color: $breadcrumbs_color;
+    min-width: 140px;
   }
 
   &__value {
-    font-size: 13px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
     color: $main_text;
 
     strong {
@@ -197,6 +208,7 @@
     }
 
     &--muted {
+      font-size: 10px;
       font-weight: 300;
       line-height: 20px;
       color: #556270;
@@ -214,7 +226,7 @@
   &__input {
     flex: 1;
     height: 40px;
-    font-weight: 700;
+    font-weight: 400;
     color: $accent_color;
   }
 
@@ -242,17 +254,19 @@
   }
 
   &__text {
-    font-size: 12px;
-    line-height: 18px;
-    color: $main_text;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    color: $main_color;
 
     a {
-      color: $accent_color;
+      color: $main_color;
       text-decoration: underline;
       text-underline-offset: 2px;
 
       &:hover {
-        color: $cta_hover_color;
+        text-decoration: none;
       }
     }
   }
