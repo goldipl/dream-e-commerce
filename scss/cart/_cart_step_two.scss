@@ -77,7 +77,8 @@
   &:has(input:checked) {
     background: #fff;
     box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
-    .delivery-option__name {
+    .delivery-option__name,
+    .delivery-option__price {
       font-weight: 700;
     }
   }
@@ -122,10 +123,6 @@
     color: $main_text;
     white-space: nowrap;
     margin-right: 12px;
-
-    strong {
-      font-weight: 700;
-    }
 
     @media (max-width: 767px) {
       display: none;

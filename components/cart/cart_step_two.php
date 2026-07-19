@@ -37,7 +37,7 @@
               Przesyłka kurierska za pobraniem
             </span>
             <span class="delivery-option__price">
-              <strong>19,00 PLN + VAT</strong>
+              19,00 PLN + VAT
             </span>
             <input type="radio" name="delivery-method" class="delivery-option__radio" checked>
           </label>
