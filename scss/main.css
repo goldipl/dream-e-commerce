@@ -5165,7 +5165,8 @@ tbody td {
   border-color: #e03737;
   color: #e03737;
 }
-.qty-stepper--error:focus {
+.qty-stepper--error:focus,
+.qty-stepper--error .qty-stepper__input {
   border-color: #e03737;
 }
 

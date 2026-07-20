@@ -322,7 +322,8 @@
     border-color: #e03737;
     color: #e03737;
 
-    &:focus {
+    &:focus,
+    .qty-stepper__input {
       border-color: #e03737;
     }
   }
