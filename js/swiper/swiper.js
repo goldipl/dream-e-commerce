@@ -97,3 +97,35 @@ if (recommendedProductsSwiperEl) {
     },
   });
 }
+
+const articleMoreNewsSwiperEl = document.querySelector('.article-more-news-swiper');
+
+if (articleMoreNewsSwiperEl) {
+  new Swiper(articleMoreNewsSwiperEl, {
+    direction: 'horizontal',
+    loop: false,
+    watchOverflow: true,
+    observer: true,
+    observeParents: true,
+    grabCursor: true,
+    speed: 400,
+    slidesPerView: 1,
+    spaceBetween: 24,
+
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 24
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 32
+      }
+    },
+
+    navigation: {
+      nextEl: articleMoreNewsSwiperEl.querySelector('.swiper-button-next'),
+      prevEl: articleMoreNewsSwiperEl.querySelector('.swiper-button-prev'),
+    },
+  });
+}
