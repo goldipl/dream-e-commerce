@@ -6603,32 +6603,15 @@ tbody td {
   white-space: nowrap;
 }
 
-.article-breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 24px;
-  font-size: 12px;
-  font-weight: 300;
+#main-wrapper:has(.article-content) .breadcrumbs {
+  max-width: 1480px;
+  padding-left: 0;
 }
 @media (max-width: 767px) {
-  .article-breadcrumbs {
-    margin-bottom: 16px;
+  #main-wrapper:has(.article-content) .breadcrumbs {
+    padding: 0 16px;
+    margin-bottom: 0;
   }
-}
-.article-breadcrumbs__link {
-  color: #0349ff;
-  text-decoration: none;
-}
-.article-breadcrumbs__link:hover {
-  text-decoration: underline;
-}
-.article-breadcrumbs__sep {
-  color: #8b9bb4;
-}
-.article-breadcrumbs__current {
-  color: #1a1a1a;
-  font-weight: 300;
 }
 
 .article-content {

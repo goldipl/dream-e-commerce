@@ -4,10 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dreamtex - Artykuł</title>
+        <title>Dreamtex - Schowek</title>
         <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="./css/bootstrap.min.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/swiper-bundle.css" />
         <link rel="stylesheet" href="./css/select2.min.css" />
         <link rel="stylesheet" href="./scss/main.css">
     </head>
@@ -26,9 +25,19 @@
                     </li>
                 </ul>
             </div>
-            <?php include "./components/article/article_content.php"; ?>
-            <?php include "./components/article/article_products.php"; ?>
-            <?php include "./components/article/article_more_news.php"; ?>
+            <div class="category-top-wrapper container">
+                <?php include "./components/category/category_top_filters.php"; ?> 
+            </div>
+            <div class="category-wrapper">
+                <div class="container">
+                    <aside class="category-wrapper__left">
+                        <?php include "./components/category/category_left_filters.php"; ?> 
+                    </aside>
+                    <div class="category-wrapper__right">
+                        <?php include "./components/category/category_filters_main.php"; ?> 
+                    </div>
+                </div>
+            </div> 
         </main>
         <footer> 
             <?php include "./components/common/footer.php"; ?> 
@@ -38,8 +47,7 @@
         <script src="./js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="./js/bootbox.min.js"></script>
         <script src="./js/select2.min.js"></script>
-        <script src="./js/swiper/swiper-bundle.js"></script>
-        <script src="./js/swiper/swiper.js"></script>
         <script src="./js/script.js"></script>
+        <script src="./js/category/accordions.js"></script>
     </body>
 </html>

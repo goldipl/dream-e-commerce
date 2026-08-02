@@ -1,10 +1,4 @@
 <section class="article-content">
-  <div class="article-breadcrumbs" aria-label="breadcrumb">
-    <a href="#" class="article-breadcrumbs__link">Odzież firmowa</a>
-    <span class="article-breadcrumbs__sep">/</span>
-    <span class="article-breadcrumbs__current">Koszulki T-shirt</span>
-  </div>
-
   <h1 class="article-content__title">Koszule biznesowe SEVEN SEAS - WIĘCEJ NIŻ KOSZULE</h1>
 
   <div class="article-hero">

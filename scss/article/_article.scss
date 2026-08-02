@@ -1,40 +1,15 @@
 // ---------------------------------------------------------------------
-// Breadcrumbs
+// Content wrapper / title
 // ---------------------------------------------------------------------
-.article-breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 24px;
-  font-size: 12px;
-  font-weight: 300;
-
+#main-wrapper:has(.article-content) .breadcrumbs {
+  max-width: 1480px;
+  padding-left: 0;
   @media (max-width: 767px) {
-    margin-bottom: 16px;
-  }
-
-  &__link {
-    color: $accent_color;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  &__sep {
-    color: $text_muted;
-  }
-
-  &__current {
-    color: $main_text;
-    font-weight: 300;
+    padding: 0 16px;
+    margin-bottom: 0;
   }
 }
 
-// ---------------------------------------------------------------------
-// Content wrapper / title
-// ---------------------------------------------------------------------
 .article-content {
   max-width: 1480px;
   margin: 0 auto;
