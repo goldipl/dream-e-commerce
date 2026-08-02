@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dreamtex - Schowek</title>
+        <title>Dreamtex - Twój schowek</title>
         <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="./css/bootstrap.min.css" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/select2.min.css" />
@@ -15,29 +15,7 @@
             <?php include "./components/common/nav.php"; ?> 
         </header>
         <main id="main-wrapper">
-            <div class="breadcrumbs container">
-                <ul>
-                    <li class="breadcrumb-item">
-                        <a href="#">Odzież firmowa</a>
-                    </li>
-                    <li class="breadcrumb-item active">
-                        <span>Koszulki T-shirt</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="category-top-wrapper container">
-                <?php include "./components/category/category_top_filters.php"; ?> 
-            </div>
-            <div class="category-wrapper">
-                <div class="container">
-                    <aside class="category-wrapper__left">
-                        <?php include "./components/category/category_left_filters.php"; ?> 
-                    </aside>
-                    <div class="category-wrapper__right">
-                        <?php include "./components/category/category_filters_main.php"; ?> 
-                    </div>
-                </div>
-            </div> 
+            <?php include "./components/storage/storage.php"; ?>  
         </main>
         <footer> 
             <?php include "./components/common/footer.php"; ?> 
@@ -49,5 +27,23 @@
         <script src="./js/select2.min.js"></script>
         <script src="./js/script.js"></script>
         <script src="./js/category/accordions.js"></script>
+        <script>
+            $(function () {
+                var visibleItems = 12;
+                var $products = $('.product-card');
+                var $loadMore = $('.btn-load-more');
+
+                // Hide all products after the first 12
+                $products.slice(visibleItems).hide();
+
+                $loadMore.on('click', function () {
+                    // Show the remaining 3 products
+                    $products.slice(visibleItems, visibleItems + 3).fadeIn();
+
+                    // Hide the button after showing all hidden products
+                    $(this).hide();
+                });
+            });
+        </script>
     </body>
 </html>

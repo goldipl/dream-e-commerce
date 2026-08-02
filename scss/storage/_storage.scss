@@ -1,0 +1,83 @@
+// ==========================================================================
+// Storage ("Twój schowek") — same product grid as category_filters_main,
+// just 4 columns instead of 3.
+// ==========================================================================
+
+.storage-wrapper {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+
+  @media (max-width: 992px) {
+    padding: 16px 16px 40px;
+  }
+
+  .product-card.is-hidden {
+    display: none;
+  }
+}
+
+.storage-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 16px 0 32px 0;
+
+  @media (max-width: 771px) {
+    margin: 8px 0 16px 0;
+    gap: 12px;
+  }
+
+  &__icon {
+    width: 31px;
+    height: 29px;
+    color: $main_color;
+    flex-shrink: 0;
+    @media (max-width: 767px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__title {
+    color: $main_text;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+
+  &__count {
+    color: rgba(0, 28, 94, 0.5);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 125% */
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+}
+
+// 4-column variant of .products-grid-container (defined in
+// _category_filters_main.scss — same component, same breakpoints,
+// just one more column at desktop width).
+.products-grid-container--4col {
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 550px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
