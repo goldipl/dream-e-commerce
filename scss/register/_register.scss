@@ -1,0 +1,411 @@
+.register-fieldset {
+  all: unset;
+  display: block;
+  box-sizing: border-box;
+  min-width: 0;
+
+  &[disabled] {
+    display: none !important;
+  }
+}
+
+.register-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 40px 0 60px;
+
+  .checkout-panel {
+    border: 0;
+    box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
+    &__body {
+      padding: 40px 78px;
+      @media (max-width: 767px) {
+        padding: 24px 28px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 24px 16px 40px;
+    gap: 16px;
+  }
+
+  &__header {
+    margin-bottom: 4px;
+  }
+
+  &__title {
+    color: $main_color;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+
+  &__subtitle {
+    color: $text_muted;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 54px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: stretch;
+      margin-top: 16px;
+    }
+  }
+
+  &__submit {
+    flex-shrink: 0;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------
+// Section label ("1. Na początek wybierz, jak kupujesz:")
+// ---------------------------------------------------------------------
+.form-section-label {
+  display: block;
+  color: $main_color;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+// ---------------------------------------------------------------------
+// 1. Purchase type switcher
+// ---------------------------------------------------------------------
+.purchase-type-options {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+.purchase-type-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+
+  &__radio {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    accent-color: $accent_color;
+    cursor: pointer;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 300;
+    color: $main_text;
+  }
+
+  &:has(&__radio:checked),
+  &:has(input:checked) {
+    .purchase-type-option__label {
+      color: $accent_color;
+      font-weight: 700;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------
+// 2. Sprawdzenie NIP
+// ---------------------------------------------------------------------
+.nip-check-row {
+  display: flex;
+  gap: 12px;
+  max-width: 460px;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+
+  .text-input {
+    flex: 1;
+    min-height: 42px;
+  }
+
+  .btn-outline-blue {
+    flex-shrink: 0;
+    padding: 0 24px;
+    min-height: 42px;
+
+    @media (max-width: 480px) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------
+// 3–5. Dane do logowania / Dane firmowe / Osoba kontaktowa
+// ---------------------------------------------------------------------
+.register-details {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.register-grid {
+  display: grid;
+  gap: 12px;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &--2col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &--3col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &--4col {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 767px) {
+    &--2col,
+    &--3col,
+    &--4col {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------
+// Footer: terms checkbox + submit
+// ---------------------------------------------------------------------
+.register-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+
+  .checkbox-input {
+    margin-top: 3px;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: $text_muted;
+    max-width: 1100px;
+    color: $main_text;
+    @media (max-width: 767px) {
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+
+  &__link {
+    color: $accent_color;
+    text-decoration: underline;
+  }
+}
+
+// ==========================================================================
+// "Dziękujemy za rejestrację!" — bootbox.dialog wrapper
+// Bootbox 6 renders: .bootbox.modal > .modal-dialog > .modal-content > .modal-body > .bootbox-body
+// ==========================================================================
+.bootbox.register-success-dialog {
+  .modal-header {
+    padding: 0;
+  }
+
+  .modal-dialog {
+    max-width: 1070px;
+    width: 100%;
+    margin: 1.75rem auto;
+
+    @media (max-width: 767px) {
+      max-width: calc(100% - 24px);
+      margin: 12px auto;
+    }
+  }
+
+  .modal-content {
+    border: none;
+    border-radius: 0;
+    box-shadow: $shadow-md;
+    overflow: hidden;
+  }
+
+  .modal-body {
+    padding: 32px 36px;
+
+    @media (max-width: 767px) {
+      padding: 24px 20px;
+    }
+  }
+
+  .bootbox-close-button {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    z-index: 5;
+    filter: drop-shadow(0 0 15px rgba(0, 28, 94, 0.2));
+    transition: all 0.2s ease;
+    font-size: 14px;
+    line-height: 1;
+    color: $main_color;
+
+    &:hover {
+      background-color: $main_color;
+      border-color: $main_color;
+      color: $white;
+      --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+    }
+
+    @media (max-width: 767px) {
+      width: 32px;
+      height: 32px;
+      top: 16px;
+      right: 16px;
+      font-size: 12px;
+    }
+  }
+}
+
+.register-success-modal {
+  position: relative;
+  color: $main_text;
+
+  &__head {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    color: $accent_color;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+
+  &__subtitle {
+    color: $main_text;
+    font-size: 13px;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 20px;
+    background-color: $inputs_layer;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease;
+    width: 460px;
+
+    @media (max-width: 640px) {
+      width: 100%;
+    }
+
+    &:hover {
+      box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
+
+      .register-success-modal__card-btn {
+        background-color: $accent_color;
+      }
+    }
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    background-color: $white;
+    color: $main_color;
+    font-size: 10px;
+    font-weight: 300;
+    border: 1px solid $stroke-color;
+  }
+
+  &__card-title {
+    color: $main_color;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__card-desc {
+    color: $text_muted;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0 0 8px;
+  }
+
+  &__card-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: $main_color;
+    color: $white;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+  }
+}
