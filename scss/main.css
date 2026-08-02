@@ -604,6 +604,126 @@ nav .promo-card .dropdown-menu.mega-menu {
   background-color: #ffffff;
 }
 
+nav .login-dropdown {
+  position: relative;
+}
+nav .login-toggle {
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+nav .login-toggle.active .nav-links-items__item-label {
+  color: #0049ff;
+}
+nav .login-popup.dropdown-menu {
+  display: none;
+  position: absolute !important;
+  top: calc(100% + 24px) !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  inset: auto !important;
+  margin: 0 !important;
+  width: 332px;
+  max-width: calc(100vw - 32px);
+  padding: 40px 32px 32px;
+  border: 0;
+  background-color: #ffffff;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.18);
+  z-index: 1050;
+}
+nav .login-popup.dropdown-menu.show {
+  display: flex;
+  flex-direction: column;
+}
+nav .login-popup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+nav .login-popup__field {
+  width: 100%;
+}
+nav .login-popup__input {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid #cbd5e1;
+  color: #001c5e;
+  font-size: 14px;
+}
+nav .login-popup__input::-moz-placeholder {
+  color: rgba(0, 28, 94, 0.5);
+  font-size: 14px;
+  font-weight: 300;
+}
+nav .login-popup__input::placeholder {
+  color: rgba(0, 28, 94, 0.5);
+  font-size: 14px;
+  font-weight: 300;
+}
+nav .login-popup__input:focus {
+  border-color: #0049ff;
+}
+nav .login-popup__submit {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0049ff;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+nav .login-popup__submit:hover {
+  opacity: 0.9;
+}
+nav .login-popup__question {
+  margin: 24px 0 12px;
+  color: #001c5e;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+nav .login-popup__register-btn {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #0049ff;
+  color: #0049ff;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+nav .login-popup__register-btn:hover {
+  background-color: #0049ff;
+  color: #ffffff;
+}
+
+@media (max-width: 991px) {
+  nav .login-popup.dropdown-menu {
+    width: 100%;
+    max-width: 100%;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    top: calc(100% + 12px) !important;
+    padding: 24px 16px;
+  }
+}
 .footer {
   background: #ffffff;
   border-top: 1px solid rgba(0, 28, 94, 0.1);

@@ -184,3 +184,18 @@ $(function () {
     }
   });
 });
+
+$(document).ready(function () {
+  var $loginDropdown = $('.login-dropdown');
+  var $loginToggle = $('.login-toggle');
+
+  if ($loginDropdown.length && $loginToggle.length) {
+    $loginDropdown.on('show.bs.dropdown', function () {
+      $loginToggle.addClass('active').attr('aria-expanded', 'true');
+    });
+
+    $loginDropdown.on('hide.bs.dropdown', function () {
+      $loginToggle.removeClass('active').attr('aria-expanded', 'false');
+    });
+  }
+});
