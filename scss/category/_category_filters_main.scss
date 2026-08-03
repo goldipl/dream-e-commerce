@@ -169,6 +169,19 @@
           }
         }
       }
+
+      &--storage {
+        background-color: #07193b;
+        svg {
+          filter: invert(1) brightness(2);
+        }
+        &:hover {
+          background-color: #ffffff;
+          svg {
+            filter: unset;
+          }
+        }
+      }
     }
   }
 

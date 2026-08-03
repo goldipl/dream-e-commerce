@@ -2500,6 +2500,18 @@ nav .login-popup__register-btn:hover {
 .product-card__action-buttons .action-btn--wishlist:hover svg {
   filter: invert(1) brightness(2);
 }
+.product-card__action-buttons .action-btn--storage {
+  background-color: #07193b;
+}
+.product-card__action-buttons .action-btn--storage svg {
+  filter: invert(1) brightness(2);
+}
+.product-card__action-buttons .action-btn--storage:hover {
+  background-color: #ffffff;
+}
+.product-card__action-buttons .action-btn--storage:hover svg {
+  filter: unset;
+}
 .product-card__brand-tag {
   position: absolute;
   bottom: 20px;

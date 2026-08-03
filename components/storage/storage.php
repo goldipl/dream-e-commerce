@@ -25,7 +25,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -82,7 +82,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -138,7 +138,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -194,7 +194,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -250,7 +250,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -307,7 +307,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -363,7 +363,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -419,7 +419,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -475,7 +475,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -532,7 +532,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -588,7 +588,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -644,7 +644,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -700,7 +700,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -757,7 +757,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -813,7 +813,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
@@ -869,7 +869,7 @@
               <path d="M5.6525 16L4.54409 14.825L7.27534 11.95H0V10.2832H7.27534L4.54409 7.40825L5.6525 6.23325L10.2916 11.1168L5.6525 16ZM13.3475 9.76675L8.70841 4.88325L13.3475 0L14.4559 1.175L11.7247 4.05H19V5.71675H11.7247L14.4559 8.59175L13.3475 9.76675Z" fill="#001C5E" />
             </svg>
           </button>
-          <button class="action-btn action-btn--wishlist" aria-label="Dodaj do ulubionych">
+          <button class="action-btn action-btn--wishlist action-btn--storage" aria-label="Usuń z ulubionych">
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
