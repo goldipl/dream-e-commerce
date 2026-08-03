@@ -1,5 +1,5 @@
 <section class="article-more-news">
-  <h2 class="article-more-news__title">Więcej aktualności:</h2>
+  <h2 class="article-more-news__title">Aktualności</h2>
 
   <div class="swiper article-more-news-swiper">
     <div class="swiper-wrapper">
