@@ -5180,6 +5180,12 @@ tbody td {
 .cart-table thead th.col-num, .cart-table thead th.col-price, .cart-table thead th.col-total {
   text-align: center;
 }
+.cart-table tbody.cart-group {
+  border-bottom: 0.4px solid rgba(0, 28, 94, 0.2);
+}
+.cart-table tbody.cart-group td.col-actions {
+  height: 40px;
+}
 .cart-table tbody.cart-group:hover {
   box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
 }
@@ -5193,9 +5199,6 @@ tbody td {
   border: 0;
   border-left: 0.4px solid rgba(0, 28, 94, 0.2);
   border-right: 0.4px solid rgba(0, 28, 94, 0.2);
-}
-.cart-table tbody.cart-group .cart-row td {
-  padding-bottom: 0;
 }
 .cart-table tbody tr {
   width: auto;
