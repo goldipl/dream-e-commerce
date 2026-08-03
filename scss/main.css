@@ -1454,6 +1454,7 @@ nav .login-popup__register-btn:hover {
   padding: 92px 16px;
   box-sizing: border-box;
   background-color: #ecf2fb;
+  margin-bottom: 48px;
 }
 @media (max-width: 991px) {
   .products-section {
