@@ -30,7 +30,7 @@
             <th class="col-actions"></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="cart-group" data-group="1">
           <!-- Single-variant product -->
           <tr class="cart-row cart-row--single" data-group="1">
             <td class="col-product" rowspan="1">
@@ -68,6 +68,9 @@
               </button>
             </td>
           </tr>
+        </tbody>
+
+        <tbody class="cart-group" data-group="2">
           <!-- Multi-variant product group (spans thumbnail across rows) -->
           <tr class="cart-row cart-row--group-start" data-group="2">
             <td class="col-product" rowspan="4">
@@ -180,6 +183,9 @@
               </button>
             </td>
           </tr>
+        </tbody>
+
+        <tbody class="cart-group" data-group="3">
           <tr class="cart-row cart-row--single" data-group="3">
             <td class="col-product">
               <div class="cart-product">
@@ -216,6 +222,9 @@
               </button>
             </td>
           </tr>
+        </tbody>
+
+        <tbody class="cart-group" data-group="4">
           <tr class="cart-row cart-row--single" data-group="4">
             <td class="col-product">
               <div class="cart-product">
@@ -252,6 +261,9 @@
               </button>
             </td>
           </tr>
+        </tbody>
+
+        <tbody class="cart-group" data-group="5">
           <!-- Row with validation error: size not chosen -->
           <tr class="cart-row cart-row--single cart-row--error" data-group="5">
             <td class="col-product">
@@ -290,6 +302,9 @@
               </button>
             </td>
           </tr>
+        </tbody>
+
+        <tbody class="cart-group" data-group="6">
           <tr class="cart-row cart-row--group-start" data-group="6">
             <td class="col-product" rowspan="2">
               <div class="cart-product">

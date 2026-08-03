@@ -123,6 +123,11 @@
   border-collapse: collapse;
   background-color: $white;
   table-layout: auto;
+  border-bottom: 0.4px solid rgba(0, 28, 94, 0.2);
+
+  thead tr {
+    border: 0.4px solid rgba(0, 28, 94, 0.2);
+  }
 
   thead th {
     text-align: left;
@@ -149,6 +154,25 @@
   }
 
   tbody {
+    &.cart-group {
+      &:hover {
+        box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
+      }
+      &:hover tr {
+        box-shadow: unset;
+      }
+      .cart-row--single:hover {
+        box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
+      }
+      .cart-row {
+        border: 0;
+        border-left: 0.4px solid rgba(0, 28, 94, 0.2);
+        border-right: 0.4px solid rgba(0, 28, 94, 0.2);
+        td {
+          padding-bottom: 0;
+        }
+      }
+    }
     tr {
       width: auto;
       border-bottom: 0;
@@ -241,6 +265,11 @@
 
     .cart-row--error:hover td {
       background-color: rgba(224, 55, 55, 0.03);
+    }
+
+    // Hover group: highlight whole grouped tbody when any row is hovered
+    tbody.cart-group {
+      background-color: rgba(55, 170, 224, 0.04);
     }
   }
 }

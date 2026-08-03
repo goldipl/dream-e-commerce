@@ -5138,6 +5138,10 @@ tbody td {
   border-collapse: collapse;
   background-color: #ffffff;
   table-layout: auto;
+  border-bottom: 0.4px solid rgba(0, 28, 94, 0.2);
+}
+.cart-table thead tr {
+  border: 0.4px solid rgba(0, 28, 94, 0.2);
 }
 .cart-table thead th {
   text-align: left;
@@ -5158,6 +5162,23 @@ tbody td {
 }
 .cart-table thead th.col-num, .cart-table thead th.col-price, .cart-table thead th.col-total {
   text-align: center;
+}
+.cart-table tbody.cart-group:hover {
+  box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
+}
+.cart-table tbody.cart-group:hover tr {
+  box-shadow: unset;
+}
+.cart-table tbody.cart-group .cart-row--single:hover {
+  box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
+}
+.cart-table tbody.cart-group .cart-row {
+  border: 0;
+  border-left: 0.4px solid rgba(0, 28, 94, 0.2);
+  border-right: 0.4px solid rgba(0, 28, 94, 0.2);
+}
+.cart-table tbody.cart-group .cart-row td {
+  padding-bottom: 0;
 }
 .cart-table tbody tr {
   width: auto;
@@ -5228,6 +5249,9 @@ tbody td {
 }
 .cart-table tbody .cart-row--error:hover td {
   background-color: rgba(224, 55, 55, 0.03);
+}
+.cart-table tbody tbody.cart-group {
+  background-color: rgba(55, 170, 224, 0.04);
 }
 
 .cart-product {
