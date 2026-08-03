@@ -1,5 +1,8 @@
+const getSwiperNavRoot = (swiperEl) => swiperEl.closest('.swiper-container') || swiperEl;
+
 document.querySelectorAll('.main-page-swiper .swiper').forEach((swiperEl) => {
   if (swiperEl) {
+    const swiperNavRoot = getSwiperNavRoot(swiperEl);
     new Swiper(swiperEl, {
       direction: 'horizontal',
       loop: true,
@@ -13,8 +16,8 @@ document.querySelectorAll('.main-page-swiper .swiper').forEach((swiperEl) => {
       },
 
       navigation: {
-        nextEl: swiperEl.querySelector('.swiper-button-next'),
-        prevEl: swiperEl.querySelector('.swiper-button-prev'),
+        nextEl: swiperNavRoot.querySelector('.swiper-button-next'),
+        prevEl: swiperNavRoot.querySelector('.swiper-button-prev'),
       },
 
       autoplay: {
@@ -28,6 +31,7 @@ document.querySelectorAll('.main-page-swiper .swiper').forEach((swiperEl) => {
 const newsSwiperEl = document.querySelector('.news-swiper');
 
 if (newsSwiperEl) {
+  const newsNavRoot = getSwiperNavRoot(newsSwiperEl);
   new Swiper(newsSwiperEl, {
     direction: 'horizontal',
     loop: true,
@@ -51,8 +55,8 @@ if (newsSwiperEl) {
     },
 
     navigation: {
-      nextEl: newsSwiperEl.querySelector('.swiper-button-next'),
-      prevEl: newsSwiperEl.querySelector('.swiper-button-prev'),
+      nextEl: newsNavRoot.querySelector('.swiper-button-next'),
+      prevEl: newsNavRoot.querySelector('.swiper-button-prev'),
     },
 
     autoplay: {
@@ -65,6 +69,7 @@ if (newsSwiperEl) {
 const recommendedProductsSwiperEl = document.querySelector('.recommended-products-swiper');
 
 if (recommendedProductsSwiperEl) {
+  const recommendedProductsContainer = getSwiperNavRoot(recommendedProductsSwiperEl);
   new Swiper(recommendedProductsSwiperEl, {
     direction: 'horizontal',
     loop: false,
@@ -92,8 +97,8 @@ if (recommendedProductsSwiperEl) {
     },
 
     navigation: {
-      nextEl: recommendedProductsSwiperEl.querySelector('.swiper-button-next'),
-      prevEl: recommendedProductsSwiperEl.querySelector('.swiper-button-prev'),
+      nextEl: recommendedProductsContainer?.querySelector('.swiper-button-next'),
+      prevEl: recommendedProductsContainer?.querySelector('.swiper-button-prev'),
     },
   });
 }
@@ -101,6 +106,7 @@ if (recommendedProductsSwiperEl) {
 const articleMoreNewsSwiperEl = document.querySelector('.article-more-news-swiper');
 
 if (articleMoreNewsSwiperEl) {
+  const articleMoreNewsContainer = getSwiperNavRoot(articleMoreNewsSwiperEl);
   new Swiper(articleMoreNewsSwiperEl, {
     direction: 'horizontal',
     loop: false,
@@ -124,8 +130,8 @@ if (articleMoreNewsSwiperEl) {
     },
 
     navigation: {
-      nextEl: articleMoreNewsSwiperEl.querySelector('.swiper-button-next'),
-      prevEl: articleMoreNewsSwiperEl.querySelector('.swiper-button-prev'),
+      nextEl: articleMoreNewsContainer?.querySelector('.swiper-button-next'),
+      prevEl: articleMoreNewsContainer?.querySelector('.swiper-button-prev'),
     },
   });
 }

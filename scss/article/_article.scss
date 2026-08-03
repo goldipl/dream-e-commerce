@@ -209,6 +209,15 @@
     }
   }
 
+  .article-products__swiper-container {
+    position: relative;
+    overflow: visible;
+  }
+
+  .article-products__swiper-container .swiper {
+    overflow: hidden;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     position: absolute;
@@ -238,10 +247,20 @@
 
   .swiper-button-next {
     background-image: url("./../assets/icons/main_page/hero_swiper/arrow-right.svg");
+    right: 6px;
+
+    @media (min-width: 992px) {
+      right: -56px;
+    }
   }
 
   .swiper-button-prev {
     background-image: url("./../assets/icons/main_page/hero_swiper/arrow-left.svg");
+    left: 6px;
+
+    @media (min-width: 992px) {
+      left: -56px;
+    }
   }
 }
 
@@ -277,8 +296,14 @@
     }
   }
 
+  .article-more-news__container {
+    position: relative;
+    overflow: visible;
+  }
+
   .swiper {
     padding: 0 4px;
+    overflow: hidden;
   }
 
   .swiper-slide {
@@ -318,9 +343,19 @@
 
   .swiper-button-next {
     background-image: url("./../assets/icons/main_page/hero_swiper/arrow-right.svg");
+    right: 0;
+
+    @media (min-width: 992px) {
+      right: -56px;
+    }
   }
 
   .swiper-button-prev {
     background-image: url("./../assets/icons/main_page/hero_swiper/arrow-left.svg");
+    left: 0;
+
+    @media (min-width: 992px) {
+      left: -56px;
+    }
   }
 }
