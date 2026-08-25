@@ -1091,3 +1091,283 @@ td:has(.addon-info) {
     }
   }
 }
+
+// ==========================================================================
+// STEP 4 — DESCRIPTION & SETTINGS ("Opis i ustawienia")
+// ==========================================================================
+.opis-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.opis-group {
+  background: $white;
+  border: 1px solid $stroke-color;
+  box-shadow: $shadow-sm;
+}
+
+.opis-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  background: $white;
+
+  th,
+  td {
+    padding: 14px 16px;
+    font-size: 13px;
+    vertical-align: middle;
+  }
+
+  thead {
+    background: $inputs_layer;
+    border-bottom: 1px solid $stroke-color;
+
+    th {
+      font-size: 11px;
+      color: $breadcrumbs_color;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-align: left;
+    }
+  }
+
+  tbody tr.opis-table__product-row {
+    border-bottom: 1px solid $stroke-color;
+  }
+
+  &__product-row {
+    background: $white;
+
+    td {
+      white-space: nowrap;
+    }
+  }
+}
+
+.col-toggle {
+  text-align: right;
+  width: 90px;
+}
+
+// ==========================================================================
+// FIELD GROUP (label + reset link + input)
+// ==========================================================================
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 260px;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+}
+
+.field-label {
+  font-size: 11px;
+  color: $breadcrumbs_color;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.reset-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 11px;
+  color: $accent_color;
+  text-decoration: underline;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+// ==========================================================================
+// TOGGLE BUTTON (Rozwiń / Zwiń)
+// ==========================================================================
+.toggle-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: $accent_color;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+
+  i {
+    font-size: 11px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// ==========================================================================
+// DETAIL PANEL (expanded description & settings content)
+// ==========================================================================
+.opis-detail-wrapper > td {
+  padding: 0 16px 20px;
+  white-space: normal;
+}
+
+.opis-detail-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 4px;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 42px;
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 28px;
+    padding-top: 4px;
+  }
+
+  &__option-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__suboptions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 26px;
+  }
+}
+
+.textarea-field {
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+  border: 1px solid $stroke-color;
+  padding: 12px 14px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: $main_text;
+  font-family: inherit;
+  outline: none;
+  background: $white;
+  transition: border-color 0.15s;
+
+  &:focus {
+    border-color: $accent_color;
+  }
+}
+
+// ==========================================================================
+// RADIO FIELD
+// ==========================================================================
+.radio-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  &__dot {
+    width: 16px;
+    height: 16px;
+    border: 2px solid $stroke-color;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    background: $white;
+    transition: border-color 0.15s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 3px;
+      left: 3px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $accent_color;
+    }
+  }
+
+  input[type="radio"]:checked + .radio-field__dot {
+    border-color: $accent_color;
+
+    &::after {
+      display: block;
+    }
+  }
+
+  &__label {
+    font-size: 12.5px;
+    color: $main_text;
+  }
+}
+
+@media (max-width: 768px) {
+  .opis-table {
+    min-width: 820px;
+
+    th,
+    td {
+      padding: 12px 12px;
+    }
+  }
+
+  .field-group {
+    min-width: 200px;
+  }
+
+  .opis-detail-panel {
+    gap: 16px;
+
+    &__options {
+      gap: 18px;
+    }
+  }
+}

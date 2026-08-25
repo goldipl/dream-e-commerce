@@ -5212,6 +5212,245 @@ td:has(.addon-info) {
     gap: 16px;
   }
 }
+.opis-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.opis-group {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.opis-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+.opis-table th,
+.opis-table td {
+  padding: 14px 16px;
+  font-size: 13px;
+  vertical-align: middle;
+}
+.opis-table thead {
+  background: #ecf2fb;
+  border-bottom: 1px solid #cbd5e1;
+}
+.opis-table thead th {
+  font-size: 11px;
+  color: #808eaf;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+.opis-table tbody tr.opis-table__product-row {
+  border-bottom: 1px solid #cbd5e1;
+}
+.opis-table__product-row {
+  background: #ffffff;
+}
+.opis-table__product-row td {
+  white-space: nowrap;
+}
+
+.col-toggle {
+  text-align: right;
+  width: 90px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 260px;
+}
+.field-group__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.field-label {
+  font-size: 11px;
+  color: #808eaf;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.reset-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 11px;
+  color: #0349ff;
+  text-decoration: underline;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+}
+.reset-link:hover {
+  opacity: 0.75;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0349ff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+}
+.toggle-btn i {
+  font-size: 11px;
+}
+.toggle-btn:hover {
+  opacity: 0.8;
+}
+
+.opis-detail-wrapper > td {
+  padding: 0 16px 20px;
+  white-space: normal;
+}
+
+.opis-detail-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 4px;
+}
+.opis-detail-panel__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.opis-detail-panel__input {
+  width: 100%;
+  height: 42px;
+}
+.opis-detail-panel__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 900px) {
+  .opis-detail-panel__columns {
+    grid-template-columns: 1fr;
+  }
+}
+.opis-detail-panel__column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.opis-detail-panel__options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 28px;
+  padding-top: 4px;
+}
+.opis-detail-panel__option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.opis-detail-panel__suboptions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 26px;
+}
+
+.textarea-field {
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+  border: 1px solid #cbd5e1;
+  padding: 12px 14px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: #1a1a1a;
+  font-family: inherit;
+  outline: none;
+  background: #ffffff;
+  transition: border-color 0.15s;
+}
+.textarea-field:focus {
+  border-color: #0349ff;
+}
+
+.radio-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.radio-field input[type=radio] {
+  display: none;
+}
+.radio-field__dot {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #cbd5e1;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  background: #ffffff;
+  transition: border-color 0.15s;
+}
+.radio-field__dot::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0349ff;
+}
+.radio-field input[type=radio]:checked + .radio-field__dot {
+  border-color: #0349ff;
+}
+.radio-field input[type=radio]:checked + .radio-field__dot::after {
+  display: block;
+}
+.radio-field__label {
+  font-size: 12.5px;
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .opis-table {
+    min-width: 820px;
+  }
+  .opis-table th,
+  .opis-table td {
+    padding: 12px 12px;
+  }
+  .field-group {
+    min-width: 200px;
+  }
+  .opis-detail-panel {
+    gap: 16px;
+  }
+  .opis-detail-panel__options {
+    gap: 18px;
+  }
+}
 .cart-page {
   width: 100%;
   max-width: 1440px;
