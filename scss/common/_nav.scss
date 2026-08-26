@@ -856,9 +856,24 @@ nav {
       &.dropdown-menu {
         width: 100%;
         max-width: 100%;
-        left: 0 !important;
+        left: -100% !important;
         right: 0 !important;
         top: calc(100% + 12px) !important;
+        padding: 4px;
+        .account-popup__item {
+          font-size: 14px;
+          padding: 8px;
+          .account-popup__icon {
+            width: 5px;
+          }
+        }
+        .account-popup__logout {
+          font-size: 14px;
+          margin: 8px;
+        }
+        .account-popup__divider {
+          margin: 12px 0;
+        }
       }
     }
   }
