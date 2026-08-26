@@ -754,6 +754,8 @@ nav {
       display: flex;
       align-items: center;
       gap: 6px;
+      height: 32px;
+      white-space: nowrap;
     }
 
     &__chevron,
@@ -782,9 +784,9 @@ nav {
       right: auto !important;
       inset: auto !important;
       margin: 0 !important;
-      width: 264px;
+      padding: 24px 43px;
+      width: 332px;
       max-width: calc(100vw - 32px);
-      padding: 8px 0 16px;
       border: 0;
       background-color: $white;
       box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.18);
@@ -818,31 +820,24 @@ nav {
       }
 
       &:hover {
-        background-color: $inputs_layer;
-      }
-
-      &--accent {
-        color: $cta_color;
-
-        .account-popup__icon {
-          color: $cta_color;
-        }
+        text-decoration: none !important;
+        color: $accent_color !important;
       }
     }
 
     &__divider {
-      margin: 4px 24px 12px;
+      margin: 24px 0;
       border: 0;
-      border-top: 1px solid $stroke-color;
+      border-top: 1px solid $breadcrumbs_color;
     }
 
     &__logout {
       display: block;
-      padding: 0 24px;
       color: rgba(0, 28, 94, 0.5);
       font-size: 14px;
       font-weight: 400;
       text-decoration: none;
+      margin: 12px 0;
 
       &:hover {
         color: $main_color;
