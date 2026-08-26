@@ -754,6 +754,7 @@ nav .account-toggle .nav-links-items__item-label {
 nav .account-toggle__chevron,
 nav .account-toggle .account-toggle__chevron {
   transition: transform 0.2s ease;
+  width: 10px !important;
 }
 nav .account-toggle.active .nav-links-items__item-label, nav .account-toggle[aria-expanded=true] .nav-links-items__item-label {
   color: #0049ff;
