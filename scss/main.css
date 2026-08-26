@@ -800,6 +800,8 @@ nav .account-popup__item {
 nav .account-popup__item .account-popup__icon {
   flex-shrink: 0;
   color: #001c5e;
+  width: 5px;
+  height: auto;
 }
 nav .account-popup__item:hover {
   text-decoration: none !important;

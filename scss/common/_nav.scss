@@ -818,6 +818,8 @@ nav {
       .account-popup__icon {
         flex-shrink: 0;
         color: $main_color;
+        width: 5px;
+        height: auto;
       }
 
       &:hover {
