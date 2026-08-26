@@ -803,6 +803,9 @@ nav {
       &.show {
         display: block;
       }
+      @media (min-width: 992px) {
+        left: -110px !important;
+      }
     }
 
     &__list {

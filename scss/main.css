@@ -788,6 +788,11 @@ nav .account-popup.dropdown-menu {
 nav .account-popup.dropdown-menu.show {
   display: block;
 }
+@media (min-width: 992px) {
+  nav .account-popup.dropdown-menu {
+    left: -110px !important;
+  }
+}
 nav .account-popup__list {
   list-style: none;
   margin: 0;
