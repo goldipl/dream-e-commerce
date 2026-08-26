@@ -832,7 +832,7 @@ nav .account-popup__logout:hover {
     max-width: 100%;
     left: -100% !important;
     right: 0 !important;
-    top: calc(100% + 12px) !important;
+    top: 100% !important;
     padding: 4px;
   }
   nav .account-popup.dropdown-menu .account-popup__item {
