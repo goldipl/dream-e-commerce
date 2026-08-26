@@ -59,6 +59,7 @@
                 </div>
                 <button type="submit" class="login-popup__submit">Zaloguj się</button>
               </form>
+              <a href="" class="login-popup__password-lost">Nie pamiętam hasła</a>
               <p class="login-popup__question">Chcesz zamawiać online?</p>
               <a href="./rejestracja.php" class="login-popup__register-btn">Załóż konto</a>
             </div>
