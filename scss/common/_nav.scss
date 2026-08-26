@@ -810,8 +810,9 @@ nav {
       gap: 12px;
       padding: 14px 24px;
       color: $main_color;
-      font-size: 15px;
-      font-weight: 400;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
       text-decoration: none;
 
       .account-popup__icon {
@@ -834,8 +835,9 @@ nav {
     &__logout {
       display: block;
       color: rgba(0, 28, 94, 0.5);
-      font-size: 14px;
-      font-weight: 400;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
       text-decoration: none;
       margin: 12px 0;
 

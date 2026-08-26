@@ -792,8 +792,9 @@ nav .account-popup__item {
   gap: 12px;
   padding: 14px 24px;
   color: #001c5e;
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
   text-decoration: none;
 }
 nav .account-popup__item .account-popup__icon {
@@ -812,8 +813,9 @@ nav .account-popup__divider {
 nav .account-popup__logout {
   display: block;
   color: rgba(0, 28, 94, 0.5);
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
   text-decoration: none;
   margin: 12px 0;
 }
