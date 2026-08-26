@@ -727,13 +727,20 @@ nav {
   nav {
     .login-popup {
       &.dropdown-menu {
-        width: 100%;
-        max-width: 100%;
-        left: 0 !important;
+        width: 50vw;
+        max-width: 50vw;
+        left: -160% !important;
         right: 0 !important;
         transform: none !important;
-        top: calc(100% + 12px) !important;
+        top: 100% !important;
         padding: 24px 16px;
+        .login-popup__submit,
+        .login-popup__register-btn {
+          font-size: 14px;
+        }
+        .login-popup__register-btn {
+          font-size: 12px;
+        }
       }
     }
   }
