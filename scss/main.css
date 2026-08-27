@@ -6476,7 +6476,7 @@ td:has(.addon-info) {
   width: 100%;
   height: 42px;
   padding: 0 14px;
-  border: 1px solid #cbd5e1;
+  border: 0.4px solid #001c5e;
   border-radius: 0;
   font-size: 14px;
   color: #1a1a1a;
@@ -6484,10 +6484,10 @@ td:has(.addon-info) {
   font-family: inherit;
 }
 .text-input::-moz-placeholder {
-  color: #8b9bb4;
+  color: #001c5e;
 }
 .text-input::placeholder {
-  color: #8b9bb4;
+  color: #001c5e;
 }
 .text-input:focus {
   outline: none;
@@ -6901,7 +6901,22 @@ td:has(.addon-info) {
   }
 }
 .register-page__header {
-  margin-bottom: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+@media (max-width: 767px) {
+  .register-page__header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    margin-bottom: 8px;
+  }
+}
+.register-page__intro {
+  flex-shrink: 0;
 }
 .register-page__title {
   color: #001c5e;
@@ -6909,11 +6924,48 @@ td:has(.addon-info) {
   font-weight: 700;
   margin: 0 0 6px;
 }
+.register-page__big-subtitle {
+  color: #0049ff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 60px 0 11px;
+}
+@media (max-width: 767px) {
+  .register-page__big-subtitle {
+    font-size: 16px;
+    margin: 16px 0 11px;
+  }
+}
 .register-page__subtitle {
-  color: #8b9bb4;
+  color: #1a1a1a;
   font-size: 14px;
+  font-style: normal;
   font-weight: 300;
+  line-height: 20px;
   margin: 0;
+}
+.register-page__nip-check {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  margin: 80px 0 11px;
+}
+@media (max-width: 767px) {
+  .register-page__nip-check {
+    align-items: stretch;
+    margin: 0 0 11px;
+  }
+}
+.register-page__nip-check-hint {
+  display: block;
+  color: rgba(26, 26, 26, 0.7);
+  font-size: 11px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  text-align: left;
 }
 .register-page__body {
   display: flex;
@@ -6922,8 +6974,8 @@ td:has(.addon-info) {
 }
 .register-page__footer {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
   gap: 24px;
   margin-top: 54px;
 }
@@ -7012,6 +7064,17 @@ td:has(.addon-info) {
   .nip-check-row .btn-outline-blue {
     width: 100%;
     justify-content: center;
+  }
+}
+.register-page__nip-check .nip-check-row {
+  max-width: 300px;
+}
+.register-page__nip-check .nip-check-row .text-input {
+  min-width: 0;
+}
+@media (max-width: 767px) {
+  .register-page__nip-check .nip-check-row {
+    max-width: none;
   }
 }
 

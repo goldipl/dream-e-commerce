@@ -1,7 +1,18 @@
 <div class="register-page">
   <div class="register-page__header">
-    <h1 class="register-page__title">Rejestracja</h1>
-    <p class="register-page__subtitle">Załóż konto w kilka chwil i zyskaj dostęp do pełnej oferty!</p>
+    <div class="register-page__intro">
+      <h1 class="register-page__title">Rejestracja</h1>
+      <p class="register-page__big-subtitle">Chcesz zamawiać online?</p>
+      <p class="register-page__subtitle">Załóż konto w kilka chwil i zyskaj dostęp do pełnej oferty!</p>
+    </div>
+
+    <div class="register-page__nip-check">
+      <span class="register-page__nip-check-hint">Możliwe, że masz już konto, sprawdź przed rejestracją.</span>
+      <div class="nip-check-row">
+        <input type="text" class="text-input" id="nip-check-input" placeholder="NIP*">
+        <button type="button" class="btn-outline-blue" id="nip-check-btn">Sprawdź</button>
+      </div>
+    </div>
   </div>
 
   <form class="register-page__body" id="register-form" novalidate>
@@ -26,23 +37,12 @@
       </div>
     </section>
 
-    <!-- 2. Sprawdzenie NIP — tylko dla zakupów firmowych -->
-    <fieldset class="checkout-panel register-fieldset" id="nip-check-panel">
-      <div class="checkout-panel__body">
-        <span class="form-section-label">2. Możliwe, że masz już konto, sprawdź przed rejestracją.</span>
-        <div class="nip-check-row">
-          <input type="text" class="text-input" id="nip-check-input" placeholder="NIP*">
-          <button type="button" class="btn-outline-blue" id="nip-check-btn">Sprawdź</button>
-        </div>
-      </div>
-    </fieldset>
-
-    <!-- 3–5. Dane do logowania / Dane firmowe / Osoba kontaktowa -->
+    <!-- 2–4. Dane do logowania / Dane firmowe / Osoba kontaktowa -->
     <section class="checkout-panel">
       <div class="checkout-panel__body register-details">
         <!-- Dane do logowania -->
         <div class="register-details__block">
-          <span class="form-section-label" id="login-data-label">3. Dane do logowania</span>
+          <span class="form-section-label">2. Dane do logowania</span>
           <div class="register-grid register-grid--3col">
             <input type="email" class="text-input" name="email" placeholder="E-mail*" required>
             <input type="password" class="text-input" name="password" placeholder="Hasło*" required>
@@ -52,7 +52,7 @@
 
         <!-- Dane firmowe — tylko dla zakupów firmowych -->
         <fieldset class="register-details__block register-fieldset" id="company-data-block">
-          <span class="form-section-label">4. Dane firmowe</span>
+          <span class="form-section-label">3. Dane firmowe</span>
           <div class="register-grid register-grid--2col">
             <input type="text" class="text-input" name="company_name" placeholder="Nazwa firmy*" required>
             <input type="text" class="text-input" name="company_nip" placeholder="NIP*" required>
@@ -71,7 +71,7 @@
 
         <!-- Osoba kontaktowa — tylko dla zakupów firmowych -->
         <fieldset class="register-details__block register-fieldset" id="contact-person-block">
-          <span class="form-section-label">5. Osoba kontaktowa</span>
+          <span class="form-section-label">4. Osoba kontaktowa</span>
           <div class="register-grid register-grid--3col">
             <input type="text" class="text-input" name="contact_name" placeholder="Imię i Nazwisko*" required>
             <input type="tel" class="text-input" name="contact_phone" placeholder="Telefon*" required>
@@ -82,13 +82,6 @@
     </section>
 
     <div class="register-page__footer">
-      <label class="register-terms">
-        <input type="checkbox" class="checkbox-input" required>
-        <span class="register-terms__text">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-          <a href="#" class="register-terms__link">voluptas sit aspernatur.</a>
-        </span>
-      </label>
       <button type="submit" class="btn-primary-cta register-page__submit">
         <span>Zarejestruj się</span>
       </button>
@@ -137,10 +130,8 @@
     if (!form) return;
 
     var radios = form.querySelectorAll('input[name="purchase-type"]');
-    var nipPanel = document.getElementById('nip-check-panel');
     var companyBlock = document.getElementById('company-data-block');
     var contactBlock = document.getElementById('contact-person-block');
-    var loginLabel = document.getElementById('login-data-label');
 
     function setFieldsetState(fieldset, visible) {
       if (!fieldset) return;
@@ -151,13 +142,8 @@
     function updateView(purchaseType) {
       var isRetail = purchaseType === 'retail';
 
-      setFieldsetState(nipPanel, !isRetail);
       setFieldsetState(companyBlock, !isRetail);
       setFieldsetState(contactBlock, !isRetail);
-
-      if (loginLabel) {
-        loginLabel.textContent = isRetail ? '2. Dane do logowania' : '3. Dane do logowania';
-      }
 
       form.classList.toggle('is-retail', isRetail);
     }
