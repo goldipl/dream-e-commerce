@@ -152,21 +152,20 @@
         <div class="form-row">
           <div class="form-field">
             <label class="field-label">Termin ważności oferty</label>
-            <select class="select-field">
-              <option value=""></option>
-              <option>7 dni</option>
-              <option>14 dni</option>
-              <option>30 dni</option>
-            </select>
+            <input
+              class="input-field"
+              type="date"
+              value="2026-04-30"
+            >
           </div>
+
           <div class="form-field">
             <label class="field-label">Data oferty</label>
-            <select class="select-field">
-              <option value=""></option>
-              <option>1.04.2026</option>
-              <option>2.04.2026</option>
-              <option>3.04.2026</option>
-            </select>
+            <input
+              class="input-field"
+              type="date"
+              value="2026-04-01"
+            >
           </div>
         </div>
         <div class="form-row">
