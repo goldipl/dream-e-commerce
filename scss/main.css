@@ -5809,7 +5809,7 @@ td:has(.addon-info) {
 @media (max-width: 768px) {
   .page-nav {
     min-height: auto;
-    padding: 14px 16px;
+    padding: 14px 0;
     gap: 12px;
   }
   .page-nav .btn {
