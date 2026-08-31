@@ -1542,3 +1542,179 @@ td:has(.addon-info) {
     }
   }
 }
+
+// ==========================================================================
+// PAGE NAV — BUTTONS (Figma)
+// ==========================================================================
+
+.page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 67px;
+  padding: 48px 0;
+
+  background: $white;
+  border-top: 1px solid #eeeeee;
+  box-sizing: border-box;
+
+  // Wspólny wygląd wszystkich przycisków
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 45px;
+    min-height: 45px;
+    padding: 0 16px;
+
+    border: 1px solid $cta_color;
+    border-radius: 0;
+
+    background: $white;
+    color: $cta_color;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+
+    cursor: pointer;
+    box-sizing: border-box;
+
+    transition:
+      background-color $transition-speed ease,
+      color $transition-speed ease,
+      border-color $transition-speed ease;
+
+    &:hover {
+      background: $cta_color;
+      border-color: $cta_color;
+      color: $white;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba($cta_color, 0.25);
+      outline-offset: 2px;
+    }
+
+    &:active {
+      background: $cta_hover_color;
+      border-color: $cta_hover_color;
+      color: $white;
+    }
+  }
+
+  // ------------------------------------------------------------------------
+  // LEFT — "Opis i ustawienia"
+  // ------------------------------------------------------------------------
+
+  .btn--nav {
+    min-width: 185px;
+    padding: 0 9px;
+
+    gap: 8px;
+
+    justify-content: center;
+
+    i {
+      font-size: 16px;
+      line-height: 1;
+      @media (max-width: 480px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  // ------------------------------------------------------------------------
+  // RIGHT ACTIONS
+  // ------------------------------------------------------------------------
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    .btn {
+      min-width: 185px;
+    }
+  }
+
+  // ------------------------------------------------------------------------
+  // PRIMARY — "Zapisz ofertę"
+  // ------------------------------------------------------------------------
+
+  .btn--filled {
+    background: $cta_color;
+    border-color: $cta_color;
+    color: $white;
+
+    &:hover {
+      background: $cta_hover_color;
+      border-color: $cta_hover_color;
+      color: $white;
+    }
+
+    &:active {
+      background: $main_color;
+      border-color: $main_color;
+    }
+  }
+}
+
+// ==========================================================================
+// RWD — PAGE NAV
+// ==========================================================================
+
+@media (max-width: 768px) {
+  .page-nav {
+    min-height: auto;
+    padding: 14px 16px;
+    gap: 12px;
+
+    .btn {
+      height: 35px;
+      min-height: 35px;
+      font-size: 11px;
+    }
+
+    .btn--nav {
+      width: auto;
+      min-width: 185px;
+      flex: 0 0 auto;
+    }
+
+    &__actions {
+      gap: 8px;
+
+      .btn {
+        min-width: 0;
+        flex: 1 1 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .page-nav {
+    flex-direction: column;
+    align-items: stretch;
+
+    .btn--nav {
+      width: 100%;
+    }
+
+    &__actions {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
