@@ -873,6 +873,7 @@ nav .account-popup__logout:hover {
   gap: 80px;
   padding: 48px 0;
   align-items: center;
+  max-width: 1518px;
 }
 .footer__logo img {
   max-width: 160px;
