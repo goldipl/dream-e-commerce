@@ -87,12 +87,11 @@
         <div class="form-row">
           <div class="form-field">
             <label class="field-label">Termin realizacji</label>
-            <select class="select-field">
-              <option value=""></option>
-              <option>7 dni roboczych</option>
-              <option>14 dni roboczych</option>
-              <option>21 dni roboczych</option>
-            </select>
+            <input
+              class="input-field"
+              type="date"
+              value="2026-09-30"
+            >
           </div>
           <div class="form-field">
             <label class="field-label">Czas realizacji (dni)</label>
