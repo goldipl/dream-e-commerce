@@ -97,6 +97,7 @@ nav .navbar-collapse {
 }
 nav.navbar {
   background-color: #ffffff;
+  max-width: 1518px;
 }
 nav .navbar-brand img {
   font-size: 12px;
