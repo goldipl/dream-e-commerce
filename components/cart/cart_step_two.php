@@ -192,7 +192,7 @@
           <span class="cart-summary__label">Łącznie netto:</span>
           <div class="cart-summary__value-group">
             <span class="cart-summary__value cart-summary__value--accent">4 699,00 PLN</span>
-            <span class="cart-summary__value-sub">| 5779,77 PLN Brutto</span>
+            <span class="cart-summary__value-sub cart-summary__value-sub--accent">| 5779,77 PLN Brutto</span>
           </div>
         </div>
         <button type="button" class="btn-primary-cta cart-summary__submit">
