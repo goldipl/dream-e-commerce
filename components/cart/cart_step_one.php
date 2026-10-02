@@ -1,3 +1,7 @@
+<?php
+// Info icon (Dostawy przyszłe)
+$cart_info_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M7.33325 11.3333H8.66658V7.33331H7.33325V11.3333ZM7.99992 5.99998C8.18881 5.99998 8.34714 5.93609 8.47492 5.80831C8.6027 5.68053 8.66658 5.5222 8.66658 5.33331C8.66658 5.14442 8.6027 4.98609 8.47492 4.85831C8.34714 4.73054 8.18881 4.66665 7.99992 4.66665C7.81103 4.66665 7.6527 4.73054 7.52492 4.85831C7.39714 4.98609 7.33325 5.14442 7.33325 5.33331C7.33325 5.5222 7.39714 5.68053 7.52492 5.80831C7.6527 5.93609 7.81103 5.99998 7.99992 5.99998ZM7.99992 14.6666C7.0777 14.6666 6.21103 14.4916 5.39992 14.1416C4.58881 13.7916 3.88325 13.3166 3.28325 12.7166C2.68325 12.1166 2.20825 11.4111 1.85825 10.6C1.50825 9.78887 1.33325 8.9222 1.33325 7.99998C1.33325 7.07776 1.50825 6.21109 1.85825 5.39998C2.20825 4.58887 2.68325 3.88331 3.28325 3.28331C3.88325 2.68331 4.58881 2.20831 5.39992 1.85831C6.21103 1.50831 7.0777 1.33331 7.99992 1.33331C8.92214 1.33331 9.78881 1.50831 10.5999 1.85831C11.411 2.20831 12.1166 2.68331 12.7166 3.28331C13.3166 3.88331 13.7916 4.58887 14.1416 5.39998C14.4916 6.21109 14.6666 7.07776 14.6666 7.99998C14.6666 8.9222 14.4916 9.78887 14.1416 10.6C13.7916 11.4111 13.3166 12.1166 12.7166 12.7166C12.1166 13.3166 11.411 13.7916 10.5999 14.1416C9.78881 14.4916 8.92214 14.6666 7.99992 14.6666ZM7.99992 13.3333C9.48881 13.3333 10.7499 12.8166 11.7833 11.7833C12.8166 10.75 13.3333 9.48887 13.3333 7.99998C13.3333 6.51109 12.8166 5.24998 11.7833 4.21665C10.7499 3.18331 9.48881 2.66665 7.99992 2.66665C6.51103 2.66665 5.24992 3.18331 4.21659 4.21665C3.18325 5.24998 2.66659 6.51109 2.66659 7.99998C2.66659 9.48887 3.18325 10.75 4.21659 11.7833C5.24992 12.8166 6.51103 13.3333 7.99992 13.3333Z" fill="#001C5E"/></svg>';
+?>
 <div class="cart-page">
   <div class="cart-page__header">
     <h1 class="cart-page__title">
@@ -24,7 +28,7 @@
             <th class="col-qty">Liczba produktów</th>
             <th class="col-num">24h</th>
             <th class="col-num">2-3 dni</th>
-            <th class="col-num">Dostawa</th>
+            <th class="col-num">Dostawy przyszłe</th>
             <th class="col-price">Cena netto PLN</th>
             <th class="col-total">Łączna wartość netto</th>
             <th class="col-actions"></th>
@@ -54,7 +58,12 @@
             </td>
             <td class="col-num">20</td>
             <td class="col-num">0</td>
-            <td class="col-num">0</td>
+            <td class="col-num col-future">
+              <span class="col-future__inner">
+                <span class="col-future__value">0</span>
+                <button type="button" class="info-tip" aria-label="Informacje o dostawie"><?= $cart_info_icon ?></button>
+              </span>
+            </td>
             <td class="col-price">12,50</td>
             <td class="col-total">
               <strong class="row-total">25,00 PLN</strong>
@@ -94,7 +103,12 @@
             </td>
             <td class="col-num">0</td>
             <td class="col-num">200</td>
-            <td class="col-num">0</td>
+            <td class="col-num col-future">
+              <span class="col-future__inner">
+                <span class="col-future__value">0</span>
+                <button type="button" class="info-tip" aria-label="Informacje o dostawie"><?= $cart_info_icon ?></button>
+              </span>
+            </td>
             <td class="col-price">12,50</td>
             <td class="col-total">
               <strong class="row-total">37,50 PLN</strong>
@@ -119,7 +133,12 @@
             </td>
             <td class="col-num">10</td>
             <td class="col-num">100</td>
-            <td class="col-num">0</td>
+            <td class="col-num col-future">
+              <span class="col-future__inner">
+                <span class="col-future__value">0</span>
+                <button type="button" class="info-tip" aria-label="Informacje o dostawie"><?= $cart_info_icon ?></button>
+              </span>
+            </td>
             <td class="col-price">12,50</td>
             <td class="col-total">
               <strong class="row-total">25,00 PLN</strong>
@@ -144,7 +163,12 @@
             </td>
             <td class="col-num">10</td>
             <td class="col-num">150</td>
-            <td class="col-num">0</td>
+            <td class="col-num col-future">
+              <span class="col-future__inner">
+                <span class="col-future__value">0</span>
+                <button type="button" class="info-tip" aria-label="Informacje o dostawie"><?= $cart_info_icon ?></button>
+              </span>
+            </td>
             <td class="col-price">12,50</td>
             <td class="col-total">
               <strong class="row-total">62,50 PLN</strong>
@@ -169,7 +193,12 @@
             </td>
             <td class="col-num">5</td>
             <td class="col-num">0</td>
-            <td class="col-num">0</td>
+            <td class="col-num col-future">
+              <span class="col-future__inner">
+                <span class="col-future__value">0</span>
+                <button type="button" class="info-tip" aria-label="Informacje o dostawie"><?= $cart_info_icon ?></button>
+              </span>
+            </td>
             <td class="col-price">12,50</td>
             <td class="col-total">
               <strong class="row-total">12,50 PLN</strong>
@@ -208,7 +237,12 @@
             </td>
             <td class="col-num">20</td>
             <td class="col-num">0</td>
-            <td class="col-num">0</td>
+            <td class="col-num col-future">
+              <span class="col-future__inner">
+                <span class="col-future__value">0</span>
+                <button type="button" class="info-tip" aria-label="Informacje o dostawie"><?= $cart_info_icon ?></button>
+              </span>
+            </td>
             <td class="col-price">12,50</td>
             <td class="col-total">
               <strong class="row-total">25,00 PLN</strong>
@@ -247,7 +281,12 @@
             </td>
             <td class="col-num">20</td>
             <td class="col-num">0</td>
-            <td class="col-num">0</td>
+            <td class="col-num col-future">
+              <span class="col-future__inner">
+                <span class="col-future__value">0</span>
+                <button type="button" class="info-tip" aria-label="Informacje o dostawie"><?= $cart_info_icon ?></button>
+              </span>
+            </td>
             <td class="col-price">12,50</td>
             <td class="col-total">
               <strong class="row-total">25,00 PLN</strong>
@@ -288,7 +327,12 @@
             </td>
             <td class="col-num">20</td>
             <td class="col-num">0</td>
-            <td class="col-num">0</td>
+            <td class="col-num col-future">
+              <span class="col-future__inner">
+                <span class="col-future__value">0</span>
+                <button type="button" class="info-tip" aria-label="Informacje o dostawie"><?= $cart_info_icon ?></button>
+              </span>
+            </td>
             <td class="col-price">12,50</td>
             <td class="col-total">
               <strong class="row-total">0,00 PLN</strong>
@@ -327,7 +371,12 @@
             </td>
             <td class="col-num">0</td>
             <td class="col-num">200</td>
-            <td class="col-num">0</td>
+            <td class="col-num col-future">
+              <span class="col-future__inner">
+                <span class="col-future__value">0</span>
+                <button type="button" class="info-tip" aria-label="Informacje o dostawie"><?= $cart_info_icon ?></button>
+              </span>
+            </td>
             <td class="col-price">12,50</td>
             <td class="col-total">
               <strong class="row-total">37,50 PLN</strong>
@@ -350,9 +399,14 @@
                 <input type="number" class="qty-stepper__input" value="6" min="0" step="1" aria-label="Ilość sztuk rozmiar S">
               </div>
             </td>
-            <td class="col-num">10</td>
-            <td class="col-num">100</td>
-            <td class="col-num">0</td>
+            <td class="col-num">1</td>
+            <td class="col-num">1</td>
+            <td class="col-num col-future">
+              <span class="col-future__inner">
+                <span class="col-future__value">10</span>
+                <button type="button" class="info-tip" aria-label="Informacje o dostawie"><?= $cart_info_icon ?></button>
+              </span>
+            </td>
             <td class="col-price">12,50</td>
             <td class="col-total">
               <strong class="row-total">75,00 PLN</strong>
@@ -364,6 +418,11 @@
                   <path d="M6 9V15M12 9V15M1 5H17M15 5V17C15 18.1046 14.1046 19 13 19H5C3.89543 19 3 18.1046 3 17V5M6 5V3C6 1.89543 6.89543 1 8 1H10C11.1046 1 12 1.89543 12 3V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                 </svg>
               </button>
+            </td>
+          </tr>
+          <tr class="cart-row cart-row--note" data-group="6">
+            <td colspan="9">
+              <span class="cart-row__note">W tym 2 szt. z przyszłej dostawy</span>
             </td>
           </tr>
         </tbody>
