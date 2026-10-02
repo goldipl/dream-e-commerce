@@ -14,6 +14,14 @@
       <span class="cart-steps__item cart-steps__item--active">3. Podsumowanie</span>
     </div>
   </div>
+  <!-- Order name -->
+  <section class="summary-panel order-name">
+    <div class="summary-panel__header"><h3 class="summary-panel__header-h3">Nazwa zamówienia</h3></div>
+    <div class="order-name__body">
+      <input type="text" class="order-name__input" placeholder="Tutaj wpisz swoją nazwę dla tego zamówienia" aria-label="Nazwa zamówienia">
+      <button type="button" class="order-name__btn">Zapisz</button>
+    </div>
+  </section>
   <div class="cart-page__body cart-page__body--three-col">
     <!-- Column 1: scrollable product list -->
     <section class="summary-panel summary-products">
