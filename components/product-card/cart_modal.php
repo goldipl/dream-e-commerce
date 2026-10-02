@@ -1,3 +1,30 @@
+<?php
+$cart_modal_info_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M7.33325 11.3333H8.66658V7.33331H7.33325V11.3333ZM7.99992 5.99998C8.18881 5.99998 8.34714 5.93609 8.47492 5.80831C8.6027 5.68053 8.66658 5.5222 8.66658 5.33331C8.66658 5.14442 8.6027 4.98609 8.47492 4.85831C8.34714 4.73054 8.18881 4.66665 7.99992 4.66665C7.81103 4.66665 7.6527 4.73054 7.52492 4.85831C7.39714 4.98609 7.33325 5.14442 7.33325 5.33331C7.33325 5.5222 7.39714 5.68053 7.52492 5.80831C7.6527 5.93609 7.81103 5.99998 7.99992 5.99998ZM7.99992 14.6666C7.0777 14.6666 6.21103 14.4916 5.39992 14.1416C4.58881 13.7916 3.88325 13.3166 3.28325 12.7166C2.68325 12.1166 2.20825 11.4111 1.85825 10.6C1.50825 9.78887 1.33325 8.9222 1.33325 7.99998C1.33325 7.07776 1.50825 6.21109 1.85825 5.39998C2.20825 4.58887 2.68325 3.88331 3.28325 3.28331C3.88325 2.68331 4.58881 2.20831 5.39992 1.85831C6.21103 1.50831 7.0777 1.33331 7.99992 1.33331C8.92214 1.33331 9.78881 1.50831 10.5999 1.85831C11.411 2.20831 12.1166 2.68331 12.7166 3.28331C13.3166 3.88331 13.7916 4.58887 14.1416 5.39998C14.4916 6.21109 14.6666 7.07776 14.6666 7.99998C14.6666 8.9222 14.4916 9.78887 14.1416 10.6C13.7916 11.4111 13.3166 12.1166 12.7166 12.7166C12.1166 13.3166 11.411 13.7916 10.5999 14.1416C9.78881 14.4916 8.92214 14.6666 7.99992 14.6666ZM7.99992 13.3333C9.48881 13.3333 10.7499 12.8166 11.7833 11.7833C12.8166 10.75 13.3333 9.48887 13.3333 7.99998C13.3333 6.51109 12.8166 5.24998 11.7833 4.21665C10.7499 3.18331 9.48881 2.66665 7.99992 2.66665C6.51103 2.66665 5.24992 3.18331 4.21659 4.21665C3.18325 5.24998 2.66659 6.51109 2.66659 7.99998C2.66659 9.48887 3.18325 10.75 4.21659 11.7833C5.24992 12.8166 6.51103 13.3333 7.99992 13.3333Z" fill="#001C5E"/></svg>';
+
+$cart_modal_sizes = [
+  ['size' => 'S',    'price' => 12.50, 'stock_express' => 20, 'stock_standard' => 0, 'qty' => 22, 'deliveries' => [['date' => '15.10.2026', 'qty' => 5]]],
+  ['size' => 'M',    'price' => 12.50, 'stock_express' => 20, 'stock_standard' => 0, 'qty' => 5,  'deliveries' => []],
+  ['size' => 'L',    'price' => 12.50, 'stock_express' => 20, 'stock_standard' => 0, 'qty' => 3,  'deliveries' => []],
+  ['size' => 'XL',   'price' => 12.50, 'stock_express' => 20, 'stock_standard' => 0, 'qty' => 2,  'deliveries' => []],
+  ['size' => 'XXL',  'price' => 12.50, 'stock_express' => 20, 'stock_standard' => 0, 'qty' => 3,  'deliveries' => []],
+  ['size' => 'XXXL', 'price' => 12.50, 'stock_express' => 20, 'stock_standard' => 0, 'qty' => 2,  'deliveries' => []],
+];
+
+$cart_modal_fmt = function ($value) {
+  return number_format($value, 2, ',', "\u{00A0}") . ' PLN';
+};
+
+// Initial summary (cart-modal.js recalculates everything on open)
+$cart_modal_total = 0;
+$cart_modal_qty = 0;
+$cart_modal_future_used = 0;
+foreach ($cart_modal_sizes as $s) {
+  $immediate = $s['stock_express'] + $s['stock_standard'];
+  $cart_modal_total += $s['price'] * $s['qty'];
+  $cart_modal_qty += $s['qty'];
+  $cart_modal_future_used += max(0, $s['qty'] - $immediate);
+}
+?>
 <template id="cart-modal-template">
   <div class="cart-modal">
 
@@ -6,10 +33,10 @@
         <img src="https://www.heavytools.pl/upload_files/products_thumb_big/thumb_big_1776816601_t16024s2501_e.jpg" alt="Męska rozpinana bluza CORE">
       </div>
       <div class="cart-modal__head-info">
-        <h3 class="cart-modal__title">T-shirt Asher Green Bay</h3>
-        <span class="cart-modal__sku">SD0658-30</span>
+        <h3 class="cart-modal__title">Męska rozpinana bluza CORE</h3>
+        <span class="cart-modal__sku">ID0638-30</span>
         <div class="cart-modal__colors">
-          <span class="cart-modal__colors-label">Wybierz kolor: <strong>Ciemny zielony DX</strong></span>
+          <span class="cart-modal__colors-label">Wybierz kolor: <strong>Zielony DX</strong></span>
           <div class="cart-modal__swatch-list">
             <button type="button" class="swatch-btn" style="background-color:#ffffff; border:1px solid #cbd5e1;" data-color="Biały" aria-label="Biały"></button>
             <button type="button" class="swatch-btn" style="background-color:#1a365d;" data-color="Navy" aria-label="Navy"></button>
@@ -28,7 +55,6 @@
       </div>
     </div>
 
-
     <div class="cart-modal__table-wrapper">
       <table class="cart-modal__table">
         <thead>
@@ -36,139 +62,82 @@
             <th class="col-size">Wybierz rozmiar</th>
             <th class="col-num">24h</th>
             <th class="col-num">2-3 dni</th>
-            <th class="col-num">Dostawa</th>
-            <th class="col-price">Cena netto</th>
+            <th class="col-num">Dostawy przyszłe</th>
+            <th class="col-price">Cena netto PLN</th>
             <th class="col-total">Łączna wartość netto</th>
             <th class="col-qty">Liczba sztuk</th>
           </tr>
         </thead>
-        <tbody>
-          <tr data-size="S" data-price="12.50">
-            <td class="col-size"><strong>S</strong></td>
-            <td class="col-num">20</td>
-            <td class="col-num">0</td>
-            <td class="col-num">0</td>
-            <td class="col-price">12,50</td>
-            <td class="col-total"><strong class="row-total">25,00 PLN</strong></td>
+
+        <?php foreach ($cart_modal_sizes as $s):
+          $future = 0;
+          foreach ($s['deliveries'] as $delivery) {
+            $future += $delivery['qty'];
+          }
+          $max = $s['stock_express'] + $s['stock_standard'] + $future;
+        ?>
+        <tbody class="cart-modal__row-group"
+               data-size="<?= htmlspecialchars($s['size'], ENT_QUOTES) ?>"
+               data-price="<?= $s['price'] ?>"
+               data-stock-express="<?= (int) $s['stock_express'] ?>"
+               data-stock-standard="<?= (int) $s['stock_standard'] ?>"
+               data-deliveries="<?= htmlspecialchars(json_encode($s['deliveries']), ENT_QUOTES) ?>">
+          <tr class="cart-modal__row">
+            <td class="col-size"><strong><?= htmlspecialchars($s['size']) ?></strong></td>
+            <td class="col-num"><?= (int) $s['stock_express'] ?></td>
+            <td class="col-num"><?= (int) $s['stock_standard'] ?></td>
+            <td class="col-num col-future">
+              <span class="col-future__inner">
+                <span class="col-future__value"><?= (int) $future ?></span>
+                <button type="button" class="info-tip" aria-label="Informacje o dostawie rozmiar <?= htmlspecialchars($s['size']) ?>"><?= $cart_modal_info_icon ?></button>
+              </span>
+            </td>
+            <td class="col-price"><?= number_format($s['price'], 2, ',', "\u{00A0}") ?></td>
+            <td class="col-total"><strong class="row-total"><?= $cart_modal_fmt($s['price'] * $s['qty']) ?></strong></td>
             <td class="col-qty">
               <div class="qty-stepper">
                 <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
-                <input type="number" class="qty-stepper__input" value="2" min="0" step="1" aria-label="Ilość sztuk rozmiar S">
+                <input type="number" class="qty-stepper__input" value="<?= (int) $s['qty'] ?>" min="0" max="<?= (int) $max ?>" step="1" aria-label="Ilość sztuk rozmiar <?= htmlspecialchars($s['size']) ?>">
                 <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
               </div>
             </td>
           </tr>
-          <tr data-size="M" data-price="12.50">
-            <td class="col-size"><strong>M</strong></td>
-            <td class="col-num">20</td>
-            <td class="col-num">0</td>
-            <td class="col-num">0</td>
-            <td class="col-price">12,50</td>
-            <td class="col-total"><strong class="row-total">52,00 PLN</strong></td>
-            <td class="col-qty">
-              <div class="qty-stepper">
-                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
-                <input type="number" class="qty-stepper__input" value="5" min="0" step="1" aria-label="Ilość sztuk rozmiar M">
-                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
-              </div>
-            </td>
-          </tr>
-          <tr data-size="L" data-price="12.50">
-            <td class="col-size"><strong>L</strong></td>
-            <td class="col-num">20</td>
-            <td class="col-num">0</td>
-            <td class="col-num">0</td>
-            <td class="col-price">12,50</td>
-            <td class="col-total"><strong class="row-total">25,00 PLN</strong></td>
-            <td class="col-qty">
-              <div class="qty-stepper">
-                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
-                <input type="number" class="qty-stepper__input" value="3" min="0" step="1" aria-label="Ilość sztuk rozmiar L">
-                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
-              </div>
-            </td>
-          </tr>
-          <tr data-size="XL" data-price="12.50">
-            <td class="col-size"><strong>XL</strong></td>
-            <td class="col-num">20</td>
-            <td class="col-num">0</td>
-            <td class="col-num">0</td>
-            <td class="col-price">12,50</td>
-            <td class="col-total"><strong class="row-total">56,00 PLN</strong></td>
-            <td class="col-qty">
-              <div class="qty-stepper">
-                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
-                <input type="number" class="qty-stepper__input" value="2" min="0" step="1" aria-label="Ilość sztuk rozmiar XL">
-                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
-              </div>
-            </td>
-          </tr>
-          <tr data-size="XXL" data-price="12.50">
-            <td class="col-size"><strong>XXL</strong></td>
-            <td class="col-num">20</td>
-            <td class="col-num">0</td>
-            <td class="col-num">0</td>
-            <td class="col-price">12,50</td>
-            <td class="col-total"><strong class="row-total">32,00 PLN</strong></td>
-            <td class="col-qty">
-              <div class="qty-stepper">
-                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
-                <input type="number" class="qty-stepper__input" value="3" min="0" step="1" aria-label="Ilość sztuk rozmiar XXL">
-                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
-              </div>
-            </td>
-          </tr>
-          <tr data-size="XXXL" data-price="12.50">
-            <td class="col-size"><strong>XXXL</strong></td>
-            <td class="col-num">20</td>
-            <td class="col-num">0</td>
-            <td class="col-num">0</td>
-            <td class="col-price">12,50</td>
-            <td class="col-total"><strong class="row-total">25,00 PLN</strong></td>
-            <td class="col-qty">
-              <div class="qty-stepper">
-                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
-                <input type="number" class="qty-stepper__input" value="2" min="0" step="1" aria-label="Ilość sztuk rozmiar XXXL">
-                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
+          <tr class="cart-modal__note-row" hidden>
+            <td colspan="7">
+              <div class="cart-modal__note-inner" aria-live="polite">
+                <span class="cart-modal__note cart-modal__note--info"></span>
+                <span class="cart-modal__note cart-modal__note--alert"></span>
               </div>
             </td>
           </tr>
         </tbody>
+        <?php endforeach; ?>
       </table>
     </div>
 
     <div class="cart-modal__footer">
       <div class="cart-modal__selected">
         <span class="cart-modal__selected-label">Aktualnie wybrano:</span>
-        <div class="cart-modal__selected-swatches">
-          <span class="selected-swatch-item">
-            <span class="selected-swatch-dot" style="background-color:#3b719f;"></span>
-            <span class="selected-swatch-count">10</span>
-          </span>
-          <span class="selected-swatch-item">
-            <span class="selected-swatch-dot" style="background-color:#e53e3e;"></span>
-            <span class="selected-swatch-count">2</span>
-          </span>
-          <span class="selected-swatch-item">
-            <span class="selected-swatch-dot" style="background-color:#a0aec0;"></span>
-            <span class="selected-swatch-count">4</span>
-          </span>
-          <span class="selected-swatch-item">
-            <span class="selected-swatch-dot" style="background-color:#e06d26;"></span>
-            <span class="selected-swatch-count">1</span>
-          </span>
-          <span class="selected-swatch-item">
-            <span class="selected-swatch-dot" style="background-color:#38a169;"></span>
-            <span class="selected-swatch-count">32</span>
-          </span>
-          <span class="selected-swatch-item">
-            <span class="selected-swatch-dot" style="background-color:#63b3ed;"></span>
-            <span class="selected-swatch-count">4</span>
-          </span>
+        <div class="cart-modal__selected-row">
+          <div class="cart-modal__selected-swatches">
+            <span class="selected-swatch-item" data-color="Zielony DX">
+              <span class="selected-swatch-dot" style="background-color:#38a169;"></span>
+              <span class="selected-swatch-count"><?= (int) $cart_modal_qty ?></span>
+            </span>
+            <span class="selected-swatch-item" data-color="Magenta">
+              <span class="selected-swatch-dot" style="background-color:#d100d1;"></span>
+              <span class="selected-swatch-count">13</span>
+            </span>
+            <span class="selected-swatch-item" data-color="Czerwony">
+              <span class="selected-swatch-dot" style="background-color:#c0392b;"></span>
+              <span class="selected-swatch-count">6</span>
+            </span>
+          </div>
+          <span class="cart-modal__selected-note"<?= $cart_modal_future_used > 0 ? '' : ' hidden' ?>>w tym dostawy przyszłe: <?= (int) $cart_modal_future_used ?> szt.</span>
         </div>
       </div>
       <div class="cart-modal__summary">
-        <span class="cart-modal__summary-label">Łączna kwota netto: <strong class="cart-modal__grand-total">2 352,00 PLN</strong></span>
+        <span class="cart-modal__summary-label">Ten kolor netto: <strong class="cart-modal__grand-total"><?= $cart_modal_fmt($cart_modal_total) ?></strong></span>
         <button type="button" class="btn-primary-cta cart-modal__submit">
           <span>Do koszyka</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
