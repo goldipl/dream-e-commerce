@@ -6086,7 +6086,7 @@ td:has(.addon-info) {
 }
 .cart-page {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1518px;
   margin: 64px auto;
   padding: 24px 40px 60px;
   color: #1a1a1a;
@@ -8450,7 +8450,7 @@ td:has(.addon-info) {
 }
 .contact-page {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1518px;
   margin: 64px auto;
   padding: 24px 40px 60px;
 }
@@ -8720,7 +8720,7 @@ td:has(.addon-info) {
 }
 .content-page {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1518px;
   margin: 64px auto;
   padding: 0 40px 80px;
 }
@@ -8804,9 +8804,9 @@ td:has(.addon-info) {
   align-items: flex-start;
   gap: 48px;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1518px;
   margin: 64px auto;
-  padding: 0 40px 80px;
+  padding: 0 0 24px;
 }
 
 .account-sidebar {
