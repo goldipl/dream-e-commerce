@@ -3050,6 +3050,24 @@ nav .account-popup__logout:hover {
     font-size: 20px;
   }
 }
+.category-empty-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin: 64px auto;
+}
+.category-empty-result__text p {
+  text-align: center;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .category-empty-result__text p {
+    font-size: 14px;
+  }
+}
+
 .product-page-container {
   width: 100%;
   margin: 0 auto;

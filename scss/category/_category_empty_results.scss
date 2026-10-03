@@ -1,0 +1,17 @@
+.category-empty-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin: 64px auto;
+  &__text {
+    p {
+      text-align: center;
+      margin: 0;
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
