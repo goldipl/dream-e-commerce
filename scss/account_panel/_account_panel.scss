@@ -1,0 +1,630 @@
+.account-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 64px auto;
+  padding: 0 40px 80px;
+}
+
+// ==========================================================================
+// SIDEBAR
+// ==========================================================================
+.account-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+
+  &__title {
+    color: $main_color;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 4px;
+  }
+
+  &__subtitle {
+    color: rgba(0, 28, 94, 0.4);
+    font-size: 11px;
+    margin: 0 0 24px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__link {
+    color: $main_color;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      color: $cta_color;
+    }
+
+    &--active {
+      color: $cta_color;
+      font-weight: 700;
+    }
+  }
+}
+
+// ==========================================================================
+// CONTENT AREA
+// ==========================================================================
+.account-content {
+  flex: 1;
+  min-width: 0;
+
+  &__title {
+    color: $cta_color;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 24px;
+  }
+}
+
+.account-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+
+  .account-content__title {
+    margin-bottom: 0;
+  }
+}
+
+.account-section-title {
+  color: $main_color;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 40px 0 16px;
+
+  &--inline {
+    margin: 0;
+  }
+}
+
+.account-sample-date {
+  color: rgba(0, 28, 94, 0.45);
+  font-size: 12px;
+}
+
+// ==========================================================================
+// INFO CARDS (Dane użytkownika / Dane firmy / Warunki współpracy / etc.)
+// ==========================================================================
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+
+  &--billing {
+    margin-top: 32px;
+  }
+}
+
+.info-card {
+  background: $white;
+  border: 1px solid $stroke-color;
+  margin-bottom: 24px;
+
+  &__header {
+    background-color: $inputs_layer;
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: $main_color;
+  }
+
+  &__body {
+    padding: 20px;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__label {
+    color: rgba(0, 28, 94, 0.45);
+    font-size: 11px;
+  }
+
+  &__value {
+    color: $main_color;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    &--regular {
+      font-weight: 400;
+    }
+
+    &--account {
+      font-weight: 700;
+      font-size: 15px;
+      margin: 4px 0 12px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: $cta_color;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-top: 12px;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &--button {
+      background: none;
+      border: 0;
+      padding: 0;
+      margin-top: 0;
+      cursor: pointer;
+      font-family: inherit;
+    }
+  }
+
+  &__inline-link {
+    color: $cta_color;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  &__note {
+    color: rgba(0, 28, 94, 0.45);
+    font-size: 11px;
+    margin: 20px 0 4px;
+  }
+
+  // Delivery method row inside "Dostawa i powiadomienia"
+  &__delivery-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__delivery-edit {
+    .select-field {
+      width: 260px;
+      height: 42px;
+    }
+  }
+
+  &__delivery-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+
+  &__footer-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+  }
+}
+
+// ==========================================================================
+// ADVISOR CARD ("Twój opiekun w Dreamtex")
+// ==========================================================================
+.advisor {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+
+  &__avatar {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    background-color: $inputs_layer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__name {
+    color: $main_color;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    a {
+      color: $cta_color;
+      font-size: 12.5px;
+      text-decoration: underline;
+    }
+  }
+}
+
+// ==========================================================================
+// DATA TABLE (reused across orders, invoices, addresses, order detail)
+// ==========================================================================
+.data-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  background: $white;
+  margin-bottom: 24px;
+
+  th,
+  td {
+    padding: 14px 16px;
+    font-size: 13px;
+    color: $main_color;
+    vertical-align: middle;
+    text-align: left;
+  }
+
+  thead {
+    background-color: $inputs_layer;
+    border-bottom: 1px solid $stroke-color;
+
+    th {
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(0, 28, 94, 0.5);
+      white-space: nowrap;
+    }
+  }
+
+  tbody tr {
+    border-bottom: 1px solid $stroke-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  a {
+    color: $cta_color;
+    text-decoration: underline;
+  }
+
+  &__action {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  &__action-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-end;
+  }
+
+  &__link {
+    color: $cta_color;
+    text-decoration: underline;
+    font-weight: 600;
+
+    &--danger {
+      color: #d64545;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  }
+}
+
+.account-status-label {
+  color: $cta_color;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+// Product cell (order detail — "Zamówione produkty")
+.product-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  &__title {
+    color: $cta_color;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  &__meta {
+    color: rgba(0, 28, 94, 0.5);
+    font-size: 12px;
+  }
+}
+
+// ==========================================================================
+// ORDER SUMMARY (order detail — totals box)
+// ==========================================================================
+.order-summary {
+  width: 320px;
+  margin-left: auto;
+  background-color: $inputs_layer;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: $main_color;
+    padding: 6px 0;
+
+    &--total {
+      border-top: 1px solid $stroke-color;
+      margin-top: 8px;
+      padding-top: 14px;
+      font-weight: 700;
+      font-size: 15px;
+      color: $cta_color;
+    }
+  }
+}
+
+.account-back-link {
+  display: inline-block;
+  color: $cta_color;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+// ==========================================================================
+// FILTERS (Moje zamówienia)
+// ==========================================================================
+.account-filters {
+  margin-bottom: 24px;
+
+  &__actions {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__status {
+    max-width: 220px;
+  }
+
+  &__clear {
+    color: $cta_color;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+
+  &__per-page {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+
+    .select-field {
+      width: 80px;
+      height: 42px;
+    }
+  }
+
+  &__per-page-label {
+    color: rgba(0, 28, 94, 0.45);
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
+// ==========================================================================
+// SEARCH ROW (Moje adresy)
+// ==========================================================================
+.account-search-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+
+  &__input {
+    max-width: 420px;
+    height: 42px;
+  }
+
+  &__count {
+    color: rgba(0, 28, 94, 0.45);
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
+// ==========================================================================
+// PAGINATION
+// ==========================================================================
+.account-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  &__summary {
+    color: rgba(0, 28, 94, 0.45);
+    font-size: 12.5px;
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  &__arrow {
+    color: $cta_color;
+    display: flex;
+    align-items: center;
+  }
+
+  &__page {
+    color: $main_color;
+    font-size: 13px;
+
+    &--active {
+      color: $cta_color;
+      font-weight: 700;
+    }
+  }
+}
+
+// ==========================================================================
+// CREDIT LINE BANNER (Moje rozliczenia — 3 states)
+// ==========================================================================
+.credit-banner {
+  background-color: $inputs_layer;
+  border-left: 4px solid $cta_color;
+  padding: 16px 20px;
+  margin-bottom: 32px;
+
+  &__title {
+    color: $cta_color;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+
+  &__text {
+    color: $main_color;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  &--limit-exceeded,
+  &--overdue {
+    border-left-color: #d64545;
+
+    .credit-banner__title,
+    .credit-banner__text {
+      color: #d64545;
+    }
+  }
+}
+
+// ==========================================================================
+// INVOICE FILTERS (Moje rozliczenia)
+// ==========================================================================
+.invoice-filters {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+
+.checkbox-field__label--danger {
+  color: #d64545;
+}
+
+.text-danger {
+  color: #d64545;
+}
+
+// ==========================================================================
+// FORM ACTIONS (address form — Anuluj / Zapisz adres)
+// ==========================================================================
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+// ==========================================================================
+// RESPONSIVE
+// ==========================================================================
+@media (max-width: 991px) {
+  .account-panel {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .account-sidebar {
+    width: 100%;
+
+    &__nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-summary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .account-panel {
+    margin: 32px auto;
+    padding: 0 20px 48px;
+  }
+
+  .account-filters__per-page {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .account-search-row {
+    flex-direction: column;
+    align-items: stretch;
+
+    &__input {
+      max-width: 100%;
+    }
+  }
+
+  .info-card__delivery-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .info-card__delivery-actions {
+    justify-content: flex-end;
+  }
+}

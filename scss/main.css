@@ -8798,4 +8798,518 @@ td:has(.addon-info) {
   .content-page > a {
     margin-top: 28px;
   }
+}
+.account-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 64px auto;
+  padding: 0 40px 80px;
+}
+
+.account-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+}
+.account-sidebar__title {
+  color: #001c5e;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 4px;
+}
+.account-sidebar__subtitle {
+  color: rgba(0, 28, 94, 0.4);
+  font-size: 11px;
+  margin: 0 0 24px;
+}
+.account-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.account-sidebar__link {
+  color: #001c5e;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.account-sidebar__link:hover {
+  color: #0049ff;
+}
+.account-sidebar__link--active {
+  color: #0049ff;
+  font-weight: 700;
+}
+
+.account-content {
+  flex: 1;
+  min-width: 0;
+}
+.account-content__title {
+  color: #0049ff;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 24px;
+}
+
+.account-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.account-section-header .account-content__title {
+  margin-bottom: 0;
+}
+
+.account-section-title {
+  color: #001c5e;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 40px 0 16px;
+}
+.account-section-title--inline {
+  margin: 0;
+}
+
+.account-sample-date {
+  color: rgba(0, 28, 94, 0.45);
+  font-size: 12px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.info-grid--billing {
+  margin-top: 32px;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 24px;
+}
+.info-card__header {
+  background-color: #ecf2fb;
+  padding: 12px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #001c5e;
+}
+.info-card__body {
+  padding: 20px;
+}
+.info-card__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 16px;
+}
+.info-card__row:last-child {
+  margin-bottom: 0;
+}
+.info-card__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.info-card__label {
+  color: rgba(0, 28, 94, 0.45);
+  font-size: 11px;
+}
+.info-card__value {
+  color: #001c5e;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.info-card__value--regular {
+  font-weight: 400;
+}
+.info-card__value--account {
+  font-weight: 700;
+  font-size: 15px;
+  margin: 4px 0 12px;
+}
+.info-card__link {
+  display: inline-block;
+  color: #0049ff;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-top: 12px;
+}
+.info-card__link:hover {
+  opacity: 0.85;
+}
+.info-card__link--button {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-top: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+.info-card__inline-link {
+  color: #0049ff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.info-card__note {
+  color: rgba(0, 28, 94, 0.45);
+  font-size: 11px;
+  margin: 20px 0 4px;
+}
+.info-card__delivery-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.info-card__delivery-edit .select-field {
+  width: 260px;
+  height: 42px;
+}
+.info-card__delivery-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.info-card__checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+.info-card__footer-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.advisor {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.advisor__avatar {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  background-color: #ecf2fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.advisor__name {
+  color: #001c5e;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+.advisor__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.advisor__contact a {
+  color: #0049ff;
+  font-size: 12.5px;
+  text-decoration: underline;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  background: #ffffff;
+  margin-bottom: 24px;
+}
+.data-table th,
+.data-table td {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #001c5e;
+  vertical-align: middle;
+  text-align: left;
+}
+.data-table thead {
+  background-color: #ecf2fb;
+  border-bottom: 1px solid #cbd5e1;
+}
+.data-table thead th {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(0, 28, 94, 0.5);
+  white-space: nowrap;
+}
+.data-table tbody tr {
+  border-bottom: 1px solid #cbd5e1;
+}
+.data-table tbody tr:last-child {
+  border-bottom: none;
+}
+.data-table a {
+  color: #0049ff;
+  text-decoration: underline;
+}
+.data-table__action {
+  text-align: right;
+  white-space: nowrap;
+}
+.data-table__action-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+}
+.data-table__link {
+  color: #0049ff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.data-table__link--danger {
+  color: #d64545;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.account-status-label {
+  color: #0049ff;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.product-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.product-cell__title {
+  color: #0049ff;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.product-cell__meta {
+  color: rgba(0, 28, 94, 0.5);
+  font-size: 12px;
+}
+
+.order-summary {
+  width: 320px;
+  margin-left: auto;
+  background-color: #ecf2fb;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+.order-summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #001c5e;
+  padding: 6px 0;
+}
+.order-summary__row--total {
+  border-top: 1px solid #cbd5e1;
+  margin-top: 8px;
+  padding-top: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #0049ff;
+}
+
+.account-back-link {
+  display: inline-block;
+  color: #0049ff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.account-filters {
+  margin-bottom: 24px;
+}
+.account-filters__actions {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.account-filters__status {
+  max-width: 220px;
+}
+.account-filters__clear {
+  color: #0049ff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+.account-filters__per-page {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+.account-filters__per-page .select-field {
+  width: 80px;
+  height: 42px;
+}
+.account-filters__per-page-label {
+  color: rgba(0, 28, 94, 0.45);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.account-search-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.account-search-row__input {
+  max-width: 420px;
+  height: 42px;
+}
+.account-search-row__count {
+  color: rgba(0, 28, 94, 0.45);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.account-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.account-pagination__summary {
+  color: rgba(0, 28, 94, 0.45);
+  font-size: 12.5px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.pagination__arrow {
+  color: #0049ff;
+  display: flex;
+  align-items: center;
+}
+.pagination__page {
+  color: #001c5e;
+  font-size: 13px;
+}
+.pagination__page--active {
+  color: #0049ff;
+  font-weight: 700;
+}
+
+.credit-banner {
+  background-color: #ecf2fb;
+  border-left: 4px solid #0049ff;
+  padding: 16px 20px;
+  margin-bottom: 32px;
+}
+.credit-banner__title {
+  color: #0049ff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.credit-banner__text {
+  color: #001c5e;
+  font-size: 13px;
+  margin: 0;
+}
+.credit-banner--limit-exceeded, .credit-banner--overdue {
+  border-left-color: #d64545;
+}
+.credit-banner--limit-exceeded .credit-banner__title,
+.credit-banner--limit-exceeded .credit-banner__text, .credit-banner--overdue .credit-banner__title,
+.credit-banner--overdue .credit-banner__text {
+  color: #d64545;
+}
+
+.invoice-filters {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+
+.checkbox-field__label--danger {
+  color: #d64545;
+}
+
+.text-danger {
+  color: #d64545;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+@media (max-width: 991px) {
+  .account-panel {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .account-sidebar {
+    width: 100%;
+  }
+  .account-sidebar__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  .order-summary {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .account-panel {
+    margin: 32px auto;
+    padding: 0 20px 48px;
+  }
+  .account-filters__per-page {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .account-search-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .account-search-row__input {
+    max-width: 100%;
+  }
+  .info-card__delivery-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .info-card__delivery-actions {
+    justify-content: flex-end;
+  }
 }/*# sourceMappingURL=main.css.map */
