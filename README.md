@@ -106,6 +106,18 @@ The following screenshots show selected desktop and mobile views from the projec
 | --- | --- |
 | ![Product configurator modal on desktop](./screenshots/product-card-modal-desktop.jpg) | ![Dreamtex product page on mobile](./screenshots/product-card-mobile.jpg) |
 
+### Cart
+
+| Desktop | Mobile |
+| --- | --- |
+| ![Dreamtex cart, products step, on desktop](./screenshots/cart-step-one-desktop.jpg) | ![Dreamtex cart, products step, on mobile](./screenshots/cart-step-one-mobile.jpg) |
+
+### Offer customization
+
+| Desktop | Mobile |
+| --- | --- |
+| ![Dreamtex offer customization step on desktop](./screenshots/offerts-list-step-two-desktop.jpg) | ![Dreamtex offer customization step on mobile](./screenshots/offerts-list-step-two-mobile.jpg) |
+
 ## Page catalogue
 
 ### Home and catalogue
