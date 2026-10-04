@@ -6,6 +6,22 @@
   max-width: 1518px;
   margin: 64px auto;
   padding: 0 0 24px;
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid $accent_color;
+  }
+  .data-table {
+    tbody {
+      tr {
+        &:last-child {
+          border-bottom: 0.4px solid rgba(0, 28, 94, 0.2);
+        }
+      }
+    }
+  }
 }
 
 // ==========================================================================
@@ -476,10 +492,12 @@
 // ==========================================================================
 .account-pagination {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
+  margin: 0 auto 20px auto;
 
   &__summary {
     color: rgba(0, 28, 94, 0.45);
@@ -487,24 +505,37 @@
   }
 }
 
-.pagination {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-
-  &__arrow {
-    color: $cta_color;
+.account-panel {
+  .pagination {
     display: flex;
     align-items: center;
-  }
+    gap: 32px;
+    margin: 0;
+    width: fit-content;
 
-  &__page {
-    color: $main_color;
-    font-size: 13px;
-
-    &--active {
+    &__arrow {
       color: $cta_color;
-      font-weight: 700;
+      display: flex;
+      align-items: center;
+    }
+
+    &__page {
+      color: rgba(26, 26, 26, 0.7);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 35px; /* 250% */
+      text-decoration: none;
+
+      &--active {
+        font-size: 16px;
+        color: $cta_color;
+        font-weight: 700;
+      }
+      &:hover {
+        color: $cta_color;
+        font-weight: 700;
+      }
     }
   }
 }

@@ -8808,6 +8808,16 @@ td:has(.addon-info) {
   margin: 64px auto;
   padding: 0 0 24px;
 }
+.account-panel .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #0349ff;
+}
+.account-panel .data-table tbody tr:last-child {
+  border-bottom: 0.4px solid rgba(0, 28, 94, 0.2);
+}
 
 .account-sidebar {
   width: 220px;
@@ -9191,31 +9201,45 @@ td:has(.addon-info) {
 
 .account-pagination {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
+  margin: 0 auto 20px auto;
 }
 .account-pagination__summary {
   color: rgba(0, 28, 94, 0.45);
   font-size: 12.5px;
 }
 
-.pagination {
+.account-panel .pagination {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 32px;
+  margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-.pagination__arrow {
+.account-panel .pagination__arrow {
   color: #0049ff;
   display: flex;
   align-items: center;
 }
-.pagination__page {
-  color: #001c5e;
-  font-size: 13px;
+.account-panel .pagination__page {
+  color: rgba(26, 26, 26, 0.7);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 35px; /* 250% */
+  text-decoration: none;
 }
-.pagination__page--active {
+.account-panel .pagination__page--active {
+  font-size: 16px;
+  color: #0049ff;
+  font-weight: 700;
+}
+.account-panel .pagination__page:hover {
   color: #0049ff;
   font-weight: 700;
 }

@@ -38,7 +38,7 @@
     </div>
 
     <button type="submit" class="btn btn--filled">Szukaj</button>
-    <a href="./my-orders.php" class="account-filters__clear">Wyczyść filtry</a>
+    <a href="./individual-my-orders.php" class="account-filters__clear">Wyczyść filtry</a>
 
     <div class="account-filters__per-page">
       <span class="account-filters__per-page-label">Pokaż na stronie</span>
@@ -59,7 +59,7 @@
         <th>Data utworzenia</th>
         <th>Nazwa</th>
         <th>Utworzył</th>
-        <th>Wartość netto</th>
+        <th>Wartość brutto</th>
         <th>Status</th>
         <th></th>
       </tr>
@@ -68,83 +68,83 @@
       <tr>
         <td>-</td>
         <td>03.08.2026</td>
-        <td>FANSTORE - BIALY</td>
-        <td>Tomasz Wesoły</td>
-        <td>100 000,00 PLN</td>
+        <td>FANSTORE - BIAŁY</td>
+        <td>Albert Kamus</td>
+        <td>123 000,00 PLN</td>
         <td>Złożone</td>
-        <td class="data-table__action"><a href="./my-order-details.php">Podgląd</a></td>
+        <td class="data-table__action"><a href="./individual-order-details.php">Podgląd</a></td>
       </tr>
       <tr>
         <td>-</td>
         <td>03.08.2026</td>
-        <td>FANSTORE - BIALY</td>
-        <td>Tomasz Wesoły</td>
-        <td>100 000,00 PLN</td>
+        <td>FANSTORE - BIAŁY</td>
+        <td>Albert Kamus</td>
+        <td>123 000,00 PLN</td>
         <td>Oczekuje na przyjęcie</td>
-        <td class="data-table__action"><a href="./my-order-details.php">Podgląd</a></td>
+        <td class="data-table__action"><a href="./individual-order-details.php">Podgląd</a></td>
       </tr>
       <tr>
         <td>ZL/1140/2026</td>
         <td>03.08.2026</td>
         <td>PANSTORE - BIAŁY</td>
-        <td>Tomasz Wesoły</td>
-        <td>100 000,00 PLN</td>
+        <td>Albert Kamus</td>
+        <td>123 000,00 PLN</td>
         <td>Przyjęte</td>
-        <td class="data-table__action"><a href="./my-order-details.php">Podgląd</a></td>
+        <td class="data-table__action"><a href="./individual-order-details.php">Podgląd</a></td>
       </tr>
       <tr>
         <td>ZL/1141/2026</td>
         <td>03.08.2026</td>
         <td>ICE CREAM</td>
-        <td>Tomasz Wesoły</td>
-        <td>50 000,00 PLN</td>
+        <td>Albert Kamus</td>
+        <td>61 500,00 PLN</td>
         <td>Wstrzymane</td>
-        <td class="data-table__action"><a href="./my-order-details.php">Podgląd</a></td>
+        <td class="data-table__action"><a href="./individual-order-details.php">Podgląd</a></td>
       </tr>
       <tr>
         <td>ZL/1144/2026</td>
         <td>03.08.2026</td>
-        <td>FANSTORE - BIALY</td>
-        <td>Tomasz Wesoły</td>
-        <td>100 000,00 PLN</td>
+        <td>FANSTORE - BIAŁY</td>
+        <td>Albert Kamus</td>
+        <td>123 000,00 PLN</td>
         <td>Częściowo wysłane</td>
-        <td class="data-table__action"><a href="./my-order-details.php">Podgląd</a></td>
+        <td class="data-table__action"><a href="./individual-order-details.php">Podgląd</a></td>
       </tr>
       <tr>
         <td>ZL/1145/2026</td>
         <td>03.08.2026</td>
-        <td>FANSTORE - BIALY</td>
-        <td>Tomasz Wesoły</td>
-        <td>100 000,00 PLN</td>
+        <td>FANSTORE - BIAŁY</td>
+        <td>Albert Kamus</td>
+        <td>123 000,00 PLN</td>
         <td>Wysłane</td>
-        <td class="data-table__action"><a href="./my-order-details.php">Podgląd</a></td>
+        <td class="data-table__action"><a href="./individual-order-details.php">Podgląd</a></td>
       </tr>
       <tr>
         <td>ZL/1146/2026</td>
         <td>03.08.2026</td>
         <td>MYLADY</td>
-        <td>Tomasz Wesoły</td>
-        <td>100 000,00 PLN</td>
+        <td>Albert Kamus</td>
+        <td>123 000,00 PLN</td>
         <td>W realizacji</td>
-        <td class="data-table__action"><a href="./my-order-details.php">Podgląd</a></td>
+        <td class="data-table__action"><a href="./individual-order-details.php">Podgląd</a></td>
       </tr>
       <tr>
         <td>ZL/1148/2026</td>
         <td>02.08.2026</td>
         <td>MACHO#1</td>
-        <td>Tomasz Wesoły</td>
-        <td>100 000,00 PLN</td>
+        <td>Albert Kamus</td>
+        <td>123 000,00 PLN</td>
         <td>Anulowane</td>
-        <td class="data-table__action"><a href="./my-order-details.php">Podgląd</a></td>
+        <td class="data-table__action"><a href="./individual-order-details.php">Podgląd</a></td>
       </tr>
       <tr>
         <td>ZL/1149/2026</td>
         <td>01.08.2026</td>
         <td>BARCA - ZIELONY</td>
-        <td>Tomasz Wesoły</td>
-        <td>188,00 PLN</td>
+        <td>Albert Kamus</td>
+        <td>231,24 PLN</td>
         <td>Zrealizowane</td>
-        <td class="data-table__action"><a href="./my-order-details.php">Podgląd</a></td>
+        <td class="data-table__action"><a href="./individual-order-details.php">Podgląd</a></td>
       </tr>
     </tbody>
   </table>
