@@ -8857,6 +8857,13 @@ td:has(.addon-info) {
   flex: 1;
   min-width: 0;
 }
+.account-content .table-scroll {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 .account-content__title {
   color: #0049ff;
   font-size: 20px;
@@ -9295,6 +9302,7 @@ td:has(.addon-info) {
 @media (max-width: 991px) {
   .account-panel {
     flex-direction: column;
+    align-items: stretch;
     gap: 32px;
   }
   .account-sidebar {
