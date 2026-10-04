@@ -1,7 +1,3 @@
-<?php
-$activeAccountPage = 'adresy';
-$accountType = 'individual';
-?>
 <!DOCTYPE html>
 <html lang="pl">
     <head>

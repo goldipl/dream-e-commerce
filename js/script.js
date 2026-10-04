@@ -7,9 +7,18 @@ $(function () {
   };
 
   const initAccountSidebarActiveLink = () => {
-    $('.account-sidebar').each(function () {
-      const activePage = $(this).data('active-page');
+    const pageName = window.location.pathname.split('/').pop().toLowerCase();
+    const activePage = /address|adres/.test(pageName)
+      ? 'adresy'
+      : /order|zamow/.test(pageName)
+        ? 'zamowienia'
+        : /billing|rozlicz/.test(pageName)
+          ? 'rozliczenia'
+          : /data|dane/.test(pageName)
+            ? 'dane'
+            : '';
 
+    $('.account-sidebar').each(function () {
       $(this).find('.account-sidebar__link').each(function () {
         const isActive = $(this).data('account-page') === activePage;
         $(this).toggleClass('account-sidebar__link--active', isActive);

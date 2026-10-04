@@ -1,7 +1,3 @@
-<?php
-$activeAccountPage = 'zamowienia';
-$accountType = 'individual';
-?>
 <!DOCTYPE html>
 <html lang="pl">
     <head>

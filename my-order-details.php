@@ -1,4 +1,3 @@
-<?php $activeAccountPage = 'zamowienia'; ?>
 <!DOCTYPE html>
 <html lang="pl">
     <head>

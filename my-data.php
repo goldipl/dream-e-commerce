@@ -1,4 +1,3 @@
-<?php $activeAccountPage = 'dane'; ?>
 <!DOCTYPE html>
 <html lang="pl">
     <head>

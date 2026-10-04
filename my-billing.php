@@ -1,4 +1,3 @@
-<?php $activeAccountPage = 'rozliczenia'; ?>
 <!DOCTYPE html>
 <html lang="pl">
     <head>

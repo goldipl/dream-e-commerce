@@ -1,7 +1,3 @@
-<?php
-$activeAccountPage = 'dane';
-$accountType = 'individual';
-?>
 <!DOCTYPE html>
 <html lang="pl">
     <head>
