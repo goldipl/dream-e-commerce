@@ -9313,6 +9313,8 @@ td:has(.addon-info) {
   }
   .account-sidebar {
     width: 100%;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 24px;
   }
   .account-sidebar__nav {
     flex-direction: row;

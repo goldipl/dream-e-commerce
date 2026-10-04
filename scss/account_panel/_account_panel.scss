@@ -624,6 +624,8 @@
 
   .account-sidebar {
     width: 100%;
+    border-bottom: 1px solid $stroke-color;
+    padding-bottom: 24px;
 
     &__nav {
       flex-direction: row;
