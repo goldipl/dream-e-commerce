@@ -153,8 +153,11 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 160px;
     margin-bottom: 16px;
+    @media (max-width: 991px) {
+      gap: 40px;
+    }
 
     &:last-child {
       margin-bottom: 0;
