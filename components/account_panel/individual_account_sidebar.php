@@ -1,4 +1,4 @@
-<div class="account-sidebar" data-active-page="<?php echo htmlspecialchars($activeAccountPage ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+<div class="account-sidebar">
   <h1 class="account-sidebar__title">Panel klienta</h1>
   <p class="account-sidebar__subtitle">Konto indywidualne</p>
 
