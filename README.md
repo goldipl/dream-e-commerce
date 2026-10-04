@@ -74,6 +74,7 @@ The pages use PHP includes and therefore need to be served through Apache/PHP; o
 │   └── product-card/
 ├── css/                    Bundled third-party CSS
 ├── js/                     Front-end scripts and bundled libraries
+├── screenshots/            Sample desktop and mobile screenshots
 ├── scss/                   Project stylesheets and compiled main.css
 ├── webfonts/               Font files
 ├── *.php                   Top-level page entry points
@@ -82,6 +83,28 @@ The pages use PHP includes and therefore need to be served through Apache/PHP; o
 ```
 
 Top-level PHP files are page entry points. Most reusable page markup lives under `components/` and is included by those entry points. The stylesheet linked by the pages is `scss/main.css`; its source styles are organized in `scss/`.
+
+## Screenshots
+
+The following screenshots show selected desktop and mobile views from the project.
+
+### Home page
+
+| Desktop | Mobile |
+| --- | --- |
+| ![Dreamtex home page on desktop](./screenshots/home-page-desktop.jpg) | ![Dreamtex home page on mobile](./screenshots/home-page-mobile.jpg) |
+
+### Product category
+
+| Desktop | Mobile |
+| --- | --- |
+| ![Dreamtex product category on desktop](./screenshots/category-desktop.jpg) | ![Dreamtex product category on mobile](./screenshots/category-mobile.jpg) |
+
+### Product page
+
+| Product configurator modal — desktop | Product page — mobile |
+| --- | --- |
+| ![Product configurator modal on desktop](./screenshots/product-card-modal-desktop.jpg) | ![Dreamtex product page on mobile](./screenshots/product-card-mobile.jpg) |
 
 ## Page catalogue
 
