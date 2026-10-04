@@ -9094,7 +9094,7 @@ td:has(.addon-info) {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 .data-table__link {
   color: #0049ff;
