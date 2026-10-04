@@ -21,7 +21,7 @@ $accountType = 'individual';
         </header>
         <main id="main-wrapper">
             <div class="account-panel container">
-                <?php include "./components/account_panel/account_sidebar.php"; ?>
+                <?php include "./components/account_panel/individual_account_sidebar.php"; ?>
                 <div class="account-content">
                     <?php include "./components/account_panel/individual_order_details.php"; ?>
                 </div>

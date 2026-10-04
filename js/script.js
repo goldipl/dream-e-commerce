@@ -6,6 +6,24 @@ $(function () {
     $('#main-wrapper').toggleClass('opened-menu', isMenuOpen);
   };
 
+  const initAccountSidebarActiveLink = () => {
+    $('.account-sidebar').each(function () {
+      const activePage = $(this).data('active-page');
+
+      $(this).find('.account-sidebar__link').each(function () {
+        const isActive = $(this).data('account-page') === activePage;
+        $(this).toggleClass('account-sidebar__link--active', isActive);
+
+        if (isActive) {
+          $(this).attr('aria-current', 'page');
+        } else {
+          $(this).removeAttr('aria-current');
+        }
+      });
+    });
+  };
+
+  initAccountSidebarActiveLink();
   $(document).on('click', toggleMainWrapperClass);
 
   const initCategoryCardTooltips = () => {
