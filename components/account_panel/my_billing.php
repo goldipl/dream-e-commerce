@@ -1,41 +1,3 @@
-<?php
-// Sample account data — in production these would come from the backend.
-$creditLimit = 150000.00;
-$usedCredit = 50000.00;
-$freeCredit = $creditLimit - $usedCredit;
-
-$invoices = [
-    [
-        'number' => 'FV260540549', 'kseef' => '9521866652-20260910-8960F500000E-D0',
-        'order' => 'ZL/1140/2026', 'net' => '802,40', 'vat' => '184,55', 'gross' => '986,95',
-        'date' => '10.09.2026', 'due_date' => '25.09.2026', 'days_overdue' => 0, 'paid' => false,
-    ],
-    [
-        'number' => 'FV260540550', 'kseef' => '9521866699-20260905-8960F500000E-D0',
-        'order' => 'ZL/1141/2026', 'net' => '20 000,00', 'vat' => '4 600,00', 'gross' => '24 600,00',
-        'date' => '05.09.2026', 'due_date' => '20.09.2026', 'days_overdue' => 5, 'paid' => false,
-    ],
-];
-
-$overdueInvoiceCount = count(array_filter($invoices, function ($inv) { return $inv['days_overdue'] > 0; }));
-$hasLongOverdueInvoice = count(array_filter($invoices, function ($inv) { return $inv['days_overdue'] > 10; })) > 0;
-
-// Credit-line banner state, derived from account data — mirrors the three
-// Figma states: active / limit exceeded / overdue payment.
-if ($usedCredit > $creditLimit) {
-    $bannerVariant = 'limit-exceeded';
-    $bannerTitle = 'Linia kredytowa zablokowana: przekroczony limit';
-    $bannerText = 'Limit został przekroczony o ' . number_format($usedCredit - $creditLimit, 2, ',', ' ') . ' PLN. Skontaktuj się z nami w sprawie rozliczenia.';
-} elseif ($hasLongOverdueInvoice) {
-    $bannerVariant = 'overdue';
-    $bannerTitle = 'Linia kredytowa zablokowana: zaległa płatność';
-    $bannerText = 'Masz fakturę nieopłaconą od ponad 10 dni po terminie. Skontaktuj się z księgowością.';
-} else {
-    $bannerVariant = 'active';
-    $bannerTitle = 'Linia kredytowa aktywna';
-    $bannerText = 'Możesz korzystać z dostępnego limitu zgodnie z warunkami płatności.';
-}
-?>
 <div class="account-section-header">
   <h1 class="account-content__title">Moje rozliczenia</h1>
   <span class="account-sample-date">Dane przykładowe: 25.09.2026</span>
@@ -47,23 +9,23 @@ if ($usedCredit > $creditLimit) {
     <div class="info-card__row">
       <div class="info-card__field">
         <span class="info-card__label">Limit kredytu</span>
-        <span class="info-card__value"><?php echo number_format($creditLimit, 2, ',', ' '); ?> PLN</span>
+        <span class="info-card__value">150 000,00 PLN</span>
       </div>
       <div class="info-card__field">
         <span class="info-card__label">Wykorzystano</span>
-        <span class="info-card__value"><?php echo number_format($usedCredit, 2, ',', ' '); ?> PLN</span>
+        <span class="info-card__value">50 000,00 PLN</span>
       </div>
       <div class="info-card__field">
         <span class="info-card__label">Wolne środki</span>
-        <span class="info-card__value"><?php echo number_format($freeCredit, 2, ',', ' '); ?> PLN</span>
+        <span class="info-card__value">100 000,00 PLN</span>
       </div>
     </div>
   </div>
 </div>
 
-<div class="credit-banner credit-banner--<?php echo $bannerVariant; ?>">
-  <p class="credit-banner__title"><?php echo $bannerTitle; ?></p>
-  <p class="credit-banner__text"><?php echo $bannerText; ?></p>
+<div class="credit-banner credit-banner--active">
+  <p class="credit-banner__title">Linia kredytowa aktywna</p>
+  <p class="credit-banner__text">Możesz korzystać z dostępnego limitu zgodnie z warunkami płatności.</p>
 </div>
 
 <h2 class="account-section-title">Lista faktur</h2>
@@ -98,25 +60,35 @@ if ($usedCredit > $creditLimit) {
       </tr>
     </thead>
     <tbody>
-      <?php foreach ($invoices as $inv): ?>
-      <tr data-overdue="<?php echo $inv['days_overdue'] > 0 ? '1' : '0'; ?>" data-paid="<?php echo $inv['paid'] ? '1' : '0'; ?>">
-        <td><a href="#"><?php echo $inv['number']; ?></a></td>
-        <td><?php echo $inv['kseef']; ?></td>
-        <td><a href="./my-order-details.php"><?php echo $inv['order']; ?></a></td>
-        <td><?php echo $inv['net']; ?></td>
-        <td><?php echo $inv['vat']; ?></td>
-        <td class="text-bold"><?php echo $inv['gross']; ?></td>
-        <td><?php echo $inv['date']; ?></td>
-        <td><?php echo $inv['due_date']; ?></td>
-        <td><?php echo $inv['days_overdue']; ?></td>
-        <td><span class="text-danger"><?php echo $inv['paid'] ? 'Zapłacona' : 'Niezapłacona'; ?></span></td>
+      <tr data-overdue="0" data-paid="0">
+        <td><a href="#">FV260540549</a></td>
+        <td>9521866652-20260910-8960F500000E-D0</td>
+        <td><a href="./my-order-details.php">ZL/1140/2026</a></td>
+        <td>802,40</td>
+        <td>184,55</td>
+        <td class="text-bold">986,95</td>
+        <td>10.09.2026</td>
+        <td>25.09.2026</td>
+        <td>0</td>
+        <td><span class="text-danger">Niezapłacona</span></td>
       </tr>
-      <?php endforeach; ?>
+      <tr data-overdue="1" data-paid="0">
+        <td><a href="#">FV260540550</a></td>
+        <td>9521866699-20260905-8960F500000E-D0</td>
+        <td><a href="./my-order-details.php">ZL/1141/2026</a></td>
+        <td>20 000,00</td>
+        <td>4 600,00</td>
+        <td class="text-bold">24 600,00</td>
+        <td>05.09.2026</td>
+        <td>20.09.2026</td>
+        <td>5</td>
+        <td><span class="text-danger">Niezapłacona</span></td>
+      </tr>
     </tbody>
   </table>
 </div>
 
-<p class="account-pagination__summary" id="invoices-count"><?php echo count($invoices); ?> faktury</p>
+<p class="account-pagination__summary" id="invoices-count">2 faktury</p>
 
 <div class="info-grid info-grid--billing">
   <div class="info-card">
