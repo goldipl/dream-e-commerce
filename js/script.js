@@ -55,10 +55,13 @@ $(function () {
       const currentScrollY = window.scrollY;
       const isMobile = window.innerWidth <= 991;
       const isMenuOpen = mobileHeader.classList.contains('mobile-header--menu-open')
+        || mobileHeader.classList.contains('mobile-header--search-open')
         || mobileHeader.querySelector('.navbar-collapse.show, .navbar-collapse.collapsing');
 
       if (!isMobile) {
         mobileHeader.classList.remove('mobile-header--hidden');
+        mobileHeader.classList.remove('mobile-header--search-open');
+        mobileHeader.querySelector('.mobile-header-search')?.setAttribute('aria-expanded', 'false');
         mobileCatalogToolbar?.classList.remove('is-scroll-sticky');
         lastScrollY = currentScrollY;
         syncMobileHeaderHeight();
@@ -248,16 +251,13 @@ $(function () {
   initProductImageZoom();
 
   $('.mobile-header-search').on('click', function () {
-    const navbar = document.getElementById('navbarSupportedContent');
-    if (!navbar || typeof bootstrap === 'undefined') {
-      return;
-    }
+    const header = this.closest('header');
+    const isSearchOpen = header?.classList.toggle('mobile-header--search-open');
+    this.setAttribute('aria-expanded', String(Boolean(isSearchOpen)));
 
-    const collapse = bootstrap.Collapse.getOrCreateInstance(navbar);
-    collapse.show();
-    $(navbar).one('shown.bs.collapse', function () {
-      $(this).find('#nav-searchbar input').trigger('focus');
-    });
+    if (isSearchOpen) {
+      header.querySelector('#nav-searchbar input')?.focus();
+    }
   });
 });
 

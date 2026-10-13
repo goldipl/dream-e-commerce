@@ -5,7 +5,7 @@
       <img src="./assets/icons/common/header/dreamtex-logo.svg" alt="Dreamtex - Dystrybutor gadżetów reklamowych" width="192" height="20">
     </a>
     <div class="mobile-header-actions">
-      <button class="mobile-header-search" type="button" aria-label="Otwórz wyszukiwarkę" aria-controls="navbarSupportedContent">
+      <button class="mobile-header-search" type="button" aria-label="Otwórz wyszukiwarkę" aria-controls="nav-searchbar" aria-expanded="false">
         <img src="./assets/icons/common/header/magnifier.svg" alt="" width="20" height="20">
       </button>
       <a class="mobile-header-cart" href="./cart-step-one.php" aria-label="Koszyk, 0 produktów">
@@ -19,16 +19,16 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <form role="search" id="nav-searchbar">
+      <input class="form-control mx-2" type="search" placeholder="Szukaj" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Szukaj</button>
+    </form>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-top d-flex align-items-center justify-content-between navbar-nav me-auto mb-2 mb-lg-0 w-100">
         <div class="logo-searchbar-box">
           <a class="navbar-brand navbar-brand-desktop" href="./index.php">
             <img src="./assets/icons/common/header/dreamtex-logo.svg" alt="Dreamtex - Dystrybutor gadżetów reklamowych" width="192" height="20">
           </a>
-          <form class="d-flex" role="search" id="nav-searchbar">
-            <input class="form-control mx-2" type="search" placeholder="Szukaj" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Szukaj</button>
-          </form>
         </div>
         <div class="nav-links-items">
           <a href="" rel="nofollow" class="nav-links-items__item">

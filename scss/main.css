@@ -244,7 +244,13 @@ nav .navbar-bottom .main-nav-item > a:first-of-type:hover {
 }
 @media (min-width: 992px) {
   nav {
+    position: relative;
     height: 160px;
+  }
+  nav #nav-searchbar {
+    position: absolute;
+    top: 27px;
+    left: 256px;
   }
   nav .navbar-brand-mobile {
     display: none;
@@ -389,6 +395,10 @@ nav .navbar-bottom .main-nav-item > a:first-of-type:hover {
     flex: 0 0 auto;
     margin-left: 0;
     padding: 6px 8px;
+  }
+  nav #nav-searchbar {
+    display: none;
+    flex: 0 0 100%;
   }
   nav .navbar-collapse {
     max-height: calc(100dvh - 64px);
@@ -623,6 +633,11 @@ nav .promo-card .dropdown-menu.mega-menu {
   right: 0 !important;
   width: 100%;
   margin-top: 0 !important;
+}
+@media (max-width: 991px) {
+  header.mobile-header--search-open nav #nav-searchbar {
+    display: flex;
+  }
 }
 
 @media (max-width: 991px) {

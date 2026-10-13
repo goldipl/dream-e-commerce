@@ -165,7 +165,13 @@ nav {
 
 @media (min-width: 992px) {
   nav {
+    position: relative;
     height: 160px;
+    #nav-searchbar {
+      position: absolute;
+      top: 27px;
+      left: 256px;
+    }
     .navbar-brand-mobile {
       display: none;
     }
@@ -321,6 +327,10 @@ nav {
       flex: 0 0 auto;
       margin-left: 0;
       padding: 6px 8px;
+    }
+    #nav-searchbar {
+      display: none;
+      flex: 0 0 100%;
     }
     .navbar-collapse {
       max-height: calc(100dvh - 64px);
@@ -627,6 +637,7 @@ nav {
             display: block;
           }
         }
+
       }
 
       &__promo {
@@ -989,5 +1000,11 @@ nav {
         }
       }
     }
+  }
+}
+
+@media (max-width: 991px) {
+  header.mobile-header--search-open nav #nav-searchbar {
+    display: flex;
   }
 }
