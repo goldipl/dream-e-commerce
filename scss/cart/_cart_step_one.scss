@@ -884,6 +884,10 @@
 
         td {
           border: 0 !important;
+          &:first-child,
+          &:last-child {
+            border: 0 !important;
+          }
         }
       }
     }
