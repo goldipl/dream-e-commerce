@@ -54,7 +54,8 @@ $(function () {
     const updateMobileHeader = () => {
       const currentScrollY = window.scrollY;
       const isMobile = window.innerWidth <= 991;
-      const isMenuOpen = mobileHeader.querySelector('.navbar-collapse.show');
+      const isMenuOpen = mobileHeader.classList.contains('mobile-header--menu-open')
+        || mobileHeader.querySelector('.navbar-collapse.show, .navbar-collapse.collapsing');
 
       if (!isMobile) {
         mobileHeader.classList.remove('mobile-header--hidden');
@@ -85,8 +86,22 @@ $(function () {
 
     window.addEventListener('scroll', updateMobileHeader, { passive: true });
     window.addEventListener('resize', updateMobileHeader);
+    mobileHeader.addEventListener('show.bs.collapse', () => {
+      if (window.innerWidth > 991) {
+        return;
+      }
+
+      mobileHeader.classList.add('mobile-header--menu-open');
+      mobileHeader.classList.remove('mobile-header--hidden');
+      mobileCatalogToolbar?.classList.remove('is-scroll-sticky');
+      lastScrollY = window.scrollY;
+    });
     mobileHeader.addEventListener('shown.bs.collapse', updateMobileHeader);
-    mobileHeader.addEventListener('hidden.bs.collapse', updateMobileHeader);
+    mobileHeader.addEventListener('hidden.bs.collapse', () => {
+      mobileHeader.classList.remove('mobile-header--menu-open');
+      lastScrollY = window.scrollY;
+      updateMobileHeader();
+    });
 
     if (typeof ResizeObserver !== 'undefined') {
       new ResizeObserver(syncMobileHeaderHeight).observe(mobileHeader);

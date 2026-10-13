@@ -324,6 +324,10 @@ nav .navbar-bottom .main-nav-item > a:first-of-type:hover {
   header.mobile-header--hidden {
     transform: translateY(-100%);
   }
+  header.mobile-header--menu-open {
+    transform: translateY(0);
+    transition: none;
+  }
   nav {
     height: auto;
   }

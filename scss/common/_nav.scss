@@ -261,6 +261,11 @@ nav {
     &.mobile-header--hidden {
       transform: translateY(-100%);
     }
+
+    &.mobile-header--menu-open {
+      transform: translateY(0);
+      transition: none;
+    }
   }
 
   nav {
