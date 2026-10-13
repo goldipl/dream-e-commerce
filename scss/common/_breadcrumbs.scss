@@ -77,6 +77,10 @@
 }
 
 @media (max-width: 991px) {
+  .breadcrumbs--mobile-hidden {
+    display: none;
+  }
+
   .breadcrumbs {
     margin-top: 6px;
     padding-top: 0;

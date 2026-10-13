@@ -594,3 +594,271 @@
 .modal {
   border-radius: 0;
 }
+
+@media (max-width: 600px) {
+  .bootbox.cart-modal-dialog {
+    .modal-dialog {
+      width: calc(100% - 16px);
+      max-width: none;
+      height: calc(100dvh - 16px);
+      margin: 8px auto;
+    }
+
+    .modal-content {
+      height: 100%;
+      max-height: 100%;
+    }
+
+    .modal-body {
+      min-height: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 12px 12px 0;
+    }
+
+    .bootbox-close-button {
+      top: 12px;
+      right: 12px;
+    }
+  }
+
+  .cart-modal {
+    &__head {
+      align-items: flex-start;
+      flex-direction: row;
+      gap: 10px;
+      margin: 0 36px 14px 0;
+      padding: 0;
+    }
+
+    &__thumb {
+      width: 76px;
+      height: 76px;
+    }
+
+    &__head-info {
+      min-width: 0;
+      gap: 5px;
+    }
+
+    &__title {
+      font-size: 15px;
+      line-height: 19px;
+    }
+
+    &__sku,
+    &__colors-label {
+      font-size: 12px;
+      line-height: 17px;
+    }
+
+    &__colors {
+      margin: 0;
+    }
+
+    &__colors-label {
+      margin-bottom: 7px;
+    }
+
+    &__swatch-list {
+      gap: 8px;
+    }
+
+    .swatch-btn {
+      width: 21px;
+      height: 21px;
+    }
+
+    &__table-wrapper {
+      margin: 0 -12px 12px;
+      padding: 0 12px;
+      overflow: hidden;
+    }
+
+    &__table {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      border: 0;
+      background: transparent;
+
+      thead {
+        display: none;
+      }
+
+      tbody.cart-modal__row-group {
+        display: block;
+        margin-bottom: 12px;
+        border: 1px solid rgba(0, 28, 94, 0.12);
+        background: $white;
+      }
+
+      tr.cart-modal__row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      tbody td {
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4px;
+        padding: 9px 4px;
+        border: 0;
+        border-bottom: 1px solid rgba(0, 28, 94, 0.08);
+        font-size: 12px;
+        line-height: 16px;
+        white-space: normal;
+        text-align: center;
+
+        &::before {
+          color: rgba(0, 28, 94, 0.65);
+          font-size: 9px;
+          font-weight: 500;
+          line-height: 12px;
+          text-transform: uppercase;
+        }
+
+        &.col-size {
+          grid-column: 1 / -1;
+          align-items: flex-start;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 9px 12px;
+          background-color: $inputs_layer;
+          text-align: left;
+
+          &::before {
+            content: "Rozmiar";
+          }
+        }
+
+        &.col-num {
+          padding: 8px 2px;
+
+          &:nth-child(2) {
+            grid-column: 1;
+
+            &::before {
+              content: "24h";
+            }
+          }
+
+          &:nth-child(3) {
+            grid-column: 2;
+
+            &::before {
+              content: "2-3 dni";
+            }
+          }
+        }
+
+        &.col-future {
+          grid-column: 3;
+
+          &::before {
+            content: "Dostawy przyszłe";
+          }
+        }
+
+        &.col-price {
+          grid-column: 1;
+          align-items: flex-start;
+          padding-left: 12px;
+
+          &::before {
+            content: "Cena netto";
+          }
+        }
+
+        &.col-total {
+          grid-column: 2 / 4;
+          align-items: flex-end;
+          padding-right: 12px;
+
+          &::before {
+            content: "Razem";
+          }
+        }
+
+        &.col-qty {
+          grid-column: 1 / -1;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 10px 12px;
+
+          &::before {
+            content: "Liczba sztuk";
+          }
+        }
+      }
+
+      .col-future__inner {
+        gap: 5px;
+      }
+
+      tr.cart-modal__note-row {
+        display: block;
+      }
+
+      tr.cart-modal__note-row[hidden] {
+        display: none;
+      }
+
+      tr.cart-modal__note-row td {
+        display: block;
+        padding: 8px 10px;
+        font-size: 10px;
+        text-align: left;
+      }
+    }
+
+    .qty-stepper {
+      gap: 8px;
+
+      &__input {
+        width: 54px;
+        height: 32px;
+        text-align: center;
+      }
+    }
+
+    &__footer {
+      position: sticky;
+      bottom: 0;
+      z-index: 2;
+      margin: 0 -12px;
+      padding: 10px 12px 12px;
+      background: $white;
+      box-shadow: 0 -4px 12px rgba(0, 28, 94, 0.08);
+    }
+
+    &__selected {
+      gap: 4px;
+    }
+
+    &__selected-row {
+      gap: 6px 16px;
+    }
+
+    &__summary {
+      gap: 10px;
+    }
+
+    &__summary-label {
+      white-space: normal;
+      font-size: 12px;
+    }
+
+    &__grand-total {
+      font-size: 14px;
+    }
+
+    &__submit {
+      width: 100%;
+      min-height: 46px;
+    }
+  }
+}

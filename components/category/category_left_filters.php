@@ -1,10 +1,16 @@
-<div class="category-left-filters-box">
+<div class="category-left-filters-box" id="mobileFiltersPanel">
+    <button type="button" class="category-filters-backdrop" aria-label="Zamknij filtry"></button>
     <div class="category-left-filters-box__button">
         <span>Rozwiń filtry</span>
         <img src="./assets/icons/common/header/menu-arrow-down.svg" width="16" height="12">
     </div>
 
     <div class="category-left-filters">
+        <div class="category-filters-heading">
+            <h2>Filtry</h2>
+            <button type="button" class="category-filters-clear">Wyczyść</button>
+            <button type="button" class="category-filters-close" aria-label="Zamknij filtry">&times;</button>
+        </div>
         <div class="category-left-filters__slot active">
             <div class="header">
                 <h3>Kolor:</h3>
@@ -116,6 +122,9 @@
             <div class="content">
                 <label class="custom-checkbox-container">Z okrągłym dekoltem <input type="checkbox" class="custom_input"><span class="custom-checkbox-checkmark"></span></label>
             </div>
+        </div>
+        <div class="category-filters-footer">
+            <button type="button" class="category-filters-apply">Pokaż produkty</button>
         </div>
     </div>
 </div>

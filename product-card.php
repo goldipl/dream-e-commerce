@@ -18,7 +18,7 @@
             <?php include "./components/common/nav.php"; ?> 
         </header>
         <main id="main-wrapper">
-            <div class="breadcrumbs container">
+            <div class="breadcrumbs breadcrumbs--mobile-hidden container">
                 <ul>
                     <li class="breadcrumb-item">
                         <a href="#">Odzież firmowa</a>

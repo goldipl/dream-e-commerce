@@ -3,6 +3,9 @@
   margin: 0 auto;
   color: $main_text;
   box-sizing: border-box;
+  @media (max-width: 991px) {
+    margin-top: 16px;
+  }
 }
 
 // Layout core

@@ -38,7 +38,7 @@
             <?php include "./components/common/nav.php"; ?> 
         </header>
         <main id="main-wrapper">
-            <div class="breadcrumbs container">
+            <div class="breadcrumbs breadcrumbs--mobile-hidden container">
                 <ul>
                     <li class="breadcrumb-item">
                         <a href="#">Odzież firmowa</a>
@@ -53,6 +53,7 @@
             </div>
             <div class="category-wrapper">
                 <div class="container">
+                    <?php include "./components/category/category_mobile_toolbar.php"; ?>
                     <aside class="category-wrapper__left">
                         <?php include "./components/category/category_left_filters.php"; ?> 
                     </aside>

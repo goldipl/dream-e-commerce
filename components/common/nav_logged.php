@@ -4,6 +4,18 @@
     <a class="navbar-brand navbar-brand-mobile" href="./index.php">
       <img src="./assets/icons/common/header/dreamtex-logo.svg" alt="Dreamtex - Dystrybutor gadżetów reklamowych" width="192" height="20">
     </a>
+    <div class="mobile-header-actions">
+      <button class="mobile-header-search" type="button" aria-label="Otwórz wyszukiwarkę" aria-controls="navbarSupportedContent">
+        <img src="./assets/icons/common/header/magnifier.svg" alt="" width="20" height="20">
+      </button>
+      <a class="mobile-header-cart" href="./cart-step-one.php" aria-label="Koszyk, 0 produktów">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="21" viewBox="0 0 22 21" fill="none" aria-hidden="true">
+          <path d="M1 1h2l2.2 11.2a2 2 0 0 0 2 1.6h9.9a2 2 0 0 0 1.9-1.5L21 5H4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="8" cy="18" r="1.4" fill="currentColor"/><circle cx="17" cy="18" r="1.4" fill="currentColor"/>
+        </svg>
+        <span class="mobile-header-cart__count">0</span>
+      </a>
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

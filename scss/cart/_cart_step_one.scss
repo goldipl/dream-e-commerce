@@ -158,6 +158,10 @@
       border-bottom: 0.4px solid rgba(0, 28, 94, 0.2);
       td.col-actions {
         height: 40px;
+        @media (max-width: 767px) {
+          height: auto;
+          padding-top: 6px;
+        }
       }
       &:hover {
         box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
@@ -291,15 +295,14 @@
     .cart-row--error {
       td {
         background-color: rgba(224, 55, 55, 0.03);
-        border-top: 1px solid #e03737;
-        border-bottom: 1px solid #e03737;
-        border-color: #e03737 !important;
+        border-top: 1px solid #e03737 !important;
+        border-bottom: 1px solid #e03737 !important;
 
         &:first-child {
-          border-left: 1px solid #e03737;
+          border-left: 1px solid #e03737 !important;
         }
         &:last-child {
-          border-right: 1px solid #e03737;
+          border-right: 1px solid #e03737 !important;
         }
       }
 
@@ -736,5 +739,322 @@
   &__submit {
     width: 100%;
     max-width: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .cart-page {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-right: 12px;
+    padding-left: 12px;
+
+    &__header {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 12px;
+      overflow: visible;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .cart-table tbody .cart-row--group-end td:not(.col-product) {
+      padding-bottom: 14px;
+    }
+  }
+
+  .cart-page__title {
+    gap: 8px;
+    margin-bottom: 0;
+
+    svg {
+      width: 26px;
+      height: 24px;
+    }
+  }
+
+  .cart-steps {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    padding: 0;
+
+    &__item {
+      padding: 0;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  .cart-page__body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cart-table-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .cart-table {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    border: 0;
+
+    thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+    }
+
+    tbody.cart-group {
+      display: block;
+      width: 100%;
+      margin-bottom: 12px;
+      border: 1px solid rgba(0, 28, 94, 0.16);
+      background: $white;
+      box-shadow: 0 2px 8px rgba(0, 28, 94, 0.06);
+
+      &:hover {
+        box-shadow: 0 2px 8px rgba(0, 28, 94, 0.06);
+      }
+    }
+
+    tr.cart-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid rgba(0, 28, 94, 0.1);
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &--group-start {
+        td.col-size,
+        td.col-qty {
+          grid-row: 2;
+          padding: 6px 16px;
+        }
+
+        td.col-num,
+        td.col-future {
+          grid-row: 3;
+          padding: 6px 16px;
+        }
+
+        td.col-price,
+        td.col-total,
+        td.col-actions {
+          grid-row: 4;
+          padding: 6px 16px;
+        }
+      }
+
+      &--single {
+        td.col-size,
+        td.col-qty {
+          grid-row: 2;
+          padding: 6px 16px;
+        }
+
+        td.col-num,
+        td.col-future {
+          grid-row: 3;
+        }
+
+        td.col-price,
+        td.col-total,
+        td.col-actions {
+          grid-row: 4;
+        }
+      }
+
+      &--error {
+        outline: 1px solid #e03737;
+        outline-offset: -1px;
+
+        td {
+          border: 0 !important;
+        }
+      }
+    }
+
+    tbody td {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      padding: 8px 4px;
+      border: 0;
+      background: transparent;
+      font-size: 12px;
+      line-height: 16px;
+      white-space: normal;
+      text-align: center;
+
+      &::before {
+        color: rgba(0, 28, 94, 0.65);
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 12px;
+        text-transform: uppercase;
+      }
+
+      &.col-product {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 28, 94, 0.1);
+        text-align: left;
+      }
+
+      &.col-size {
+        grid-column: 1;
+        grid-row: 1;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 6px;
+        font-weight: 700;
+        padding: 6px 16px;
+
+        &::before {
+          content: "Rozmiar:";
+          font-weight: 400;
+        }
+      }
+
+      &.col-qty {
+        grid-column: 2 / -1;
+        grid-row: 1;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 6px 16px;
+
+        &::before {
+          content: "Ilość:";
+        }
+      }
+
+      &.col-num {
+        grid-row: 2;
+
+        &::before {
+          content: "24h";
+        }
+
+        & + .col-num::before {
+          content: "2-3 dni";
+        }
+      }
+
+      &.col-future {
+        grid-column: 3;
+        grid-row: 2;
+
+        &::before {
+          content: "Dostawy przyszłe";
+        }
+      }
+
+      &.col-price {
+        grid-column: 1;
+        grid-row: 3;
+        align-items: center;
+
+        &::before {
+          content: "Cena netto";
+        }
+      }
+
+      &.col-total {
+        grid-column: 2;
+        grid-row: 3;
+
+        &::before {
+          content: "Razem";
+        }
+      }
+
+      &.col-actions {
+        grid-column: 3;
+        grid-row: 3;
+        padding: 4px;
+      }
+    }
+
+    tbody tr.cart-row--note {
+      display: block;
+      padding: 8px 10px;
+      border: 0;
+
+      td {
+        display: block;
+        padding: 0;
+        font-size: 11px;
+        line-height: 16px;
+        text-align: left;
+      }
+    }
+
+    .cart-product {
+      align-items: center;
+      gap: 10px;
+
+      &__thumb {
+        width: 56px;
+        height: 56px;
+      }
+
+      &__info {
+        width: auto;
+        min-width: 0;
+        gap: 4px;
+        padding: 0;
+      }
+
+      &__name {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      &__sku {
+        font-size: 10px;
+        line-height: 13px;
+      }
+    }
+
+    .qty-stepper__input {
+      width: 58px;
+      height: 32px;
+      padding: 4px 6px;
+      text-align: center;
+    }
+
+    .size-error-label {
+      left: -24px !important;
+      white-space: normal;
+    }
+  }
+
+  .cart-summary {
+    width: 100%;
+    position: static;
+
+    &__body {
+      gap: 18px;
+      padding: 20px;
+    }
   }
 }
