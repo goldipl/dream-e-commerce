@@ -251,6 +251,7 @@ nav .navbar-bottom .main-nav-item > a:first-of-type:hover {
     position: absolute;
     top: 27px;
     left: 256px;
+    z-index: 1;
   }
   nav .navbar-brand-mobile {
     display: none;
@@ -634,11 +635,6 @@ nav .promo-card .dropdown-menu.mega-menu {
   width: 100%;
   margin-top: 0 !important;
 }
-@media (max-width: 991px) {
-  header.mobile-header--search-open nav #nav-searchbar {
-    display: flex;
-  }
-}
 
 @media (max-width: 991px) {
   nav .mega-menu {
@@ -973,6 +969,11 @@ nav .account-popup__logout:hover {
   }
   nav .account-popup.dropdown-menu .account-popup__divider {
     margin: 12px 0;
+  }
+}
+@media (max-width: 991px) {
+  header.mobile-header--search-open nav #nav-searchbar {
+    display: flex;
   }
 }
 .footer {
