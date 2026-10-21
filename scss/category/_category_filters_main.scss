@@ -38,12 +38,19 @@
     }
   }
 
+  // Storage page: views only, aligned with the .storage-wrapper padding
+  .mobile-catalog-toolbar--storage {
+    margin: 0 -16px 16px;
+    padding: 4px 16px;
+  }
+
   .mobile-catalog-toolbar__views {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
   }
 
+  // Active view in navy, the other two greyed out
   .catalog-view-toggle {
     display: flex;
     align-items: center;
@@ -53,7 +60,8 @@
     padding: 0;
     border: 0;
     background: transparent;
-    color: rgba(0, 28, 94, 0.55);
+    color: rgba(0, 28, 94, 0.3);
+    transition: color 0.2s ease;
 
     svg {
       width: 19px;
@@ -109,10 +117,13 @@
     }
   }
 
-  .products-grid-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px 10px;
-
+  // Product views (toggled in .mobile-catalog-toolbar):
+  // - default: large photos, the regular one-column card
+  // - .is-grid-view: boxes, two compact cards per row
+  // - .is-list-view: list, photo on the left
+  // Column counts live at the bottom of this file (after the base grid).
+  .products-grid-container.is-grid-view,
+  .products-grid-container.is-list-view {
     .badge-container {
       top: 10px;
       gap: 5px;
@@ -193,67 +204,65 @@
         }
       }
     }
+  }
 
-    &.is-list-view {
-      grid-template-columns: minmax(0, 1fr);
-
-      .product-card {
-        flex-direction: row;
-        min-width: 0;
-      }
-
-      .product-card__image-wrapper {
-        flex: 0 0 38%;
-        width: 38%;
-        height: auto;
-        min-height: 150px;
-        padding-top: 0;
-      }
-
-      .product-card__info {
-        min-width: 0;
-        padding: 10px;
-      }
-
-      .product-card__title-link {
-        font-size: 14px;
-        line-height: 18px;
-      }
-
-      .product-card__subtitle {
-        font-size: 11px;
-        line-height: 16px;
-      }
-
-      .product-card__colors {
-        gap: 5px;
-
-        .color-dot {
-          width: 15px;
-          height: 15px;
-        }
-      }
+  .products-grid-container.is-list-view {
+    .product-card {
+      flex-direction: row;
+      min-width: 0;
     }
 
-    &:not(.is-list-view) {
-      .product-card__image-wrapper {
-        height: auto;
-        padding-top: 125%;
-      }
+    .product-card__image-wrapper {
+      flex: 0 0 38%;
+      width: 38%;
+      height: auto;
+      min-height: 150px;
+      padding-top: 0;
+    }
 
-      .product-card__info {
-        padding: 10px 8px;
-      }
+    .product-card__info {
+      min-width: 0;
+      padding: 10px;
+    }
 
-      .product-card__title-link {
-        font-size: 14px;
-        line-height: 18px;
-      }
+    .product-card__title-link {
+      font-size: 14px;
+      line-height: 18px;
+    }
 
-      .product-card__subtitle {
-        font-size: 11px;
-        line-height: 16px;
+    .product-card__subtitle {
+      font-size: 11px;
+      line-height: 16px;
+    }
+
+    .product-card__colors {
+      gap: 5px;
+
+      .color-dot {
+        width: 15px;
+        height: 15px;
       }
+    }
+  }
+
+  .products-grid-container.is-grid-view {
+    .product-card__image-wrapper {
+      height: auto;
+      padding-top: 125%;
+    }
+
+    .product-card__info {
+      padding: 10px 8px;
+    }
+
+    .product-card__title-link {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .product-card__subtitle {
+      font-size: 11px;
+      line-height: 16px;
     }
   }
 }
@@ -741,13 +750,15 @@
   }
 }
 
+// Mobile view columns (category + storage); the default large-photo view
+// keeps the base grid above
 @media (max-width: 991px) {
-  .category-wrapper .products-grid-container:not(.is-list-view) {
+  .products-grid-container.is-grid-view {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px 10px;
   }
 
-  .category-wrapper .products-grid-container.is-list-view {
+  .products-grid-container.is-list-view {
     grid-template-columns: minmax(0, 1fr);
   }
 }

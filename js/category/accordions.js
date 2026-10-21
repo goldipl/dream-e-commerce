@@ -92,10 +92,12 @@ $(function () {
     }
   });
 
+  // Mobile product views: large photos (default), boxes, list
   $('.catalog-view-toggle').on('click', function () {
     const view = $(this).data('view');
-    const isListView = view === 'list';
-    $('.products-grid-container').toggleClass('is-list-view', isListView);
+    $('.products-grid-container')
+      .toggleClass('is-grid-view', view === 'grid')
+      .toggleClass('is-list-view', view === 'list');
     $('.catalog-view-toggle')
       .removeClass('is-active')
       .attr('aria-pressed', 'false');

@@ -15,6 +15,11 @@
     margin-top: 16px;
   }
 
+  // Mobile: no "Znaleziono" / selected filters bar (filters live under "Filtry")
+  @media (max-width: 991px) {
+    display: none;
+  }
+
   // Left Side: Count Text
   .results-count {
     color: rgba(0, 28, 94, 0.5);

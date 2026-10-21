@@ -7,6 +7,10 @@
     <span class="storage-header__count">32 produkty</span>
   </div>
 
+  <div class="mobile-catalog-toolbar mobile-catalog-toolbar--storage" aria-label="Opcje schowka">
+    <?php include "./components/category/catalog_view_toggles.php"; ?>
+  </div>
+
   <div class="products-grid-container products-grid-container--4col">
 
     <!-- 1 -->

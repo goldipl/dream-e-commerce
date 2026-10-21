@@ -29,5 +29,6 @@
         <script src="./js/swiper/swiper-bundle.js"></script>
         <script src="./js/swiper/swiper.js"></script>
         <script src="./js/script.js"></script>
+        <script src="./js/cart/cart-step-one.js"></script>
     </body>
 </html>

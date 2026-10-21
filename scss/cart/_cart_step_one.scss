@@ -160,7 +160,6 @@
         height: 40px;
         @media (max-width: 767px) {
           height: auto;
-          padding-top: 6px;
         }
       }
       &:hover {
@@ -185,38 +184,41 @@
         border-top: 0;
       }
     }
-    .cart-row {
-      &--single td,
-      &--group-end td {
-        border-bottom: 1px solid $stroke-color;
+    // Desktop table only — the mobile card layout draws its own lines
+    @media (min-width: 768px) {
+      .cart-row {
+        &--single td,
+        &--group-end td {
+          border-bottom: 1px solid $stroke-color;
+        }
+
+        &--group-start td,
+        td {
+          border-top: none;
+        }
       }
 
-      &--group-start td,
-      td {
-        border-top: none;
+      // Grouped rows get a border wrapping the whole product block
+      .cart-row--group-start {
+        td:not(.col-product) {
+          border-top: 0;
+        }
+        td.col-product {
+          border-top: 0;
+          border-bottom: 0;
+          vertical-align: top;
+        }
       }
-    }
-
-    // Grouped rows get a border wrapping the whole product block
-    .cart-row--group-start {
-      td:not(.col-product) {
-        border-top: 0;
-      }
-      td.col-product {
-        border-top: 0;
+      .cart-row--group-end td:not(.col-product) {
         border-bottom: 0;
-        vertical-align: top;
       }
-    }
-    .cart-row--group-end td:not(.col-product) {
-      border-bottom: 0;
-    }
-    .cart-row:not(.cart-row--single):not(.cart-row--group-start):not(
-        .cart-row--group-end
-      )
-      td:not(.col-product) {
-      border-top: none;
-      border-bottom: none;
+      .cart-row:not(.cart-row--single):not(.cart-row--group-start):not(
+          .cart-row--group-end
+        )
+        td:not(.col-product) {
+        border-top: none;
+        border-bottom: none;
+      }
     }
 
     td {
@@ -260,16 +262,18 @@
 
     // Multi-size group: first size sits level with the thumbnail's centre,
     // following sizes stack tightly (40px per row)
-    .cart-row--group-start td:not(.col-product) {
-      padding-top: 42px;
-      padding-bottom: 2px;
-    }
-    .cart-row:not(.cart-row--single):not(.cart-row--group-start):not(
-        .cart-row--note
-      )
-      td:not(.col-product) {
-      padding-top: 2px;
-      padding-bottom: 2px;
+    @media (min-width: 768px) {
+      .cart-row--group-start td:not(.col-product) {
+        padding-top: 42px;
+        padding-bottom: 2px;
+      }
+      .cart-row:not(.cart-row--single):not(.cart-row--group-start):not(
+          .cart-row--note
+        )
+        td:not(.col-product) {
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
     }
 
     // "Dostawy przyszłe": value + info icon
@@ -374,7 +378,11 @@
   }
 }
 
-// Quantity input (single-field variant used in this table, no +/- steppers)
+// Quantity input (single field on desktop; +/- buttons are shown on mobile only)
+.cart-table .qty-stepper__btn {
+  display: none;
+}
+
 .qty-stepper {
   display: inline-flex;
 
@@ -742,6 +750,9 @@
   }
 }
 
+// Mobile card: width of the quantity stepper column (value is centred under it)
+$cart-mobile-qty-width: 104px;
+
 @media (max-width: 767px) {
   .cart-page {
     max-width: 100%;
@@ -827,67 +838,55 @@
       }
     }
 
+    // One card per product: product head on top, then one block per size
+    // read as a natural sequence: price x quantity = value
     tr.cart-row {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: 56px minmax(0, 1fr) $cart-mobile-qty-width;
+      grid-template-areas:
+        "size price qty"
+        "actions total total";
+      align-items: center;
+      gap: 6px 12px;
       width: 100%;
+      padding: 14px 16px 10px;
       border: 0;
-      border-bottom: 1px solid rgba(0, 28, 94, 0.1);
 
-      &:last-child {
-        border-bottom: 0;
-      }
-
+      &--single,
       &--group-start {
-        td.col-size,
-        td.col-qty {
-          grid-row: 2;
-          padding: 6px 16px;
-        }
-
-        td.col-num,
-        td.col-future {
-          grid-row: 3;
-          padding: 6px 16px;
-        }
-
-        td.col-price,
-        td.col-total,
-        td.col-actions {
-          grid-row: 4;
-          padding: 6px 16px;
-        }
+        grid-template-areas:
+          "product product product"
+          "size price qty"
+          "actions total total";
       }
 
-      &--single {
-        td.col-size,
-        td.col-qty {
-          grid-row: 2;
-          padding: 6px 16px;
-        }
-
-        td.col-num,
-        td.col-future {
-          grid-row: 3;
-        }
-
-        td.col-price,
-        td.col-total,
-        td.col-actions {
-          grid-row: 4;
-        }
+      // Grey line between sizes of the same model / colour
+      & + tr.cart-row:not(.cart-row--note) {
+        background-image: linear-gradient($stroke-color, $stroke-color);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: calc(100% - 32px) 1px;
       }
 
       &--error {
         outline: 1px solid #e03737;
         outline-offset: -1px;
+        background-color: rgba(224, 55, 55, 0.03);
 
         td {
           border: 0 !important;
+          background-color: transparent !important;
           &:first-child,
           &:last-child {
             border: 0 !important;
           }
+        }
+
+        // Room for the "Wybierz rozmiar" label above the stepper
+        td.col-size,
+        td.col-price,
+        td.col-qty {
+          padding-top: 18px;
         }
       }
     }
@@ -896,111 +895,105 @@
       display: flex;
       min-width: 0;
       align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 4px;
-      padding: 8px 4px;
+      gap: 8px;
+      padding: 0;
       border: 0;
       background: transparent;
-      font-size: 12px;
+      font-size: 13px;
       line-height: 16px;
       white-space: normal;
-      text-align: center;
+      text-align: left;
 
       &::before {
-        color: rgba(0, 28, 94, 0.65);
-        font-size: 9px;
-        font-weight: 500;
-        line-height: 12px;
-        text-transform: uppercase;
+        color: $breadcrumbs_color;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 14px;
+        white-space: nowrap;
       }
 
       &.col-product {
-        grid-column: 1 / -1;
-        grid-row: 1;
+        grid-area: product;
         display: block;
-        padding: 10px;
+        margin: -14px -16px 8px;
+        padding: 10px 16px;
         border-bottom: 1px solid rgba(0, 28, 94, 0.1);
-        text-align: left;
+      }
+
+      // Availability (24h / 2-3 dni / Dostawy przyszłe) is not shown on mobile
+      &.col-num,
+      &.col-future {
+        display: none;
       }
 
       &.col-size {
-        grid-column: 1;
-        grid-row: 1;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 6px;
+        grid-area: size;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        font-size: 15px;
         font-weight: 700;
-        padding: 6px 16px;
+        line-height: 18px;
+        white-space: nowrap;
 
         &::before {
-          content: "Rozmiar:";
-          font-weight: 400;
-        }
-      }
-
-      &.col-qty {
-        grid-column: 2 / -1;
-        grid-row: 1;
-        flex-direction: row;
-        justify-content: flex-end;
-        padding: 6px 16px;
-
-        &::before {
-          content: "Ilość:";
-        }
-      }
-
-      &.col-num {
-        grid-row: 2;
-
-        &::before {
-          content: "24h";
-        }
-
-        & + .col-num::before {
-          content: "2-3 dni";
-        }
-      }
-
-      &.col-future {
-        grid-column: 3;
-        grid-row: 2;
-
-        &::before {
-          content: "Dostawy przyszłe";
+          content: "Rozmiar";
+          font-size: 9px;
+          font-weight: 500;
+          line-height: 12px;
+          text-transform: uppercase;
         }
       }
 
       &.col-price {
-        grid-column: 1;
-        grid-row: 3;
-        align-items: center;
+        grid-area: price;
 
         &::before {
-          content: "Cena netto";
+          content: "Cena/szt. PLN";
         }
       }
 
+      &.col-qty {
+        grid-area: qty;
+        justify-content: center;
+      }
+
+      // Label under the price, value right under the stepper
       &.col-total {
-        grid-column: 2;
-        grid-row: 3;
+        grid-area: total;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) $cart-mobile-qty-width;
+        column-gap: 12px;
+        text-align: left;
 
         &::before {
-          content: "Razem";
+          content: "Łącznie wartość netto";
+        }
+
+        .row-total {
+          color: $main_color;
+          font-size: 14px;
+          line-height: 18px;
+          text-align: center;
+          white-space: nowrap;
         }
       }
 
       &.col-actions {
-        grid-column: 3;
-        grid-row: 3;
-        padding: 4px;
+        grid-area: actions;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+
+        .icon-btn {
+          margin-left: -8px;
+        }
       }
     }
 
     tbody tr.cart-row--note {
       display: block;
-      padding: 8px 10px;
+      padding: 0 16px 12px;
       border: 0;
 
       td {
@@ -1039,16 +1032,73 @@
       }
     }
 
-    .qty-stepper__input {
-      width: 58px;
-      height: 32px;
-      padding: 4px 6px;
-      text-align: center;
+    // Stepper: [ − | qty | + ] in one box, changes the amount by 1
+    .qty-stepper {
+      width: $cart-mobile-qty-width;
+      height: 34px;
+      align-items: stretch;
+      border: 1px solid $stroke-color;
+      background-color: $inputs_layer;
+
+      &:focus-within {
+        border-color: $accent_color;
+      }
+
+      &__btn {
+        display: flex;
+        flex: 0 0 32px;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: $main_color;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1;
+        cursor: pointer;
+
+        &--plus {
+          color: $accent_color;
+        }
+
+        &:active {
+          background-color: rgba($accent_color, 0.1);
+        }
+      }
+
+      &__input {
+        flex: 1 1 auto;
+        width: 100%;
+        min-width: 0;
+        height: 100%;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: $main_color;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        &:focus {
+          border: 0;
+        }
+      }
+
+      &--error {
+        border-color: #e03737;
+      }
     }
 
-    .size-error-label {
-      left: -24px !important;
-      white-space: normal;
+    tbody .cart-row--error .size-error-label {
+      left: auto;
+      right: 0;
     }
   }
 

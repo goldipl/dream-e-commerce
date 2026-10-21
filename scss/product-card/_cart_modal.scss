@@ -243,25 +243,33 @@
         }
       }
 
-      & + tbody tr:first-child td {
-        border-top: 0.4px solid rgba(0, 28, 94, 0.2);
-      }
-
-      &:hover {
-        tr {
-          background-color: $inputs_layer;
-          box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
-        }
-
-        .qty-stepper__input {
-          border-color: $accent_color;
-          color: $accent_color;
+      @media (min-width: 601px) {
+        & + tbody tr:first-child td {
+          border-top: 0.4px solid rgba(0, 28, 94, 0.2);
         }
       }
 
-      &.has-note .cart-modal__row td {
-        padding-bottom: 6px;
-        border-bottom: 0;
+      // Pointer devices only — on touch the hover state sticks after a tap
+      @media (hover: hover) {
+        &:hover {
+          tr {
+            background-color: $inputs_layer;
+            box-shadow: 0 3.2px 24px 0 rgba(0, 28, 94, 0.15);
+          }
+
+          .qty-stepper__input {
+            border-color: $accent_color;
+            color: $accent_color;
+          }
+        }
+      }
+
+      // Desktop table only — the mobile layout spaces the note itself
+      @media (min-width: 601px) {
+        &.has-note .cart-modal__row td {
+          padding-bottom: 6px;
+          border-bottom: 0;
+        }
       }
 
       tr.cart-modal__note-row td {
@@ -595,6 +603,9 @@
   border-radius: 0;
 }
 
+// Mobile: width of the quantity stepper column (value is centred under it)
+$cart-modal-qty-width: 122px;
+
 @media (max-width: 600px) {
   .bootbox.cart-modal-dialog {
     .modal-dialog {
@@ -693,53 +704,88 @@
         background: $white;
       }
 
+      // One size: header (ROZMIAR + value), availability, a single line,
+      // then the natural sequence price x quantity = value
       tr.cart-modal__row {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1fr) $cart-modal-qty-width 4px;
+        grid-template-areas:
+          "size size size size size"
+          "avail express standard future ."
+          "divider divider divider divider divider"
+          ". price price qty ."
+          ". total total total .";
+        align-items: center;
+        column-gap: 8px;
+
+        // "Dostępność" label in front of the availability values
+        &::before {
+          content: "Dostępność";
+          grid-area: avail;
+          padding-left: 12px;
+          color: $breadcrumbs_color;
+          font-size: 10px;
+          font-weight: 300;
+          line-height: 14px;
+        }
+
+        // The only line inside a size: availability | price / quantity / value
+        &::after {
+          content: "";
+          grid-area: divider;
+          height: 1px;
+          margin: 0 12px;
+          background-color: rgba(0, 28, 94, 0.12);
+        }
       }
 
       tbody td {
         display: flex;
         min-width: 0;
         align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 4px;
-        padding: 9px 4px;
+        gap: 8px;
+        padding: 0;
         border: 0;
-        border-bottom: 1px solid rgba(0, 28, 94, 0.08);
-        font-size: 12px;
+        font-size: 13px;
         line-height: 16px;
         white-space: normal;
-        text-align: center;
+        text-align: left;
 
         &::before {
-          color: rgba(0, 28, 94, 0.65);
-          font-size: 9px;
-          font-weight: 500;
-          line-height: 12px;
-          text-transform: uppercase;
+          color: $breadcrumbs_color;
+          font-size: 10px;
+          font-weight: 300;
+          line-height: 14px;
+          white-space: nowrap;
         }
 
         &.col-size {
-          grid-column: 1 / -1;
-          align-items: flex-start;
-          flex-direction: row;
-          justify-content: space-between;
+          grid-area: size;
+          justify-content: flex-start;
+          gap: 14px;
           padding: 9px 12px;
           background-color: $inputs_layer;
-          text-align: left;
+          font-size: 14px;
+          line-height: 18px;
 
           &::before {
             content: "Rozmiar";
+            font-size: 9px;
+            font-weight: 500;
+            line-height: 12px;
+            text-transform: uppercase;
           }
         }
 
+        // Availability: lowercase labels above the values
         &.col-num {
-          padding: 8px 2px;
+          flex-direction: column;
+          gap: 2px;
+          padding: 10px 0;
+          text-align: center;
 
           &:nth-child(2) {
-            grid-column: 1;
+            grid-area: express;
 
             &::before {
               content: "24h";
@@ -747,7 +793,7 @@
           }
 
           &:nth-child(3) {
-            grid-column: 2;
+            grid-area: standard;
 
             &::before {
               content: "2-3 dni";
@@ -756,7 +802,7 @@
         }
 
         &.col-future {
-          grid-column: 3;
+          grid-area: future;
 
           &::before {
             content: "Dostawy przyszłe";
@@ -764,35 +810,44 @@
         }
 
         &.col-price {
-          grid-column: 1;
-          align-items: flex-start;
-          padding-left: 12px;
+          grid-area: price;
+          padding: 12px 0 6px;
 
           &::before {
-            content: "Cena netto";
-          }
-        }
-
-        &.col-total {
-          grid-column: 2 / 4;
-          align-items: flex-end;
-          padding-right: 12px;
-
-          &::before {
-            content: "Razem";
+            content: "Cena/szt. PLN";
           }
         }
 
         &.col-qty {
-          grid-column: 1 / -1;
-          flex-direction: row;
-          justify-content: space-between;
-          padding: 10px 12px;
+          grid-area: qty;
+          justify-content: center;
+          padding: 12px 0 6px;
+        }
+
+        // Label under the price, value right under the stepper
+        &.col-total {
+          grid-area: total;
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) $cart-modal-qty-width;
+          column-gap: 8px;
+          padding: 0 0 12px;
+          text-align: left;
 
           &::before {
-            content: "Liczba sztuk";
+            content: "Łącznie wartość netto";
+          }
+
+          strong {
+            font-size: 14px;
+            line-height: 18px;
+            text-align: center;
+            white-space: nowrap;
           }
         }
+      }
+
+      tbody.has-note td.col-total {
+        padding-bottom: 6px;
       }
 
       .col-future__inner {
@@ -809,7 +864,7 @@
 
       tr.cart-modal__note-row td {
         display: block;
-        padding: 8px 10px;
+        padding: 0 12px 12px;
         font-size: 10px;
         text-align: left;
       }

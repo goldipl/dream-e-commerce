@@ -53,7 +53,9 @@ $cart_info_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
                 <input type="number" class="qty-stepper__input" value="2" min="0" step="1" aria-label="Ilość sztuk rozmiar L">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
               </div>
             </td>
             <td class="col-num">20</td>
@@ -98,7 +100,9 @@ $cart_info_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
                 <input type="number" class="qty-stepper__input" value="3" min="0" step="1" aria-label="Ilość sztuk rozmiar XS">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
               </div>
             </td>
             <td class="col-num">0</td>
@@ -128,7 +132,9 @@ $cart_info_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
                 <input type="number" class="qty-stepper__input" value="2" min="0" step="1" aria-label="Ilość sztuk rozmiar S">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
               </div>
             </td>
             <td class="col-num">10</td>
@@ -158,7 +164,9 @@ $cart_info_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
                 <input type="number" class="qty-stepper__input" value="5" min="0" step="1" aria-label="Ilość sztuk rozmiar M">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
               </div>
             </td>
             <td class="col-num">10</td>
@@ -188,7 +196,9 @@ $cart_info_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
                 <input type="number" class="qty-stepper__input" value="1" min="0" step="1" aria-label="Ilość sztuk rozmiar L">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
               </div>
             </td>
             <td class="col-num">5</td>
@@ -232,7 +242,9 @@ $cart_info_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
                 <input type="number" class="qty-stepper__input" value="2" min="0" step="1" aria-label="Ilość sztuk rozmiar L">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
               </div>
             </td>
             <td class="col-num">20</td>
@@ -276,7 +288,9 @@ $cart_info_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
                 <input type="number" class="qty-stepper__input" value="2" min="0" step="1" aria-label="Ilość sztuk rozmiar L">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
               </div>
             </td>
             <td class="col-num">20</td>
@@ -322,7 +336,9 @@ $cart_info_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16
             <td class="col-qty">
               <div class="qty-stepper qty-stepper--error">
                 <span class="size-error-label">Wybierz rozmiar</span>
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
                 <input type="number" class="qty-stepper__input" value="0" min="0" step="1" aria-label="Ilość sztuk">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
               </div>
             </td>
             <td class="col-num">20</td>
@@ -366,7 +382,9 @@ $cart_info_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
                 <input type="number" class="qty-stepper__input" value="3" min="0" step="1" aria-label="Ilość sztuk rozmiar XS">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
               </div>
             </td>
             <td class="col-num">0</td>
@@ -396,7 +414,9 @@ $cart_info_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16
             </td>
             <td class="col-qty">
               <div class="qty-stepper">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--minus" aria-label="Zmniejsz ilość">−</button>
                 <input type="number" class="qty-stepper__input" value="6" min="0" step="1" aria-label="Ilość sztuk rozmiar S">
+                <button type="button" class="qty-stepper__btn qty-stepper__btn--plus" aria-label="Zwiększ ilość">+</button>
               </div>
             </td>
             <td class="col-num">1</td>
