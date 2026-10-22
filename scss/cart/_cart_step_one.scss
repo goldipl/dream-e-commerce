@@ -274,6 +274,14 @@
         padding-top: 2px;
         padding-bottom: 2px;
       }
+      // Last size closes the group with the same breathing room as the thumbnail
+      // (unless a note row follows and provides its own spacing)
+      .cart-row.cart-row--group-end:not(.cart-row--group-start):not(
+          :has(+ .cart-row--note)
+        )
+        td:not(.col-product) {
+        padding-bottom: 18px;
+      }
     }
 
     // "Dostawy przyszłe": value + info icon
@@ -443,6 +451,44 @@
     outline: 1px solid $accent_color;
     outline-offset: 2px;
     border-radius: 50%;
+  }
+}
+
+// Delivery info tooltip (mirrors .cart-modal__tooltip), appended to <body> by JS
+.cart-tooltip {
+  position: absolute;
+  z-index: 1050;
+  width: 245px;
+  padding: 16px;
+  background-color: $white;
+  border: 1px solid $accent_color;
+  pointer-events: none;
+  font-size: 12px;
+  line-height: 16px;
+  color: $main_text;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &__title {
+    display: block;
+    font-weight: 700;
+    color: $main_color;
+    margin-bottom: 8px;
+  }
+
+  &__date {
+    display: block;
+    font-weight: 400;
+    color: $accent_color;
+    margin-bottom: 12px;
+  }
+
+  &__note {
+    margin: 0;
+    font-weight: 300;
+    color: $main_text;
   }
 }
 
@@ -767,12 +813,6 @@ $cart-mobile-qty-width: 104px;
       overflow: visible;
       margin-bottom: 20px;
       padding-bottom: 12px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .cart-table tbody .cart-row--group-end td:not(.col-product) {
-      padding-bottom: 14px;
     }
   }
 

@@ -34,6 +34,74 @@ $(function () {
     $row.find(".row-total").text(formatPLN(price * qty));
   }
 
+  // ---------------------------------------------------------------------
+  // Delivery info tooltip (same look as in the product card cart modal)
+  // Rendered once on <body> so the overflow-x table wrapper can't clip it.
+  // ---------------------------------------------------------------------
+  const $tip = $(
+    '<div class="cart-tooltip" role="tooltip" hidden></div>'
+  ).appendTo("body");
+
+  function showTooltip($btn) {
+    const rawDeliveries = $btn.data("deliveries");
+    const deliveries = Array.isArray(rawDeliveries) ? rawDeliveries : [];
+
+    $tip.empty();
+    $tip.append(
+      $('<strong class="cart-tooltip__title"></strong>').text(
+        "Dostawa do magazynu dostawcy"
+      )
+    );
+
+    if (deliveries.length) {
+      deliveries.forEach(function (delivery) {
+        $tip.append(
+          $('<span class="cart-tooltip__date"></span>').text(
+            delivery.date + " · " + delivery.qty + " szt."
+          )
+        );
+      });
+    } else {
+      $tip.append(
+        $('<span class="cart-tooltip__date"></span>').text(
+          "Termin kolejnej dostawy nieznany"
+        )
+      );
+    }
+
+    $tip.append(
+      $('<p class="cart-tooltip__note"></p>').text(
+        "To nie jest termin dostawy do Ciebie."
+      )
+    );
+
+    $tip.prop("hidden", false);
+
+    const iconRect = $btn[0].getBoundingClientRect();
+    const tipWidth = $tip.outerWidth();
+    const viewportWidth = document.documentElement.clientWidth;
+
+    let left = iconRect.right + 10;
+    if (left + tipWidth > viewportWidth) {
+      left = iconRect.left - tipWidth - 10;
+    }
+
+    $tip.css({
+      left: Math.max(8, left) + window.scrollX,
+      top: iconRect.top - 4 + window.scrollY,
+    });
+  }
+
+  function hideTooltip() {
+    $tip.prop("hidden", true);
+  }
+
+  $table.on("mouseenter focusin", ".info-tip", function () {
+    showTooltip($(this));
+  });
+  $table.on("mouseleave focusout", ".info-tip", hideTooltip);
+  $(".cart-table-wrapper").on("scroll", hideTooltip);
+
   function parsePLN(text) {
     return parseFloat(text.replace(/\s/g, "").replace(",", ".")) || 0;
   }

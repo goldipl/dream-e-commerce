@@ -7027,6 +7027,9 @@ td:has(.addon-info) {
     padding-top: 2px;
     padding-bottom: 2px;
   }
+  .cart-table tbody .cart-row.cart-row--group-end:not(.cart-row--group-start):not(:has(+ .cart-row--note)) td:not(.col-product) {
+    padding-bottom: 18px;
+  }
 }
 .cart-table tbody td.col-future .col-future__inner {
   display: inline-flex;
@@ -7165,6 +7168,39 @@ td:has(.addon-info) {
   outline: 1px solid #0349ff;
   outline-offset: 2px;
   border-radius: 50%;
+}
+
+.cart-tooltip {
+  position: absolute;
+  z-index: 1050;
+  width: 245px;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #0349ff;
+  pointer-events: none;
+  font-size: 12px;
+  line-height: 16px;
+  color: #1a1a1a;
+}
+.cart-tooltip[hidden] {
+  display: none;
+}
+.cart-tooltip__title {
+  display: block;
+  font-weight: 700;
+  color: #001c5e;
+  margin-bottom: 8px;
+}
+.cart-tooltip__date {
+  display: block;
+  font-weight: 400;
+  color: #0349ff;
+  margin-bottom: 12px;
+}
+.cart-tooltip__note {
+  margin: 0;
+  font-weight: 300;
+  color: #1a1a1a;
 }
 
 .icon-btn {
@@ -7460,13 +7496,6 @@ td:has(.addon-info) {
     margin-bottom: 20px;
     padding-bottom: 12px;
   }
-}
-@media (max-width: 767px) and (min-width: 768px) {
-  .cart-table tbody .cart-row--group-end td:not(.col-product) {
-    padding-bottom: 14px;
-  }
-}
-@media (max-width: 767px) {
   .cart-page__title {
     gap: 8px;
     margin-bottom: 0;
