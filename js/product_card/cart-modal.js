@@ -104,11 +104,8 @@ $(function () {
 
     $row.find(".row-total").text(formatPLN(d.price * qty));
 
-    // Stepper state: plus disappears at the limit
-    $row
-      .find(".qty-stepper__btn--plus")
-      .toggleClass("is-hidden", atMax)
-      .prop("disabled", atMax);
+    // Stepper state: plus is disabled at the limit
+    $row.find(".qty-stepper__btn--plus").prop("disabled", atMax);
 
     $row
       .find(".qty-stepper__input")
