@@ -8,10 +8,11 @@ The interface content is primarily in Polish. This repository provides website t
 
 - Public and signed-in homepage layouts
 - Product category, product detail, news, article, and content pages
-- Multi-step cart and offer flows
-- Company and individual customer-account page templates
+- "Add to cart" configurator modal with colour swatches, per-size quantity steppers, and live net totals
+- Multi-step cart and offer flows, including future-delivery info tooltips
+- Company and individual customer-account page templates with an auto-highlighted sidebar
 - Contact, registration, and password-reminder pages
-- Responsive layouts implemented with SCSS and CSS
+- Responsive layouts implemented with SCSS and CSS, with a dedicated mobile menu and search toggle
 - Reusable PHP includes for navigation, page sections, and account content
 - Front-end interactions using JavaScript and bundled libraries
 
@@ -74,7 +75,7 @@ The pages use PHP includes and therefore need to be served through Apache/PHP; o
 │   └── product-card/
 ├── css/                    Bundled third-party CSS
 ├── js/                     Front-end scripts and bundled libraries
-├── screenshots/            Sample desktop and mobile screenshots
+├── screenshots/            Desktop and mobile screenshots used in this README
 ├── scss/                   Project stylesheets and compiled main.css
 ├── webfonts/               Font files
 ├── *.php                   Top-level page entry points
@@ -86,37 +87,185 @@ Top-level PHP files are page entry points. Most reusable page markup lives under
 
 ## Screenshots
 
-The following screenshots show selected desktop and mobile views from the project.
+Desktop screenshots are captured at 1920 × 1080 and mobile screenshots at 390 × 844 (2× pixel density). Click any image to open it at full size.
 
-### Home page
+### Storefront
 
-| Desktop | Mobile |
-| --- | --- |
-| ![Dreamtex home page on desktop](./screenshots/home-page-desktop.jpg) | ![Dreamtex home page on mobile](./screenshots/home-page-mobile.jpg) |
+<table>
+  <tr>
+    <th width="70%">Desktop</th>
+    <th width="30%">Mobile</th>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/home-page-desktop.jpg"><img src="./screenshots/home-page-desktop.jpg" alt="Home page — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/home-page-mobile.jpg"><img src="./screenshots/home-page-mobile.jpg" alt="Home page — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Home page</b> — Hero slider, featured categories, and news for guest visitors. <sub>(<a href="./index.php"><code>index.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/home-page-logged-desktop.jpg"><img src="./screenshots/home-page-logged-desktop.jpg" alt="Home page — signed in — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/home-page-logged-mobile.jpg"><img src="./screenshots/home-page-logged-mobile.jpg" alt="Home page — signed in — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Home page — signed in</b> — Header variant with account shortcuts for a signed-in customer. <sub>(<a href="./index-logged-user.php"><code>index-logged-user.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/category-desktop.jpg"><img src="./screenshots/category-desktop.jpg" alt="Product category — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/category-mobile.jpg"><img src="./screenshots/category-mobile.jpg" alt="Product category — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Product category</b> — Product grid with filters, sorting, and view toggles. <sub>(<a href="./category.php"><code>category.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/category-empty-desktop.jpg"><img src="./screenshots/category-empty-desktop.jpg" alt="Empty category results — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/category-empty-mobile.jpg"><img src="./screenshots/category-empty-mobile.jpg" alt="Empty category results — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Empty category results</b> — Fallback shown when no products match the selected filters. <sub>(<a href="./category-empty-result.php"><code>category-empty-result.php</code></a>)</sub></td>
+  </tr>
+</table>
 
-### Product category
+### Product and cart
 
-| Desktop | Mobile |
-| --- | --- |
-| ![Dreamtex product category on desktop](./screenshots/category-desktop.jpg) | ![Dreamtex product category on mobile](./screenshots/category-mobile.jpg) |
+<table>
+  <tr>
+    <th width="70%">Desktop</th>
+    <th width="30%">Mobile</th>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/product-card-desktop.jpg"><img src="./screenshots/product-card-desktop.jpg" alt="Product page — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/product-card-mobile.jpg"><img src="./screenshots/product-card-mobile.jpg" alt="Product page — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Product page</b> — Product gallery, specifications, colour selection, price, and quick actions. <sub>(<a href="./product-card.php"><code>product-card.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/product-card-modal-desktop.jpg"><img src="./screenshots/product-card-modal-desktop.jpg" alt="Add-to-cart configurator — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/product-card-modal-mobile.jpg"><img src="./screenshots/product-card-modal-mobile.jpg" alt="Add-to-cart configurator — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Add-to-cart configurator</b> — Modal with colour swatches, per-size stock, quantity steppers, and net totals. <sub>(<a href="./product-card.php"><code>product-card.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/cart-step-one-desktop.jpg"><img src="./screenshots/cart-step-one-desktop.jpg" alt="Cart — step 1: products — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/cart-step-one-mobile.jpg"><img src="./screenshots/cart-step-one-mobile.jpg" alt="Cart — step 1: products — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Cart — step 1: products</b> — Products grouped by size, with quantity steppers and line totals. <sub>(<a href="./cart-step-one.php"><code>cart-step-one.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/cart-step-two-desktop.jpg"><img src="./screenshots/cart-step-two-desktop.jpg" alt="Cart — step 2: delivery and payment — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/cart-step-two-mobile.jpg"><img src="./screenshots/cart-step-two-mobile.jpg" alt="Cart — step 2: delivery and payment — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Cart — step 2: delivery and payment</b> — Shipping method, delivery address, payment method, and order summary. <sub>(<a href="./cart-step-two.php"><code>cart-step-two.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/cart-step-three-desktop.jpg"><img src="./screenshots/cart-step-three-desktop.jpg" alt="Cart — step 3: summary — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/cart-step-three-mobile.jpg"><img src="./screenshots/cart-step-three-mobile.jpg" alt="Cart — step 3: summary — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Cart — step 3: summary</b> — Order review with products, delivery, payment, discount code, and terms acceptance. <sub>(<a href="./cart-step-three.php"><code>cart-step-three.php</code></a>)</sub></td>
+  </tr>
+</table>
 
-### Product page
+### Offers
 
-| Product configurator modal — desktop | Product page — mobile |
-| --- | --- |
-| ![Product configurator modal on desktop](./screenshots/product-card-modal-desktop.jpg) | ![Dreamtex product page on mobile](./screenshots/product-card-mobile.jpg) |
+<table>
+  <tr>
+    <th width="70%">Desktop</th>
+    <th width="30%">Mobile</th>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/offerts-list-desktop.jpg"><img src="./screenshots/offerts-list-desktop.jpg" alt="Offers list — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/offerts-list-mobile.jpg"><img src="./screenshots/offerts-list-mobile.jpg" alt="Offers list — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Offers list</b> — Offers and orders table with filters, status badges, and quick actions. <sub>(<a href="./offerts-list.php"><code>offerts-list.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/offerts-list-step-two-desktop.jpg"><img src="./screenshots/offerts-list-step-two-desktop.jpg" alt="Offer builder — step 2: branding — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/offerts-list-step-two-mobile.jpg"><img src="./screenshots/offerts-list-step-two-mobile.jpg" alt="Offer builder — step 2: branding — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Offer builder — step 2: branding</b> — Logo placement, decoration technique, size, visualisation files, and costs. <sub>(<a href="./offerts-list-step-two.php"><code>offerts-list-step-two.php</code></a>)</sub></td>
+  </tr>
+</table>
 
-### Cart
+### Customer account
 
-| Desktop | Mobile |
-| --- | --- |
-| ![Dreamtex cart, products step, on desktop](./screenshots/cart-step-one-desktop.jpg) | ![Dreamtex cart, products step, on mobile](./screenshots/cart-step-one-mobile.jpg) |
+<table>
+  <tr>
+    <th width="70%">Desktop</th>
+    <th width="30%">Mobile</th>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/my-orders-desktop.jpg"><img src="./screenshots/my-orders-desktop.jpg" alt="My orders — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/my-orders-mobile.jpg"><img src="./screenshots/my-orders-mobile.jpg" alt="My orders — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>My orders</b> — Order history table with statuses and actions. <sub>(<a href="./my-orders.php"><code>my-orders.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/my-order-details-desktop.jpg"><img src="./screenshots/my-order-details-desktop.jpg" alt="Order details — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/my-order-details-mobile.jpg"><img src="./screenshots/my-order-details-mobile.jpg" alt="Order details — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Order details</b> — Order information, delivery details, invoices, waybills, and ordered products. <sub>(<a href="./my-order-details.php"><code>my-order-details.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/my-data-desktop.jpg"><img src="./screenshots/my-data-desktop.jpg" alt="My data — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/my-data-mobile.jpg"><img src="./screenshots/my-data-mobile.jpg" alt="My data — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>My data</b> — User and company details, credit terms, account manager, and notification settings. <sub>(<a href="./my-data.php"><code>my-data.php</code></a>)</sub></td>
+  </tr>
+</table>
 
-### Offer customization
+### Other pages
 
-| Desktop | Mobile |
-| --- | --- |
-| ![Dreamtex offer customization step on desktop](./screenshots/offerts-list-step-two-desktop.jpg) | ![Dreamtex offer customization step on mobile](./screenshots/offerts-list-step-two-mobile.jpg) |
+<table>
+  <tr>
+    <th width="70%">Desktop</th>
+    <th width="30%">Mobile</th>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/register-desktop.jpg"><img src="./screenshots/register-desktop.jpg" alt="Registration — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/register-mobile.jpg"><img src="./screenshots/register-mobile.jpg" alt="Registration — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Registration</b> — Business registration form with buyer type, login, company, and contact details. <sub>(<a href="./register.php"><code>register.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/contact-desktop.jpg"><img src="./screenshots/contact-desktop.jpg" alt="Contact — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/contact-mobile.jpg"><img src="./screenshots/contact-mobile.jpg" alt="Contact — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Contact</b> — Help topics, contact e-mail, and showroom location map. <sub>(<a href="./contact-unlogged.php"><code>contact-unlogged.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/news-desktop.jpg"><img src="./screenshots/news-desktop.jpg" alt="News — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/news-mobile.jpg"><img src="./screenshots/news-mobile.jpg" alt="News — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>News</b> — News listing with article cards. <sub>(<a href="./news.php"><code>news.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/article-desktop.jpg"><img src="./screenshots/article-desktop.jpg" alt="Article — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/article-mobile.jpg"><img src="./screenshots/article-mobile.jpg" alt="Article — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Article</b> — Article page with related news and products. <sub>(<a href="./article.php"><code>article.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/wishlist-desktop.jpg"><img src="./screenshots/wishlist-desktop.jpg" alt="Wishlist — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/wishlist-mobile.jpg"><img src="./screenshots/wishlist-mobile.jpg" alt="Wishlist — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Wishlist</b> — Saved products grid with badges, colour swatches, and prices. <sub>(<a href="./storage.php"><code>storage.php</code></a>)</sub></td>
+  </tr>
+</table>
 
 ## Page catalogue
 
@@ -127,7 +276,7 @@ The following screenshots show selected desktop and mobile views from the projec
 - Product category: [`category.php`](./category.php)
 - Empty category results: [`category-empty-result.php`](./category-empty-result.php)
 - Product details: [`product-card.php`](./product-card.php)
-- Storage page: [`storage.php`](./storage.php)
+- Wishlist (saved products): [`storage.php`](./storage.php)
 
 ### Cart
 
