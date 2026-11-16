@@ -10353,6 +10353,86 @@ td:has(.addon-info) {
   margin-top: 24px;
 }
 
+.change-request__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: -4px 0 24px;
+}
+.change-request__client-no {
+  color: rgba(0, 28, 94, 0.45);
+  font-size: 11px;
+}
+.change-request__notice {
+  background-color: #ecf2fb;
+  color: #001c5e;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 22px 24px;
+  margin-bottom: 32px;
+}
+.change-request__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.change-request__section {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.change-request__header {
+  display: block;
+  width: 100%;
+  float: left;
+  background-color: #ecf2fb;
+  color: #001c5e;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: normal;
+  padding: 10px 24px;
+  margin: 0;
+}
+.change-request__header + * {
+  clear: both;
+}
+.change-request__body {
+  padding: 28px 24px 0;
+}
+.change-request__body--full {
+  padding-top: 36px;
+}
+.change-request__postal {
+  flex: 0 0 160px;
+}
+.change-request .field-label {
+  color: rgba(0, 28, 94, 0.45);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.change-request__hint {
+  color: rgba(0, 28, 94, 0.45);
+  font-size: 11px;
+  margin: 0;
+}
+.change-request__textarea {
+  min-height: 82px;
+}
+.change-request .form-actions {
+  margin-top: 56px;
+}
+.change-request .form-actions .btn {
+  min-width: 200px;
+  height: 45px;
+  font-size: 14px;
+}
+.change-request .form-actions .btn--filled {
+  min-width: 220px;
+}
+
 @media (max-width: 991px) {
   .account-panel {
     flex-direction: column;
@@ -10369,7 +10449,8 @@ td:has(.addon-info) {
     flex-wrap: wrap;
     gap: 20px;
   }
-  .info-grid {
+  .info-grid,
+  .change-request__grid {
     grid-template-columns: 1fr;
   }
   .order-summary {
@@ -10399,5 +10480,26 @@ td:has(.addon-info) {
   }
   .info-card__delivery-actions {
     justify-content: flex-end;
+  }
+  .change-request__body {
+    padding: 20px 0 0;
+  }
+  .change-request__body--full {
+    padding-top: 28px;
+  }
+  .change-request__header {
+    padding: 10px 16px;
+  }
+  .change-request__postal {
+    flex: 1 1 120px;
+  }
+  .change-request .form-actions {
+    flex-direction: column-reverse;
+    margin-top: 32px;
+  }
+  .change-request .form-actions .btn,
+  .change-request .form-actions .btn--filled {
+    width: 100%;
+    min-width: 0;
   }
 }/*# sourceMappingURL=main.css.map */

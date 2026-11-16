@@ -613,6 +613,106 @@
 }
 
 // ==========================================================================
+// DATA CHANGE REQUEST (Zgłoszenie zmiany danych firmy i użytkownika)
+// ==========================================================================
+.change-request {
+  &__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin: -4px 0 24px;
+  }
+
+  &__client-no {
+    color: rgba(0, 28, 94, 0.45);
+    font-size: 11px;
+  }
+
+  &__notice {
+    background-color: $inputs_layer;
+    color: $main_color;
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 22px 24px;
+    margin-bottom: 32px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  &__section {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  &__header {
+    display: block;
+    width: 100%;
+    float: left; // keeps <legend> inside the fieldset flow
+    background-color: $inputs_layer;
+    color: $main_color;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 10px 24px;
+    margin: 0;
+
+    + * {
+      clear: both;
+    }
+  }
+
+  &__body {
+    padding: 28px 24px 0;
+
+    &--full {
+      padding-top: 36px;
+    }
+  }
+
+  &__postal {
+    flex: 0 0 160px;
+  }
+
+  .field-label {
+    color: rgba(0, 28, 94, 0.45);
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  &__hint {
+    color: rgba(0, 28, 94, 0.45);
+    font-size: 11px;
+    margin: 0;
+  }
+
+  &__textarea {
+    min-height: 82px;
+  }
+
+  .form-actions {
+    margin-top: 56px;
+
+    .btn {
+      min-width: 200px;
+      height: 45px;
+      font-size: 14px;
+    }
+
+    .btn--filled {
+      min-width: 220px;
+    }
+  }
+}
+
+// ==========================================================================
 // RESPONSIVE
 // ==========================================================================
 @media (max-width: 991px) {
@@ -634,7 +734,8 @@
     }
   }
 
-  .info-grid {
+  .info-grid,
+  .change-request__grid {
     grid-template-columns: 1fr;
   }
 
@@ -671,5 +772,34 @@
 
   .info-card__delivery-actions {
     justify-content: flex-end;
+  }
+
+  .change-request {
+    &__body {
+      padding: 20px 0 0;
+
+      &--full {
+        padding-top: 28px;
+      }
+    }
+
+    &__header {
+      padding: 10px 16px;
+    }
+
+    &__postal {
+      flex: 1 1 120px;
+    }
+
+    .form-actions {
+      flex-direction: column-reverse;
+      margin-top: 32px;
+
+      .btn,
+      .btn--filled {
+        width: 100%;
+        min-width: 0;
+      }
+    }
   }
 }

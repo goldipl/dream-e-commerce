@@ -24,6 +24,7 @@
           <span class="info-card__value">+48 666 777 666</span>
         </div>
       </div>
+      <a href="./my-data-change-request.php" class="info-card__link">Zgłoszenie zmiany danych użytkownika</a>
     </div>
   </div>
 
@@ -53,7 +54,7 @@
           <span class="info-card__value">677770</span>
         </div>
       </div>
-      <a href="./zgloszenie-zmiany-danych.php" class="info-card__link">Zgłoszenie zmiany w danych firmy</a>
+      <a href="./my-data-change-request.php" class="info-card__link">Zgłoszenie zmiany danych firmy</a>
     </div>
   </div>
 
