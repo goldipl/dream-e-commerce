@@ -1,0 +1,684 @@
+// ==========================================================================
+// Product comparison ("Porównanie produktów")
+// ==========================================================================
+
+$compare_border: #dfe6f1;
+$compare_group_bg: #f6f8fc;
+$compare_label_col: 212px;
+$compare_label_col_md: 170px;
+$compare_label_col_sm: 124px;
+
+.compare-page {
+  padding-bottom: 120px;
+
+  &__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin: 0;
+    color: $cta_color;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  &__count {
+    flex-shrink: 0;
+    color: $main_color;
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
+
+// --------------------------------------------------------------------------
+// Toolbar: view options + actions
+// --------------------------------------------------------------------------
+.compare-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px 32px;
+  margin-bottom: 40px;
+
+  &__actions {
+    display: flex;
+    gap: 16px;
+
+    .btn-primary-cta {
+      flex-grow: 0;
+      min-width: 200px;
+      text-decoration: none;
+    }
+  }
+}
+
+.compare-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 48px;
+}
+
+.compare-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: $main_text;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+  user-select: none;
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  &__box {
+    position: relative;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $cta_color;
+    background-color: $white;
+    transition: background-color $transition-speed;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 5px;
+      display: none;
+      width: 6px;
+      height: 10px;
+      border: solid $white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:hover &__box {
+    background-color: $inputs_layer;
+  }
+
+  &__input:checked + &__box {
+    background-color: $cta_color;
+
+    &::after {
+      display: block;
+    }
+  }
+
+  &__input:focus-visible + &__box {
+    outline: 2px solid $cta_hover_color;
+    outline-offset: 2px;
+  }
+}
+
+// --------------------------------------------------------------------------
+// Table
+// --------------------------------------------------------------------------
+.compare-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.compare-table {
+  width: 100%;
+  min-width: calc(#{$compare_label_col} + var(--compare-cols, 2) * 160px);
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-top: 1px solid $compare_border;
+  border-left: 1px solid $compare_border;
+  color: $main_text;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.6;
+
+  th,
+  td {
+    min-width: 0;
+    border-right: 1px solid $compare_border;
+    border-bottom: 1px solid $compare_border;
+    vertical-align: top;
+  }
+
+  // Reset the global thead / tbody styles (offers table)
+  thead {
+    background: transparent;
+  }
+
+  thead th:last-of-type {
+    width: auto;
+  }
+
+  td {
+    background-color: $white;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  tbody tr:hover {
+    box-shadow: none;
+  }
+
+  &__label-col {
+    width: $compare_label_col;
+  }
+
+  // First column stays visible while the table scrolls sideways
+  &__label {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    padding: 18px 16px;
+    background-color: $white;
+    color: $breadcrumbs_color;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  &__label-title {
+    display: block;
+    color: $main_color;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &__label-hint {
+    display: block;
+    max-width: 120px;
+    margin-top: 10px;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+}
+
+.compare-product {
+  position: relative;
+  padding: 16px;
+
+  &__remove {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    color: $breadcrumbs_color;
+    font-size: 11px;
+    text-decoration: none;
+    transition: color $transition-speed;
+
+    &:hover {
+      color: $cta_color;
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 154px;
+    margin: 12px 0 18px;
+    text-decoration: none;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__name {
+    display: inline-block;
+    color: $main_color;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: $cta_color;
+    }
+  }
+
+  &__meta {
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+    color: $breadcrumbs_color;
+    font-size: 11px;
+    line-height: 1.8;
+  }
+}
+
+.compare-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 154px;
+  max-width: 100%;
+  height: 100%;
+  padding: 16px;
+  background-color: $compare_group_bg;
+  color: $breadcrumbs_color;
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+// Group header rows
+.compare-group-head {
+  &__cell {
+    padding: 0;
+    background-color: $compare_group_bg;
+  }
+
+  &__toggle {
+    position: sticky;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: var(--compare-viewport, 100%);
+    max-width: 100%;
+    padding: 10px 16px;
+    border: 0;
+    background: transparent;
+    color: $main_color;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid $cta_color;
+      outline-offset: -2px;
+    }
+
+    &--static {
+      cursor: default;
+    }
+  }
+
+  &__count {
+    margin-left: auto;
+    color: $breadcrumbs_color;
+    font-size: 11px;
+    font-weight: 300;
+  }
+
+  &__chevron {
+    display: inline-flex;
+    margin: 0 4px 0 16px;
+    color: $cta_color;
+    transition: transform $transition-speed;
+  }
+
+  &__toggle[aria-expanded="true"] &__chevron {
+    transform: rotate(180deg);
+  }
+}
+
+// Value cells
+.compare-cell {
+  padding: 18px 14px;
+  word-wrap: break-word;
+
+  &__empty {
+    color: $breadcrumbs_color;
+    font-size: 11px;
+  }
+
+  &__link {
+    color: $cta_color;
+    font-weight: 400;
+    text-decoration: underline;
+
+    &:hover {
+      color: $cta_hover_color;
+    }
+  }
+}
+
+.compare-price {
+  display: block;
+  color: $cta_color;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+
+  &__unit {
+    display: block;
+    margin-top: 6px;
+    color: $breadcrumbs_color;
+    font-size: 11px;
+  }
+}
+
+.compare-availability {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+
+  &__info {
+    display: inline-flex;
+    flex-shrink: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: $cta_color;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 1px solid $cta_color;
+      outline-offset: 2px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.compare-colors {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: $main_color;
+  font-size: 11px;
+  line-height: 1.6;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & + li {
+      margin-top: 6px;
+    }
+  }
+
+  &__swatch {
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid $main_color;
+  }
+}
+
+// Rows without a value for any product and groups left without rows
+// (e.g. after removing a product) are hidden by compare.js
+.compare-row.is-empty,
+.compare-group-head[data-count="0"],
+.compare-group-body[data-count="0"] {
+  display: none;
+}
+
+// "Tylko różnice": identical rows and groups without differences are hidden
+.compare-page[data-mode="diff"] {
+  .compare-row[data-same],
+  .compare-group-head[data-diff-count="0"],
+  .compare-group-body[data-diff-count="0"] {
+    display: none;
+  }
+}
+
+// --------------------------------------------------------------------------
+// Empty state and single product
+// --------------------------------------------------------------------------
+.compare-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 640px;
+  margin: 96px auto 0;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    color: $main_color;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  &__text {
+    margin: 32px 0 0;
+    color: $main_text;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .btn-primary-cta {
+    flex-grow: 0;
+    margin-top: 48px;
+    text-decoration: none;
+  }
+}
+
+.compare-single {
+  margin-top: 64px;
+
+  &__title {
+    margin: 0 0 20px;
+    color: $main_color;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 24px 40px;
+    border: 1px solid $compare_border;
+  }
+
+  &__image {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 180px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__name {
+    color: $main_color;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      color: $cta_color;
+    }
+  }
+
+  &__meta {
+    margin: 16px 0 0;
+    color: $breadcrumbs_color;
+    font-size: 13px;
+  }
+
+  &__price {
+    margin: 16px 0 0;
+    color: $cta_color;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__remove {
+    display: inline-block;
+    margin-top: 20px;
+    color: $cta_color;
+    font-size: 13px;
+    text-decoration: underline;
+
+    &:hover {
+      color: $cta_hover_color;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 60px;
+
+    .btn-primary-cta {
+      flex-grow: 0;
+      min-width: 200px;
+      text-decoration: none;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+// Responsive
+// --------------------------------------------------------------------------
+@media (max-width: 1199px) {
+  .compare-table {
+    min-width: calc(#{$compare_label_col_md} + var(--compare-cols, 2) * 160px);
+
+    &__label-col {
+      width: $compare_label_col_md;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .compare-page {
+    padding-top: 16px;
+    padding-bottom: 72px;
+
+    &__title {
+      font-size: 24px;
+    }
+  }
+
+  .compare-toolbar {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .compare-page {
+    &__header {
+      margin-bottom: 16px;
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+  }
+
+  .compare-toggles {
+    gap: 12px 24px;
+  }
+
+  .compare-toolbar__actions {
+    width: 100%;
+
+    .btn-primary-cta {
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: none;
+      padding: 0 12px;
+    }
+  }
+
+  .compare-table {
+    min-width: calc(#{$compare_label_col_sm} + var(--compare-cols, 2) * 150px);
+
+    &__label-col {
+      width: $compare_label_col_sm;
+    }
+
+    &__label {
+      padding: 14px 10px;
+      font-size: 12px;
+    }
+
+    &__label-hint {
+      display: none;
+    }
+  }
+
+  .compare-product {
+    padding: 12px;
+
+    &__image {
+      height: 110px;
+      margin: 16px 0 12px;
+    }
+  }
+
+  .compare-cell {
+    padding: 14px 10px;
+  }
+
+  .compare-price {
+    font-size: 16px;
+  }
+
+  .compare-empty {
+    margin-top: 48px;
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__text {
+      margin-top: 20px;
+      font-size: 15px;
+    }
+
+    .btn-primary-cta {
+      margin-top: 32px;
+    }
+  }
+
+  .compare-single {
+    margin-top: 32px;
+
+    &__card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    &__image {
+      width: 120px;
+      height: 140px;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__actions {
+      margin-top: 32px;
+
+      .btn-primary-cta {
+        width: 100%;
+        max-width: none;
+      }
+    }
+  }
+}

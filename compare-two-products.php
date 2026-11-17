@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex, follow">
+        <title>Dreamtex - Porównanie produktów</title>
+        <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/select2.min.css" />
+        <link rel="stylesheet" href="./scss/main.css">
+    </head>
+    <body>
+        <header> 
+            <?php include "./components/common/nav.php"; ?> 
+        </header>
+        <main id="main-wrapper">
+            <div class="breadcrumbs breadcrumbs--mobile-hidden container">
+                <ul>
+                    <li class="breadcrumb-item">
+                        <a href="./index.php">Strona główna</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        <span>Porównanie produktów</span>
+                    </li>
+                </ul>
+            </div>
+            <section class="compare-page container" data-compare data-max="5">
+                <div class="compare-page__header">
+                    <h1 class="compare-page__title">Porównanie produktów</h1>
+                    <span class="compare-page__count" data-compare-count>2 z 5 produktów</span>
+                </div>
+                <div data-compare-state="table">
+                    <?php include "./components/compare/compare_table_two_products.php"; ?>
+                </div>
+                <div data-compare-state="single" hidden>
+                    <?php include "./components/compare/compare_single.php"; ?>
+                </div>
+                <div data-compare-state="empty" hidden>
+                    <?php include "./components/compare/compare_empty.php"; ?>
+                </div>
+            </section>
+        </main>
+        <footer> 
+            <?php include "./components/common/footer.php"; ?> 
+        </footer>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="./js/bootbox.min.js"></script>
+        <script src="./js/select2.min.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/compare/compare.js"></script>
+    </body>
+</html>

@@ -43,7 +43,7 @@
             </svg>
             <span class="nav-links-items__item-label">Schowek</span>
           </a>
-          <a href="" rel="nofollow" class="nav-links-items__item">
+          <a href="./compare.php" rel="nofollow" class="nav-links-items__item">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none">
               <path d="M5.95 17L4.78325 15.7516L7.65825 12.6969H0V10.926H7.65825L4.78325 7.87127L5.95 6.62283L10.8333 11.8115L5.95 17ZM14.05 10.3772L9.16675 5.18845L14.05 0L15.2168 1.24844L12.3418 4.30312H20V6.07405H12.3418L15.2168 9.12873L14.05 10.3772Z" fill="#001C5E" />
             </svg>
