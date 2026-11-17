@@ -9,9 +9,10 @@ The interface content is primarily in Polish. This repository provides website t
 - Public and signed-in homepage layouts
 - Product category, product detail, news, article, and content pages
 - "Add to cart" configurator modal with colour swatches, per-size quantity steppers, and live net totals
+- Product comparison for 2–5 products with "Najważniejsze", "Wszystkie parametry", and "Tylko różnice" views, collapsible parameter groups, and empty and single-product states
 - Multi-step cart and offer flows, including future-delivery info tooltips
-- Company and individual customer-account page templates with an auto-highlighted sidebar
-- Contact, registration, and password-reminder pages
+- Company and individual customer-account page templates with an auto-highlighted sidebar, including a company and user data change request form
+- Contact, registration, password-reminder, and 404 error pages
 - Responsive layouts implemented with SCSS and CSS, with a dedicated mobile menu and search toggle
 - Reusable PHP includes for navigation, page sections, and account content
 - Front-end interactions using JavaScript and bundled libraries
@@ -66,13 +67,21 @@ The pages use PHP includes and therefore need to be served through Apache/PHP; o
 ├── components/             Reusable PHP page sections, grouped by feature
 │   ├── account_panel/
 │   ├── article/
+│   ├── auth_pages/
 │   ├── cart/
 │   ├── category/
 │   ├── common/
+│   ├── compare/
+│   ├── contact_page/
+│   ├── content_page/
+│   ├── error_page/
 │   ├── main_page/
+│   ├── news/
 │   ├── offerts_page/
 │   ├── offerts_steps/
-│   └── product-card/
+│   ├── product-card/
+│   ├── register/
+│   └── storage/
 ├── css/                    Bundled third-party CSS
 ├── js/                     Front-end scripts and bundled libraries
 ├── screenshots/            Desktop and mobile screenshots used in this README
@@ -167,6 +176,43 @@ Desktop screenshots are captured at 1920 × 1080 and mobile screenshots at 390 �
   </tr>
   <tr>
     <td colspan="2" align="center"><b>Cart — step 3: summary</b> — Order review with products, delivery, payment, discount code, and terms acceptance. <sub>(<a href="./cart-step-three.php"><code>cart-step-three.php</code></a>)</sub></td>
+  </tr>
+</table>
+
+### Product comparison
+
+<table>
+  <tr>
+    <th width="70%">Desktop</th>
+    <th width="30%">Mobile</th>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/compare-desktop.jpg"><img src="./screenshots/compare-desktop.jpg" alt="Product comparison — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/compare-mobile.jpg"><img src="./screenshots/compare-mobile.jpg" alt="Product comparison — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Product comparison</b> — Five products side by side with key parameters and collapsible groups for the rest. <sub>(<a href="./compare.php"><code>compare.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/compare-differences-desktop.jpg"><img src="./screenshots/compare-differences-desktop.jpg" alt="Product comparison — differences only — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/compare-differences-mobile.jpg"><img src="./screenshots/compare-differences-mobile.jpg" alt="Product comparison — differences only — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Product comparison — differences only</b> — Identical rows hidden and groups with differences expanded. <sub>(<a href="./compare-two-products.php?mode=diff"><code>compare-two-products.php?mode=diff</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/compare-one-product-desktop.jpg"><img src="./screenshots/compare-one-product-desktop.jpg" alt="Product comparison — one product — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/compare-one-product-mobile.jpg"><img src="./screenshots/compare-one-product-mobile.jpg" alt="Product comparison — one product — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Product comparison — one product</b> — Selected product with a prompt to add one more. <sub>(<a href="./compare-one-product.php"><code>compare-one-product.php</code></a>)</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/compare-empty-desktop.jpg"><img src="./screenshots/compare-empty-desktop.jpg" alt="Product comparison — empty — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/compare-empty-mobile.jpg"><img src="./screenshots/compare-empty-mobile.jpg" alt="Product comparison — empty — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Product comparison — empty</b> — Shown when no products have been added yet. <sub>(<a href="./compare-empty.php"><code>compare-empty.php</code></a>)</sub></td>
   </tr>
 </table>
 
@@ -265,6 +311,13 @@ Desktop screenshots are captured at 1920 × 1080 and mobile screenshots at 390 �
   <tr>
     <td colspan="2" align="center"><b>Wishlist</b> — Saved products grid with badges, colour swatches, and prices. <sub>(<a href="./storage.php"><code>storage.php</code></a>)</sub></td>
   </tr>
+  <tr>
+    <td align="center"><a href="./screenshots/404-desktop.jpg"><img src="./screenshots/404-desktop.jpg" alt="Page not found — desktop" width="600"></a></td>
+    <td align="center"><a href="./screenshots/404-mobile.jpg"><img src="./screenshots/404-mobile.jpg" alt="Page not found — mobile" width="170"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Page not found</b> — 404 error page with links to the catalogue, home page, and contact. <sub>(<a href="./404.php"><code>404.php</code></a>)</sub></td>
+  </tr>
 </table>
 
 ## Page catalogue
@@ -277,6 +330,15 @@ Desktop screenshots are captured at 1920 × 1080 and mobile screenshots at 390 �
 - Empty category results: [`category-empty-result.php`](./category-empty-result.php)
 - Product details: [`product-card.php`](./product-card.php)
 - Wishlist (saved products): [`storage.php`](./storage.php)
+
+### Product comparison
+
+- Five products: [`compare.php`](./compare.php)
+- Two products: [`compare-two-products.php`](./compare-two-products.php)
+- One product: [`compare-one-product.php`](./compare-one-product.php)
+- No products: [`compare-empty.php`](./compare-empty.php)
+
+The starting view of the table pages can be set with `?mode=important` (default), `?mode=all`, or `?mode=diff`.
 
 ### Cart
 
@@ -296,6 +358,7 @@ Desktop screenshots are captured at 1920 × 1080 and mobile screenshots at 390 �
 ### Customer account — company
 
 - Personal data: [`my-data.php`](./my-data.php)
+- Data change request: [`my-data-change-request.php`](./my-data-change-request.php)
 - Orders: [`my-orders.php`](./my-orders.php)
 - Order details: [`my-order-details.php`](./my-order-details.php)
 - Billing: [`my-billing.php`](./my-billing.php)
@@ -319,12 +382,14 @@ Desktop screenshots are captured at 1920 × 1080 and mobile screenshots at 390 �
 - News: [`news.php`](./news.php)
 - Article: [`article.php`](./article.php)
 - Universal content page: [`universal-page.php`](./universal-page.php)
+- Page not found: [`404.php`](./404.php)
 
 ## Development notes
 
 - Keep reusable page sections in the relevant `components/` subdirectory and include them from the top-level PHP page.
 - Organize style changes in the appropriate SCSS source file. Ensure the stylesheet served by the pages, `scss/main.css`, is kept in sync.
 - Preserve the existing relative asset paths when adding or moving pages.
+- The product comparison templates are static HTML with sample products. View switching, collapsible groups, difference detection, hiding parameters without values, and removing products are handled in `js/compare/compare.js`.
 - The repository does not currently document an automated build, lint, or test command.
 
 ## Third-party materials
