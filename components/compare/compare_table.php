@@ -24,8 +24,7 @@
 </div>
 
 <div class="compare-table-wrapper">
-  <table class="compare-table" style="--compare-cols: 5">
-    <caption class="visually-hidden">Porównanie parametrów wybranych produktów</caption>
+  <table class="compare-table" style="--compare-cols: 5" aria-label="Porównanie parametrów wybranych produktów">
     <colgroup>
       <col class="compare-table__label-col">
       <col>

@@ -213,13 +213,27 @@ $compare_label_col_sm: 124px;
     position: absolute;
     top: 8px;
     right: 12px;
-    color: $breadcrumbs_color;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: $main_color;
+    font-family: inherit;
     font-size: 11px;
-    text-decoration: none;
+    font-weight: 400;
+    line-height: 1.4;
+    cursor: pointer;
     transition: color $transition-speed;
 
     &:hover {
       color: $cta_color;
+    }
+
+    &:focus-visible {
+      outline: 1px solid $cta_color;
+      outline-offset: 2px;
     }
   }
 

@@ -10127,13 +10127,26 @@ td:has(.addon-info) {
   position: absolute;
   top: 8px;
   right: 12px;
-  color: #808eaf;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #001c5e;
+  font-family: inherit;
   font-size: 11px;
-  text-decoration: none;
+  font-weight: 400;
+  line-height: 1.4;
+  cursor: pointer;
   transition: color 0.25s;
 }
 .compare-product__remove:hover {
   color: #0049ff;
+}
+.compare-product__remove:focus-visible {
+  outline: 1px solid #0049ff;
+  outline-offset: 2px;
 }
 .compare-product__image {
   display: flex;
